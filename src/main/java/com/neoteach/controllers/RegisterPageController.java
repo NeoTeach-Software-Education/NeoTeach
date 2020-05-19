@@ -22,6 +22,6 @@ public class RegisterPageController {
 	public String saveDtls(RegisterPojo registerPojo) throws Exception
 	{
 		registerServiceImpl.saveDtls(registerPojo);
-		return "register";
+		return "myhome";
 	}
 }
