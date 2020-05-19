@@ -1,7 +1,16 @@
 $(document).ready(function()
 {
-//alert("Hello I am from js");
-		
+alert("Hello I am from js");
+$('#register').click(function(e)
+		{
+		alert("from js");
+		document.userform1.action="register1.html";
+		document.userform1.method="POST";
+		document.userform1.submit();
+		})
+	});
+	
+//});
 //	################################
 
 	
@@ -146,18 +155,7 @@ $(document).ready(function()
 //		return false;
 // }
 //	else
-	$('#register').click(function(e)
-		{
-		alert("from js");
-		document.userform1.action="register1.html";
-		document.userform1.method="POST";
-		document.userform1.submit();
-		}
-	});
-	
-	
 
-});
 
 	
 	

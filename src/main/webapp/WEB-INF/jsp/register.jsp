@@ -39,8 +39,8 @@ label {
 	font-weight: normal !important;
 }
 </style>
-
-	<script src="./views/js/jquery-1.8.3min.js" type="text/javascript"></script>
+<script src="./js/jquery-1.8.3.js" type="text/javascript"></script>
+	<script src="./js/jquery-1.8.3min.js" type="text/javascript"></script>
 
 <!--  <script type="text/javascript"> -->
 <!--  function register()  -->
@@ -52,7 +52,7 @@ label {
 <!--  	}   -->
 
 <!--  </script>  -->
-<script type="text/javascript" src="./views/js/register.js"></script>  
+<script type="text/javascript" src="./js/register.js"></script>  
 
  <script type="text/javascript">
 function removeMess()
