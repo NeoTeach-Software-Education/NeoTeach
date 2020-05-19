@@ -2,7 +2,7 @@
 SQLyog Ultimate v11.11 (64 bit)
 MySQL - 5.5.34 : Database - neoteachdb
 *********************************************************************
-*/
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -21,7 +21,7 @@ USE `neoteachdb`;
 DROP TABLE IF EXISTS `admin`;
 
 CREATE TABLE `admin` (
-  `admin` varchar(50) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
   `pwd` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -37,6 +37,8 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `user` */
+
+insert  into `user`(`firstname`,`lastname`) values ('sri','nivas'),('thouti','srinu'),('123','432');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

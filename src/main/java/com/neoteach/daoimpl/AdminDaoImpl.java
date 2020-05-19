@@ -9,7 +9,7 @@ import com.neoteach.pojo.RegisterPojo;
 
 	
 @Repository
-public class RegisterDaoImpl {
+public class AdminDaoImpl {
 //	@Autowired
 //	private NhtLogMgr nhtLogMgr;
 //	private final String CLASS_NAME=this.getClass().getCanonicalName();
@@ -24,20 +24,13 @@ public class RegisterDaoImpl {
 	@Autowired  
 	private NamedParameterJdbcTemplate namedJdbcTemplate;  
 	public int saveDtls(RegisterPojo registerPojo) {
+		 System.out.println("from regdaoimpl1===="+registerPojo.getFirstname());
 		int result=0;
 //		final String METHOD_NAME="saveDtls2";
 		jdbcTemplate.execute("insert into user(firstname,lastname)"+"values('"+registerPojo.getFirstname()+"','"+registerPojo.getLastname()+"')");
+  System.out.println("from regdaoimpl");
 		return result;
 	}
-	
-	
-	public boolean creadentialAuthenticate(String email, String pwd) {
-		// TODO Auto-generated method stub
-		
-//		jdbcTemplate.queryfor
-		return false;
-	}
-	
 		//		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
 //		Transaction transaction = session.beginTransaction();
 //		int result=0;
@@ -132,5 +125,4 @@ public class RegisterDaoImpl {
 //		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.EXIT);
 //	return result.toString();	
 //	}
-	
 	}
