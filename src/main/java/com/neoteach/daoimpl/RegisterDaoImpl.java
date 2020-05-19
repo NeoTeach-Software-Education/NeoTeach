@@ -27,7 +27,7 @@ public class RegisterDaoImpl {
 		 System.out.println("from regdaoimpl1===="+registerPojo.getFirstname());
 		int result=0;
 //		final String METHOD_NAME="saveDtls2";
-		jdbcTemplate.execute("insert into user(firstname,lastname)"+"values("+registerPojo.getFirstname()+"','"+registerPojo.getLastname());
+		jdbcTemplate.execute("insert into user(firstname,lastname)"+"values('"+registerPojo.getFirstname()+"','"+registerPojo.getLastname()+"')");
   System.out.println("from regdaoimpl");
 		return result;
 	}

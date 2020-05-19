@@ -3,13 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:fb="http://www.facebook.com/2008/fbml">
     <head>
-	        <title>Join NeoHomeTuitions.com to find Tutors for your specific Requirement</title>
-	        <meta name="description" content="Join NeoHomeTuitions.com today to find Tutors across subjects. If you are a Tutor, join now to create a Free Profile and find Students."/>
-		
-		<link href="./views/css/cssReset.css" type="text/css" rel="stylesheet" media="screen, projection" />
-		<link href="./views/css/main.css" type="text/css" rel="stylesheet" media="screen, projection" />
-		
-<meta name="layout" content="standAlone"/>
+	       
 
 <style type="text/css">
 body, .g23, .siteHeader	{background-color:#F6F6F6 !important;}	
@@ -39,8 +33,7 @@ label {
 	font-weight: normal !important;
 }
 </style>
-<script src="./js/jquery-1.8.3.js" type="text/javascript"></script>
-	<script src="./js/jquery-1.8.3min.js" type="text/javascript"></script>
+
 
 <!--  <script type="text/javascript"> -->
 <!--  function register()  -->
@@ -52,7 +45,10 @@ label {
 <!--  	}   -->
 
 <!--  </script>  -->
-<script type="text/javascript" src="./js/register.js"></script>  
+
+<script src="js/jquery-1.8.3min.js" type="text/javascript"></script>
+<!--<script type="text/javascript" src="webjars/jquery/3.2.0/jquery.min.js"></script>  -->
+<script type="text/javascript" src="js/register.js"></script>  
 
  <script type="text/javascript">
 function removeMess()
@@ -88,7 +84,7 @@ function removeMess()
 	<div class="d-cont">
 	
 			<a href="http://www.neoonlinetraining.com">
-	 			<img src="./views/images/nht9.png" alt="NHT" class="d-logo" width="175" height="42"/>
+	 			<img src="images/nht9.png" alt="NHT" class="d-logo" width="175" height="42"/>
 	 		</a>
 				
 				
@@ -103,7 +99,7 @@ function removeMess()
 					<div class="siteHeader framework clearfix">
 						<div class="cont">
 					        <div style="display:none;" class="spinner" id="spinner">
-					            <img alt="Spinner" src="./views/images/spinner.gif">
+					            <img alt="Spinner" src="images/spinner.gif">
 					        </div>					        
 				       						     
 		
@@ -115,7 +111,7 @@ function removeMess()
 		<div style="width: 460px; padding: 7px; float: left; padding-bottom: 100px;">
 
 
-			<img width="448" height="205" src="./views/images/s12.jpg"/>
+			<img width="448" height="205" src="images/s12.jpg"/>
 			<div style="float: left; margin-left: 0px; margin-bottom: 25px;background-color: #fff; border:1px solid #e4e4e4; width: 416px;padding:7px 15px 18px 15px; margin-top:9px;">
 				<p style="color: #0000A0; font-size: 26px; margin: 15px 0px; margin-top:0px;">NeoHomeTuition is for You</p>
 
@@ -276,9 +272,9 @@ function removeMess()
 	     <div class="d-cont-foot">
 
 			<ul class="footerSocial marginTop15">
-				<li class="no-border social-icons"><a href="https://twitter.com/neohometuitions"><img src="./views/images/tw.png" /></a></li>
-	        	<li class="no-border social-icons"><a href="https://plus.google.com/u/1/106054801941976563719/posts" target="_blank"><img src="./views/images/gp.png" /></a></li>
-	        	<li class="no-border social-icons"><a href="https://www.facebook.com/neo.hometuitions"><img src="./views/images/fb.png" /></a></li>
+				<li class="no-border social-icons"><a href="https://twitter.com/neohometuitions"><img src="images/tw.png" /></a></li>
+	        	<li class="no-border social-icons"><a href="https://plus.google.com/u/1/106054801941976563719/posts" target="_blank"><img src="images/gp.png" /></a></li>
+	        	<li class="no-border social-icons"><a href="https://www.facebook.com/neo.hometuitions"><img src="images/fb.png" /></a></li>
 			</ul>
 
 	     <div class="copyright hide-for-small-only">  NeoHomeTuitions &copy; 2010-2015 All Rights Reserved

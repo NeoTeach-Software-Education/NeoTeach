@@ -4,7 +4,7 @@ alert("Hello I am from js");
 $('#register').click(function(e)
 		{
 		alert("from js");
-		document.userform1.action="register1.html";
+		document.userform1.action="/register1";
 		document.userform1.method="POST";
 		document.userform1.submit();
 		})
