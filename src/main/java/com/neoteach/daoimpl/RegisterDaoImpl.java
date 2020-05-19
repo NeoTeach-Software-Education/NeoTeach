@@ -1,34 +1,32 @@
 package com.neoteach.daoimpl;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
-import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import com.mysql.cj.xdevapi.SessionFactory;
 import com.neoteach.pojo.RegisterPojo;
 
 	
 @Repository
 public class RegisterDaoImpl {
-	@Autowired
+//	@Autowired
 //	private NhtLogMgr nhtLogMgr;
-	private final String CLASS_NAME=this.getClass().getCanonicalName();
+//	private final String CLASS_NAME=this.getClass().getCanonicalName();
 	
-	private JdbcTemplate jdbcTemplate;
-
-	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
+//	private JdbcTemplate jdbcTemplate;
+//
+//	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+//		this.jdbcTemplate = jdbcTemplate;
+//	}
+	@Autowired  
+	JdbcTemplate jdbcTemplate;  
+	@Autowired  
+	private NamedParameterJdbcTemplate namedJdbcTemplate;  
 	public int saveDtls(RegisterPojo registerPojo) {
 		 System.out.println("from regdaoimpl1===="+registerPojo.getFirstname());
 		int result=0;
-		final String METHOD_NAME="saveDtls2";
+//		final String METHOD_NAME="saveDtls2";
 		jdbcTemplate.execute("insert into user(firstname,lastname)"+"values("+registerPojo.getFirstname()+"','"+registerPojo.getLastname());
   System.out.println("from regdaoimpl");
 		return result;
