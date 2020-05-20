@@ -27,6 +27,8 @@ CREATE TABLE `admin` (
 
 /*Data for the table `admin` */
 
+insert  into `admin`(`email`,`pwd`) values ('neo','neo');
+
 /*Table structure for table `user` */
 
 DROP TABLE IF EXISTS `user`;
