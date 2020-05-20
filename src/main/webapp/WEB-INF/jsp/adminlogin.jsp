@@ -37,12 +37,9 @@ width:100%;}
 .forgetLink	{color:#6C6C6C !important;}
 	  </style>
 	  
-	<script src="js/jquery-1.8.3min.js" type="text/javascript"></script>
-      
    
 <script src="js/jquery-1.8.3min.js" type="text/javascript"></script>
-<!--<script type="text/javascript" src="webjars/jquery/3.2.0/jquery.min.js"></script>  -->
-<script type="text/javascript" src="js/register.js"></script>  
+<script type="text/javascript" src="js/adminlogin.js"></script>  
     </head>
 
 	<body>
@@ -111,7 +108,7 @@ width:100%;}
 
 						<tr>
 							<td><input type="submit" class="loginBtn" value="Log In" 
-								alt="Log In"  tabindex="3" onclick="loginusernht()"/></td>
+								alt="Log In"  tabindex="3" id="adminlogin"/></td>
 						</tr>
 
 						<tr>

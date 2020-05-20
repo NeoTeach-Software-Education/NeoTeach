@@ -1,5 +1,8 @@
 package com.neoteach.daoimpl;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -31,6 +34,26 @@ public class AdminDaoImpl {
   System.out.println("from regdaoimpl");
 		return result;
 	}
+	
+	
+	public boolean creadentialAuthenticate(String email, String password) {
+		boolean flag=false;
+			String pwd="";
+		List<Map<String, Object>> resultList=jdbcTemplate.queryForList("select pwd from admin where email='"+email+"'");
+			if (!resultList.isEmpty()) {
+				System.out.println("from admin dao impl");
+	            for (Map<String, Object> resultMap : resultList) 
+	            {
+	           	pwd =resultMap.get("pwd")+"";
+	           	 if(password.equalsIgnoreCase(pwd))
+	           	 {
+	           		flag=true; 
+	           	 }
+	           }
+	   	 }
+			return flag;
+		}
+	
 		//		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
 //		Transaction transaction = session.beginTransaction();
 //		int result=0;

@@ -9,5 +9,4 @@ public class NeoTeachApplication extends SpringBootServletInitializer{
 	public static void main(String[] args) {
 		SpringApplication.run(NeoTeachApplication.class, args);
 	}
-
 }

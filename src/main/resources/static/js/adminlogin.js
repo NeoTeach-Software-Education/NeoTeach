@@ -1,8 +1,9 @@
 $(document).ready(function()
 {
-$('#register').click(function(e)
+$('#adminlogin').click(function(e)
 		{
-		document.userform1.action="/adminlogin";
+	alert("from adminlogin js");
+		document.userform1.action="/adminsignup";
 		document.userform1.method="POST";
 		document.userform1.submit();
 		})

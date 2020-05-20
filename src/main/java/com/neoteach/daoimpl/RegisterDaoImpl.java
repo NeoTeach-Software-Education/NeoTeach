@@ -34,22 +34,7 @@ public class RegisterDaoImpl {
 		return result;
 	}
 
-	public boolean creadentialAuthenticate(String email, String password) {
-	boolean flag=false;
-		String pwd="";
-	List<Map<String, Object>> resultList=jdbcTemplate.queryForList("select pwd from admin where email='"+email+"'");
-		if (!resultList.isEmpty()) {
-            for (Map<String, Object> resultMap : resultList) 
-            {
-           	pwd =resultMap.get("pwd")+"";
-           	 if(password.equalsIgnoreCase(pwd))
-           	 {
-           		flag=true; 
-           	 }
-           }
-   	 }
-		return flag;
-	}
+	
 	
 		//		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
 //		Transaction transaction = session.beginTransaction();

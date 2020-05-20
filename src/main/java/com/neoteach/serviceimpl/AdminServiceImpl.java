@@ -3,6 +3,7 @@ package com.neoteach.serviceimpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.neoteach.daoimpl.AdminDaoImpl;
 import com.neoteach.daoimpl.RegisterDaoImpl;
 import com.neoteach.pojo.RegisterPojo;
 
@@ -13,6 +14,8 @@ public class AdminServiceImpl{
 //	private final String CLASS_NAME=this.getClass().getCanonicalName();
 	@Autowired
 	RegisterDaoImpl registerDaoImpl;
+	@Autowired
+	AdminDaoImpl adminDaoImpl;
 //	@Override
 	public int saveDtls(RegisterPojo registerPojo) throws Exception {
 		final String METHOD_NAME="saveDtls";
@@ -26,7 +29,7 @@ public class AdminServiceImpl{
 		
 		final String METHOD_NAME="creadentialAuthenticate";
 //		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
-		boolean result=registerDaoImpl.creadentialAuthenticate(email,pwd);
+		boolean result=adminDaoImpl.creadentialAuthenticate(email,pwd);
 //		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.EXIT);
 		
 		return result;

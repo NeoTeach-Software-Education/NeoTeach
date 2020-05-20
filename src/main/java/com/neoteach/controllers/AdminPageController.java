@@ -15,12 +15,12 @@ public class AdminPageController {
 	@RequestMapping(value="/admin",method=RequestMethod.GET)
 	public String adminPage()
 	{
-		return "admin";
+		return "adminlogin";
 	}
-	@RequestMapping(value="/adminlogin",method=RequestMethod.GET)
+	@RequestMapping(value="/adminsignup",method=RequestMethod.POST)
 	public String adminLogin(@RequestParam("username") String email,@RequestParam("password") String pwd)
 	{
-		
+		System.out.println("email:"+email);
 		boolean result=adminservice.creadentialAuthenticate(email,pwd);
 		if(result)
 		{
@@ -28,7 +28,7 @@ public class AdminPageController {
 		}
 		else
 		{
-			return "admin";	
+			return "adminlogin";	
 		}
 		
 	}
