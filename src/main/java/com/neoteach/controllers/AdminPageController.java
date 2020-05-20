@@ -22,7 +22,14 @@ public class AdminPageController {
 	{
 		
 		boolean result=adminservice.creadentialAuthenticate(email,pwd);
+		if(result)
+		{
+			return "adminhome";	
+		}
+		else
+		{
+			return "admin";	
+		}
 		
-		return "adminhome";
 	}
 }

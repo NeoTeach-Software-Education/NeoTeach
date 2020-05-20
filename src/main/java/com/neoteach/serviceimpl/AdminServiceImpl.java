@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import com.neoteach.daoimpl.RegisterDaoImpl;
 import com.neoteach.pojo.RegisterPojo;
 
-@Service(value="RegisterServiceImpl")
+@Service(value="AdminServiceImpl")
 public class AdminServiceImpl{
 	
 //	@Autowired

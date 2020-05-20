@@ -1,9 +1,13 @@
 package com.neoteach.daoimpl;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.StringUtils;
 
 import com.neoteach.pojo.RegisterPojo;
 
@@ -29,13 +33,22 @@ public class RegisterDaoImpl {
 		jdbcTemplate.execute("insert into user(firstname,lastname)"+"values('"+registerPojo.getFirstname()+"','"+registerPojo.getLastname()+"')");
 		return result;
 	}
-	
-	
-	public boolean creadentialAuthenticate(String email, String pwd) {
-		// TODO Auto-generated method stub
-		
-//		jdbcTemplate.queryfor
-		return false;
+
+	public boolean creadentialAuthenticate(String email, String password) {
+	boolean flag=false;
+		String pwd="";
+	List<Map<String, Object>> resultList=jdbcTemplate.queryForList("select pwd from admin where email='"+email+"'");
+		if (!resultList.isEmpty()) {
+            for (Map<String, Object> resultMap : resultList) 
+            {
+           	pwd =resultMap.get("pwd")+"";
+           	 if(password.equalsIgnoreCase(pwd))
+           	 {
+           		flag=true; 
+           	 }
+           }
+   	 }
+		return flag;
 	}
 	
 		//		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
