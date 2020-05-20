@@ -12,12 +12,12 @@ public class AdminServiceImpl{
 //	@Autowired
 //	private final String CLASS_NAME=this.getClass().getCanonicalName();
 	@Autowired
-	RegisterDaoImpl rdi;
+	RegisterDaoImpl registerDaoImpl;
 //	@Override
 	public int saveDtls(RegisterPojo registerPojo) throws Exception {
 		final String METHOD_NAME="saveDtls";
 //		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
-		int result=rdi.saveDtls(registerPojo);
+		int result=registerDaoImpl.saveDtls(registerPojo);
 //		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.EXIT);
 		return result;
 	}
@@ -26,7 +26,7 @@ public class AdminServiceImpl{
 		
 		final String METHOD_NAME="creadentialAuthenticate";
 //		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
-		boolean result=rdi.creadentialAuthenticate(email,pwd);
+		boolean result=registerDaoImpl.creadentialAuthenticate(email,pwd);
 //		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.EXIT);
 		
 		return result;
