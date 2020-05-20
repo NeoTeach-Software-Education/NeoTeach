@@ -3,9 +3,9 @@ $(document).ready(function()
 $('#adminlogin').click(function(e)
 		{
 	alert("from adminlogin js");
-		document.userform1.action="/adminsignup";
-		document.userform1.method="POST";
-		document.userform1.submit();
+		document.adminloginform.action="/adminsignup";
+		document.adminloginform.method="POST";
+		document.adminloginform.submit();
 		})
 	});
 	

@@ -43,7 +43,7 @@ width:100%;}
     </head>
 
 	<body>
-
+${adminloginfail}
 <div style="width:100%;height:51px;z-index: 999;float:left;margin-bottom:15px; " class="gradient-ribbon">
 	<div class="d-cont">
 	
@@ -76,7 +76,7 @@ width:100%;}
 			</div>
 					
 			<div style="width: 330px; padding: 15px 20px 20px 20px; margin: 0 auto; border:1px solid #DDDDDD; background-color:#fff;">
-				<form name="loginform3">
+				<form name="adminloginform">
 <%-- 				<input type="hidden" name="type" value="${type}"> --%>
 				<h2>${Error}</h2>
 					<h1 class="commonTitle" style="font-weight: normal; text-align:center; font-weight:300; color:#000080; width:100%; display: block; font-size:22px;">Login to your Account</h1>

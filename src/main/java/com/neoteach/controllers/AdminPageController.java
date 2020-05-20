@@ -2,6 +2,7 @@ package com.neoteach.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,9 +19,8 @@ public class AdminPageController {
 		return "adminlogin";
 	}
 	@RequestMapping(value="/adminsignup",method=RequestMethod.POST)
-	public String adminLogin(@RequestParam("username") String email,@RequestParam("password") String pwd)
+	public String adminLogin(@RequestParam("username") String email,@RequestParam("password") String pwd,Model model)
 	{
-		System.out.println("email:"+email);
 		boolean result=adminservice.creadentialAuthenticate(email,pwd);
 		if(result)
 		{
@@ -28,6 +28,7 @@ public class AdminPageController {
 		}
 		else
 		{
+			model.addAttribute("adminloginfail", "Invalid credentials..."+email);
 			return "adminlogin";	
 		}
 		
