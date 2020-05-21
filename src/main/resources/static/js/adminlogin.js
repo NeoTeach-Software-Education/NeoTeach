@@ -2,7 +2,6 @@ $(document).ready(function()
 {
 $('.login100-form-btn').click(function(e)
 		{
-	alert("from adminlogin js");
 		document.adminloginform.action="/adminsignup";
 		document.adminloginform.method="POST";
 		document.adminloginform.submit();

@@ -47,7 +47,7 @@
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="pass" placeholder="Type your password">
+						<input class="input100" type="password" name="password" placeholder="Type your password">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 					
@@ -102,6 +102,7 @@
 	
 
 	<div id="dropDownSelect1"></div>
+	<script src="js/jquery-1.8.3min.js" type="text/javascript"></script>
 	<script language="JavaScript" src="js/adminlogin.js"></script> 
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
