@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-$('#adminlogin').click(function(e)
+$('.login100-form-btn').click(function(e)
 		{
 	alert("from adminlogin js");
 		document.adminloginform.action="/adminsignup";
