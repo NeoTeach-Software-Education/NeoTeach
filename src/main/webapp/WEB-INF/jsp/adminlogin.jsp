@@ -34,7 +34,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form name="adminloginform" class="login100-form validate-form">
+				<form name="adminloginform" class="login100-form validate-form" action="/adminsignup" method="post">
 					<span class="login100-form-title p-b-49">
 						Admin Login
 					</span>
@@ -103,7 +103,7 @@
 
 	<div id="dropDownSelect1"></div>
 	<script src="js/jquery-1.8.3min.js" type="text/javascript"></script>
-	<script language="JavaScript" src="js/adminlogin.js"></script> 
+<!--	<script language="JavaScript" src="js/adminlogin.js"></script> -->
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->

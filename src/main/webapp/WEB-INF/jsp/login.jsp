@@ -28,7 +28,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
-				<form class="login100-form validate-form" name="userloginform">
+				<form class="login100-form validate-form" name="userloginform" action="/userlogin" method="post">
 					<span class="login100-form-title p-b-55">
 						Login
 					</span>
@@ -94,7 +94,7 @@
 	
 	
 <script src="js/jquery-1.8.3min.js" type="text/javascript"></script>
-	<script language="JavaScript" src="js/userlogin.js"></script> 
+<!--	<script language="JavaScript" src="js/userlogin.js"></script> --
 	
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>

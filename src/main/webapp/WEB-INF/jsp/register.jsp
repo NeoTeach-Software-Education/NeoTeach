@@ -12,7 +12,7 @@
 	
 	<script src="js/jquery-1.8.3min.js" type="text/javascript"></script>
 <!--<script type="text/javascript" src="webjars/jquery/3.2.0/jquery.min.js"></script>  -->
-<script type="text/javascript" src="js/register.js"></script>  
+<!--<script type="text/javascript" src="js/register.js"></script>  -->  
 	
 </head>
 <body class="form-v6">
@@ -21,10 +21,11 @@
 			<div class="form-left">
 				<img src="images/form-v6.jpg" alt="form">
 			</div>
-			<form class="form-detail" name="userform1">
+			<form class="form-detail" name="userform1" action="/register1" method="post">
 				<h2>Register Form</h2>
 				<div class="form-row">
 					<input type="text" name="fullname" id="full-name" class="input-text" placeholder="Full Name" required>
+					<span style="float: left;" id="errorFirstname"></span>
 				</div>
 				<div class="form-row">
 					<input type="text" name="email" id="your-email" class="input-text" placeholder="Email Address" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
