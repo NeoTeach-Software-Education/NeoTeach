@@ -27,10 +27,10 @@ public class AdminDaoImpl {
 	@Autowired  
 	private NamedParameterJdbcTemplate namedJdbcTemplate;  
 	public int saveDtls(RegisterPojo registerPojo) {
-		 System.out.println("from regdaoimpl1===="+registerPojo.getFirstname());
+		 System.out.println("from regdaoimpl1===="+registerPojo.getFullname());
 		int result=0;
 //		final String METHOD_NAME="saveDtls2";
-		jdbcTemplate.execute("insert into user(firstname,lastname)"+"values('"+registerPojo.getFirstname()+"','"+registerPojo.getLastname()+"')");
+		jdbcTemplate.execute("insert into user(firstname,lastname)"+"values('"+registerPojo.getFullname()+"','"+registerPojo.getPassword()+"')");
   System.out.println("from regdaoimpl");
 		return result;
 	}
@@ -41,7 +41,6 @@ public class AdminDaoImpl {
 			String pwd="";
 		List<Map<String, Object>> resultList=jdbcTemplate.queryForList("select pwd from admin where email='"+email+"'");
 			if (!resultList.isEmpty()) {
-				System.out.println("from admin dao impl");
 	            for (Map<String, Object> resultMap : resultList) 
 	            {
 	           	pwd =resultMap.get("pwd")+"";

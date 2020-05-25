@@ -1,3 +1,4 @@
 <div>Welcome to NeoTeach Software Education</div>
 <a href="/register"> Sign Up</a><br>
-<a href="/admin"> Admin Login</a>
+<a href="/admin"> Admin Login</a><br><br>
+<a href="/loginpage"> User Login</a>

@@ -34,13 +34,14 @@ insert  into `admin`(`email`,`pwd`) values ('neo','neo');
 DROP TABLE IF EXISTS `user`;
 
 CREATE TABLE `user` (
-  `firstname` varchar(50) DEFAULT NULL,
-  `lastname` varchar(50) DEFAULT NULL
+  `fullname` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `user` */
 
-insert  into `user`(`firstname`,`lastname`) values ('sri','nivas'),('thouti','srinu'),('123','432');
+insert  into `user`(`fullname`,`email`,`password`) values ('Srinivas','srinivas.brahmoji@gmail.com','sss'),('sss','sss','sss');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

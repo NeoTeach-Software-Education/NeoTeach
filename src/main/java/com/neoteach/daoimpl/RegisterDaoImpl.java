@@ -30,7 +30,7 @@ public class RegisterDaoImpl {
 	public int saveDtls(RegisterPojo registerPojo) {
 		int result=0;
 //		final String METHOD_NAME="saveDtls2";
-		jdbcTemplate.execute("insert into user(firstname,lastname)"+"values('"+registerPojo.getFirstname()+"','"+registerPojo.getLastname()+"')");
+		jdbcTemplate.execute("insert into user(fullname,email,password)"+"values('"+registerPojo.getFullname()+"','"+registerPojo.getEmail()+"','"+registerPojo.getPassword()+"')");
 		return result;
 	}
 

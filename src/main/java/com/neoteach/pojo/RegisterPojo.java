@@ -1,89 +1,35 @@
 package com.neoteach.pojo;
 
 public class RegisterPojo {
-	private String firstname;
-	private String lastname;
-	private String gender;
-	private String mobile;
-	private String qualification;
-	private String subject;
-	private String leveltoteach;
-	private String location;
-	private String description;
-	private String repasswd;
-	private String username;
-	private String oldPasswd;
-	public String getFirstname() {
-		return firstname;
+	private String fullname;
+	private String email;
+	private String password;
+	private String phone;
+	public String getFullname() {
+		return fullname;
 	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFullname(String fullname) {
+		this.fullname = fullname;
 	}
-	public String getLastname() {
-		return lastname;
+	public String getEmail() {
+		return email;
 	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public String getGender() {
-		return gender;
+	public String getPassword() {
+		return password;
 	}
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	public String getMobile() {
-		return mobile;
+	public String getPhone() {
+		return phone;
 	}
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	public String getQualification() {
-		return qualification;
-	}
-	public void setQualification(String qualification) {
-		this.qualification = qualification;
-	}
-	public String getSubject() {
-		return subject;
-	}
-	public void setSubject(String subject) {
-		this.subject = subject;
-	}
-	public String getLeveltoteach() {
-		return leveltoteach;
-	}
-	public void setLeveltoteach(String leveltoteach) {
-		this.leveltoteach = leveltoteach;
-	}
-	public String getLocation() {
-		return location;
-	}
-	public void setLocation(String location) {
-		this.location = location;
-	}
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	public void setRepasswd(String repasswd) {
-		this.repasswd = repasswd;
-	}
-	public String getRepasswd() {
-		return repasswd;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	public String getUsername() {
-		return username;
-	}
-	public void setOldPasswd(String oldPasswd) {
-		this.oldPasswd = oldPasswd;
-	}
-	public String getOldPasswd() {
-		return oldPasswd;
-	}
+	
+	
 
 }

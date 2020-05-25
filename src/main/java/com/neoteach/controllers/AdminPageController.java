@@ -21,7 +21,7 @@ import com.neoteach.serviceimpl.AdminServiceImpl;
 public class AdminPageController {
 	@Autowired
 	AdminServiceImpl adminservice;
-	String UPLOADED_FOLDER="C://Users//srinivas//git//NeoTeach//src//main//resources//static//videos//";
+	String UPLOADED_FOLDER="C://Users//Sri//git//NeoTeach//src//main//resources//static//videos//";
 	@RequestMapping(value="/admin",method=RequestMethod.GET)
 	public String adminPage()
 	{
