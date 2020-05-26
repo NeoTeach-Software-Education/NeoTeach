@@ -63,7 +63,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-4">
-							<p>NeoTeach is for online learning...</p>
+							<p>NeoTeach is for online learning...9700053393</p>
 						</div>
 						<div class="col-xs-6 col-md-push-2 text-right">
 							<p class="btn-apply"><a href="/admin">Admin Login</a> <a href="/loginpage">Login</a> <a href="/register">Sign Up</a></p>
@@ -973,14 +973,7 @@
 			<div class="copy">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-12 text-center">
-							<p>
-								<small class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small><br> 
-								<small class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a>, <a href="http://pexels.com/" target="_blank">Pexels</a></small>
-							</p>
-						</div>
+<!--//////////// content removed /////////////////////////////////// -->
 					</div>
 				</div>
 			</div>
