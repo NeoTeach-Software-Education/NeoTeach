@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.neoteach.daoimpl.AdminDaoImpl;
 import com.neoteach.daoimpl.RegisterDaoImpl;
+import com.neoteach.pojo.ImageModel;
 import com.neoteach.pojo.RegisterPojo;
 
 @Service(value="AdminServiceImpl")
@@ -32,6 +33,14 @@ public class AdminServiceImpl{
 		boolean result=adminDaoImpl.creadentialAuthenticate(email,pwd);
 //		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.EXIT);
 		
+		return result;
+	}
+	public int saveImageOrVideo(byte[] bytes, String orginalName,String ContentType) {
+		int result=adminDaoImpl.saveImageOrVideo(bytes,orginalName,ContentType);
+		return result;
+	}
+	public byte[] getTutorialVideos() {
+		byte[] result=adminDaoImpl.getTutorialVideos();
 		return result;
 	}
 	

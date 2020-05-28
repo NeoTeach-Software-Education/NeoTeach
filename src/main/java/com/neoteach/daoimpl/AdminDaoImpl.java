@@ -8,7 +8,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.neoteach.pojo.ImageModel;
 import com.neoteach.pojo.RegisterPojo;
+import com.neoteach.util.NeoTeachUtill;
 
 	
 @Repository
@@ -24,8 +26,10 @@ public class AdminDaoImpl {
 //	}
 	@Autowired  
 	JdbcTemplate jdbcTemplate;  
-	@Autowired  
-	private NamedParameterJdbcTemplate namedJdbcTemplate;  
+
+	@Autowired
+	NeoTeachUtill neoTeachUtill;
+	
 	public int saveDtls(RegisterPojo registerPojo) {
 		 System.out.println("from regdaoimpl1===="+registerPojo.getFullname());
 		int result=0;
@@ -52,6 +56,33 @@ public class AdminDaoImpl {
 	   	 }
 			return flag;
 		}
+
+	public int saveImageOrVideo(byte[] bytes, String orginalName,String ContentType) {
+		int result = 0;
+		// final String METHOD_NAME="saveDtls2";
+		jdbcTemplate.execute("insert into AdminTutorailvideos(VideoOrImage,Name,ContentType)" + "values('" + bytes + "','"
+				+ orginalName + "','" + ContentType + "')");
+		return result;
+	}
+	public byte[] getTutorialVideos() {
+		List<Map<String, Object>> resultList=jdbcTemplate.queryForList("select VideoOrImage,Name,ContentType from AdminTutorailvideos ");
+		ImageModel img=null;
+		byte[] videobytes = null;
+		String name="";
+		String contentType="";
+		if (!resultList.isEmpty()) {
+            for (Map<String, Object> resultMap : resultList) 
+            {
+            	videobytes =(byte[]) resultMap.get("VideoOrImage");
+            	name=resultMap.get("Name")+"";
+            	contentType=resultMap.get("ContentType")+"";
+            	
+            	 // img = new ImageModel(name, contentType,NeoTeachUtill.decompressBytes(videobytes));
+           }
+            System.out.println("retrive img ==="+videobytes);
+   	 }
+		return videobytes;
+	}
 	
 		//		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
 //		Transaction transaction = session.beginTransaction();

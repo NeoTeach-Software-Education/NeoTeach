@@ -9,7 +9,13 @@
 <script type="text/javascript" src="js/adminhome.js"></script>
 </head>
 <body>
-under construction
+
+<table>
+  <tr>
+    <td width="710" bgcolor="#CCCC33" align="center" ><span class="style4">Video Player Version 1.0</span>      <strong>
+      <embed src="${img }" type="application/x-mplayer2" pluginspage="http://www.microsoft.com/Windows/MediaPlayer/" name="mediaplayer1" ShowStatusBar="true" EnableContextMenu="false" width="700" height="500" autostart="false" loop="false" align="middle" volume="60" ></embed>
+    </strong></td>
+  </tr></table>
 <form  enctype="multipart/form-data"  name="uploadform">
 			<table>
 				<tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
