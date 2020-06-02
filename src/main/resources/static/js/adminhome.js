@@ -3,9 +3,10 @@ $(document).ready(function()
 $('#uploadvideo').click(function(e)
 		{
 	alert("from adminhome js");
-		document.uploadform.action="/upload";
+		document.uploadform.action="/uploadMultipleFiles";
 		document.uploadform.method="POST";
 		document.uploadform.submit();
+		
 		})
 	});
 	

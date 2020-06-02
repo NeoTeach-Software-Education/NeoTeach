@@ -1,16 +1,24 @@
 package com.neoteach.serviceimpl;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.neoteach.daoimpl.AdminDaoImpl;
 import com.neoteach.daoimpl.RegisterDaoImpl;
-import com.neoteach.pojo.ImageModel;
+import com.neoteach.exception.FileStorageException;
+//import com.neoteach.pojo.ImageModel;
 import com.neoteach.pojo.RegisterPojo;
+import com.neoteach.pojo.VideoFile;
+import com.neoteach.repositories.DBFileRepository;
 
 @Service(value="AdminServiceImpl")
 public class AdminServiceImpl{
-	
+	 @Autowired
+	    private DBFileRepository dbFileRepository;
 //	@Autowired
 //	private final String CLASS_NAME=this.getClass().getCanonicalName();
 	@Autowired
@@ -35,13 +43,34 @@ public class AdminServiceImpl{
 		
 		return result;
 	}
-	public int saveImageOrVideo(byte[] bytes, String orginalName,String ContentType) {
-		int result=adminDaoImpl.saveImageOrVideo(bytes,orginalName,ContentType);
-		return result;
-	}
-	public byte[] getTutorialVideos() {
-		byte[] result=adminDaoImpl.getTutorialVideos();
-		return result;
+//	public int saveImageOrVideo(byte[] bytes, String orginalName,String ContentType) {
+//		int result=adminDaoImpl.saveImageOrVideo(bytes,orginalName,ContentType);
+//		return result;
+//	}
+//	public byte[] getTutorialVideos() {
+//		byte[] result=adminDaoImpl.getTutorialVideos();
+//		return result;
+//	}
+	public VideoFile storeFile(MultipartFile file) {
+		
+
+        // Normalize file name
+        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+
+        try {
+            // Check if the file's name contains invalid characters
+            if(fileName.contains("..")) {
+                throw new FileStorageException("Sorry! Filename contains invalid path sequence " + fileName);
+            }
+
+            VideoFile dbFile = new VideoFile(fileName, file.getContentType(), file.getBytes());
+
+            return dbFileRepository.save(dbFile);
+        } catch (IOException ex) {
+            throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
+        }
+    
+		
 	}
 	
 

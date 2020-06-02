@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.neoteach.pojo.ImageModel;
+//import com.neoteach.pojo.ImageModel;
 import com.neoteach.pojo.RegisterPojo;
 import com.neoteach.util.NeoTeachUtill;
 
@@ -66,7 +66,7 @@ public class AdminDaoImpl {
 	}
 	public byte[] getTutorialVideos() {
 		List<Map<String, Object>> resultList=jdbcTemplate.queryForList("select VideoOrImage,Name,ContentType from AdminTutorailvideos ");
-		ImageModel img=null;
+//		ImageModel img=null;
 		byte[] videobytes = null;
 		String name="";
 		String contentType="";

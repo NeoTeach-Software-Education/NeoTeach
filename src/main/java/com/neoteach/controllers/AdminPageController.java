@@ -1,9 +1,9 @@
 package com.neoteach.controllers;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,8 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.neoteach.pojo.ImageModel;
+import com.neoteach.pojo.UploadFileResponse;
+import com.neoteach.pojo.VideoFile;
+//import com.neoteach.pojo.ImageModel;
 import com.neoteach.serviceimpl.AdminServiceImpl;
 import com.neoteach.util.NeoTeachUtill;
 
@@ -27,7 +30,7 @@ public class AdminPageController {
 	@Autowired
 	NeoTeachUtill neoTeachUtill;
 	
-	String UPLOADED_FOLDER="C://Users//Sri//git//NeoTeach//src//main//resources//static//videos//";
+//	String UPLOADED_FOLDER="C://Users//Sri//git//NeoTeach//src//main//resources//static//videos//";
 	@RequestMapping(value="/admin",method=RequestMethod.GET)
 	public String adminPage()
 	{
@@ -37,11 +40,9 @@ public class AdminPageController {
 	public String adminLogin(@RequestParam("username") String email,@RequestParam("password") String pwd,Model model)
 	{
 		boolean result=adminservice.creadentialAuthenticate(email,pwd);
-		byte[] img =adminservice.getTutorialVideos();
 		
 		if(result)
 		{
-			model.addAttribute("img", img);
 			return "adminhome";	
 		}
 		else
@@ -51,47 +52,25 @@ public class AdminPageController {
 		}
 		
 	}
-	@PostMapping("/upload") 
-    public String singleFileUpload(@RequestParam("file") MultipartFile file,
-                                   RedirectAttributes redirectAttributes) {
+	 @PostMapping("/uploadVideos")
+	    public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file) {
+	        VideoFile vFile = adminservice.storeFile(file);
 
-        if (file.isEmpty()) {
-            redirectAttributes.addFlashAttribute("message", "Please select a file to upload");
-            return "redirect:uploadStatus";
-        }
+	        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
+	                .path("/downloadCourseVideos/")
+	                .path(vFile.getId())
+	                .toUriString();
 
-        try {
-/*
-            // Get the file and save it somewhere
-            byte[] bytes = file.getBytes();
-            
-           
-            Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
-            if (!Files.exists(path)) {
-                try {
-                    Files.createDirectories(path);
-                } catch (IOException e) {
-                    //fail to create directory
-                    e.printStackTrace();
-                }
-            }
-            Files.write(path, bytes);
+	        return new UploadFileResponse(vFile.getFileName(), fileDownloadUri,
+	                file.getContentType(), file.getSize());
+	    }
+	
+	 @PostMapping("/uploadMultipleFiles")
+	    public List<UploadFileResponse> uploadMultipleFiles(@RequestParam("videos") MultipartFile[] files) {
+	        return Arrays.asList(files)
+	                .stream()
+	                .map(file -> uploadFile(file))
+	                .collect(Collectors.toList());
+	    }
 
-            redirectAttributes.addFlashAttribute("message",
-                    "You successfully uploaded '" + file.getOriginalFilename() + "'");*/
-            System.out.println("Original Image Byte Size - " + file.getBytes().length);
-            byte[] imageBytes = new byte[(int) file.getSize()];
-            ImageModel imgorvideo = new ImageModel(file.getOriginalFilename(), file.getContentType(),
-            		NeoTeachUtill.compressBytes(file.getBytes()));
-            int result=adminservice.saveImageOrVideo(imageBytes,file.getOriginalFilename(),file.getContentType());
-            if(result >0)
-            {
-            	 return "redirect:/adminhome";	
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return "redirect:/adminhome";
-    }
 }
