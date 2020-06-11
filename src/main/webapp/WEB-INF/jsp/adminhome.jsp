@@ -14,6 +14,12 @@
 <form  enctype="multipart/form-data"  name="uploadform">
 			<table>
 				<tr><td>File to upload:</td><td> <input id="multipleFileUploadInput" type="file" name="videos" class="file-input" multiple required /></td></tr>
+				<tr><td><select id="course" name="coursename">
+  <option value="C">C</option>
+  <option value="Cpp">Cpp</option>
+  <option value="Core Java">Core Java</option>
+  <option value="DS">DS</option>
+</select></td></tr>
 				<tr><td></td><td><input type="submit" value="Upload" id="uploadvideo"/></td></tr>
 			</table>
 		</form> 

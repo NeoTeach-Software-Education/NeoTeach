@@ -1,6 +1,7 @@
 package com.neoteach.serviceimpl;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,7 @@ import com.neoteach.daoimpl.RegisterDaoImpl;
 import com.neoteach.exception.FileStorageException;
 //import com.neoteach.pojo.ImageModel;
 import com.neoteach.pojo.RegisterPojo;
+import com.neoteach.pojo.VedioListPogo;
 import com.neoteach.pojo.VideoFile;
 import com.neoteach.repositories.DBFileRepository;
 
@@ -27,7 +29,7 @@ public class AdminServiceImpl{
 	AdminDaoImpl adminDaoImpl;
 //	@Override
 	public int saveDtls(RegisterPojo registerPojo) throws Exception {
-		final String METHOD_NAME="saveDtls";
+//		final String METHOD_NAME="saveDtls";
 //		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
 		int result=registerDaoImpl.saveDtls(registerPojo);
 //		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.EXIT);
@@ -51,7 +53,7 @@ public class AdminServiceImpl{
 //		byte[] result=adminDaoImpl.getTutorialVideos();
 //		return result;
 //	}
-	public VideoFile storeFile(MultipartFile file) {
+	public VideoFile storeFile(MultipartFile file,String coursename) {
 		
 
         // Normalize file name
@@ -63,7 +65,7 @@ public class AdminServiceImpl{
                 throw new FileStorageException("Sorry! Filename contains invalid path sequence " + fileName);
             }
 
-            VideoFile dbFile = new VideoFile(fileName, file.getContentType(), file.getBytes());
+            VideoFile dbFile = new VideoFile(fileName, file.getContentType(), file.getBytes(),coursename);
 
             return dbFileRepository.save(dbFile);
         } catch (IOException ex) {
@@ -71,6 +73,10 @@ public class AdminServiceImpl{
         }
     
 		
+	}
+	public List<VedioListPogo> getCourseList(String coursetitle) {
+		List<VedioListPogo> courselist=adminDaoImpl.getCourseList(coursetitle);
+		return courselist;
 	}
 	
 

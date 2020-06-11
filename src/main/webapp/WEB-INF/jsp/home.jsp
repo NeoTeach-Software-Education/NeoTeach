@@ -234,7 +234,7 @@
 					<div class="col-md-12 services-wrap">
 						<div class="row">
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="services.html" class="services">
+								<a href="/coursepage?coursetitle=CoreJava" class="services">
 									<span class="icon">
 										<i class="flaticon-desktop"></i>
 									</span>

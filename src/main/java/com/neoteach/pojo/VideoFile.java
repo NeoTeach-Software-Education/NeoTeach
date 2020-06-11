@@ -1,13 +1,25 @@
 package com.neoteach.pojo;
 
-import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.Table;
 
-import javax.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name = "coursevideos")
 public class VideoFile {
-    @Id
+    public String getCoursename() {
+		return coursename;
+	}
+
+	public void setCoursename(String coursename) {
+		this.coursename = coursename;
+	}
+
+	@Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
@@ -15,6 +27,7 @@ public class VideoFile {
     private String fileName;
 
     private String fileType;
+    private String coursename;
 
     @Lob
     private byte[] data;
@@ -23,10 +36,11 @@ public class VideoFile {
 
     }
 
-    public VideoFile(String fileName, String fileType, byte[] data) {
+    public VideoFile(String fileName, String fileType, byte[] data,String coursename) {
         this.fileName = fileName;
         this.fileType = fileType;
         this.data = data;
+        this.coursename=coursename;
     }
 
     public String getId() {
