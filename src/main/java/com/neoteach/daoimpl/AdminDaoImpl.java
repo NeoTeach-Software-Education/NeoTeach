@@ -1,5 +1,6 @@
 package com.neoteach.daoimpl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.neoteach.exception.MyFileNotFoundException;
 import com.neoteach.pojo.RegisterPojo;
 import com.neoteach.pojo.VedioListPogo;
+import com.neoteach.pojo.VideoFile;
 import com.neoteach.repositories.DBFileRepository;
 import com.neoteach.util.NeoTeachUtill;
 
@@ -52,8 +54,19 @@ public class AdminDaoImpl {
 
 
 	public List<VedioListPogo> getCourseList(String coursetitle) {
-        return (List<VedioListPogo>) dbFileRepository.findByCusename(coursetitle);
-//                .orElseThrow(() -> new MyFileNotFoundException("File not found with id " + coursetitle));
+		VedioListPogo vedioListPogo=null;
+		List<VedioListPogo> vedios=new ArrayList<VedioListPogo>();
+		List<Map<String, Object>> resultList=jdbcTemplate.queryForList("select file_name from coursevideos where coursename='"+coursetitle+"'");
+		if (!resultList.isEmpty()) {
+            for (Map<String, Object> resultMap : resultList) 
+            {
+            	vedioListPogo=new VedioListPogo();
+            	vedioListPogo.setFileName(resultMap.get("file_name").toString());
+            	vedios.add(vedioListPogo);
+            	System.out.println(vedios);
+           }
+   	 }
+		return vedios;
     }
 
 	}
