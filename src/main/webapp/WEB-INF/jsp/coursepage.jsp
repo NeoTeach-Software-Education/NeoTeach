@@ -8,11 +8,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
 </head>
 <body>
 
 <c:forEach var="courselist" items="${courselist}">
-<td width='182' align='left'>${courselist}</td>
+<td width='182' align='left'>${courselist.fileName}</td>
 </c:forEach>
 
 
