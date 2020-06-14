@@ -1,15 +1,15 @@
-$(document).ready(function()
-{
-$('#uploadvideo').click(function(e)
-		{
-	alert("from adminhome js");
-		document.uploadform.action="/uploadMultipleFiles";
-		document.uploadform.method="POST";
-		document.uploadform.submit();
-		
-		})
-	});
-	
+//$(document).ready(function()
+//{
+//$('#uploadvideo').click(function(e)
+//		{
+//	alert("from adminhome js");
+//		document.uploadform.action="/uploadMultipleFiles";
+//		document.uploadform.method="POST";
+//		document.uploadform.submit();
+//		
+//		})
+//	});
+//	
 //});
 //	################################
 

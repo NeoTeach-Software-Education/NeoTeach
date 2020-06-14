@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.mysql.cj.jdbc.Blob;
 import com.neoteach.exception.MyFileNotFoundException;
 import com.neoteach.pojo.RegisterPojo;
 import com.neoteach.pojo.VedioListPogo;
@@ -53,20 +54,20 @@ public class AdminDaoImpl {
 		}
 
 
-	public List<VedioListPogo> getCourseList(String coursetitle) {
-		VedioListPogo vedioListPogo=null;
-		List<VedioListPogo> vedios=new ArrayList<VedioListPogo>();
-		List<Map<String, Object>> resultList=jdbcTemplate.queryForList("select file_name from coursevideos where coursename='"+coursetitle+"'");
-		if (!resultList.isEmpty()) {
-            for (Map<String, Object> resultMap : resultList) 
-            {
-            	vedioListPogo=new VedioListPogo();
-            	vedioListPogo.setFileName(resultMap.get("file_name").toString());
-            	vedios.add(vedioListPogo);
-            	System.out.println(vedios);
-           }
-   	 }
-		return vedios;
-    }
+//	public List<VedioListPogo> getCourseList(String coursetitle) {
+//		VedioListPogo vedioListPogo=null;
+//		List<VedioListPogo> vedios=new ArrayList<VedioListPogo>();
+//		List<Map<String, Object>> resultList=jdbcTemplate.queryForList("select data from coursevideos where coursename='"+coursetitle+"'");
+//		if (!resultList.isEmpty()) {
+//            for (Map<String, Object> resultMap : resultList) 
+//            {
+//            	vedioListPogo=new VedioListPogo();
+//            	vedioListPogo.setData(resultMap.get("data"));
+//            	vedios.add(vedioListPogo);
+//            	System.out.println(vedios);
+//           }
+//   	 }
+//		return vedios;
+//    }
 
 	}

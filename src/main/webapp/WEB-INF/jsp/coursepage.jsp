@@ -11,11 +11,13 @@
 
 </head>
 <body>
+${courselist.getData()}
 
-<c:forEach var="courselist" items="${courselist}">
-<td width='182' align='left'>${courselist.fileName}</td>
-</c:forEach>
+<video id="addVideo" controls autoplay>
+    <source src="${courselist.getData()}" />
+</video>
 
 
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 </body>
 </html>

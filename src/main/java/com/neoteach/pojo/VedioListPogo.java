@@ -1,9 +1,12 @@
 package com.neoteach.pojo;
 
+import com.mysql.cj.jdbc.Blob;
+
 public class VedioListPogo {
 	 private String fileName;
 	 private String coursename;
 	 private String id;
+	 private Blob data;
 	public String getFileName() {
 		return fileName;
 	}
@@ -21,6 +24,12 @@ public class VedioListPogo {
 	}
 	public void setId(String id) {
 		this.id = id;
+	}
+	public Blob getData() {
+		return data;
+	}
+	public void setData(Object object) {
+		this.data = (Blob) object;
 	}
 
 }

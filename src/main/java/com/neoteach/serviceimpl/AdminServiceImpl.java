@@ -53,32 +53,32 @@ public class AdminServiceImpl{
 //		byte[] result=adminDaoImpl.getTutorialVideos();
 //		return result;
 //	}
-	public VideoFile storeFile(MultipartFile file,String coursename) {
-		
-
-        // Normalize file name
-        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-
-        try {
-            // Check if the file's name contains invalid characters
-            if(fileName.contains("..")) {
-                throw new FileStorageException("Sorry! Filename contains invalid path sequence " + fileName);
-            }
-
-            VideoFile dbFile = new VideoFile(fileName, file.getContentType(), file.getBytes(),coursename);
-
-            return dbFileRepository.save(dbFile);
-        } catch (IOException ex) {
-            throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
-        }
-    
-		
-	}
-	public List<VedioListPogo> getCourseList(String coursetitle) {
-		List<VedioListPogo> courselist=adminDaoImpl.getCourseList(coursetitle);
-		return courselist;
-	}
-	
+//	public VideoFile storeFile(MultipartFile file,String coursename) {
+//		
+//
+//        // Normalize file name
+//        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+//
+//        try {
+//            // Check if the file's name contains invalid characters
+//            if(fileName.contains("..")) {
+//                throw new FileStorageException("Sorry! Filename contains invalid path sequence " + fileName);
+//            }
+//
+//            VideoFile dbFile = new VideoFile(fileName, file.getContentType(), file.getBytes(),coursename);
+//
+//            return dbFileRepository.save(dbFile);
+//        } catch (IOException ex) {
+//            throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
+//        }
+//    
+//		
+//	}
+//	public List<VedioListPogo> getCourseList(String coursetitle) {
+//		List<VedioListPogo> courselist=adminDaoImpl.getCourseList(coursetitle);
+//		return courselist;
+//	}
+//	
 
 //	@Override
 //	public String chkPhoneNo(String phone) throws Exception {

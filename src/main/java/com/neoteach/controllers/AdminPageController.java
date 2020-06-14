@@ -18,7 +18,6 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.neoteach.pojo.UploadFileResponse;
 import com.neoteach.pojo.VedioListPogo;
 import com.neoteach.pojo.VideoFile;
 //import com.neoteach.pojo.ImageModel;
@@ -55,35 +54,35 @@ public class AdminPageController {
 		}
 		
 	}
-	 @PostMapping("/uploadVideos")
-	    public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file,@RequestParam("coursename") String coursename) {
-	        VideoFile vFile = adminservice.storeFile(file,coursename);
-
-	        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
-	                .path("/downloadCourseVideos/")
-	                .path(vFile.getId())
-	                .toUriString();
-
-	        return new UploadFileResponse(vFile.getFileName(), fileDownloadUri,
-	                file.getContentType(), file.getSize());
-	    }
-	
-	 @PostMapping("/uploadMultipleFiles")
-	    public List<UploadFileResponse> uploadMultipleFiles(@RequestParam("videos") MultipartFile[] files,@RequestParam("coursename") String coursename) {
-	        return Arrays.asList(files)
-	                .stream()
-	                .map(file -> uploadFile(file,coursename))
-	                .collect(Collectors.toList());
-	    }
-
-	  @GetMapping("/coursepage")
-	  public String coursePage(@RequestParam("coursetitle") String coursetitle,Model cousemodel)
-	  {
-		  List<VedioListPogo> courselist=adminservice.getCourseList(coursetitle);
-		  cousemodel.addAttribute("courselist",courselist);
-		  System.out.println(courselist);
-		  return "coursepage";
-	  }
+//	 @PostMapping("/uploadVideos")
+//	    public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file,@RequestParam("coursename") String coursename) {
+//	        VideoFile vFile = adminservice.storeFile(file,coursename);
+//
+//	        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
+//	                .path("/downloadCourseVideos/")
+//	                .path(vFile.getId())
+//	                .toUriString();
+//
+//	        return new UploadFileResponse(vFile.getFileName(), fileDownloadUri,
+//	                file.getContentType(), file.getSize());
+//	    }
+//	
+//	 @PostMapping("/uploadMultipleFiles")
+//	    public List<UploadFileResponse> uploadMultipleFiles(@RequestParam("videos") MultipartFile[] files,@RequestParam("coursename") String coursename) {
+//	        return Arrays.asList(files)
+//	                .stream()
+//	                .map(file -> uploadFile(file,coursename))
+//	                .collect(Collectors.toList());
+//	    }
+//
+//	  @GetMapping("/coursepage")
+//	  public String coursePage(@RequestParam("coursetitle") String coursetitle,Model cousemodel)
+//	  {
+//		  List<VedioListPogo> courselist=adminservice.getCourseList(coursetitle);
+//		  cousemodel.addAttribute("courselist",courselist);
+//		  System.out.println(courselist);
+//		  return "coursepage";
+//	  }
 	  
 	  
 }
