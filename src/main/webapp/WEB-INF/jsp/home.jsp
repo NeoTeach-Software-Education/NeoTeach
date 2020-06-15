@@ -75,27 +75,27 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-2">
-							<div id="colorlib-logo"><a href="index.html">NeoTeach</a></div>
+							<div id="colorlib-logo"><a href="/">NeoTeach</a></div>
 						</div>
 						<div class="col-md-10 text-right menu-1">
 							<ul>
-								<li class="active"><a href="index.html">Home</a></li>
+								<li class="active"><a href="/">Home</a></li>
 								<li class="has-dropdown">
 									<a href="courses.html">Courses</a>
 									<ul class="dropdown">
-										<li><a href="courses-single.html">Courses Single</a></li>
-										<li><a href="#">Mobile Apps</a></li>
-										<li><a href="#">Website</a></li>
-										<li><a href="#">Web Design</a></li>
-										<li><a href="#">WordPress</a></li>
+										<li><a href="courses-single.html">C-Language</a></li>
+										<li><a href="#">DS</a></li>
+										<li><a href="#">Cpp</a></li>
+										<li><a href="#">Core Java</a></li>
+										<li><a href="#">Adv Java</a></li>
 									</ul>
 								</li>
 								<li><a href="teachers.html">Teachers</a></li>
 								<li><a href="about.html">About</a></li>
-								<li><a href="event.html">Events</a></li>
-								<li><a href="news.html">News</a></li>
+<!-- 								<li><a href="event.html">Events</a></li> -->
+<!-- 								<li><a href="news.html">News</a></li> -->
 								<li><a href="contact.html">Contact</a></li>
-								<li class="btn-cta"><a href="#"><span>Get started</span></a></li>
+								<li class="btn-cta"><a href="#"><span>Class Room Training</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -129,7 +129,7 @@
 				   				<div class="slider-text-inner">
 				   					<div class="desc">
 				   						<h2>You only have to know one thing</h2>
-					   					<h1>Online Free Course</h1>
+					   					<h1>Online Classes</h1>
 					   					<p><a href="https://www.youtube.com/channel/UCCQxC1ZDLsPxoKz_2L8OfGQ/?guided_help_flow=5" class="btn btn-primary btn-lg popup-vimeo"><span class="icon"><i class="icon-play3"></i></span> Start Learning Now!</a></p>
 					   				</div>
 				   				</div>
@@ -173,60 +173,60 @@
 		  	</div>
 		</aside>
 
-		<div class="colorlib-search">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 search-wrap">
-						<div class="search-wrap-2">
-							<form method="post" class="colorlib-form">
-			              	<div class="row">
-			                <div class="col-md-3">
-			                  <div class="form-group">
-			                    <!-- <label for="search">Search Course</label> -->
-			                    <div class="form-field">
-			                      <input type="text" id="search" class="form-control" placeholder="Keyword search">
-			                    </div>
-			                  </div>
-			                </div>
-			                <div class="col-md-3">
-			                  <div class="form-group">
-			                    <!-- <label for="course">Category Course</label> -->
-			                    <div class="form-field">
-			                      <i class="icon icon-arrow-down3"></i>
-			                      <select name="people" id="people" class="form-control">
-			                        <option value="#">WordPress</option>
-			                        <option value="#">HTML/CSS</option>
-			                        <option value="#">PHP</option>
-			                        <option value="#">JavaScript</option>
-			                        <option value="#">Python</option>
-			                      </select>
-			                    </div>
-			                  </div>
-			                </div>
-			                <div class="col-md-3">
-			                  <div class="form-group">
-			                    <!-- <label for="difficulty">Difficulty</label> -->
-			                    <div class="form-field">
-			                      <i class="icon icon-arrow-down3"></i>
-			                      <select name="people" id="people" class="form-control">
-			                        <option value="#">Difficulty</option>
-			                        <option value="#">Beginner</option>
-			                        <option value="#">Intermediate</option>
-			                        <option value="#">Advance</option>
-			                      </select>
-			                    </div>
-			                  </div>
-			                </div>
-			                <div class="col-md-3">
-			                  <input type="submit" name="submit" id="submit" value="Search course" class="btn btn-primary btn-block">
-			                </div>
-			              </div>
-			            </form>
-		            </div>
-					</div>
-				</div>
-			</div>
-		</div>
+<!-- 		<div class="colorlib-search"> -->
+<!-- 			<div class="container"> -->
+<!-- 				<div class="row"> -->
+<!-- 					<div class="col-md-12 search-wrap"> -->
+<!-- 						<div class="search-wrap-2"> -->
+<!-- 							<form method="post" class="colorlib-form"> -->
+<!-- 			              	<div class="row"> -->
+<!-- 			                <div class="col-md-3"> -->
+<!-- 			                  <div class="form-group"> -->
+<!-- 			                    <label for="search">Search Course</label> -->
+<!-- 			                    <div class="form-field"> -->
+<!-- 			                      <input type="text" id="search" class="form-control" placeholder="Keyword search"> -->
+<!-- 			                    </div> -->
+<!-- 			                  </div> -->
+<!-- 			                </div> -->
+<!-- 			                <div class="col-md-3"> -->
+<!-- 			                  <div class="form-group"> -->
+<!-- 			                    <label for="course">Category Course</label> -->
+<!-- 			                    <div class="form-field"> -->
+<!-- 			                      <i class="icon icon-arrow-down3"></i> -->
+<!-- 			                      <select name="people" id="people" class="form-control"> -->
+<!-- 			                        <option value="#">WordPress</option> -->
+<!-- 			                        <option value="#">HTML/CSS</option> -->
+<!-- 			                        <option value="#">PHP</option> -->
+<!-- 			                        <option value="#">JavaScript</option> -->
+<!-- 			                        <option value="#">Python</option> -->
+<!-- 			                      </select> -->
+<!-- 			                    </div> -->
+<!-- 			                  </div> -->
+<!-- 			                </div> -->
+<!-- 			                <div class="col-md-3"> -->
+<!-- 			                  <div class="form-group"> -->
+<!-- 			                    <label for="difficulty">Difficulty</label> -->
+<!-- 			                    <div class="form-field"> -->
+<!-- 			                      <i class="icon icon-arrow-down3"></i> -->
+<!-- 			                      <select name="people" id="people" class="form-control"> -->
+<!-- 			                        <option value="#">Difficulty</option> -->
+<!-- 			                        <option value="#">Beginner</option> -->
+<!-- 			                        <option value="#">Intermediate</option> -->
+<!-- 			                        <option value="#">Advance</option> -->
+<!-- 			                      </select> -->
+<!-- 			                    </div> -->
+<!-- 			                  </div> -->
+<!-- 			                </div> -->
+<!-- 			                <div class="col-md-3"> -->
+<!-- 			                  <input type="submit" name="submit" id="submit" value="Search course" class="btn btn-primary btn-block"> -->
+<!-- 			                </div> -->
+<!-- 			              </div> -->
+<!-- 			            </form> -->
+<!-- 		            </div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 		
 		<div id="colorlib-services">
 			<div class="container">
@@ -239,57 +239,57 @@
 										<i class="flaticon-desktop"></i>
 									</span>
 									<div class="desc">
-										<h3>Web <br>Development</h3>
+										<h3>Core Java <br>Training</h3>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="services.html" class="services">
+								<a href="/coursepage?coursetitle=C" class="services">
 									<span class="icon">
 										<i class="flaticon-smartphone"></i>
 									</span>
 									<div class="desc">
-										<h3>Mobile <br>Development</h3>
+										<h3>C-Language <br>Training</h3>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="services.html" class="services">
+								<a href="/coursepage?coursetitle=Cpp" class="services">
 									<span class="icon">
 										<i class="flaticon-laboratory"></i>
 									</span>
 									<div class="desc">
-										<h3>Science <br>Data</h3>
+										<h3>Cpp <br>Training</h3>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="services.html" class="services">
+								<a href="/coursepage?coursetitle=DS" class="services">
 									<span class="icon">
 										<i class="flaticon-computer-graphic"></i>
 									</span>
 									<div class="desc">
-										<h3>Graphic <br>Design</h3>
+										<h3>DS <br>Training</h3>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="services.html" class="services">
+								<a href="/coursepage?coursetitle=Python" class="services">
 									<span class="icon">
 										<i class="flaticon-video-player"></i>
 									</span>
 									<div class="desc">
-										<h3>Media <br>Courses</h3>
+										<h3>Python <br>Training</h3>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="services.html" class="services">
+								<a href="/coursepage?coursetitle=Python" class="services">
 									<span class="icon">
 										<i class="flaticon-layers"></i>
 									</span>
 									<div class="desc">
-										<h3>User <br>Interface</h3>
+										<h3>Adv Java <br>Training</h3>
 									</div>
 								</a>
 							</div>

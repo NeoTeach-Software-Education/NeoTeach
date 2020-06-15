@@ -26,10 +26,10 @@
                         <label for="courselist">Choose a course:</label>
 
 						<select name="coursename" id="course">
-  							<option value="c">C</option>
-  							<option value="cpp">Cpp</option>
- 				 			<option value="corejava">Core Java</option>
-  							<option value="ds">DS</option>
+  							<option value="1">C</option>
+  							<option value="2">Cpp</option>
+ 				 			<option value="3">Core Java</option>
+  							<option value="4">DS</option>
 						</select>
                         </div>
                         <button type="submit" class="primary submit-btn">Submit</button>

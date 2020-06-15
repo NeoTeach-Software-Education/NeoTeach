@@ -17,7 +17,5 @@ ${courselist.getData()}
     <source src="${courselist.getData()}" />
 </video>
 
-
-hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 </body>
 </html>

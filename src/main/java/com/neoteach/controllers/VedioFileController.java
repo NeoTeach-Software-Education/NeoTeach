@@ -9,6 +9,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -22,7 +23,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RestController
+@Controller
 public class VedioFileController {
 
     private static final Logger logger = LoggerFactory.getLogger(VedioFileController.class);
@@ -62,11 +63,11 @@ public class VedioFileController {
                 .body(new ByteArrayResource(videoFile.getData()));
     }
     @GetMapping("/coursepage")
-	  public String coursePage(@RequestParam("coursetitle") String coursetitle,Model cousemodel)
+	  public String coursePage(@RequestParam("coursetitle") String coursetitle,Model coursemodel)
 	  {
     	VideoFile courselist = dbFileStorageService.getCourseList(coursetitle);
-		  cousemodel.addAttribute("courselist", courselist);
-		  System.out.println(courselist.getData());
-		  return "coursepage";
+    	coursemodel.addAttribute("courselist", courselist);
+		  System.out.println(courselist.getFileType());
+		  return "coursevideos";
 	  }
 }
