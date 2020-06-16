@@ -11,10 +11,9 @@
 
 </head>
 <body>
-${courselist.getData()}
 
 <video id="addVideo" controls autoplay>
-    <source src="${courselist.getData()}" />
+   <embed src="${courselist.getId()}" type="application/x-mplayer2" pluginspage="http://www.microsoft.com/Windows/MediaPlayer/" name="mediaplayer1" ShowStatusBar="true" EnableContextMenu="false" width="700" height="500" autostart="false" loop="false" align="middle" volume=60 ></embed>;
 </video>
 
 </body>
