@@ -62,7 +62,7 @@ public class AdminDaoImpl {
 //            for (Map<String, Object> resultMap : resultList) 
 //            {
 //            	vedioListPogo=new VedioListPogo();
-//            	vedioListPogo.setData(resultMap.get("data"));
+//            	vedioListPogo.setData((byte[]) resultMap.get("data"));
 //            	vedios.add(vedioListPogo);
 //            	System.out.println(vedios);
 //           }

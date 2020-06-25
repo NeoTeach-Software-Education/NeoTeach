@@ -79,9 +79,13 @@ public class AdminPageController {
 //	  public String coursePage(@RequestParam("coursetitle") String coursetitle,Model cousemodel)
 //	  {
 //		  List<VedioListPogo> courselist=adminservice.getCourseList(coursetitle);
-//		  cousemodel.addAttribute("courselist",courselist);
+//		  for (VedioListPogo vedioListPogo : courselist) 
+//		  {
+//			 cousemodel.addAttribute("courselist",vedioListPogo.getData());
+//		  }
+//		 
 //		  System.out.println(courselist);
-//		  return "coursepage";
+//		  return "coursevideos";
 //	  }
 	  
 	  

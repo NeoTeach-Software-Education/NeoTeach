@@ -16,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.neoteach.payload.UploadFileResponse;
+import com.neoteach.pojo.VedioListPogo;
 import com.neoteach.pojo.VideoFile;
 import com.neoteach.serviceimpl.DBFileStorageService;
 
@@ -52,22 +53,26 @@ public class VedioFileController {
                 .collect(Collectors.toList());
     }
 
-    @GetMapping("/downloadFile/{fileId}")
-    public ResponseEntity<Resource> downloadFile(@PathVariable String fileId) {
-        // Load file from database
-    	VideoFile videoFile = dbFileStorageService.getFile(fileId);
-
-        return ResponseEntity.ok()
-                .contentType(MediaType.parseMediaType(videoFile.getFileType()))
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + videoFile.getFileName() + "\"")
-                .body(new ByteArrayResource(videoFile.getData()));
-    }
+//    @GetMapping("/downloadFile/{fileId}")
+//    public ResponseEntity<Resource> downloadFile(@PathVariable String fileId) {
+//        // Load file from database
+//    	VideoFile videoFile = dbFileStorageService.getFile(fileId);
+//
+//        return ResponseEntity.ok()
+//                .contentType(MediaType.parseMediaType(videoFile.getFileType()))
+//                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + videoFile.getFileName() + "\"")
+//                .body(new ByteArrayResource(videoFile.getData()));
+//    }
     @GetMapping("/coursepage")
-	  public String coursePage(@RequestParam("coursetitle") String coursetitle,Model coursemodel)
+	  public String coursePage(@RequestParam("coursetitle") String fileId,Model coursemodel)
 	  {
-    	VideoFile courselist = dbFileStorageService.getCourseList(coursetitle);
-    	coursemodel.addAttribute("courselist", courselist);
-		  System.out.println(courselist.getFileType());
+    	VideoFile videoFile = dbFileStorageService.getFile(fileId);
+    	VedioListPogo vedioListPogo=new VedioListPogo();
+    	vedioListPogo.setData(videoFile.getData());
+    	
+    	coursemodel.addAttribute("fileType",videoFile.getFileType());
+    	coursemodel.addAttribute("fileName",videoFile.getFileName());
+    	coursemodel.addAttribute("video",vedioListPogo.getData());
 		  return "coursevideos";
 	  }
 }
