@@ -1,6 +1,8 @@
 package com.neoteach.controllers;
 
 
+import org.apache.tomcat.util.codec.binary.Base64;
+import org.apache.tomcat.util.codec.binary.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,9 +72,20 @@ public class VedioFileController {
     	VedioListPogo vedioListPogo=new VedioListPogo();
     	vedioListPogo.setData(videoFile.getData());
     	
-    	coursemodel.addAttribute("fileType",videoFile.getFileType());
-    	coursemodel.addAttribute("fileName",videoFile.getFileName());
-    	coursemodel.addAttribute("video",vedioListPogo.getData());
+//    	coursemodel.addAttribute("fileType",videoFile.getFileType());
+//    	coursemodel.addAttribute("fileName",videoFile.getFileName());
+//    	coursemodel.addAttribute("video",vedioListPogo.getData());
+    	
+    	
+    	
+        byte[]  v_byte = vedioListPogo.getData();
+        	    StringBuilder sb = new StringBuilder();
+        	sb.append("data:video/mp4;base64,");
+        	sb.append(StringUtils.newStringUtf8(Base64.encodeBase64(v_byte, false)));
+        	String videoUrl = sb.toString();
+        	coursemodel.addAttribute("videoUrl",videoUrl);
+
+
 		  return "coursevideos";
 	  }
 }
