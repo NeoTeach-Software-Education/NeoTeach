@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +23,7 @@ import com.neoteach.pojo.VedioListPogo;
 import com.neoteach.pojo.VideoFile;
 import com.neoteach.serviceimpl.DBFileStorageService;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -66,26 +68,43 @@ public class VedioFileController {
 //                .body(new ByteArrayResource(videoFile.getData()));
 //    }
     @GetMapping("/coursepage")
-	  public String coursePage(@RequestParam("coursetitle") String fileId,Model coursemodel)
+	  public String coursePage(@Param("coursetitle") String coursetitle,Model coursemodel)
 	  {
-    	VideoFile videoFile = dbFileStorageService.getFile(fileId);
-    	VedioListPogo vedioListPogo=new VedioListPogo();
-    	vedioListPogo.setData(videoFile.getData());
+    	List<VideoFile> videoFile = dbFileStorageService.getCourseList(coursetitle);
+    	byte[]  v_byte=null;
+    	List<String> videos=null;
+    	StringBuilder sb=null;
+    	String videoUrl=null;
+    	System.out.println("sss"+videoFile.size());
+    	for (VideoFile videolist : videoFile) {
+			System.out.println(videolist);
+			  v_byte = videolist.getData();
+			  	sb = new StringBuilder();
+	        	sb.append("data:video/mp4;base64,");
+	        	sb.append(StringUtils.newStringUtf8(Base64.encodeBase64(v_byte, false)));
+	        	videoUrl = sb.toString();
+	        	videos=new ArrayList<String>();
+	        	videos.add(videoUrl);
+	        	
+	        	
+		}
     	
-//    	coursemodel.addAttribute("fileType",videoFile.getFileType());
+    	coursemodel.addAttribute("videos",videos);
+    	System.out.println("vdd"+videos.size());
+    	
+//    	VedioListPogo vedioListPogo=new VedioListPogo();
+//    	vedioListPogo.setData(videoFile.getData());
+    	
+//    	coursemodel.addAttribute("fileType",videoFile.getFileType());ADDDDDDDDDDDDDDDDDD
 //    	coursemodel.addAttribute("fileName",videoFile.getFileName());
 //    	coursemodel.addAttribute("video",vedioListPogo.getData());
     	
     	
     	
-        byte[]  v_byte = vedioListPogo.getData();
-        	    StringBuilder sb = new StringBuilder();
-        	sb.append("data:video/mp4;base64,");
-        	sb.append(StringUtils.newStringUtf8(Base64.encodeBase64(v_byte, false)));
-        	String videoUrl = sb.toString();
-        	coursemodel.addAttribute("videoUrl",videoUrl);
+       
+        	   
 
 
-		  return "coursevideos";
+		  return "corejavapage";
 	  }
 }

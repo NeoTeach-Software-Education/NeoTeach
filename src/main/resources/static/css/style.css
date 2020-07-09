@@ -291,7 +291,7 @@ h1, h2, h3, h4, h5, h6, figure {
       margin-bottom: 0;
       display: inline-block;
       font-size: 13px;
-      color: rgba(255, 255, 255, 0.8); }
+      color: rgba(120, 0, 0, 1); }
     .colorlib-nav .upper-menu .colorlib-social-icons {
       display: inline-block;
       margin-right: 10px; }
@@ -306,7 +306,7 @@ h1, h2, h3, h4, h5, h6, figure {
       font-size: 13px; }
       .colorlib-nav .upper-menu .btn-apply a {
         margin-right: 10px;
-        color: rgba(255, 255, 255, 0.8); }
+        color: rgba(120, 0, 0, 1); }
   .colorlib-nav .top-menu {
     padding: 40px 0; }
     @media screen and (max-width: 768px) {
@@ -1534,7 +1534,7 @@ input[type="text"] {
 
 #colorlib-footer {
   padding-top: 6em;
-  background: #302a39;
+  background: #033E80;
   color: rgba(255, 255, 255, 0.6) !important; }
   #colorlib-footer p {
     font-size: 14px;

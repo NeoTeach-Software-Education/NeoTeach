@@ -393,140 +393,140 @@
 				</div>
 			</div>	
 		</div>
-		<div id="colorlib-counter" class="colorlib-counters">
-			<div class="container">
-				<div class="col-md-7">
-					<div class="about-desc">
-						<div class="about-img-1 animate-box" style="background-image: url(images/about-img-2.jpg);"></div>
-						<div class="about-img-2 animate-box" style="background-image: url(images/about-img-1.jpg);"></div>
-					</div>
-				</div>
-				<div class="col-md-5">
-					<div class="row">
-						<div class="col-md-12 colorlib-heading animate-box">
-							<h1 class="heading-big">Who are we</h1>
-							<h2>Who are we</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box">
-							<p><strong>Even the all-powerful Pointing has no control about the blind texts</strong></p>
-							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-						</div>
-						<div class="col-md-6 col-sm-6 animate-box">
-							<div class="counter-entry">
-								<div class="desc">
-									<span class="colorlib-counter js-counter" data-from="0" data-to="1539" data-speed="5000" data-refresh-interval="50"></span>
-									<span class="colorlib-counter-label">Courses</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6 animate-box">
-							<div class="counter-entry">
-								<div class="desc">
-									<span class="colorlib-counter js-counter" data-from="0" data-to="3653" data-speed="5000" data-refresh-interval="50"></span>
-									<span class="colorlib-counter-label">Students</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6 animate-box">
-							<div class="counter-entry">
-								<div class="desc">
-									<span class="colorlib-counter js-counter" data-from="0" data-to="2300" data-speed="5000" data-refresh-interval="50"></span>
-									<span class="colorlib-counter-label">Teachers online</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6 animate-box">
-							<div class="counter-entry">
-								<div class="desc">
-									<span class="colorlib-counter js-counter" data-from="0" data-to="200" data-speed="5000" data-refresh-interval="50"></span>
-									<span class="colorlib-counter-label">Countries</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+<!-- 		<div id="colorlib-counter" class="colorlib-counters"> -->
+<!-- 			<div class="container"> -->
+<!-- 				<div class="col-md-7"> -->
+<!-- 					<div class="about-desc"> -->
+<!-- 						<div class="about-img-1 animate-box" style="background-image: url(images/about-img-2.jpg);"></div> -->
+<!-- 						<div class="about-img-2 animate-box" style="background-image: url(images/about-img-1.jpg);"></div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 				<div class="col-md-5"> -->
+<!-- 					<div class="row"> -->
+<!-- 						<div class="col-md-12 colorlib-heading animate-box"> -->
+<!-- 							<h1 class="heading-big">Who are we</h1> -->
+<!-- 							<h2>Who are we</h2> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="row"> -->
+<!-- 						<div class="col-md-12 animate-box"> -->
+<!-- 							<p><strong>Even the all-powerful Pointing has no control about the blind texts</strong></p> -->
+<!-- 							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p> -->
+<!-- 						</div> -->
+<!-- 						<div class="col-md-6 col-sm-6 animate-box"> -->
+<!-- 							<div class="counter-entry"> -->
+<!-- 								<div class="desc"> -->
+<!-- 									<span class="colorlib-counter js-counter" data-from="0" data-to="1539" data-speed="5000" data-refresh-interval="50"></span> -->
+<!-- 									<span class="colorlib-counter-label">Courses</span> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 						<div class="col-md-6 col-sm-6 animate-box"> -->
+<!-- 							<div class="counter-entry"> -->
+<!-- 								<div class="desc"> -->
+<!-- 									<span class="colorlib-counter js-counter" data-from="0" data-to="3653" data-speed="5000" data-refresh-interval="50"></span> -->
+<!-- 									<span class="colorlib-counter-label">Students</span> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 						<div class="col-md-6 col-sm-6 animate-box"> -->
+<!-- 							<div class="counter-entry"> -->
+<!-- 								<div class="desc"> -->
+<!-- 									<span class="colorlib-counter js-counter" data-from="0" data-to="2300" data-speed="5000" data-refresh-interval="50"></span> -->
+<!-- 									<span class="colorlib-counter-label">Teachers online</span> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 						<div class="col-md-6 col-sm-6 animate-box"> -->
+<!-- 							<div class="counter-entry"> -->
+<!-- 								<div class="desc"> -->
+<!-- 									<span class="colorlib-counter js-counter" data-from="0" data-to="200" data-speed="5000" data-refresh-interval="50"></span> -->
+<!-- 									<span class="colorlib-counter-label">Countries</span> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 
-		<div id="colorlib-testimony" class="testimony-img" style="background-image: url(images/img_bg_2.jpg); margin-bottom: 4em;" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12 center-heading text-center colorlib-heading animate-box">
-						<h1 class="heading-big">What are the students says</h1>
-						<h2>What are the students says</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="testimony-flex">
-							<div class="one-fifth animate-box">
-								<span class="icon"><i class="icon-quotes-left"></i></span>
-								<div class="testimony-wrap">
-									<blockquote>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									</blockquote>
-									<div class="desc">
-										<div class="figure-img" style="background-image: url(images/person1.jpg);"></div>
-										<h3>Dave Henderson</h3>
-									</div>
-								</div>
-							</div>
-							<div class="one-fifth animate-box">
-								<span class="icon"><i class="icon-quotes-left"></i></span>
-								<div class="testimony-wrap">
-									<blockquote>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
-									</blockquote>
-									<div class="desc">
-										<div class="figure-img" style="background-image: url(images/person2.jpg);"></div>
-										<h3>Dave Henderson</h3>
-									</div>
-								</div>
-							</div>
-							<div class="one-fifth animate-box">
-								<span class="icon"><i class="icon-quotes-left"></i></span>
-								<div class="testimony-wrap">
-									<blockquote>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-									</blockquote>
-									<div class="desc">
-										<div class="figure-img" style="background-image: url(images/person3.jpg);"></div>
-										<h3>Dave Henderson</h3>
-									</div>
-								</div>
-							</div>
-							<div class="one-fifth animate-box">
-								<span class="icon"><i class="icon-quotes-left"></i></span>
-								<div class="testimony-wrap">
-									<blockquote>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
-									</blockquote>
-									<div class="desc">
-										<div class="figure-img" style="background-image: url(images/person1.jpg);"></div>
-										<h3>Dave Henderson</h3>
-									</div>
-								</div>
-							</div>
-							<div class="one-fifth animate-box">
-								<span class="icon"><i class="icon-quotes-left"></i></span>
-								<div class="testimony-wrap">
-									<blockquote>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
-									</blockquote>
-									<div class="desc">
-										<div class="figure-img" style="background-image: url(images/person1.jpg);"></div>
-										<h3>Dave Henderson</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+<!-- 		<div id="colorlib-testimony" class="testimony-img" style="background-image: url(images/img_bg_2.jpg); margin-bottom: 4em;" data-stellar-background-ratio="0.5"> -->
+<!-- 			<div class="overlay"></div> -->
+<!-- 			<div class="container-fluid"> -->
+<!-- 				<div class="row"> -->
+<!-- 					<div class="col-md-12 center-heading text-center colorlib-heading animate-box"> -->
+<!-- 						<h1 class="heading-big">What are the students says</h1> -->
+<!-- 						<h2>What are the students says</h2> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 				<div class="row"> -->
+<!-- 					<div class="col-md-12"> -->
+<!-- 						<div class="testimony-flex"> -->
+<!-- 							<div class="one-fifth animate-box"> -->
+<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
+<!-- 								<div class="testimony-wrap"> -->
+<!-- 									<blockquote> -->
+<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p> -->
+<!-- 									</blockquote> -->
+<!-- 									<div class="desc"> -->
+<!-- 										<div class="figure-img" style="background-image: url(images/person1.jpg);"></div> -->
+<!-- 										<h3>Dave Henderson</h3> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 							<div class="one-fifth animate-box"> -->
+<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
+<!-- 								<div class="testimony-wrap"> -->
+<!-- 									<blockquote> -->
+<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+<!-- 									</blockquote> -->
+<!-- 									<div class="desc"> -->
+<!-- 										<div class="figure-img" style="background-image: url(images/person2.jpg);"></div> -->
+<!-- 										<h3>Dave Henderson</h3> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 							<div class="one-fifth animate-box"> -->
+<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
+<!-- 								<div class="testimony-wrap"> -->
+<!-- 									<blockquote> -->
+<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p> -->
+<!-- 									</blockquote> -->
+<!-- 									<div class="desc"> -->
+<!-- 										<div class="figure-img" style="background-image: url(images/person3.jpg);"></div> -->
+<!-- 										<h3>Dave Henderson</h3> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 							<div class="one-fifth animate-box"> -->
+<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
+<!-- 								<div class="testimony-wrap"> -->
+<!-- 									<blockquote> -->
+<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p> -->
+<!-- 									</blockquote> -->
+<!-- 									<div class="desc"> -->
+<!-- 										<div class="figure-img" style="background-image: url(images/person1.jpg);"></div> -->
+<!-- 										<h3>Dave Henderson</h3> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 							<div class="one-fifth animate-box"> -->
+<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
+<!-- 								<div class="testimony-wrap"> -->
+<!-- 									<blockquote> -->
+<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+<!-- 									</blockquote> -->
+<!-- 									<div class="desc"> -->
+<!-- 										<div class="figure-img" style="background-image: url(images/person1.jpg);"></div> -->
+<!-- 										<h3>Dave Henderson</h3> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 
 		<div class="colorlib-trainers">
 			<div class="container">
@@ -683,131 +683,131 @@
 			</div>	
 		</div>
 
-		<div class="colorlib-event">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-5 row-pb-md">
-						<div class="row">
-							<div class="col-md-12 colorlib-heading animate-box">
-								<h1 class="heading-big">Events</h1>
-								<h2>Upcoming Events</h2>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="event-entry animate-box">
-									<div class="desc">
-										<p class="meta"><span class="day">01-02</span><span class="month">Jun</span></p>
-										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p>
-										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2>
-									</div>
-									<div class="location">
-										<span class="icon"><i class="icon-map"></i></span>
-										<p>291 South 21th Street, Suite 721 New York NY 10016</p>
-									</div>
-								</div>
-								<div class="event-entry animate-box">
-									<div class="desc">
-										<p class="meta"><span class="day">05-07</span><span class="month">Jun</span></p>
-										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p>
-										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2>
-									</div>
-									<div class="location">
-										<span class="icon"><i class="icon-map"></i></span>
-										<p>291 South 21th Street, Suite 721 New York NY 10016</p>
-									</div>
-								</div>
-								<div class="event-entry animate-box">
-									<div class="desc">
-										<p class="meta"><span class="day">10-12</span><span class="month">Jun</span></p>
-										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p>
-										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2>
-									</div>
-									<div class="location">
-										<span class="icon"><i class="icon-map"></i></span>
-										<p>291 South 21th Street, Suite 721 New York NY 10016</p>
-									</div>
-								</div>
-								<div class="event-entry animate-box">
-									<div class="desc">
-										<p class="meta"><span class="day">19-25</span><span class="month">Jun</span></p>
-										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p>
-										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2>
-									</div>
-									<div class="location">
-										<span class="icon"><i class="icon-map"></i></span>
-										<p>291 South 21th Street, Suite 721 New York NY 10016</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-7 row-pb-md">
-						<div class="row">
-							<div class="col-md-12 colorlib-heading animate-box">
-								<h1 class="heading-big">Recent Blog</h1>
-								<h2>Recent Blog</h2>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="block-21 d-flex animate-box">
-					            <a href="#" class="blog-img" style="background-image: url(images/blog-1.jpg);"></a>
-					            <div class="text">
-					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p>
-					               <div class="meta">
-					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div>
-					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div>
-					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-					               </div>
-					            </div>
-					         </div>
+<!-- 		<div class="colorlib-event"> -->
+<!-- 			<div class="container"> -->
+<!-- 				<div class="row"> -->
+<!-- 					<div class="col-md-5 row-pb-md"> -->
+<!-- 						<div class="row"> -->
+<!-- 							<div class="col-md-12 colorlib-heading animate-box"> -->
+<!-- 								<h1 class="heading-big">Events</h1> -->
+<!-- 								<h2>Upcoming Events</h2> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 						<div class="row"> -->
+<!-- 							<div class="col-md-12"> -->
+<!-- 								<div class="event-entry animate-box"> -->
+<!-- 									<div class="desc"> -->
+<!-- 										<p class="meta"><span class="day">01-02</span><span class="month">Jun</span></p> -->
+<!-- 										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p> -->
+<!-- 										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2> -->
+<!-- 									</div> -->
+<!-- 									<div class="location"> -->
+<!-- 										<span class="icon"><i class="icon-map"></i></span> -->
+<!-- 										<p>291 South 21th Street, Suite 721 New York NY 10016</p> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 								<div class="event-entry animate-box"> -->
+<!-- 									<div class="desc"> -->
+<!-- 										<p class="meta"><span class="day">05-07</span><span class="month">Jun</span></p> -->
+<!-- 										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p> -->
+<!-- 										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2> -->
+<!-- 									</div> -->
+<!-- 									<div class="location"> -->
+<!-- 										<span class="icon"><i class="icon-map"></i></span> -->
+<!-- 										<p>291 South 21th Street, Suite 721 New York NY 10016</p> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 								<div class="event-entry animate-box"> -->
+<!-- 									<div class="desc"> -->
+<!-- 										<p class="meta"><span class="day">10-12</span><span class="month">Jun</span></p> -->
+<!-- 										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p> -->
+<!-- 										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2> -->
+<!-- 									</div> -->
+<!-- 									<div class="location"> -->
+<!-- 										<span class="icon"><i class="icon-map"></i></span> -->
+<!-- 										<p>291 South 21th Street, Suite 721 New York NY 10016</p> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 								<div class="event-entry animate-box"> -->
+<!-- 									<div class="desc"> -->
+<!-- 										<p class="meta"><span class="day">19-25</span><span class="month">Jun</span></p> -->
+<!-- 										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p> -->
+<!-- 										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2> -->
+<!-- 									</div> -->
+<!-- 									<div class="location"> -->
+<!-- 										<span class="icon"><i class="icon-map"></i></span> -->
+<!-- 										<p>291 South 21th Street, Suite 721 New York NY 10016</p> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-md-7 row-pb-md"> -->
+<!-- 						<div class="row"> -->
+<!-- 							<div class="col-md-12 colorlib-heading animate-box"> -->
+<!-- 								<h1 class="heading-big">Recent Blog</h1> -->
+<!-- 								<h2>Recent Blog</h2> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 						<div class="row"> -->
+<!-- 							<div class="col-md-12"> -->
+<!-- 								<div class="block-21 d-flex animate-box"> -->
+<!-- 					            <a href="#" class="blog-img" style="background-image: url(images/blog-1.jpg);"></a> -->
+<!-- 					            <div class="text"> -->
+<!-- 					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3> -->
+<!-- 					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p> -->
+<!-- 					               <div class="meta"> -->
+<!-- 					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div> -->
+<!-- 					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div> -->
+<!-- 					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
+<!-- 					               </div> -->
+<!-- 					            </div> -->
+<!-- 					         </div> -->
 
-					         <div class="block-21 d-flex animate-box">
-					            <a href="#" class="blog-img" style="background-image: url(images/blog-2.jpg);"></a>
-					            <div class="text">
-					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p>
-					               <div class="meta">
-					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div>
-					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div>
-					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-					               </div>
-					            </div>
-					         </div>
+<!-- 					         <div class="block-21 d-flex animate-box"> -->
+<!-- 					            <a href="#" class="blog-img" style="background-image: url(images/blog-2.jpg);"></a> -->
+<!-- 					            <div class="text"> -->
+<!-- 					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3> -->
+<!-- 					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p> -->
+<!-- 					               <div class="meta"> -->
+<!-- 					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div> -->
+<!-- 					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div> -->
+<!-- 					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
+<!-- 					               </div> -->
+<!-- 					            </div> -->
+<!-- 					         </div> -->
 
-					         <div class="block-21 d-flex animate-box">
-					            <a href="#" class="blog-img" style="background-image: url(images/blog-3.jpg);"></a>
-					            <div class="text">
-					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p>
-					               <div class="meta">
-					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div>
-					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div>
-					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-					               </div>
-					            </div>
-					         </div>
+<!-- 					         <div class="block-21 d-flex animate-box"> -->
+<!-- 					            <a href="#" class="blog-img" style="background-image: url(images/blog-3.jpg);"></a> -->
+<!-- 					            <div class="text"> -->
+<!-- 					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3> -->
+<!-- 					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p> -->
+<!-- 					               <div class="meta"> -->
+<!-- 					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div> -->
+<!-- 					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div> -->
+<!-- 					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
+<!-- 					               </div> -->
+<!-- 					            </div> -->
+<!-- 					         </div> -->
 
-					         <div class="block-21 d-flex animate-box">
-					            <a href="#" class="blog-img" style="background-image: url(images/blog-4.jpg);"></a>
-					            <div class="text">
-					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p>
-					               <div class="meta">
-					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div>
-					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div>
-					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-					               </div>
-					            </div>
-					         </div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+<!-- 					         <div class="block-21 d-flex animate-box"> -->
+<!-- 					            <a href="#" class="blog-img" style="background-image: url(images/blog-4.jpg);"></a> -->
+<!-- 					            <div class="text"> -->
+<!-- 					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3> -->
+<!-- 					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p> -->
+<!-- 					               <div class="meta"> -->
+<!-- 					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div> -->
+<!-- 					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div> -->
+<!-- 					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
+<!-- 					               </div> -->
+<!-- 					            </div> -->
+<!-- 					         </div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 
 
 		<!-- <div class="colorlib-blog colorlib-light-grey">
@@ -865,37 +865,37 @@
 		</div> -->
 
 	
-		<div id="colorlib-subscribe" class="subs-img" style="background-image: url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-						<h2>Subscribe Newsletter</h2>
-						<p>Subscribe our newsletter and get latest update</p>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="col-md-6 col-md-offset-3">
-						<div class="row">
-							<div class="col-md-12">
-							<form class="form-inline qbstp-header-subscribe">
-								<div class="col-three-forth">
-									<div class="form-group">
-										<input type="text" class="form-control" id="email" placeholder="Enter your email">
-									</div>
-								</div>
-								<div class="col-one-third">
-									<div class="form-group">
-										<button type="submit" class="btn btn-primary">Subscribe Now</button>
-									</div>
-								</div>
-							</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+<!-- 		<div id="colorlib-subscribe" class="subs-img" style="background-image: url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5"> -->
+<!-- 			<div class="overlay"></div> -->
+<!-- 			<div class="container"> -->
+<!-- 				<div class="row"> -->
+<!-- 					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box"> -->
+<!-- 						<h2>Subscribe Newsletter</h2> -->
+<!-- 						<p>Subscribe our newsletter and get latest update</p> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 				<div class="row animate-box"> -->
+<!-- 					<div class="col-md-6 col-md-offset-3"> -->
+<!-- 						<div class="row"> -->
+<!-- 							<div class="col-md-12"> -->
+<!-- 							<form class="form-inline qbstp-header-subscribe"> -->
+<!-- 								<div class="col-three-forth"> -->
+<!-- 									<div class="form-group"> -->
+<!-- 										<input type="text" class="form-control" id="email" placeholder="Enter your email"> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 								<div class="col-one-third"> -->
+<!-- 									<div class="form-group"> -->
+<!-- 										<button type="submit" class="btn btn-primary">Subscribe Now</button> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</form> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 		<footer id="colorlib-footer">
 			<div class="container">
 				<div class="row row-pb-md">

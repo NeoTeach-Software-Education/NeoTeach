@@ -11,6 +11,7 @@ import com.neoteach.pojo.VideoFile;
 import com.neoteach.repositories.DBFileRepository;
 
 import java.io.IOException;
+import java.util.List;
 
 @Service
 public class DBFileStorageService {
@@ -44,8 +45,8 @@ public class DBFileStorageService {
                 .orElseThrow(() -> new MyFileNotFoundException("File not found with id " + fileId));
     }
 
-	public VideoFile getCourseList(String coursetitle) {
-		 return dbFileRepository.findByCoursename(coursetitle)
-	                .orElseThrow(() -> new MyFileNotFoundException("File not found with id " + coursetitle));
+	public List<VideoFile> getCourseList(String coursetitle) {
+		 return dbFileRepository.findByCoursename(coursetitle);
+//	                .orElseThrow(() -> new MyFileNotFoundException("File not found with id " + coursetitle));
 	}
 }
