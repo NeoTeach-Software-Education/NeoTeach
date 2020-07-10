@@ -25,7 +25,7 @@
                         <div>
                         <label for="courselist">Choose a course:</label>
 
-						<select name="coursename" id="course">
+						<select name="coursename" id="coursename">
   							<option value="1">C</option>
   							<option value="2">Cpp</option>
  				 			<option value="3">Core Java</option>
@@ -46,11 +46,11 @@
                          <div>
                         <label for="courselist">Choose a course:</label>
 
-						<select id="coursename" name="coursename">
-  							<option value="c">C</option>
-  							<option value="cpp">Cpp</option>
- 				 			<option value="corejava">Core Java</option>
-  							<option value="ds">DS</option>
+						<select id="mcoursename" name="multicoursename">
+  							<option value="1">C</option>
+  							<option value="2">Cpp</option>
+ 				 			<option value="3">Core Java</option>
+  							<option value="4">DS</option>
 						</select>
                         </div>
                         <button type="submit" class="primary submit-btn">Submit</button>

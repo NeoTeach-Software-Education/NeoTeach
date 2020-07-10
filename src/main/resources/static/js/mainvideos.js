@@ -13,7 +13,7 @@ var multipleFileUploadSuccess = document.querySelector('#multipleFileUploadSucce
 function uploadSingleFile(file) {
     var formData = new FormData();
     formData.append("file", file);
-    formData.append("coursename", coursename);
+    formData.append("coursename", $('#coursename').val());
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "/uploadFile");
 
@@ -36,6 +36,7 @@ function uploadSingleFile(file) {
 
 function uploadMultipleFiles(files) {
     var formData = new FormData();
+    formData.append("coursename", $('#mcoursename').val());
     for(var index = 0; index < files.length; index++) {
         formData.append("files", files[index]);
     }
