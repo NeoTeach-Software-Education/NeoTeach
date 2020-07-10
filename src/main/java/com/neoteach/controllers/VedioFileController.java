@@ -83,27 +83,13 @@ public class VedioFileController {
 	        	sb.append("data:video/mp4;base64,");
 	        	sb.append(StringUtils.newStringUtf8(Base64.encodeBase64(v_byte, false)));
 	        	videoUrl = sb.toString();
-//	        	videos=new ArrayList<String>();
 	        	videos.add(videoUrl);
-	        	
 	        	
 		}
     	
     	coursemodel.addAttribute("videos",videos);
     	System.out.println("vdd"+videos.size());
     	
-//    	VedioListPogo vedioListPogo=new VedioListPogo();
-//    	vedioListPogo.setData(videoFile.getData());
-    	
-//    	coursemodel.addAttribute("fileType",videoFile.getFileType());ADDDDDDDDDDDDDDDDDD
-//    	coursemodel.addAttribute("fileName",videoFile.getFileName());
-//    	coursemodel.addAttribute("video",vedioListPogo.getData());
-    	
-    	
-    	
-       
-        	   
-
 
 		  return "corejavapage";
 	  }

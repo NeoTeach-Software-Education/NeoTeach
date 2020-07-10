@@ -234,7 +234,7 @@
 					<div class="col-md-12 services-wrap">
 						<div class="row">
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/coursepage?coursetitle=3" class="services">
+								<a href="/course?cousetitle=3" class="services">
 									<span class="icon">
 										<i class="flaticon-desktop"></i>
 									</span>
@@ -244,7 +244,7 @@
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/coursepage?coursetitle=C" class="services">
+								<a href="/coursepage?coursetitle=2" class="services">
 									<span class="icon">
 										<i class="flaticon-smartphone"></i>
 									</span>

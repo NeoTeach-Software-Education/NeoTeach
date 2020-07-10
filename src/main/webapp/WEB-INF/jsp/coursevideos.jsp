@@ -8,11 +8,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-
 </head>
 <body>
-<video id="addVideo" width="500" height="300" controls>
-    <a href src="<source src="${videoUrl}" />">click here</a>
-</video>
+
+
+<div><strong>Core Java Videos</strong></div>
+<c:forEach  items="${videoFile}" var="vid">
+  <a href src="${vid.fileName}">${vid.fileName}</a><br>
+</c:forEach>
+
+
 </body>
 </html>
