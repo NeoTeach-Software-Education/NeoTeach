@@ -72,7 +72,7 @@ public class VedioFileController {
 	  {
     	List<VideoFile> videoFile = dbFileStorageService.getCourseList(coursetitle);
     	byte[]  v_byte=null;
-    	List<String> videos=null;
+    	List<String> videos=new ArrayList<String>();
     	StringBuilder sb=null;
     	String videoUrl=null;
     	System.out.println("sss"+videoFile.size());
@@ -83,7 +83,7 @@ public class VedioFileController {
 	        	sb.append("data:video/mp4;base64,");
 	        	sb.append(StringUtils.newStringUtf8(Base64.encodeBase64(v_byte, false)));
 	        	videoUrl = sb.toString();
-	        	videos=new ArrayList<String>();
+//	        	videos=new ArrayList<String>();
 	        	videos.add(videoUrl);
 	        	
 	        	
