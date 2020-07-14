@@ -29,6 +29,11 @@ public class RegisterDaoImpl {
 		return result;
 	}
 
+	public void setMaxPacketSize() {
+		jdbcTemplate.execute("SET GLOBAL max_allowed_packet=16*1024*1024");
+		
+	}
+
 		// nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME,
 	// NhtConstants.ENTRY);
 	// Transaction transaction = session.beginTransaction();

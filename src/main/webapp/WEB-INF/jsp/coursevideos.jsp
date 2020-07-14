@@ -7,16 +7,17 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>NeoTeach corejava videos</title>
 </head>
 <body>
-
-
+         
+<%--       </c:forTokens> --%>
 <div><strong>Core Java Videos</strong></div>
-<c:forEach  items="${videoFile}" var="vid">
-  <a href src="${vid.fileName}">${vid.fileName}</a><br>
-</c:forEach>
-
+<%-- <c:forEach  items="${videoUrl}" var="vid"> --%>
+<video id="addVideo" width="500" height="300" controls>
+    <source src="${video}" />
+</video>
+<%-- </c:forEach> --%>
 
 </body>
 </html>

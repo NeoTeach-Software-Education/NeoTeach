@@ -49,4 +49,9 @@ public class DBFileStorageService {
 		 return dbFileRepository.findByCoursename(coursetitle);
 //	                .orElseThrow(() -> new MyFileNotFoundException("File not found with id " + coursetitle));
 	}
+
+	public VideoFile getCourseVideo(String fileName) {
+		return dbFileRepository.findByfileName(fileName)
+        .orElseThrow(() -> new MyFileNotFoundException("File not found with id " + fileName));
+	}
 }
