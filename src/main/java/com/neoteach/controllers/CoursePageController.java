@@ -22,7 +22,7 @@ public class CoursePageController {
 
 	
 	@GetMapping("/course")
-	public String coursePage(@RequestParam("cousetitle") String cousetitle,Model model)
+	public String coursePage(@RequestParam("coursetitle") String cousetitle,Model model)
 	{
 		if(cousetitle.equalsIgnoreCase("3"))
 		{
@@ -30,7 +30,36 @@ public class CoursePageController {
 			model.addAttribute("videoFile",videoFile);
 			return "corejavapage";	
 		}
-		
+		if(cousetitle.equalsIgnoreCase("2"))
+		{
+			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);
+			model.addAttribute("videoFile",videoFile);
+			return "cppvideospage";	
+		}
+		if(cousetitle.equalsIgnoreCase("1"))
+		{
+			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);
+			model.addAttribute("videoFile",videoFile);
+			return "cvideospage";	
+		}
+		if(cousetitle.equalsIgnoreCase("4"))
+		{
+			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);
+			model.addAttribute("videoFile",videoFile);
+			return "dsvideospage";	
+		}
+		if(cousetitle.equalsIgnoreCase("5"))
+		{
+			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);
+			model.addAttribute("videoFile",videoFile);
+			return "pythonvideospage";	
+		}
+		if(cousetitle.equalsIgnoreCase("6"))
+		{
+			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);
+			model.addAttribute("videoFile",videoFile);
+			return "advjavavideospage";	
+		}
 		return "";
 	}
 @GetMapping("/retriveVideos")

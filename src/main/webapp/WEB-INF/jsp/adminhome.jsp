@@ -30,6 +30,7 @@
   							<option value="2">Cpp</option>
  				 			<option value="3">Core Java</option>
   							<option value="4">DS</option>
+  							<option value="5">Python</option>
 						</select>
                         </div>
                         <button type="submit" class="primary submit-btn">Submit</button>
@@ -51,6 +52,7 @@
   							<option value="2">Cpp</option>
  				 			<option value="3">Core Java</option>
   							<option value="4">DS</option>
+  							<option value="5">Python</option>
 						</select>
                         </div>
                         <button type="submit" class="primary submit-btn">Submit</button>
@@ -68,4 +70,4 @@
 		${adminloginfail}
 ${message}
     </body>
-</html>c
+</html>

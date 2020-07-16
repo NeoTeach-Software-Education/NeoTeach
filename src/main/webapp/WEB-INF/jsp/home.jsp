@@ -234,7 +234,7 @@
 					<div class="col-md-12 services-wrap">
 						<div class="row">
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/course?cousetitle=3" class="services">
+								<a href="/course?coursetitle=3" class="services">
 									<span class="icon">
 										<i class="flaticon-desktop"></i>
 									</span>
@@ -244,7 +244,7 @@
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/coursepage?coursetitle=2" class="services">
+								<a href="/course?coursetitle=1" class="services">
 									<span class="icon">
 										<i class="flaticon-smartphone"></i>
 									</span>
@@ -254,7 +254,7 @@
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/coursepage?coursetitle=Cpp" class="services">
+								<a href="/course?coursetitle=2" class="services">
 									<span class="icon">
 										<i class="flaticon-laboratory"></i>
 									</span>
@@ -264,7 +264,7 @@
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/coursepage?coursetitle=DS" class="services">
+								<a href="/course?coursetitle=4" class="services">
 									<span class="icon">
 										<i class="flaticon-computer-graphic"></i>
 									</span>
@@ -274,7 +274,7 @@
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/coursepage?coursetitle=Python" class="services">
+								<a href="/course?coursetitle=5" class="services">
 									<span class="icon">
 										<i class="flaticon-video-player"></i>
 									</span>
@@ -284,7 +284,7 @@
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/coursepage?coursetitle=Python" class="services">
+								<a href="/course?coursetitle=6" class="services">
 									<span class="icon">
 										<i class="flaticon-layers"></i>
 									</span>
