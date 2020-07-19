@@ -21,23 +21,28 @@
 			<div class="form-left">
 				<img src="images/form-v6.jpg" alt="form">
 			</div>
-			<form class="form-detail" name="userform1" action="/register1" method="post">
+			<form class="form-detail" name="userform1" action="/userRegister" method="post">
 				<h2>Register Form</h2>
+				<div><h5>555${confirmationMessage}</h5></div>
+				<div><h5>333${alreadyRegisteredMessage}</h5></div>
 				<div class="form-row">
 					<input type="text" name="fullname" id="full-name" class="input-text" placeholder="Full Name" required>
 					<span style="float: left;" id="errorFirstname"></span>
 				</div>
 				<div class="form-row">
+					<input type="text" name="phone" id="phone" class="input-text" placeholder="Phone" required>
+				</div>
+				<div class="form-row">
 					<input type="text" name="email" id="your-email" class="input-text" placeholder="Email Address" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
 				</div>
-				<div class="form-row">
-					<input type="password" name="password" id="password" class="input-text" placeholder="Password" required>
-				</div>
-				<div class="form-row">
-					<input type="password" name="comfirm-password" id="comfirm-password" class="input-text" placeholder="Comfirm Password" required>
-				</div>
+<!-- 				<div class="form-row"> -->
+<!-- 					<input type="password" name="password" id="password" class="input-text" placeholder="Password" required> -->
+<!-- 				</div> -->
+<!-- 				<div class="form-row"> -->
+<!-- 					<input type="password" name="comfirm-password" id="comfirm-password" class="input-text" placeholder="Comfirm Password" required> -->
+<!-- 				</div> -->
 				<div class="form-row-last">
-					<input type="submit" name="registerr" class="register" value="Register" id="register">
+					<input type="submit" name="register" class="register" value="Register" id="register">
 				</div>
 			</form>
 		</div>

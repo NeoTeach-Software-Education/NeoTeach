@@ -21,13 +21,13 @@ public class RegisterDaoImpl {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
-	public int saveDtls(RegisterPojo registerPojo) {
-		int result = 0;
-		// final String METHOD_NAME="saveDtls2";
-		jdbcTemplate.execute("insert into user(fullname,email,password)" + "values('" + registerPojo.getFullname()
-				+ "','" + registerPojo.getEmail() + "','" + registerPojo.getPassword() + "')");
-		return result;
-	}
+//	public int saveDtls(RegisterPojo registerPojo) {
+//		int result = 0;
+//		// final String METHOD_NAME="saveDtls2";
+//		jdbcTemplate.execute("insert into user(fullname,email,password)" + "values('" + registerPojo.getFullname()
+//				+ "','" + registerPojo.getEmail() + "','" + registerPojo.getPassword() + "')");
+//		return result;
+//	}
 
 	public void setMaxPacketSize() {
 		jdbcTemplate.execute("SET GLOBAL max_allowed_packet=16*1024*1024");
