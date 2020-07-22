@@ -36,6 +36,10 @@ public class RegisterServiceImpl{
 		// TODO Auto-generated method stub
 		userRepository.save(user);
 	}
+	public UserRegistration findByConfirmationToken(String confirmationToken) {
+		// TODO Auto-generated method stub
+		return userRepository.findByConfirmationToken(confirmationToken);
+	}
 
 //	@Override
 //	public String chkPhoneNo(String phone) throws Exception {

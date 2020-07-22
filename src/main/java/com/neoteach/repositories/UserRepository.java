@@ -9,4 +9,6 @@ public interface UserRepository extends JpaRepository<UserRegistration, String>{
 
 	UserRegistration findByEmail(String email);
 
+	UserRegistration findByConfirmationToken(String confirmationToken);
+
 }

@@ -23,10 +23,10 @@
 			</div>
 			<form class="form-detail" name="userform1" action="/userRegister" method="post">
 				<h2>Register Form</h2>
-				<div><h5>555${confirmationMessage}</h5></div>
-				<div><h5>333${alreadyRegisteredMessage}</h5></div>
+				<div><h5>${confirmationMessage}</h5></div>
+				<div><h5>${alreadyRegisteredMessage}</h5></div>
 				<div class="form-row">
-					<input type="text" name="fullname" id="full-name" class="input-text" placeholder="Full Name" required>
+					<input type="text" name="fullName" id="full-name" class="input-text" placeholder="Full Name" required>
 					<span style="float: left;" id="errorFirstname"></span>
 				</div>
 				<div class="form-row">
