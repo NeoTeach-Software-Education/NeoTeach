@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.neoteach.model.UserRegistration;
+import com.neoteach.model.User;
 import com.neoteach.pojo.RegisterPojo;
 import com.neoteach.serviceimpl.EmailServiceImpl;
 import com.neoteach.serviceimpl.RegisterServiceImpl;
@@ -47,10 +47,10 @@ public class RegisterPageController {
 	
 	// Process form input data
 		@RequestMapping(value = "/userRegister", method = RequestMethod.POST)
-		public String processRegistrationForm(Model model, @Valid UserRegistration user, BindingResult bindingResult,HttpServletRequest request) {
+		public String processRegistrationForm(Model model, @Valid User user, BindingResult bindingResult,HttpServletRequest request) {
 					
 			// Lookup user in database by e-mail
-			UserRegistration userExists = registerServiceImpl.findByEmail(user.getEmail());
+			User userExists = registerServiceImpl.findByEmail(user.getEmail());
 			
 			System.out.println(userExists);
 			
@@ -91,7 +91,7 @@ public class RegisterPageController {
 		@RequestMapping(value="/confirm", method = RequestMethod.GET)
 		public String showConfirmationPage(Model model, @RequestParam("token") String token) {
 				
-			UserRegistration user = registerServiceImpl.findByConfirmationToken(token);
+			User user = registerServiceImpl.findByConfirmationToken(token);
 				System.out.println("555==="+user);
 			if (user == null) { // No token found in DB
 				model.addAttribute("invalidToken", "Oops!  This is an invalid confirmation link.");
@@ -122,7 +122,7 @@ public class RegisterPageController {
 //			}
 		
 			// Find the user associated with the reset token
-			UserRegistration user = registerServiceImpl.findByConfirmationToken((String) requestParams.get("token"));
+			User user = registerServiceImpl.findByConfirmationToken((String) requestParams.get("token"));
 
 			// Set new password
 //			user.setPassword(bCryptPasswordEncoder.encode((CharSequence) requestParams.get("password")));

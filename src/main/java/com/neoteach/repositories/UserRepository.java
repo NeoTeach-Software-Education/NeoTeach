@@ -1,14 +1,18 @@
 package com.neoteach.repositories;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.neoteach.model.UserRegistration;
+import com.neoteach.model.User;
 @Repository
-public interface UserRepository extends JpaRepository<UserRegistration, String>{
+public interface UserRepository extends JpaRepository<User, String>{
 
-	UserRegistration findByEmail(String email);
+	User findByEmail(String email);
 
-	UserRegistration findByConfirmationToken(String confirmationToken);
+	User findByConfirmationToken(String confirmationToken);
+
+	Optional<User> findByResetToken(String resetToken);
 
 }

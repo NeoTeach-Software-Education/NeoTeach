@@ -19,19 +19,23 @@
 
 <div class="page-content">
 		<div class="form-v6-content">
-			<div class="form-left">
-				<img src="images/form-v6.jpg" alt="form">
-			</div>
+<!-- 			<div class="form-left"> -->
+<!-- 				<img src="images/form-v6.jpg" alt="form"> -->
+<!-- 			</div> -->
+			
 			<form class="form-detail" name="passwordForm" action="/forgot" method="post">
-			 <input type="hidden" name="token" value=${confirmationToken}>
-<!-- 				 <hr /> -->
-      <h4>Set Your Password</h4>
+	
+			<h4>Reset Your Password</h4>
+		 <div><h5>${successMessage}</h5></div>
 
-      <div>${successMessage}</div>
-
-      <div>${errorMessage}</div>
+      <div><h5>${errorMessage}</h5></div>
         
-      <div>${invalidToken}</div>
+      <div><h5>${invalidToken}</h5></div>
+     
+			
+<!-- 			 <input type="hidden" name="token" value=${resetToken}> -->
+<!-- 				 <hr /> -->
+      
 				 <div class="form-group input-group">
           <span class="input-group-addon">
             <span class="glyphicon glyphicon-lock"></span>

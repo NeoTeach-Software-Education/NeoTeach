@@ -1,5 +1,7 @@
 package com.neoteach.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,7 +13,7 @@ import org.springframework.data.annotation.Transient;
 
 @Entity
 @Table(name = "user")
-public class UserRegistration {
+public class User {
 	@Id
 	@Column(name = "email", nullable = false, unique = true)
 //	@Email(message = "Please provide a valid e-mail")
@@ -28,7 +30,34 @@ public class UserRegistration {
 	private String phone;
 	@Column(name = "enabled")
 	private boolean enabled;
+	@Column(name = "created_on")
+	private Date createdOn;
+
+	@Column(name = "last_login")
+	private Date lastLogin;
+
+	@Column(name = "reset_token")
+	private String resetToken;
+
 	
+	public Date getCreatedOn() {
+		return createdOn;
+	}
+	public void setCreatedOn(Date createdOn) {
+		this.createdOn = createdOn;
+	}
+	public Date getLastLogin() {
+		return lastLogin;
+	}
+	public void setLastLogin(Date lastLogin) {
+		this.lastLogin = lastLogin;
+	}
+	public String getResetToken() {
+		return resetToken;
+	}
+	public void setResetToken(String resetToken) {
+		this.resetToken = resetToken;
+	}
 	public boolean isEnabled() {
 		return enabled;
 	}

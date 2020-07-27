@@ -1,12 +1,14 @@
 package com.neoteach.serviceimpl;
 
+import java.util.Optional;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.neoteach.daoimpl.RegisterDaoImpl;
-import com.neoteach.model.UserRegistration;
+import com.neoteach.model.User;
 import com.neoteach.pojo.RegisterPojo;
 import com.neoteach.repositories.UserRepository;
 
@@ -27,18 +29,26 @@ public class RegisterServiceImpl{
 ////		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.EXIT);
 //		return result;
 //	}
-	public UserRegistration findByEmail(String email) {
+	public User findByEmail(String email) {
 		
 		
 		return userRepository.findByEmail(email);
 	}
-	public void saveUser(@Valid UserRegistration user) {
+	public void saveUser(@Valid User user) {
 		// TODO Auto-generated method stub
 		userRepository.save(user);
 	}
-	public UserRegistration findByConfirmationToken(String confirmationToken) {
+	public User findByConfirmationToken(String confirmationToken) {
 		// TODO Auto-generated method stub
 		return userRepository.findByConfirmationToken(confirmationToken);
+	}
+	public Optional<User> findUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		return Optional.of(userRepository.findByEmail(email));
+	}
+	public Optional<User> findUserByResetToken(String resetToken) {
+		// TODO Auto-generated method stub
+		return userRepository.findByResetToken(resetToken);
 	}
 
 //	@Override
