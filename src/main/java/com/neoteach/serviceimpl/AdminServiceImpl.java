@@ -1,20 +1,9 @@
 package com.neoteach.serviceimpl;
 
-import java.io.IOException;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.neoteach.daoimpl.AdminDaoImpl;
-import com.neoteach.daoimpl.RegisterDaoImpl;
-import com.neoteach.exception.FileStorageException;
-//import com.neoteach.pojo.ImageModel;
-import com.neoteach.pojo.RegisterPojo;
-import com.neoteach.pojo.VedioListPogo;
-import com.neoteach.pojo.VideoFile;
 import com.neoteach.repositories.DBFileRepository;
 
 @Service(value="AdminServiceImpl")
@@ -23,18 +12,9 @@ public class AdminServiceImpl{
 	    private DBFileRepository dbFileRepository;
 //	@Autowired
 //	private final String CLASS_NAME=this.getClass().getCanonicalName();
-	@Autowired
-	RegisterDaoImpl registerDaoImpl;
+	
 	@Autowired
 	AdminDaoImpl adminDaoImpl;
-//	@Override
-	public int saveDtls(RegisterPojo registerPojo) throws Exception {
-//		final String METHOD_NAME="saveDtls";
-//		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
-		int result=registerDaoImpl.saveDtls(registerPojo);
-//		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.EXIT);
-		return result;
-	}
 	public boolean creadentialAuthenticate(String email, String pwd) {
 		// TODO Auto-generated method stub
 		

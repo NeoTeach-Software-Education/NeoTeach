@@ -2416,7 +2416,8 @@ Home popular courses
 }
 .dashboard-menu li.active a{
     color: #ffffff;
-    background-color: var(--btn-theme-primary-bg);
+/*     background-color: var(--btn-theme-primary-bg); */
+background-color:green;
 }
 .dashboard-menu li.active a:hover{
     color: #ffffff;

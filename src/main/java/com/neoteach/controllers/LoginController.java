@@ -7,31 +7,40 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.neoteach.serviceimpl.LoginServiceImpl;
+import com.neoteach.model.User;
+import com.neoteach.serviceimpl.UserServiceImpl;
 
 
 @Controller
 public class LoginController {
 	@Autowired
-	LoginServiceImpl loginServiceImpl;
+	UserServiceImpl userServiceImpl;
 	@RequestMapping(value="/loginpage",method=RequestMethod.GET)
 	public String loginPage()
 	{
 		return "login";
 	}
+	
 	@RequestMapping(value="/userlogin",method=RequestMethod.POST)
 	public String userLogin(@RequestParam("username") String email,@RequestParam("password") String pwd,Model model)
 	{
-		boolean result=loginServiceImpl.creadentialAuthenticate(email,pwd);
-		if(result)
-		{
-			return "useraccount";	
+		User user = userServiceImpl.findByEmail(email);
+		if (user == null) {
+			model.addAttribute("errorMessage", "We didn't find an account for that e-mail address.");
+			return "login";
 		}
-		else
+		else if(user.getPassword().equals(pwd))
 		{
-			model.addAttribute("adminloginfail", "Invalid credentials..."+email);
-			return "login";	
+			
+			model.addAttribute("user",user);
+			return "useraccount";
+		}
+		else 
+		{
+			model.addAttribute("errorMessage", "invalid password recheck and try again...!");
+			return "login";
 		}
 		
 	}
+	
 }

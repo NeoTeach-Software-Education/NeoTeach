@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon.png"/>
 
-    <!-- CSRF Token -->
-<!--     <meta name="csrf-token" content="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
-
     <title>   Dashboard | NeoTeach   </title>
 
     <!-- all css here -->
@@ -25,7 +22,6 @@
 
 <div class="main-navbar-wrap">
 
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
         <div class="container">
@@ -33,9 +29,6 @@
                 
                                     <img src="images/logo.png" alt="NeoTeach" />
                             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
             <div class="collapse navbar-collapse" id="mainNavbarContent">
                
@@ -55,14 +48,14 @@
                                             <li class="nav-item main-nav-right-menu nav-item-user-profile">
                             <a class="nav-link profile-dropdown-toogle" href="javascript:;">
                                 <span class="top-nav-user-name">
-                                    <span class='profile-text-photo' style='background-color: #8cb201; color: #fff8e5'>SR</span>
+                                    <span class='profile-text-photo' style='background-color: #8cb201; color: #fff8e5'>${user.fullName}</span>
                                 </span>
                             </a>
                             <div class="profile-dropdown-menu pt-0">
 
                                 <div class="profile-dropdown-userinfo bg-light p-3">
-                                    <p class="m-0">Srinivas</p>
-                                    <small>sri.javatrainer@gmail.com</small>
+                                    <p class="m-0">${user.fullName}</p>
+                                    <small>${user.email}</small>
                                 </div>
 
                                 <ul class="dashboard-menu">
@@ -70,25 +63,25 @@
 
     
                         <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/enrolled-courses"> <i class="la la-pencil-square-o"></i> Enrolled Courses </a>
+                <a href="#"> <i class="la la-pencil-square-o"></i> Enrolled Courses </a>
             </li>
                     <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/wishlist"> <i class="la la-heart-o"></i> Wishlist </a>
+                <a href="#"> <i class="la la-heart-o"></i> Wishlist </a>
             </li>
                     <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/reviews-i-wrote"> <i class="la la-star-half-alt"></i> Reviews </a>
+                <a href="#"> <i class="la la-star-half-alt"></i> Reviews </a>
             </li>
                     <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/my-quiz-attempts"> <i class="la la-question-circle-o"></i> My Quiz Attempts </a>
+                <a href="#"> <i class="la la-question-circle-o"></i> My Quiz Attempts </a>
             </li>
                     <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/purchases"> <i class="la la-history"></i> Purchase History </a>
+                <a href="#"> <i class="la la-history"></i> Purchase History </a>
             </li>
                     <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/settings"> <i class="la la-tools"></i> Settings </a>
+                <a href="#"> <i class="la la-tools"></i> Settings </a>
             </li>
                     <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/students-progress"> <i class="la la-pie-chart"></i> Students Progress Report </a>
+                <a href="#"> <i class="la la-pie-chart"></i> Students Progress Report </a>
             </li>
             
     <li>
@@ -116,33 +109,33 @@
         <div class="row">
             <div class="col-3 dashboard-menu-col">
                 <ul class="dashboard-menu">
-    <li class="active"><a href="https://zenoxpro.com/public/index.php/dashboard"> <i class="la la-dashboard"></i> Dashboard </a></li>
+    <li class="active"><a href="/dashboard"> <i class="la la-dashboard"></i> Dashboard </a></li>
 
     
                         <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/enrolled-courses"> <i class="la la-pencil-square-o"></i> Enrolled Courses </a>
+                <a href="#"> <i class="la la-pencil-square-o"></i> Enrolled Courses </a>
             </li>
                     <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/wishlist"> <i class="la la-heart-o"></i> Wishlist </a>
+                <a href="#"> <i class="la la-heart-o"></i> Wishlist </a>
             </li>
                     <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/reviews-i-wrote"> <i class="la la-star-half-alt"></i> Reviews </a>
+                <a href="#"> <i class="la la-star-half-alt"></i> Reviews </a>
             </li>
                     <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/my-quiz-attempts"> <i class="la la-question-circle-o"></i> My Quiz Attempts </a>
+                <a href="#"> <i class="la la-question-circle-o"></i> My Quiz Attempts </a>
             </li>
                     <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/purchases"> <i class="la la-history"></i> Purchase History </a>
+                <a href="#"> <i class="la la-history"></i> Purchase History </a>
             </li>
                     <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/settings"> <i class="la la-tools"></i> Settings </a>
+                <a href="#"> <i class="la la-tools"></i> Settings </a>
             </li>
                     <li class="">
-                <a href="https://zenoxpro.com/public/index.php/dashboard/students-progress"> <i class="la la-pie-chart"></i> Students Progress Report </a>
+                <a href="#"> <i class="la la-pie-chart"></i> Students Progress Report </a>
             </li>
             
     <li>
-        <a href="https://zenoxpro.com/public/index.php/logout"
+        <a href="/"
            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
             <i class="la la-sign-out"></i> Log Out
         </a>

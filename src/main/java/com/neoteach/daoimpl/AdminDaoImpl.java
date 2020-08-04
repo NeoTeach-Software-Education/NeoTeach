@@ -53,7 +53,10 @@ public class AdminDaoImpl {
 			return flag;
 		}
 
-
+	public void setMaxPacketSize() {
+		jdbcTemplate.execute("SET GLOBAL max_allowed_packet=16*1024*1024");
+		
+	}
 //	public List<VedioListPogo> getCourseList(String coursetitle) {
 //		VedioListPogo vedioListPogo=null;
 //		List<VedioListPogo> vedios=new ArrayList<VedioListPogo>();

@@ -20,14 +20,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.neoteach.model.User;
 import com.neoteach.pojo.RegisterPojo;
 import com.neoteach.serviceimpl.EmailServiceImpl;
-import com.neoteach.serviceimpl.RegisterServiceImpl;
+import com.neoteach.serviceimpl.UserServiceImpl;
 import com.nulabinc.zxcvbn.Strength;
 import com.nulabinc.zxcvbn.Zxcvbn;
 
 @Controller
 public class RegisterPageController {
 	@Autowired
-	RegisterServiceImpl registerServiceImpl;
+	UserServiceImpl userServiceImpl;
 	@Autowired
 	EmailServiceImpl emailServiceImpl;
 //	@Autowired
@@ -50,7 +50,7 @@ public class RegisterPageController {
 		public String processRegistrationForm(Model model, @Valid User user, BindingResult bindingResult,HttpServletRequest request) {
 					
 			// Lookup user in database by e-mail
-			User userExists = registerServiceImpl.findByEmail(user.getEmail());
+			User userExists = userServiceImpl.findByEmail(user.getEmail());
 			
 			System.out.println(userExists);
 			
@@ -69,7 +69,7 @@ public class RegisterPageController {
 			      
 			    // Generate random 36-character string token for confirmation link
 			    user.setConfirmationToken(UUID.randomUUID().toString());     
-				registerServiceImpl.saveUser(user);
+			    userServiceImpl.saveUser(user);
 					
 				String appUrl = request.getScheme() + "://" + request.getServerName();
 				
@@ -91,7 +91,7 @@ public class RegisterPageController {
 		@RequestMapping(value="/confirm", method = RequestMethod.GET)
 		public String showConfirmationPage(Model model, @RequestParam("token") String token) {
 				
-			User user = registerServiceImpl.findByConfirmationToken(token);
+			User user = userServiceImpl.findByConfirmationToken(token);
 				System.out.println("555==="+user);
 			if (user == null) { // No token found in DB
 				model.addAttribute("invalidToken", "Oops!  This is an invalid confirmation link.");
@@ -122,7 +122,7 @@ public class RegisterPageController {
 //			}
 		
 			// Find the user associated with the reset token
-			User user = registerServiceImpl.findByConfirmationToken((String) requestParams.get("token"));
+			User user = userServiceImpl.findByConfirmationToken((String) requestParams.get("token"));
 
 			// Set new password
 //			user.setPassword(bCryptPasswordEncoder.encode((CharSequence) requestParams.get("password")));
@@ -131,7 +131,7 @@ public class RegisterPageController {
 			user.setEnabled(true);
 			
 			// Save user
-			registerServiceImpl.saveUser(user);
+			userServiceImpl.saveUser(user);
 			
 			model.addAttribute("successMessage", "Your password has been set!");
 			return "login";		

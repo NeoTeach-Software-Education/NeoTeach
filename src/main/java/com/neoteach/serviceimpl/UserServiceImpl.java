@@ -7,19 +7,15 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.neoteach.daoimpl.RegisterDaoImpl;
 import com.neoteach.model.User;
 import com.neoteach.pojo.RegisterPojo;
 import com.neoteach.repositories.UserRepository;
 
 @Service(value="RegisterServiceImpl")
-public class RegisterServiceImpl{
+public class UserServiceImpl{
 	
 //	@Autowired
 //	private final String CLASS_NAME=this.getClass().getCanonicalName();
-	@Autowired
-	RegisterDaoImpl registerDaoImpl;
-//	@Override
 	@Autowired
 	UserRepository userRepository;
 //	public int saveDtls(RegisterPojo registerPojo) throws Exception {

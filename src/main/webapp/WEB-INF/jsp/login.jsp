@@ -71,6 +71,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
 			<div><h5>${successMessage}</h5></div>
+			<div><h5>${errorMessage}</h5></div>
             <div class="card">
                 <div class="card-header">Login Using your E-Mail and password</div>
 					

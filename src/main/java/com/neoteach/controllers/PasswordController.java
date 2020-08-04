@@ -19,7 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.neoteach.model.User;
 import com.neoteach.serviceimpl.EmailServiceImpl;
-import com.neoteach.serviceimpl.RegisterServiceImpl;
+import com.neoteach.serviceimpl.UserServiceImpl;
 
 
 @Controller
@@ -28,7 +28,7 @@ public class PasswordController {
 //	@Autowired
 //	private registerServiceImpl registerServiceImpl;
 	@Autowired
-	RegisterServiceImpl registerServiceImpl;
+	UserServiceImpl registerServiceImpl;
 	@Autowired
 	private EmailServiceImpl emailServiceImpl;
 
