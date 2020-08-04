@@ -134,6 +134,6 @@ public class RegisterPageController {
 			registerServiceImpl.saveUser(user);
 			
 			model.addAttribute("successMessage", "Your password has been set!");
-			return "confirm";		
+			return "login";		
 		}
 }

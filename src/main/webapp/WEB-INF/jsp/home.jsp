@@ -79,7 +79,8 @@
 						</div>
 						<div class="col-md-10 text-right menu-1">
 							<ul>
-								<li class="active"><a href="/">Home</a></li>
+<!-- 								<li class="active"><a href="/">Home</a></li> -->
+									<li class="active"><a href="about.html">About</a></li>
 								<li class="has-dropdown">
 									<a href="courses.html">Courses</a>
 									<ul class="dropdown">
@@ -91,7 +92,6 @@
 									</ul>
 								</li>
 								<li><a href="teachers.html">Teachers</a></li>
-								<li><a href="about.html">About</a></li>
 <!-- 								<li><a href="event.html">Events</a></li> -->
 <!-- 								<li><a href="news.html">News</a></li> -->
 								<li><a href="contact.html">Contact</a></li>
@@ -976,7 +976,7 @@
 					<div class="col-md-12 text-center">
 							<p>
 								<small class="block">&copy;  Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear<!--());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small><br> 
 								<small class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a>, <a href="http://pexels.com/" target="_blank">Pexels</a></small>
 							</p>

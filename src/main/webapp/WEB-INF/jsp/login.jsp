@@ -1,117 +1,267 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="auto" >
 <head>
-	<title>Login V11</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/mainlogin.css">
-<!--===============================================================================================-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon.png"/>
+
+    <!-- CSRF Token -->
+<!--     <meta name="csrf-token" content="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
+
+    <title>   Log In | NeoTeach   </title>
+
+    <!-- all css here -->
+    <!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/line-awesome.min.css">
+<!-- style css -->
+	<link rel="stylesheet" href="css/style.css">
+    <!-- modernizr css -->
+<!--     <script src="https://zenoxpro.com/public/assets/js/vendor/modernizr-2.8.3.min.js"></script> -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
-	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
-			
-				
-				<form class="login100-form validate-form" name="userloginform" action="/userlogin" method="post">
-					<span class="login100-form-title p-b-55">
-						Login
-					</span>
-					<div><h5>${successMessage}</h5></div>
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="username" placeholder="Email">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<span class="lnr lnr-envelope"></span>
-						</span>
-					</div>
+<body class="">
 
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
-						<input class="input100" type="password" name="password" placeholder="Password">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<span class="lnr lnr-lock"></span>
-						</span>
-					</div>
+<div class="main-navbar-wrap">
 
-					<div class="contact100-form-checkbox m-l-4">
-						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-						<label class="label-checkbox100" for="ckb1">
-							Remember me
-						</label>
-					</div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="container">
+            <a class="navbar-brand site-main-logo" href="/">
+                
+                                    <img src="images/logo.png" alt="NeoTeach" />
+                            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbarContent">
+               
+              
+                <ul class="navbar-nav main-nav-auth-profile-wrap justify-content-end mt-2 mt-lg-0 flex-grow-1">
+
+                    <li class="nav-item dropdown mini-cart-item">
+                        <a class="nav-link" href="javascript:;" id="miniCartDropDown">
+    <div class="text-center">
+        <i class="la la-shopping-cart"></i>
+            </div>
+</a>
+
+
+                    </li>
+
+                                            <li class="nav-item mr-2 ml-2">
+                            <a class="nav-link btn btn-login-outline" href="/loginpage"> <i class="la la-sign-in"></i> Log In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-theme-primary" href="/register"> <i class="la la-user-plus"></i> Sign Up</a>
+                        </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
+
+</div>
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+			<div><h5>${successMessage}</h5></div>
+            <div class="card">
+                <div class="card-header">Login Using your E-Mail and password</div>
 					
-					<div class="container-login100-form-btn p-t-25">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
-<div class="text-center w-full p-t-115">
-						
-						<a class="txt1 bo1 hov1" href="/forgot">
-							Forgot password?				
-						</a>
-					</div>
-					<div class="text-center w-full p-t-42 p-b-22">
-						<span class="txt1">
-							Or login with
-						</span>
-					</div>
+                <div class="card-body">
 
-					<a href="#" class="btn-face m-b-10">
-						<i class="fa fa-facebook-official"></i>
-						Facebook
-					</a>
+                    <div class="row">
+                        <div class="col-md-8">
 
-					<a href="#" class="btn-google m-b-10">
-						<img src="images/icons/icon-google.png" alt="GOOGLE">
-						Google
-					</a>
+                            
+                            <form name="userloginform" action="/userlogin" method="post">
+                                <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt">
+                                <div class="form-group row">
+                                    <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
 
-					<div class="text-center w-full p-t-115">
-						<span class="txt1">
-							Not a member?
-						</span>
+                                    <div class="col-md-8">
+                                        <input id="email" type="email" class="form-control" name="username"  required autofocus>
 
-						<a class="txt1 bo1 hov1" href="/register">
-							Sign up now							
-						</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	
-	
-<script src="js/jquery-1.8.3min.js" type="text/javascript"></script>
-<!--	<script language="JavaScript" src="js/userlogin.js"></script> --
-	
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
+                                                                            </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+
+                                    <div class="col-md-8">
+                                        <input id="password" type="password" class="form-control" name="password" required>
+
+                                                                            </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-8 offset-md-4">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="remember" > Remember Me
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-0">
+                                    <div class="col-md-8 offset-md-4">
+                                        <button type="submit" class="btn btn-primary">
+                                            Login
+                                        </button>
+
+                                        <a class="btn btn-link" href="/forgot">
+                                            Forgot Your Password?
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="social-login-wrap mb-4 text-center">
+                                
+                                
+                                
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+</div>
+<footer>
+
+    <div class="footer-top py-5">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3">
+                    <div class="footer-widget-wrap">
+                        <h4>About US</h4>
+                        <p class="footer-about-us-desc">
+                            NeoTeach is a Online Teaching platform that connect Teachers with Students globally. Teachers crate high quality course and present them in easy way to understand the concepts.
+                        </p>
+                        <p class="footer-social-icon-wrap">
+                            <a href="#"><i class="la la-facebook"></i> </a>
+                            <a href="#"><i class="la la-twitter"></i> </a>
+                            <a href="#"><i class="la la-youtube"></i> </a>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="footer-widget-wrap contact-us-widget-wrap">
+                        <h4>Contact</h4>
+                        <p class="footer-address">
+                            First floor,street no 12,Nallakunta,Hyderabad-500044.
+                        </p>
+                        <p class="mb-0"> Support.: +91 9700053393 </p>                      
+                        <p class="mb-0"> support@neoteach.com </p>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <div class="footer-widget-wrap link-widget-wrap">
+
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a> </li>
+<!--                             <li><a href="#">Dashboard</a> </li> -->
+                            <li><a href="#">Courses</a> </li>
+<!--                             <li><a href="#">Popular courses</a> </li> -->
+<!--                             <li><a href="#">Featured courses</a> </li> -->
+<!--                             <li><a href="#">Blog</a> </li> -->
+                            <li><a href="#">About Us</a> </li>
+                            <li><a href="#">Sign Up</a> </li>
+                            <li><a href="#">Contact Us</a> </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer-bottom py-5">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-bottom-contents-wrap d-flex">
+
+                        <div class="footer-bottom-left d-flex">
+                            <h5 class="text-warning">NeoTeach</h5>
+                            <span class="ml-4">Copyright © 2020 NeoTeach. All rights reserved.</span>
+                        </div>
+
+                        <div class="footer-bottom-right flex-grow-1 text-right">
+                            <ul class="footer-bottom-right-links">
+                                <li>
+                                    <a href="#">
+                                        Terms of use
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Privacy Policy &amp; Cookie Policy
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</footer>
+
+
+<form id="logout-form" action="#" method="POST" class="d-none">
+<!--     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
+</form>
+
+
+<!-- jquery latest version -->
+<script src="https://zenoxpro.com/public/assets/js/vendor/jquery-1.12.0.min.js"></script>
+<!-- bootstrap js -->
+<!-- <script src="https://zenoxpro.com/public/assets/js/bootstrap.bundle.min.js"></script> -->
+<!-- Bootstrap -->
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- main js -->
+<!-- <script src="https://zenoxpro.com/public/themes/edugator/assets/js/main.js"></script> -->
+
+<!-- Main -->
 	<script src="js/main.js"></script>
+
 
 </body>
 </html>

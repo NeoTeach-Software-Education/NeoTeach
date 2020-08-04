@@ -25,7 +25,7 @@ public class LoginController {
 		boolean result=loginServiceImpl.creadentialAuthenticate(email,pwd);
 		if(result)
 		{
-			return "myhome";	
+			return "useraccount";	
 		}
 		else
 		{

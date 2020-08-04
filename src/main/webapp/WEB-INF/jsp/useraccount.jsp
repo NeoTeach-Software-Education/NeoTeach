@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
 <!--     <meta name="csrf-token" content="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
 
-    <title>   Set Password | NeoTeach   </title>
+    <title>   Dashboard | NeoTeach   </title>
 
     <!-- all css here -->
     <!-- Bootstrap  -->
@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="css/line-awesome.min.css">
 <!-- style css -->
 	<link rel="stylesheet" href="css/style.css">
-    <!-- modernizr css --0>
+    <!-- modernizr css -->
 <!--     <script src="https://zenoxpro.com/public/assets/js/vendor/modernizr-2.8.3.min.js"></script> -->
     <script src="js/modernizr-2.6.2.min.js"></script>
 </head>
@@ -52,11 +52,53 @@
 
                     </li>
 
-                                            <li class="nav-item mr-2 ml-2">
-                            <a class="nav-link btn btn-login-outline" href="/loginpage"> <i class="la la-sign-in"></i> Log In</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-theme-primary" href="/register"> <i class="la la-user-plus"></i> Sign Up</a>
+                                            <li class="nav-item main-nav-right-menu nav-item-user-profile">
+                            <a class="nav-link profile-dropdown-toogle" href="javascript:;">
+                                <span class="top-nav-user-name">
+                                    <span class='profile-text-photo' style='background-color: #8cb201; color: #fff8e5'>SR</span>
+                                </span>
+                            </a>
+                            <div class="profile-dropdown-menu pt-0">
+
+                                <div class="profile-dropdown-userinfo bg-light p-3">
+                                    <p class="m-0">Srinivas</p>
+                                    <small>sri.javatrainer@gmail.com</small>
+                                </div>
+
+                                <ul class="dashboard-menu">
+    <li class="active"><a href="/useraccount"> <i class="la la-dashboard"></i> Dashboard </a></li>
+
+    
+                        <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/enrolled-courses"> <i class="la la-pencil-square-o"></i> Enrolled Courses </a>
+            </li>
+                    <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/wishlist"> <i class="la la-heart-o"></i> Wishlist </a>
+            </li>
+                    <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/reviews-i-wrote"> <i class="la la-star-half-alt"></i> Reviews </a>
+            </li>
+                    <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/my-quiz-attempts"> <i class="la la-question-circle-o"></i> My Quiz Attempts </a>
+            </li>
+                    <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/purchases"> <i class="la la-history"></i> Purchase History </a>
+            </li>
+                    <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/settings"> <i class="la la-tools"></i> Settings </a>
+            </li>
+                    <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/students-progress"> <i class="la la-pie-chart"></i> Students Progress Report </a>
+            </li>
+            
+    <li>
+        <a href="/"
+           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <i class="la la-sign-out"></i> Log Out
+        </a>
+    </li>
+</ul>
+                            </div>
                         </li>
                     
                 </ul>
@@ -67,89 +109,106 @@
     </nav>
 
 </div>
-<div class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-			<div><h5>${successMessage}</h5></div>
 
-      							<div><h5>${errorMessage}</h5></div>
-        
-      							<div><h5>${invalidToken}</h5></div>
-            <div class="card">
-                <div class="card-header"><h2 class="mb-5 text-center">Set Password</h2></div>
-					
-                <div class="card-body">
+<div class="dashboard-wrap">
 
-                    <div class="row">
-                        <div class="col-md-8">
-                            
-                            <form name="passwordForm" action="/confirm" method="post">
-								<input type="hidden" name="token" value=${confirmationToken}>
-<!--                                 <div class="form-group row"> -->
-<!--                                     <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label> -->
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-3 dashboard-menu-col">
+                <ul class="dashboard-menu">
+    <li class="active"><a href="https://zenoxpro.com/public/index.php/dashboard"> <i class="la la-dashboard"></i> Dashboard </a></li>
 
-<!--                                     <div class="col-md-8"> -->
-<!--                                         <input id="email" type="email" class="form-control" name="username"  required autofocus> -->
+    
+                        <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/enrolled-courses"> <i class="la la-pencil-square-o"></i> Enrolled Courses </a>
+            </li>
+                    <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/wishlist"> <i class="la la-heart-o"></i> Wishlist </a>
+            </li>
+                    <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/reviews-i-wrote"> <i class="la la-star-half-alt"></i> Reviews </a>
+            </li>
+                    <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/my-quiz-attempts"> <i class="la la-question-circle-o"></i> My Quiz Attempts </a>
+            </li>
+                    <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/purchases"> <i class="la la-history"></i> Purchase History </a>
+            </li>
+                    <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/settings"> <i class="la la-tools"></i> Settings </a>
+            </li>
+                    <li class="">
+                <a href="https://zenoxpro.com/public/index.php/dashboard/students-progress"> <i class="la la-pie-chart"></i> Students Progress Report </a>
+            </li>
+            
+    <li>
+        <a href="https://zenoxpro.com/public/index.php/logout"
+           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <i class="la la-sign-out"></i> Log Out
+        </a>
+    </li>
+</ul>
+            </div>
 
-<!--                                                                             </div> -->
-<!--                                 </div> -->
+            <div class="col-9">
+                <div class="alert alert-danger">
+        <i class="la la-info-circle"></i> Restriction area, permission denied
+    </div>
 
-                                <div class="form-group row">
-                                    <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                    
+    <div class="row">
+        <div class="col-lg-4 col-md-6">
+            <div class="dashboard-card mb-3 d-flex border p-3 bg-light">
+                <div class="card-icon mr-2">
+                    <span><i class="la la-user"></i> </span>
+                </div>
 
-                                    <div class="col-md-8">
-                                        <input id="password" type="password" class="form-control" name="password"  required autofocus>
-
-                                    </div>
-                                </div>
-
- 								<div class="form-group row">
-                                    <label for="password" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
-
-                                    <div class="col-md-8">
-                                       <input type="password" class="form-control" id="signup-password-confirm" name="ConfirmPassword" data-fv-notempty="true"
-                                       data-fv-notempty-message="Please confirm password"
-                                       data-fv-identical="true"
-                                       data-fv-identical-field="password"
-                                       data-fv-identical-message="Both passwords must be identical" />
-                                    </div>
-                                    
-                                </div>
-                                <div class="form-group row mb-0">
-                                    <div class="col-md-8 offset-md-4">
-                                        <button type="submit" class="btn btn-primary">
-                                            Save
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-
-                        </div>
-
-<!--                         <div class="col-md-4"> -->
-
-<!--                             <div class="social-login-wrap mb-4 text-center"> -->
-                                
-                                
-                                
-                                
-<!--                             </div> -->
-
-<!--                         </div> -->
-
-                    </div>
-
+                <div class="card-info">
+                    <div class="text-value"><h4>0</h4></div>
+                    <div>Courses Enrolled</div>
                 </div>
             </div>
         </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="dashboard-card mb-3 d-flex border p-3 bg-light">
+                <div class="card-icon mr-2">
+                    <span><i class="la la-heart"></i> </span>
+                </div>
+
+                <div class="card-info">
+                    <div class="text-value"><h4>0</h4></div>
+                    <div>In Wishlist</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="dashboard-card mb-3 d-flex border p-3 bg-light">
+                <div class="card-icon mr-2">
+                    <span><i class="la la-star-half-alt"></i> </span>
+                </div>
+
+                <div class="card-info">
+                    <div class="text-value"><h4>0</h4></div>
+                    <div>My Reviews</div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-
     
+    
+            </div>
+
+        </div>
+    </div>
+
 </div>
+
 <footer>
 
-   
     <div class="footer-top py-5">
 
         <div class="container">
@@ -261,8 +320,6 @@
 <!-- main js -->
 <!-- <script src="https://zenoxpro.com/public/themes/edugator/assets/js/main.js"></script> -->
 
-<!-- Main -->
-	<script src="js/main.js"></script>
 
 
 </body>
