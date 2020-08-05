@@ -12,5 +12,8 @@ public class DashboardController {
 	public String dashboardPage() {
 		return "useraccount";
     }
-
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String userLogout() {
+		return "login";
+    }
 }

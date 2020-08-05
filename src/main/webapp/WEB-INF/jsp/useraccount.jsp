@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>  
 <html lang="en" dir="auto" >
 <head>
     <meta charset="utf-8">
@@ -48,7 +50,9 @@
                                             <li class="nav-item main-nav-right-menu nav-item-user-profile">
                             <a class="nav-link profile-dropdown-toogle" href="javascript:;">
                                 <span class="top-nav-user-name">
-                                    <span class='profile-text-photo' style='background-color: #8cb201; color: #fff8e5'>${user.fullName}</span>
+                                    <span class='profile-text-photo' style='background-color: #8cb201; color: #fff8e5'>
+                                    	<c:set var="nickname" value="${user.fullName}"/>${fn:substring(nickname, 0, 3)}
+                                    </span>
                                 </span>
                             </a>
                             <div class="profile-dropdown-menu pt-0">
@@ -85,8 +89,7 @@
             </li>
             
     <li>
-        <a href="/"
-           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        <a href="/logout">
             <i class="la la-sign-out"></i> Log Out
         </a>
     </li>
@@ -135,8 +138,7 @@
             </li>
             
     <li>
-        <a href="/"
-           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        <a href="/logout">
             <i class="la la-sign-out"></i> Log Out
         </a>
     </li>
