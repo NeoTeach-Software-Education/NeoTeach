@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon.png"/>
+   <link rel="shortcut icon" href="images/favicon.png"/>
 
-    <!-- CSRF Token -->
+<!--     CSRF Token -->
 <!--     <meta name="csrf-token" content="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
 
-    <title>   Log In | NeoTeach   </title>
+    <title>   Class Room Training | NeoTeach   </title>
 
     <!-- all css here -->
-    <!-- Bootstrap  -->
+
+       <!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/line-awesome.min.css">
 <!-- style css -->
@@ -20,6 +21,7 @@
     <!-- modernizr css -->
 <!--     <script src="https://zenoxpro.com/public/assets/js/vendor/modernizr-2.8.3.min.js"></script> -->
     <script src="js/modernizr-2.6.2.min.js"></script>
+    
 </head>
 <body class="">
 
@@ -68,84 +70,98 @@
 
 </div>
 <div class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-			<div><h5>${successMessage}</h5></div>
-			<div><h5>${errorMessage}</h5></div>
-            <div class="card">
-                <div class="card-header">Login Using your E-Mail and password</div>
-					
-                <div class="card-body">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
 
-                    <div class="row">
-                        <div class="col-md-8">
+            <h2 class="mb-5 text-center">Register for Course</h2>
 
-                            
-                            <form name="userloginform" action="/userlogin" method="post">
-                                <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt">
-                                <div class="form-group row">
-                                    <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
+            <div class="auth-form-wrap">
 
-                                    <div class="col-md-8">
-                                        <input id="email" type="email" class="form-control" name="username"  required autofocus>
+                <div><h5>${successMessage}</h5></div>
+                <form class="form-horizontal" name="classroom" action="/classenqire" method="post">
+                   
 
-                                                                            </div>
-                                </div>
+                    <div class="form-group row ">
+                        <label for="name" class="col-md-4 control-label">Name</label>
 
-                                <div class="form-group row">
-                                    <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-
-                                    <div class="col-md-8">
-                                        <input id="password" type="password" class="form-control" name="password" required>
-
-                                                                            </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <div class="col-md-8 offset-md-4">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" name="remember" > Remember Me
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row mb-0">
-                                    <div class="col-md-8 offset-md-4">
-                                        <button type="submit" class="btn btn-primary">
-                                            Login
-                                        </button>
-
-                                        <a class="btn btn-link" href="/forgot">
-                                            Forgot Your Password?
-                                        </a>
-                                    </div>
-                                </div>
-                            </form>
+                        <div class="col-md-6">
+                            <input id="name" type="text" class="form-control" name="fullName" value="" required autofocus>
 
                         </div>
+                    </div>
+                    
+                     <div class="form-group row ">
+                        <label for="phone" class="col-md-4 control-label">Phone</label>
 
-                        <div class="col-md-4">
-
-                            <div class="social-login-wrap mb-4 text-center">
-                                
-                                
-                                
-                                
-                            </div>
+                        <div class="col-md-6">
+                            <input id="phone" type="text" class="form-control" name="phone" value="" required>
 
                         </div>
-
                     </div>
 
-                </div>
+                    <div class="form-group row ">
+                        <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+
+                        <div class="col-md-6">
+                            <input id="email" type="email" class="form-control" name="email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+
+                       </div>
+                    </div>
+                      <div class="form-group row ">
+                        <label for="course" class="col-md-4 control-label">Course/Subject</label>
+
+                        <div class="col-md-6">
+                            <input id="course" type="text" class="form-control" name="course" value="" required>
+
+                        </div>
+                    </div>
+                      <div class="form-group row ">
+                        <label for="Qualification" class="col-md-4 control-label">Qualification</label>
+
+                        <div class="col-md-6">
+                            <input id="qualification" type="text" class="form-control" name="qualification" value="" required>
+
+                        </div>
+                    </div>
+                    
+                    
+
+<!--                     <div class="form-group row "> -->
+<!--                         <label for="password" class="col-md-4 control-label">Password</label> -->
+
+<!--                         <div class="col-md-6"> -->
+<!--                             <input id="password" type="password" class="form-control" name="password" required> -->
+
+<!--                                                     </div> -->
+<!--                     </div> -->
+
+<!--                     <div class="form-group row "> -->
+<!--                         <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label> -->
+
+<!--                         <div class="col-md-6"> -->
+<!--                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required> -->
+<!--                         </div> -->
+<!--                     </div> -->
+
+<!--                     <div class="form-group row "> -->
+<!--                         <label for="password-confirm" class="col-md-4 control-label">I am</label> -->
+
+<!--                         <div class="col-md-6"> -->
+<!--                             <label class="mr-3"><input type="radio" name="user_as" value="student" checked> Student </label> -->
+<!--                             <label><input type="radio" name="user_as" value="instructor"  > Instructor </label> -->
+<!--                         </div> -->
+<!--                     </div> -->
+
+                    <div class="form-group row ">
+                        <div class="col-md-6 offset-4">
+                            <button type="submit" class="btn btn-primary"> Register a Course </button>
+                        </div>
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>
-
-
-    
 </div>
 <footer>
 
@@ -158,7 +174,7 @@
                     <div class="footer-widget-wrap">
                         <h4>About US</h4>
                         <p class="footer-about-us-desc">
-                            NeoTeach is a Online Teaching platform that connect Teachers with Students globally. Teachers crate high quality course and present them in easy way to understand the concepts.
+                            NeoTeach is a LMS platform that connect Teachers with Students globally. Teachers crate high quality course and present them in super easy way. NeoTeach created by <a href="#" target="_blank">NeoTeach Group</a>
                         </p>
                         <p class="footer-social-icon-wrap">
                             <a href="#"><i class="la la-facebook"></i> </a>
@@ -187,11 +203,11 @@
 
                         <ul class="footer-links">
                             <li><a href="#">Home</a> </li>
-<!--                             <li><a href="#">Dashboard</a> </li> -->
+                            <li><a href="#">Dashboard</a> </li>
                             <li><a href="#">Courses</a> </li>
-<!--                             <li><a href="#">Popular courses</a> </li> -->
-<!--                             <li><a href="#">Featured courses</a> </li> -->
-<!--                             <li><a href="#">Blog</a> </li> -->
+                            <li><a href="#">Popular courses</a> </li>
+                            <li><a href="#">Featured courses</a> </li>
+                            <li><a href="#">Blog</a> </li>
                             <li><a href="#">About Us</a> </li>
                             <li><a href="#">Sign Up</a> </li>
                             <li><a href="#">Contact Us</a> </li>
@@ -251,19 +267,17 @@
 
 
 <!-- jquery latest version -->
-<!-- <script src="https://zenoxpro.com/public/assets/js/vendor/jquery-1.12.0.min.js"></script> -->
-<script src="js/jquery-1.12.0.min.js"></script>
+<script src="https://zenoxpro.com/public/assets/js/vendor/jquery-1.12.0.min.js"></script>
 <!-- bootstrap js -->
 <!-- <script src="https://zenoxpro.com/public/assets/js/bootstrap.bundle.min.js"></script> -->
+
 <!-- Bootstrap -->
 	<script src="js/bootstrap.bundle.min.js"></script>
-
+	
 <!-- main js -->
 <!-- <script src="https://zenoxpro.com/public/themes/edugator/assets/js/main.js"></script> -->
 
-<!-- Main -->
 	<script src="js/main.js"></script>
-
 
 </body>
 </html>

@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>  
 <html lang="en" dir="auto" >
 <head>
     <meta charset="utf-8">
@@ -8,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon.png"/>
 
-    <title>   Dashboard | NeoTeach   </title>
+    <!-- CSRF Token -->
+<!--     <meta name="csrf-token" content="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
+
+    <title>   Reset Password | NeoTeach   </title>
 
     <!-- all css here -->
     <!-- Bootstrap  -->
@@ -23,6 +24,7 @@
 <body class="">
 
 <div class="main-navbar-wrap">
+
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -50,14 +52,12 @@
                                             <li class="nav-item main-nav-right-menu nav-item-user-profile">
                             <a class="nav-link profile-dropdown-toogle" href="javascript:;">
                                 <span class="top-nav-user-name">
-                                    <span class='profile-text-photo' style='background-color: #8cb201; color: #fff8e5'>
-                                    	<c:set var="nickname" value="${user.fullName}"/>${fn:substring(nickname, 0, 3)}
-                                    </span>
+                                    <span class='profile-text-photo' style='background-color: #8cb201; color: #fff8e5'>SR</span>
                                 </span>
                             </a>
                             <div class="profile-dropdown-menu pt-0">
 
-                                <div class="profile-dropdown-userinfo bg-light p-3">
+                                 <div class="profile-dropdown-userinfo bg-light p-3">
                                     <p class="m-0">${user.fullName}</p>
                                     <small>${user.email}</small>
                                 </div>
@@ -76,7 +76,7 @@
                 <a href="#"> <i class="la la-star-half-alt"></i> Reviews </a>
             </li>
                     <li class="">
-                <a href="/changepwd"> <i class="la la-question-circle-o"></i> Reset Password </a>
+                <a href="/changepwd"> <i class="la la-key"></i> Reset Password </a>
             </li>
                     <li class="">
                 <a href="#"> <i class="la la-history"></i> Purchase History </a>
@@ -125,7 +125,7 @@
                 <a href="#"> <i class="la la-star-half-alt"></i> Reviews </a>
             </li>
                     <li class="">
-                <a href="/changepwd"> <i class="la la-question-circle-o"></i> Reset Password </a>
+                <a href="/changepwd"> <i class="la la-key"></i> Reset Password </a>
             </li>
                     <li class="">
                 <a href="#"> <i class="la la-history"></i> Purchase History </a>
@@ -146,62 +146,63 @@
             </div>
 
             <div class="col-9">
-                <div class="alert alert-danger">
-        <i class="la la-info-circle"></i> Restriction area, permission denied
+                                
+<!--     <div class="dashboard-inline-submenu-wrap mb-4 border-bottom"> -->
+<!--         <a href="https://zenoxpro.com/public/index.php/dashboard/settings" class="active">Profile Settings</a> -->
+<!--         <a href="https://zenoxpro.com/public/index.php/dashboard/settings/reset-password" class="">Password Reset</a> -->
+<!--     </div> -->
+
+		<div class="profile-settings-wrap">
+
+<h4 class="mb-3">Reset Password</h4>
+        <form action="#" method="post">
+<!--             <input type="hidden" name="_token" value="knCfYaWkBZuk9etmKEmZ7B3jILMADSxhuT9yiTLi"> -->
+<!-- 				<input type="hidden" name="token" value=${confirmationToken}> -->
+            <div class="profile-basic-info bg-white p-3">
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 ">
+                        <label>Old Password</label>
+                        <input type="tel" class="form-control" name="old_password" >
+                        
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 ">
+                        <label>New Password</label>
+                        <input type="tel" class="form-control" name="new_password" >
+                     </div>      
+                    </div>
+					<div class="form-row">
+                    <div class="form-group col-md-6 ">
+                        <label>Confirm New Password</label>
+                        <input type="tel" class="form-control" name="new_password_confirmation" >
+                     
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="btn btn-purple btn-lg"> Change Password</button>
+
+
+            </div>
+
+
+
+        </form>
+
+
     </div>
 
-                    
-    <div class="row">
-        <div class="col-lg-4 col-md-6">
-            <div class="dashboard-card mb-3 d-flex border p-3 bg-light">
-                <div class="card-icon mr-2">
-                    <span><i class="la la-user"></i> </span>
-                </div>
-
-                <div class="card-info">
-                    <div class="text-value"><h4>0</h4></div>
-                    <div>Courses Enrolled</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-            <div class="dashboard-card mb-3 d-flex border p-3 bg-light">
-                <div class="card-icon mr-2">
-                    <span><i class="la la-heart"></i> </span>
-                </div>
-
-                <div class="card-info">
-                    <div class="text-value"><h4>0</h4></div>
-                    <div>In Wishlist</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-            <div class="dashboard-card mb-3 d-flex border p-3 bg-light">
-                <div class="card-icon mr-2">
-                    <span><i class="la la-star-half-alt"></i> </span>
-                </div>
-
-                <div class="card-info">
-                    <div class="text-value"><h4>0</h4></div>
-                    <div>My Reviews</div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    
-    
             </div>
 
         </div>
     </div>
 
 </div>
-
 <footer>
 
     <div class="footer-top py-5">
@@ -306,6 +307,7 @@
 
 
 <!-- jquery latest version -->
+<!-- <script src="https://zenoxpro.com/public/assets/js/vendor/jquery-1.12.0.min.js"></script> -->
 <script src="js/jquery-1.12.0.min.js"></script>
 <!-- bootstrap js -->
 <!-- <script src="https://zenoxpro.com/public/assets/js/bootstrap.bundle.min.js"></script> -->
@@ -315,6 +317,8 @@
 <!-- main js -->
 <!-- <script src="https://zenoxpro.com/public/themes/edugator/assets/js/main.js"></script> -->
 
+<!-- Main -->
+	<script src="js/main.js"></script>
 
 
 </body>

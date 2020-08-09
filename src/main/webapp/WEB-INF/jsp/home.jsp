@@ -95,7 +95,7 @@
 <!-- 								<li><a href="event.html">Events</a></li> -->
 <!-- 								<li><a href="news.html">News</a></li> -->
 								<li><a href="contact.html">Contact</a></li>
-								<li class="btn-cta"><a href="#"><span>Class Room Training</span></a></li>
+								<li class="btn-cta"><a href="/classenqire"><span>Class Room Training</span></a></li>
 							</ul>
 						</div>
 					</div>
