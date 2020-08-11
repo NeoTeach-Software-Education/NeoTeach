@@ -28,7 +28,7 @@ public class PasswordController {
 //	@Autowired
 //	private registerServiceImpl registerServiceImpl;
 	@Autowired
-	UserServiceImpl registerServiceImpl;
+	UserServiceImpl userServiceImpl;
 	@Autowired
 	private EmailServiceImpl emailServiceImpl;
 
@@ -46,7 +46,7 @@ public class PasswordController {
 	public String processForgotPasswordForm(Model model, @RequestParam("email") String userEmail, HttpServletRequest request) {
 
 		// Lookup user in database by e-mail
-		Optional<User> optional = registerServiceImpl.findUserByEmail(userEmail);
+		Optional<User> optional = userServiceImpl.findUserByEmail(userEmail);
 
 		if (!optional.isPresent()) {
 			model.addAttribute("errorMessage", "We didn't find an account for that e-mail address.");
@@ -57,7 +57,7 @@ public class PasswordController {
 			user.setResetToken(UUID.randomUUID().toString());
 
 			// Save token to database
-			registerServiceImpl.saveUser(user);
+			userServiceImpl.saveUser(user);
 
 			String appUrl = request.getScheme() + "://" + request.getServerName();
 			
@@ -83,7 +83,7 @@ public class PasswordController {
 	@RequestMapping(value = "/reset", method = RequestMethod.GET)
 	public String displayResetPasswordPage(Model model, @RequestParam("token") String token) {
 		
-		Optional<User> user = registerServiceImpl.findUserByResetToken(token);
+		Optional<User> user = userServiceImpl.findUserByResetToken(token);
 
 		if (user.isPresent()) { // Token found in DB
 			model.addAttribute("resetToken", token);
@@ -99,7 +99,7 @@ public class PasswordController {
 	public String setNewPassword(Model model, @RequestParam Map<String, String> requestParams, RedirectAttributes redir) {
 
 		// Find the user associated with the reset token
-		Optional<User> user = registerServiceImpl.findUserByResetToken(requestParams.get("token"));
+		Optional<User> user = userServiceImpl.findUserByResetToken(requestParams.get("token"));
 
 		// This should always be non-null but we check just in case
 		if (user.isPresent()) {
@@ -113,7 +113,7 @@ public class PasswordController {
 			resetUser.setResetToken(null);
 
 			// Save user
-			registerServiceImpl.saveUser(resetUser);
+			userServiceImpl.saveUser(resetUser);
 
 			// In order to set a model attribute on a redirect, we must use
 			// RedirectAttributes

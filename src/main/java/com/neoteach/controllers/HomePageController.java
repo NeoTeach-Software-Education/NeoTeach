@@ -1,7 +1,5 @@
 package com.neoteach.controllers;
 
-import java.util.Optional;
-import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.neoteach.daoimpl.AdminDaoImpl;
 import com.neoteach.serviceimpl.EmailServiceImpl;
@@ -39,7 +36,7 @@ public class HomePageController{
 //			String nnn=request.getParameter("fullName");
 			// Email message
 			SimpleMailMessage passwordResetEmail = new SimpleMailMessage();
-			passwordResetEmail.setFrom(request.getParameter("email"));
+//			passwordResetEmail.setFrom("noreply@gmail.com");
 			passwordResetEmail.setTo("sri.javatrainer@gmail.com");
 			passwordResetEmail.setSubject("New Enqiry");
 			passwordResetEmail.setText("New enquiry came from:\nName:\t" + request.getParameter("fullName")+"\nPhone:\t"+request.getParameter("phone")+"\nSubject:\t"+request.getParameter("course")+"\nQualification:\t"+request.getParameter("qualification")+"\nEmail:\t:"+request.getParameter("email"));

@@ -155,9 +155,11 @@
 		<div class="profile-settings-wrap">
 
 <h4 class="mb-3">Reset Password</h4>
-        <form action="#" method="post">
+<div><h5>${successMessage}</h5></div>
+			<div><h5>${errorMessage}</h5></div>
+        <form action="/changepwd" method="post">
 <!--             <input type="hidden" name="_token" value="knCfYaWkBZuk9etmKEmZ7B3jILMADSxhuT9yiTLi"> -->
-<!-- 				<input type="hidden" name="token" value=${confirmationToken}> -->
+				<input type="hidden" name="userEmail" value="${encodedEmail}">
             <div class="profile-basic-info bg-white p-3">
 
                 <div class="form-row">
@@ -204,12 +206,9 @@
 
 </div>
 <footer>
-
     <div class="footer-top py-5">
-
         <div class="container">
             <div class="row">
-
                 <div class="col-md-3">
                     <div class="footer-widget-wrap">
                         <h4>About US</h4>
@@ -262,18 +261,14 @@
 
 
     <div class="footer-bottom py-5">
-
         <div class="container">
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="footer-bottom-contents-wrap d-flex">
-
                         <div class="footer-bottom-left d-flex">
                             <h5 class="text-warning">NeoTeach</h5>
                             <span class="ml-4">Copyright © 2020 NeoTeach. All rights reserved.</span>
                         </div>
-
                         <div class="footer-bottom-right flex-grow-1 text-right">
                             <ul class="footer-bottom-right-links">
                                 <li>
@@ -296,13 +291,11 @@
 
         </div>
     </div>
-
-
 </footer>
 
 
 <form id="logout-form" action="#" method="POST" class="d-none">
-<!--     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
+<%--     <input type="hidden" name="${encodedEmail}"> --%>
 </form>
 
 

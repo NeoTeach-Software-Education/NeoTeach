@@ -76,7 +76,7 @@
                 <a href="#"> <i class="la la-star-half-alt"></i> Reviews </a>
             </li>
                     <li class="">
-                <a href="/changepwd"> <i class="la la-question-circle-o"></i> Reset Password </a>
+                <a href="/changepwd?id=${encodedEmail}"> <i class="la la-question-circle-o"></i> Reset Password </a>
             </li>
                     <li class="">
                 <a href="#"> <i class="la la-history"></i> Purchase History </a>
@@ -125,7 +125,7 @@
                 <a href="#"> <i class="la la-star-half-alt"></i> Reviews </a>
             </li>
                     <li class="">
-                <a href="/changepwd"> <i class="la la-question-circle-o"></i> Reset Password </a>
+                <a href="/changepwd?id=${encodedEmail}"> <i class="la la-question-circle-o"></i> Reset Password </a>
             </li>
                     <li class="">
                 <a href="#"> <i class="la la-history"></i> Purchase History </a>

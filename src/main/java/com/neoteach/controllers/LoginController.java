@@ -1,5 +1,7 @@
 package com.neoteach.controllers;
 
+import java.util.Base64;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,7 +33,9 @@ public class LoginController {
 		}
 		else if(user.getPassword().equals(pwd))
 		{
-			
+			String encodedEmail = Base64.getEncoder().encodeToString(email.getBytes());
+			System.out.println("Encodddd:"+encodedEmail);
+			model.addAttribute("encodedEmail",encodedEmail);
 			model.addAttribute("user",user);
 			return "useraccount";
 		}
