@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
 <html lang="en" dir="auto" >
 <head>
     <meta charset="utf-8">
@@ -62,8 +64,8 @@
                                     <small>${user.email}</small>
                                 </div>
 
-                                <ul class="dashboard-menu">
-    <li class="active"><a href="/useraccount"> <i class="la la-dashboard"></i> Dashboard </a></li>
+                                 <ul class="dashboard-menu">
+    <li class="active"><a href="/dashboard?id=${encodedEmail}"> <i class="la la-dashboard"></i> Dashboard </a></li>
 
     
                         <li class="">
@@ -76,13 +78,13 @@
                 <a href="#"> <i class="la la-star-half-alt"></i> Reviews </a>
             </li>
                     <li class="">
-                <a href="/changepwd"> <i class="la la-key"></i> Reset Password </a>
+                <a href="/changepwd?id=${encodedEmail}"> <i class="la la-key"></i> Reset Password </a>
             </li>
                     <li class="">
                 <a href="#"> <i class="la la-history"></i> Purchase History </a>
             </li>
                     <li class="">
-                <a href="/userUpdate"> <i class="la la-tools"></i> Update Profile </a>
+                <a href="/userUpdate?id=${encodedEmail}"> <i class="la la-tools"></i> Update Profile </a>
             </li>
 <!--                     <li class=""> -->
 <!--                 <a href="#"> <i class="la la-pie-chart"></i> Students Progress Report </a> -->
@@ -111,8 +113,8 @@
     <div class="container py-4">
         <div class="row">
             <div class="col-3 dashboard-menu-col">
-                <ul class="dashboard-menu">
-    <li class="active"><a href="/dashboard"> <i class="la la-dashboard"></i> Dashboard </a></li>
+                  <ul class="dashboard-menu">
+    <li class="active"><a href="/dashboard?id=${encodedEmail}"> <i class="la la-dashboard"></i> Dashboard </a></li>
 
     
                         <li class="">
@@ -125,13 +127,13 @@
                 <a href="#"> <i class="la la-star-half-alt"></i> Reviews </a>
             </li>
                     <li class="">
-                <a href="/changepwd"> <i class="la la-key"></i> Reset Password </a>
+                <a href="/changepwd?id=${encodedEmail}"> <i class="la la-key"></i> Reset Password </a>
             </li>
                     <li class="">
                 <a href="#"> <i class="la la-history"></i> Purchase History </a>
             </li>
                     <li class="">
-                <a href="/userUpdate"> <i class="la la-tools"></i> Update Profile </a>
+                <a href="/userUpdate?id=${encodedEmail}"> <i class="la la-tools"></i> Update Profile </a>
             </li>
 <!--                     <li class=""> -->
 <!--                 <a href="#"> <i class="la la-pie-chart"></i> Students Progress Report </a> -->
@@ -158,7 +160,6 @@
 <div><h5>${successMessage}</h5></div>
 			<div><h5>${errorMessage}</h5></div>
         <form action="/changepwd" method="post">
-<!--             <input type="hidden" name="_token" value="knCfYaWkBZuk9etmKEmZ7B3jILMADSxhuT9yiTLi"> -->
 				<input type="hidden" name="userEmail" value="${encodedEmail}">
             <div class="profile-basic-info bg-white p-3">
 

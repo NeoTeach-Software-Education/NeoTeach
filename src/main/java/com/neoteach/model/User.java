@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 //import org.hibernate.validator.constraints.Email;
@@ -38,10 +39,68 @@ public class User {
 
 	@Column(name = "reset_token")
 	private String resetToken;
-
 	
+	@Column(name="address")
+	private String address;
+	@Column(name="city")
+	private String city;
+	@Column(name="pin")
+	private String pin;
+	@Column(name="aboutMe")
+	private String aboutMe;
+	@Column(name="qualification")
+	private String qualification;
+	public String getAboutMe() {
+		return aboutMe;
+	}
+	public void setAboutMe(String aboutMe) {
+		this.aboutMe = aboutMe;
+	}
+	@Column(name="countryId")
+	private String countryId;
+	@Lob
+    private byte[] photo;
+	
+	public String getQualification() {
+		return qualification;
+	}
+	public void setQualification(String qualification) {
+		this.qualification = qualification;
+	}
+	public String getCountryId() {
+		return countryId;
+	}
+	public void setCountryId(String countryId) {
+		this.countryId = countryId;
+	}
 	public Date getCreatedOn() {
 		return createdOn;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	
+	public String getPin() {
+		return pin;
+	}
+	public void setPin(String pin) {
+		this.pin = pin;
+	}
+	
+	public byte[] getPhoto() {
+		return photo;
+	}
+	public void setPhoto(byte[] photo) {
+		this.photo = photo;
 	}
 	public void setCreatedOn(Date createdOn) {
 		this.createdOn = createdOn;

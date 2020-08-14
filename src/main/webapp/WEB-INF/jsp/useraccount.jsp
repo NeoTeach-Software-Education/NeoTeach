@@ -43,10 +43,7 @@
         <i class="la la-shopping-cart"></i>
             </div>
 </a>
-
-
                     </li>
-
                                             <li class="nav-item main-nav-right-menu nav-item-user-profile">
                             <a class="nav-link profile-dropdown-toogle" href="javascript:;">
                                 <span class="top-nav-user-name">
@@ -62,8 +59,8 @@
                                     <small>${user.email}</small>
                                 </div>
 
-                                <ul class="dashboard-menu">
-    <li class="active"><a href="/useraccount"> <i class="la la-dashboard"></i> Dashboard </a></li>
+                                 <ul class="dashboard-menu">
+    <li class="active"><a href="/dashboard?id=${encodedEmail}"> <i class="la la-dashboard"></i> Dashboard </a></li>
 
     
                         <li class="">
@@ -76,13 +73,13 @@
                 <a href="#"> <i class="la la-star-half-alt"></i> Reviews </a>
             </li>
                     <li class="">
-                <a href="/changepwd?id=${encodedEmail}"> <i class="la la-question-circle-o"></i> Reset Password </a>
+                <a href="/changepwd?id=${encodedEmail}"> <i class="la la-key"></i> Reset Password </a>
             </li>
                     <li class="">
                 <a href="#"> <i class="la la-history"></i> Purchase History </a>
             </li>
                     <li class="">
-                <a href="/userUpdate"> <i class="la la-tools"></i> Update Profile </a>
+                <a href="/userUpdate?id=${encodedEmail}"> <i class="la la-tools"></i> Update Profile </a>
             </li>
 <!--                     <li class=""> -->
 <!--                 <a href="#"> <i class="la la-pie-chart"></i> Students Progress Report </a> -->
@@ -111,8 +108,8 @@
     <div class="container py-4">
         <div class="row">
             <div class="col-3 dashboard-menu-col">
-                <ul class="dashboard-menu">
-    <li class="active"><a href="/dashboard"> <i class="la la-dashboard"></i> Dashboard </a></li>
+                 <ul class="dashboard-menu">
+    <li class="active"><a href="/dashboard?id=${encodedEmail}"> <i class="la la-dashboard"></i> Dashboard </a></li>
 
     
                         <li class="">
@@ -125,13 +122,13 @@
                 <a href="#"> <i class="la la-star-half-alt"></i> Reviews </a>
             </li>
                     <li class="">
-                <a href="/changepwd?id=${encodedEmail}"> <i class="la la-question-circle-o"></i> Reset Password </a>
+                <a href="/changepwd?id=${encodedEmail}"> <i class="la la-key"></i> Reset Password </a>
             </li>
                     <li class="">
                 <a href="#"> <i class="la la-history"></i> Purchase History </a>
             </li>
                     <li class="">
-                <a href="/userUpdate"> <i class="la la-tools"></i> Update Profile </a>
+                <a href="/userUpdate?id=${encodedEmail}"> <i class="la la-tools"></i> Update Profile </a>
             </li>
 <!--                     <li class=""> -->
 <!--                 <a href="#"> <i class="la la-pie-chart"></i> Students Progress Report </a> -->
@@ -146,11 +143,11 @@
             </div>
 
             <div class="col-9">
-                <div class="alert alert-danger">
-        <i class="la la-info-circle"></i> Restriction area, permission denied
-    </div>
+<!--                 <div class="alert alert-danger"> -->
+<!--         <i class="la la-info-circle"></i> Restriction area, permission denied -->
+<!--     </div> -->
 
-                    
+                    <input type="hidden" name="userEmail" value="${encodedEmail}">
     <div class="row">
         <div class="col-lg-4 col-md-6">
             <div class="dashboard-card mb-3 d-flex border p-3 bg-light">
@@ -164,51 +161,37 @@
                 </div>
             </div>
         </div>
-
         <div class="col-lg-4 col-md-6">
             <div class="dashboard-card mb-3 d-flex border p-3 bg-light">
                 <div class="card-icon mr-2">
                     <span><i class="la la-heart"></i> </span>
                 </div>
-
                 <div class="card-info">
                     <div class="text-value"><h4>0</h4></div>
                     <div>In Wishlist</div>
                 </div>
             </div>
         </div>
-
         <div class="col-lg-4 col-md-6">
             <div class="dashboard-card mb-3 d-flex border p-3 bg-light">
                 <div class="card-icon mr-2">
                     <span><i class="la la-star-half-alt"></i> </span>
                 </div>
-
                 <div class="card-info">
                     <div class="text-value"><h4>0</h4></div>
                     <div>My Reviews</div>
                 </div>
             </div>
         </div>
-
     </div>
-
-    
-    
             </div>
-
         </div>
     </div>
-
 </div>
-
 <footer>
-
     <div class="footer-top py-5">
-
         <div class="container">
             <div class="row">
-
                 <div class="col-md-3">
                     <div class="footer-widget-wrap">
                         <h4>About US</h4>
@@ -222,8 +205,6 @@
                         </p>
                     </div>
                 </div>
-
-
                 <div class="col-md-3">
                     <div class="footer-widget-wrap contact-us-widget-wrap">
                         <h4>Contact</h4>
@@ -234,9 +215,6 @@
                         <p class="mb-0"> support@neoteach.com </p>
                     </div>
                 </div>
-
-
-
                 <div class="col-md-6">
                     <div class="footer-widget-wrap link-widget-wrap">
 
@@ -251,19 +229,13 @@
                             <li><a href="#">Sign Up</a> </li>
                             <li><a href="#">Contact Us</a> </li>
                         </ul>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
-
     <div class="footer-bottom py-5">
-
         <div class="container">
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="footer-bottom-contents-wrap d-flex">
@@ -295,27 +267,17 @@
 
         </div>
     </div>
-
-
 </footer>
-
-
 <form id="logout-form" action="#" method="POST" class="d-none">
 <!--     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
 </form>
-
-
 <!-- jquery latest version -->
 <script src="js/jquery-1.12.0.min.js"></script>
 <!-- bootstrap js -->
 <!-- <script src="https://zenoxpro.com/public/assets/js/bootstrap.bundle.min.js"></script> -->
 <!-- Bootstrap -->
 	<script src="js/bootstrap.bundle.min.js"></script>
-
 <!-- main js -->
 <!-- <script src="https://zenoxpro.com/public/themes/edugator/assets/js/main.js"></script> -->
-
-
-
 </body>
 </html>

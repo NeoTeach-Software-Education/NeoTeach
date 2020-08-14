@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
 <html lang="en" dir="auto" >
 <head>
     <meta charset="utf-8">
@@ -24,7 +26,6 @@
 <body class="">
 
 <div class="main-navbar-wrap">
-
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -52,7 +53,9 @@
                                             <li class="nav-item main-nav-right-menu nav-item-user-profile">
                             <a class="nav-link profile-dropdown-toogle" href="javascript:;">
                                 <span class="top-nav-user-name">
-                                    <span class='profile-text-photo' style='background-color: #8cb201; color: #fff8e5'>SR</span>
+                                    <span class='profile-text-photo' style='background-color: #8cb201; color: #fff8e5'>
+                                    <c:set var="nickname" value="${user.fullName}"/>${fn:substring(nickname, 0, 3)}
+                                    </span>
                                 </span>
                             </a>
                             <div class="profile-dropdown-menu pt-0">
@@ -62,8 +65,8 @@
                                     <small>${user.email}</small>
                                 </div>
 
-                                <ul class="dashboard-menu">
-    <li class="active"><a href="/useraccount"> <i class="la la-dashboard"></i> Dashboard </a></li>
+                                 <ul class="dashboard-menu">
+    <li class="active"><a href="/dashboard?id=${encodedEmail}"> <i class="la la-dashboard"></i> Dashboard </a></li>
 
     
                         <li class="">
@@ -76,13 +79,13 @@
                 <a href="#"> <i class="la la-star-half-alt"></i> Reviews </a>
             </li>
                     <li class="">
-                <a href="/changepwd"> <i class="la la-key"></i> Reset Password </a>
+                <a href="/changepwd?id=${encodedEmail}"> <i class="la la-key"></i> Reset Password </a>
             </li>
                     <li class="">
                 <a href="#"> <i class="la la-history"></i> Purchase History </a>
             </li>
                     <li class="">
-                <a href="/userUpdate"> <i class="la la-tools"></i> Update Profile </a>
+                <a href="/userUpdate?id=${encodedEmail}"> <i class="la la-tools"></i> Update Profile </a>
             </li>
 <!--                     <li class=""> -->
 <!--                 <a href="#"> <i class="la la-pie-chart"></i> Students Progress Report </a> -->
@@ -111,8 +114,8 @@
     <div class="container py-4">
         <div class="row">
             <div class="col-3 dashboard-menu-col">
-                <ul class="dashboard-menu">
-    <li class="active"><a href="/dashboard"> <i class="la la-dashboard"></i> Dashboard </a></li>
+                  <ul class="dashboard-menu">
+    <li class="active"><a href="/dashboard?id=${encodedEmail}"> <i class="la la-dashboard"></i> Dashboard </a></li>
 
     
                         <li class="">
@@ -125,13 +128,13 @@
                 <a href="#"> <i class="la la-star-half-alt"></i> Reviews </a>
             </li>
                     <li class="">
-                <a href="/changepwd"> <i class="la la-key"></i> Reset Password </a>
+                <a href="/changepwd?id=${encodedEmail}"> <i class="la la-key"></i> Reset Password </a>
             </li>
                     <li class="">
                 <a href="#"> <i class="la la-history"></i> Purchase History </a>
             </li>
                     <li class="">
-                <a href="/userUpdate"> <i class="la la-tools"></i> Update Profile </a>
+                <a href="/userUpdate?id=${encodedEmail}"> <i class="la la-tools"></i> Update Profile </a>
             </li>
 <!--                     <li class=""> -->
 <!--                 <a href="#"> <i class="la la-pie-chart"></i> Students Progress Report </a> -->
@@ -156,55 +159,54 @@
     <div class="profile-settings-wrap">
 
         <h4 class="mb-3">Profile Information</h4>
-
-        <form action="" method="post">
-<!--             <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
-            
-
+<div><h5>${successMessage}</h5></div>
+        <form action="/userUpdate" method="post">
+            <input type="hidden" name="userEmail" value="${encodedEmail}">
+			
             <div class="profile-basic-info bg-white p-3">
 
                 <div class="form-row">
                     <div class="form-group col-md-6 ">
                         <label>Name</label>
-                        <input type="tel" class="form-control" name="name" value="Srinivas" >
+                        <input type="text" class="form-control" name="fullName" value="${user.fullName}" >
                                             </div>
 
                     <div class="form-group col-md-6 ">
-                        <label>Job Title</label>
-                        <input type="text" class="form-control" name="job_title" value="">
+                        <label>Qualification/Job Title</label>
+                        <input type="text" class="form-control" name="qualification" value="${user.qualification}">
                                             </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label>Phone</label>
-                        <input type="text" class="form-control" name="phone" value="">
+                        <input type="text" class="form-control" name="phone" value="${user.phone}">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label>Email</label>
+                        <input type="disable" class="form-control" name="email" value="${user.email}" >
                     </div>
                     <div class="form-group col-md-4">
                         <label>Address</label>
-                        <input type="text" class="form-control" name="address" value="" >
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label>Address Line 2</label>
-                        <input type="text" class="form-control" name="address_2" value="" >
+                        <input type="text" class="form-control" name="address" value="${user.address}">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label>City</label>
-                        <input type="text" class="form-control" name="city" value="">
+                        <input type="text" class="form-control" name="city" value="${user.city}">
                     </div>
 
                     <div class="form-group col-md-2">
-                        <label>Zip</label>
-                        <input type="text" class="form-control" name="zip_code" value="">
+                        <label>Zip/Pin</label>
+                        <input type="text" class="form-control" name="pin" value="${user.pin}">
                     </div>
 
                     <div class="form-group col-md-4">
                         <label for="inputState">Country</label>
 
-                        <select  class="form-control" name="country_id">
+                        <select  class="form-control" name="countryId">
                             <option value="">Choose...</option>
                                                             <option value="1"  >Afghanistan</option>
                                                             <option value="74"  >Åland Islands</option>
@@ -458,12 +460,11 @@
                                                     </select>
                     </div>
 
-                    <div class="form-group col-md-9">
+                    <div class="form-group col-md-8">
                         <label>About Me</label>
-                        <textarea class="form-control" name="about_me" rows="5"></textarea>
+                        <textarea class="form-control" name="aboutMe" rows="3"></textarea>
                     </div>
-
-                    <div class="form-group col-md-3">
+ <div class="form-group col-md-3">
                         <label>Profile Photo</label>
                                 <div class="image-wrap">
             <a href="javascript:;" data-toggle="filemanager">
@@ -481,48 +482,10 @@
             </div>
 
 
-            <h4 class="my-4">Social Link </h4>
-
-
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label>Website</label>
-                    <input type="text" class="form-control" name="social[website]" value="">
-                </div>
-                <div class="form-group col-md-4">
-                    <label>Twitter</label>
-                    <input type="text" class="form-control" name="social[twitter]" value="" >
-                </div>
-                <div class="form-group col-md-4">
-                    <label>Facebook</label>
-                    <input type="text" class="form-control" name="social[facebook]" value="" >
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label>Linkedin</label>
-                    <input type="text" class="form-control" name="social[linkedin]" value="">
-                </div>
-                <div class="form-group col-md-4">
-                    <label>Youtube</label>
-                    <input type="text" class="form-control" name="social[youtube]" value="" >
-                </div>
-                <div class="form-group col-md-4">
-                    <label>Instagram</label>
-                    <input type="text" class="form-control" name="social[instagram]" value="" >
-                </div>
-            </div>
-
-
-
             <button type="submit" class="btn btn-purple btn-lg"> Update Profile</button>
+            
         </form>
-
-
     </div>
-
-
             </div>
 
         </div>
