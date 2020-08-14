@@ -54,7 +54,9 @@
                                             <li class="nav-item main-nav-right-menu nav-item-user-profile">
                             <a class="nav-link profile-dropdown-toogle" href="javascript:;">
                                 <span class="top-nav-user-name">
-                                    <span class='profile-text-photo' style='background-color: #8cb201; color: #fff8e5'>SR</span>
+                                    <span class='profile-text-photo' style='background-color: #8cb201; color: #fff8e5'>
+                                    <c:set var="nickname" value="${user.fullName}"/>${fn:substring(nickname, 0, 3)}
+                                    </span>
                                 </span>
                             </a>
                             <div class="profile-dropdown-menu pt-0">

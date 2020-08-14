@@ -23,6 +23,11 @@ public class DashboardController {
 	
 	@RequestMapping(value = "/dashboard", method = RequestMethod.GET)
 	public String dashboardPage(Model model, @RequestParam("id") String encodedEmail) {
+//		decode into String from encoded format 
+	    byte[] emailByte = Base64.getDecoder().decode(encodedEmail); 
+	    String decodedEmail = new String(emailByte);
+		User user = userServiceImpl.findByEmail(decodedEmail);
+		model.addAttribute("user",user);
 		model.addAttribute("encodedEmail",encodedEmail);
 		return "useraccount";
     }
@@ -62,6 +67,11 @@ public class DashboardController {
 	@RequestMapping(value = "/changepwd", method = RequestMethod.GET)
 	public String pwdChange(Model model, @RequestParam("id") String encodedEmail) {
 		model.addAttribute("encodedEmail",encodedEmail);
+//		decode into String from encoded format 
+	    byte[] emailByte = Base64.getDecoder().decode(encodedEmail); 
+	    String decodedEmail = new String(emailByte);
+		User user = userServiceImpl.findByEmail(decodedEmail);
+		model.addAttribute("user",user);
 		return "changePwd";
     }
 	@RequestMapping(value = "/changepwd", method = RequestMethod.POST)
@@ -74,6 +84,7 @@ public class DashboardController {
 			user.setPassword(newpwd);
 			// Save user
 			userServiceImpl.saveUser(user);
+			model.addAttribute("user",user);
 			model.addAttribute("successMessage", "You have successfully reset your password.  You may now login.");
 			return "login";
 		}
