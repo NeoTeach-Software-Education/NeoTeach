@@ -1,311 +1,314 @@
 <!DOCTYPE HTML>
+<%@ include file="taglib_includes.jsp"%>
 <html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>NeoTeach</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>NeoTeach</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
 
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+<!-- Facebook and Twitter integration -->
+<meta property="og:title" content="" />
+<meta property="og:image" content="" />
+<meta property="og:url" content="" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:image" content="" />
+<meta name="twitter:url" content="" />
+<meta name="twitter:card" content="" />
 
-	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+<link
+	href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900"
+	rel="stylesheet">
 
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
+<!-- Animate.css -->
+<link rel="stylesheet" href="css/animate.css">
+<!-- Icomoon Icon Fonts-->
+<link rel="stylesheet" href="css/icomoon.css">
+<!-- Bootstrap  -->
+<!-- 	<link rel="stylesheet" href="css/bootstrap.css"> -->
 
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="css/magnific-popup.css">
 
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	
-	<!-- Flaticons  -->
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+<!-- Flexslider  -->
+<link rel="stylesheet" href="css/flexslider.css">
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
+<!-- Flaticons  -->
+<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+<!-- Bootstrap  -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/line-awesome.min.css">
+<!-- Theme style  -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Modernizr JS -->
+<script src="js/modernizr-2.6.2.min.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-	</head>
-	<body>
-		
+</head>
+<body>
+
 	<div class="colorlib-loader"></div>
 
 	<div id="page">
-		<nav class="colorlib-nav" role="navigation">
-			<div class="upper-menu">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-4">
-							<p>NeoTeach is for online learning...9700053393</p>
-						</div>
-						<div class="col-xs-6 col-md-push-2 text-right">
-							<p class="btn-apply"><a href="/loginpage">Login</a> <a href="/register">Sign Up</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="top-menu">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-2">
-							<div id="colorlib-logo"><a href="/">NeoTeach</a></div>
-						</div>
-						<div class="col-md-10 text-right menu-1">
-							<ul>
-<!-- 								<li class="active"><a href="/">Home</a></li> -->
-									<li class="active"><a href="about.html">About</a></li>
-								<li class="has-dropdown">
-									<a href="courses.html">Courses</a>
-									<ul class="dropdown">
-										<li><a href="courses-single.html">C-Language</a></li>
-										<li><a href="#">DS</a></li>
-										<li><a href="#">Cpp</a></li>
-										<li><a href="#">Core Java</a></li>
-										<li><a href="#">Adv Java</a></li>
-									</ul>
-								</li>
-								<li><a href="teachers.html">Teachers</a></li>
-<!-- 								<li><a href="event.html">Events</a></li> -->
-<!-- 								<li><a href="news.html">News</a></li> -->
-								<li><a href="contact.html">Contact</a></li>
-								<li class="btn-cta"><a href="/classenqire"><span>Class Room Training</span></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
+
+		<%@ include file="header_main.jsp"%>
 		<aside id="colorlib-hero">
 			<div class="flexslider">
 				<ul class="slides">
-			   	<li style="background-image: url(images/img_bg_1.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-				   						<h2>You only have to know one thing</h2>
-					   					<h1>Best Online Learning System</h1>
-					   					<p><a href="https://www.youtube.com/channel/UCCQxC1ZDLsPxoKz_2L8OfGQ/?guided_help_flow=5" class="btn btn-primary btn-lg popup-vimeo"><span class="icon"><i class="icon-play3"></i></span> Start Learning Now!</a></p>
-				   					</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/img_bg_5.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-				   						<h2>You only have to know one thing</h2>
-					   					<h1>Online Classes</h1>
-					   					<p><a href="https://www.youtube.com/channel/UCCQxC1ZDLsPxoKz_2L8OfGQ/?guided_help_flow=5" class="btn btn-primary btn-lg popup-vimeo"><span class="icon"><i class="icon-play3"></i></span> Start Learning Now!</a></p>
-					   				</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/img_bg_3.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-				   						<h2>You only have to know one thing</h2>
-					   					<h1>Education is a Key to Success</h1>
-					   					<p><a href="https://www.youtube.com/channel/UCCQxC1ZDLsPxoKz_2L8OfGQ/?guided_help_flow=5" class="btn btn-primary btn-lg popup-vimeo"><span class="icon"><i class="icon-play3"></i></span> Start Leaning Now!</a></p>
-					   				</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/img_bg_4.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-				   				<div class="slider-text-inner">
-				   					<div class="desc">
-				   						<h2>You only have to know one thing</h2>
-					   					<h1>Best Online Learning Center</h1>
-					   					<p><a href="https://www.youtube.com/channel/UCCQxC1ZDLsPxoKz_2L8OfGQ/?guided_help_flow=5" class="btn btn-primary btn-lg popup-vimeo"><span class="icon"><i class="icon-play3"></i></span> Start Learning Now!</a></p>
-					   				</div>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>	
-			  	</ul>
-		  	</div>
+					<li style="background-image: url(images/img_bg_1.jpg);">
+						<div class="overlay"></div>
+						<div class="container-fluid">
+							<div class="row">
+								<div
+									class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
+									<div class="slider-text-inner">
+										<div class="desc">
+											<h2>You only have to know one thing</h2>
+											<h1>Best Online Learning System</h1>
+											<p>
+												<a
+													href="https://www.youtube.com/channel/UCCQxC1ZDLsPxoKz_2L8OfGQ/?guided_help_flow=5"
+													class="btn btn-primary btn-lg popup-vimeo"><span
+													class="icon"><i class="icon-play3"></i></span> Start
+													Learning Now!</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li style="background-image: url(images/img_bg_5.jpg);">
+						<div class="overlay"></div>
+						<div class="container-fluid">
+							<div class="row">
+								<div
+									class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
+									<div class="slider-text-inner">
+										<div class="desc">
+											<h2>You only have to know one thing</h2>
+											<h1>Online Classes</h1>
+											<p>
+												<a
+													href="https://www.youtube.com/channel/UCCQxC1ZDLsPxoKz_2L8OfGQ/?guided_help_flow=5"
+													class="btn btn-primary btn-lg popup-vimeo"><span
+													class="icon"><i class="icon-play3"></i></span> Start
+													Learning Now!</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li style="background-image: url(images/img_bg_3.jpg);">
+						<div class="overlay"></div>
+						<div class="container-fluid">
+							<div class="row">
+								<div
+									class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
+									<div class="slider-text-inner">
+										<div class="desc">
+											<h2>You only have to know one thing</h2>
+											<h1>Education is a Key to Success</h1>
+											<p>
+												<a
+													href="https://www.youtube.com/channel/UCCQxC1ZDLsPxoKz_2L8OfGQ/?guided_help_flow=5"
+													class="btn btn-primary btn-lg popup-vimeo"><span
+													class="icon"><i class="icon-play3"></i></span> Start
+													Leaning Now!</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li style="background-image: url(images/img_bg_4.jpg);">
+						<div class="overlay"></div>
+						<div class="container-fluid">
+							<div class="row">
+								<div
+									class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
+									<div class="slider-text-inner">
+										<div class="desc">
+											<h2>You only have to know one thing</h2>
+											<h1>Best Online Learning Center</h1>
+											<p>
+												<a
+													href="https://www.youtube.com/channel/UCCQxC1ZDLsPxoKz_2L8OfGQ/?guided_help_flow=5"
+													class="btn btn-primary btn-lg popup-vimeo"><span
+													class="icon"><i class="icon-play3"></i></span> Start
+													Learning Now!</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</aside>
 
-<!-- 		<div class="colorlib-search"> -->
-<!-- 			<div class="container"> -->
-<!-- 				<div class="row"> -->
-<!-- 					<div class="col-md-12 search-wrap"> -->
-<!-- 						<div class="search-wrap-2"> -->
-<!-- 							<form method="post" class="colorlib-form"> -->
-<!-- 			              	<div class="row"> -->
-<!-- 			                <div class="col-md-3"> -->
-<!-- 			                  <div class="form-group"> -->
-<!-- 			                    <label for="search">Search Course</label> -->
-<!-- 			                    <div class="form-field"> -->
-<!-- 			                      <input type="text" id="search" class="form-control" placeholder="Keyword search"> -->
-<!-- 			                    </div> -->
-<!-- 			                  </div> -->
-<!-- 			                </div> -->
-<!-- 			                <div class="col-md-3"> -->
-<!-- 			                  <div class="form-group"> -->
-<!-- 			                    <label for="course">Category Course</label> -->
-<!-- 			                    <div class="form-field"> -->
-<!-- 			                      <i class="icon icon-arrow-down3"></i> -->
-<!-- 			                      <select name="people" id="people" class="form-control"> -->
-<!-- 			                        <option value="#">WordPress</option> -->
-<!-- 			                        <option value="#">HTML/CSS</option> -->
-<!-- 			                        <option value="#">PHP</option> -->
-<!-- 			                        <option value="#">JavaScript</option> -->
-<!-- 			                        <option value="#">Python</option> -->
-<!-- 			                      </select> -->
-<!-- 			                    </div> -->
-<!-- 			                  </div> -->
-<!-- 			                </div> -->
-<!-- 			                <div class="col-md-3"> -->
-<!-- 			                  <div class="form-group"> -->
-<!-- 			                    <label for="difficulty">Difficulty</label> -->
-<!-- 			                    <div class="form-field"> -->
-<!-- 			                      <i class="icon icon-arrow-down3"></i> -->
-<!-- 			                      <select name="people" id="people" class="form-control"> -->
-<!-- 			                        <option value="#">Difficulty</option> -->
-<!-- 			                        <option value="#">Beginner</option> -->
-<!-- 			                        <option value="#">Intermediate</option> -->
-<!-- 			                        <option value="#">Advance</option> -->
-<!-- 			                      </select> -->
-<!-- 			                    </div> -->
-<!-- 			                  </div> -->
-<!-- 			                </div> -->
-<!-- 			                <div class="col-md-3"> -->
-<!-- 			                  <input type="submit" name="submit" id="submit" value="Search course" class="btn btn-primary btn-block"> -->
-<!-- 			                </div> -->
-<!-- 			              </div> -->
-<!-- 			            </form> -->
-<!-- 		            </div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-		
+		<!-- 		<div class="colorlib-search"> -->
+		<!-- 			<div class="container"> -->
+		<!-- 				<div class="row"> -->
+		<!-- 					<div class="col-md-12 search-wrap"> -->
+		<!-- 						<div class="search-wrap-2"> -->
+		<!-- 							<form method="post" class="colorlib-form"> -->
+		<!-- 			              	<div class="row"> -->
+		<!-- 			                <div class="col-md-3"> -->
+		<!-- 			                  <div class="form-group"> -->
+		<!-- 			                    <label for="search">Search Course</label> -->
+		<!-- 			                    <div class="form-field"> -->
+		<!-- 			                      <input type="text" id="search" class="form-control" placeholder="Keyword search"> -->
+		<!-- 			                    </div> -->
+		<!-- 			                  </div> -->
+		<!-- 			                </div> -->
+		<!-- 			                <div class="col-md-3"> -->
+		<!-- 			                  <div class="form-group"> -->
+		<!-- 			                    <label for="course">Category Course</label> -->
+		<!-- 			                    <div class="form-field"> -->
+		<!-- 			                      <i class="icon icon-arrow-down3"></i> -->
+		<!-- 			                      <select name="people" id="people" class="form-control"> -->
+		<!-- 			                        <option value="#">WordPress</option> -->
+		<!-- 			                        <option value="#">HTML/CSS</option> -->
+		<!-- 			                        <option value="#">PHP</option> -->
+		<!-- 			                        <option value="#">JavaScript</option> -->
+		<!-- 			                        <option value="#">Python</option> -->
+		<!-- 			                      </select> -->
+		<!-- 			                    </div> -->
+		<!-- 			                  </div> -->
+		<!-- 			                </div> -->
+		<!-- 			                <div class="col-md-3"> -->
+		<!-- 			                  <div class="form-group"> -->
+		<!-- 			                    <label for="difficulty">Difficulty</label> -->
+		<!-- 			                    <div class="form-field"> -->
+		<!-- 			                      <i class="icon icon-arrow-down3"></i> -->
+		<!-- 			                      <select name="people" id="people" class="form-control"> -->
+		<!-- 			                        <option value="#">Difficulty</option> -->
+		<!-- 			                        <option value="#">Beginner</option> -->
+		<!-- 			                        <option value="#">Intermediate</option> -->
+		<!-- 			                        <option value="#">Advance</option> -->
+		<!-- 			                      </select> -->
+		<!-- 			                    </div> -->
+		<!-- 			                  </div> -->
+		<!-- 			                </div> -->
+		<!-- 			                <div class="col-md-3"> -->
+		<!-- 			                  <input type="submit" name="submit" id="submit" value="Search course" class="btn btn-primary btn-block"> -->
+		<!-- 			                </div> -->
+		<!-- 			              </div> -->
+		<!-- 			            </form> -->
+		<!-- 		            </div> -->
+		<!-- 					</div> -->
+		<!-- 				</div> -->
+		<!-- 			</div> -->
+		<!-- 		</div> -->
+
 		<div id="colorlib-services">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 services-wrap">
 						<div class="row">
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/course?coursetitle=3" class="services">
-									<span class="icon">
-										<i class="flaticon-desktop"></i>
-									</span>
+								<a href="/course?coursetitle=3" class="services"> <span
+									class="icon"> <i class="flaticon-desktop"></i>
+								</span>
 									<div class="desc">
-										<h3>Core Java <br>Training</h3>
+										<h3>
+											Core Java <br>Training
+										</h3>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/course?coursetitle=1" class="services">
-									<span class="icon">
-										<i class="flaticon-smartphone"></i>
-									</span>
+								<a href="/course?coursetitle=1" class="services"> <span
+									class="icon"> <i class="flaticon-smartphone"></i>
+								</span>
 									<div class="desc">
-										<h3>C-Language <br>Training</h3>
+										<h3>
+											C-Language <br>Training
+										</h3>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/course?coursetitle=2" class="services">
-									<span class="icon">
-										<i class="flaticon-laboratory"></i>
-									</span>
+								<a href="/course?coursetitle=2" class="services"> <span
+									class="icon"> <i class="flaticon-laboratory"></i>
+								</span>
 									<div class="desc">
-										<h3>Cpp <br>Training</h3>
+										<h3>
+											Cpp <br>Training
+										</h3>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/course?coursetitle=4" class="services">
-									<span class="icon">
-										<i class="flaticon-computer-graphic"></i>
-									</span>
+								<a href="/course?coursetitle=4" class="services"> <span
+									class="icon"> <i class="flaticon-computer-graphic"></i>
+								</span>
 									<div class="desc">
-										<h3>DS <br>Training</h3>
+										<h3>
+											DS <br>Training
+										</h3>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/course?coursetitle=5" class="services">
-									<span class="icon">
-										<i class="flaticon-video-player"></i>
-									</span>
+								<a href="/course?coursetitle=5" class="services"> <span
+									class="icon"> <i class="flaticon-video-player"></i>
+								</span>
 									<div class="desc">
-										<h3>Python <br>Training</h3>
+										<h3>
+											Python <br>Training
+										</h3>
 									</div>
 								</a>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
-								<a href="/course?coursetitle=6" class="services">
-									<span class="icon">
-										<i class="flaticon-layers"></i>
-									</span>
+								<a href="/course?coursetitle=6" class="services"> <span
+									class="icon"> <i class="flaticon-layers"></i>
+								</span>
 									<div class="desc">
-										<h3>Adv Java <br>Training</h3>
+										<h3>
+											Adv Java <br>Training
+										</h3>
 									</div>
 								</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-12 text-center animate-box">
-						<p><a href="https://www.youtube.com/channel/UCCQxC1ZDLsPxoKz_2L8OfGQ/?guided_help_flow=5" class="btn btn-primary btn-outline btn-lg btn-discover popup-vimeo"><span class="icon"><i class="icon-play3"></i></span>Discover Courses</a></p>
+						<p>
+							<a
+								href="https://www.youtube.com/channel/UCCQxC1ZDLsPxoKz_2L8OfGQ/?guided_help_flow=5"
+								class="btn btn-primary btn-outline btn-lg btn-discover popup-vimeo"><span
+								class="icon"><i class="icon-play3"></i></span>Discover Courses</a>
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="colorlib-classes">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-12 colorlib-heading center-heading text-center animate-box">
+					<div
+						class="col-md-12 colorlib-heading center-heading text-center animate-box">
 						<h1 class="heading-big">Popular Online Courses</h1>
 						<h2>Popular Online Courses</h2>
 					</div>
@@ -315,75 +318,105 @@
 						<div class="owl-carousel">
 							<div class="item">
 								<div class="classes">
-									<div class="classes-img" style="background-image: url(images/classes-1.jpg);">
-									</div>
+									<div class="classes-img"
+										style="background-image: url(images/classes-1.jpg);"></div>
 									<div class="wrap">
 										<div class="desc">
 											<span class="teacher">David Clarson</span>
-											<h3><a href="#">Developing Mobile Apps Using Ruby on Rails</a></h3>
+											<h3>
+												<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
+											</h3>
 										</div>
 										<div class="pricing">
-											<p><span class="price">$150</span> <span class="price old-price">$250</span> <span class="more"><a href="#"><i class="icon-link"></i></a></span></p>
+											<p>
+												<span class="price">$150</span> <span
+													class="price old-price">$250</span> <span class="more"><a
+													href="#"><i class="icon-link"></i></a></span>
+											</p>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="item">
 								<div class="classes">
-									<div class="classes-img" style="background-image: url(images/classes-2.jpg);">
-									</div>
+									<div class="classes-img"
+										style="background-image: url(images/classes-2.jpg);"></div>
 									<div class="wrap">
 										<div class="desc">
 											<span class="teacher">David Clarson</span>
-											<h3><a href="#">Developing Mobile Apps Using Ruby on Rails</a></h3>
+											<h3>
+												<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
+											</h3>
 										</div>
 										<div class="pricing">
-											<p><span class="price">$150</span> <span class="price old-price">$250</span> <span class="more"><a href="#"><i class="icon-link"></i></a></span></p>
+											<p>
+												<span class="price">$150</span> <span
+													class="price old-price">$250</span> <span class="more"><a
+													href="#"><i class="icon-link"></i></a></span>
+											</p>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="item">
 								<div class="classes">
-									<div class="classes-img" style="background-image: url(images/classes-3.jpg);">
-									</div>
+									<div class="classes-img"
+										style="background-image: url(images/classes-3.jpg);"></div>
 									<div class="wrap">
 										<div class="desc">
 											<span class="teacher">David Clarson</span>
-											<h3><a href="#">Developing Mobile Apps Using Ruby on Rails</a></h3>
+											<h3>
+												<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
+											</h3>
 										</div>
 										<div class="pricing">
-											<p><span class="price">$150</span> <span class="price old-price">$250</span> <span class="more"><a href="#"><i class="icon-link"></i></a></span></p>
+											<p>
+												<span class="price">$150</span> <span
+													class="price old-price">$250</span> <span class="more"><a
+													href="#"><i class="icon-link"></i></a></span>
+											</p>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="item">
 								<div class="classes">
-									<div class="classes-img" style="background-image: url(images/classes-4.jpg);">
-									</div>
+									<div class="classes-img"
+										style="background-image: url(images/classes-4.jpg);"></div>
 									<div class="wrap">
 										<div class="desc">
 											<span class="teacher">David Clarson</span>
-											<h3><a href="#">Developing Mobile Apps Using Ruby on Rails</a></h3>
+											<h3>
+												<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
+											</h3>
 										</div>
 										<div class="pricing">
-											<p><span class="price">$150</span> <span class="price old-price">$250</span> <span class="more"><a href="#"><i class="icon-link"></i></a></span></p>
+											<p>
+												<span class="price">$150</span> <span
+													class="price old-price">$250</span> <span class="more"><a
+													href="#"><i class="icon-link"></i></a></span>
+											</p>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="item">
 								<div class="classes">
-									<div class="classes-img" style="background-image: url(images/classes-5.jpg);">
-									</div>
+									<div class="classes-img"
+										style="background-image: url(images/classes-5.jpg);"></div>
 									<div class="wrap">
 										<div class="desc">
 											<span class="teacher">David Clarson</span>
-											<h3><a href="#">Developing Mobile Apps Using Ruby on Rails</a></h3>
+											<h3>
+												<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
+											</h3>
 										</div>
 										<div class="pricing">
-											<p><span class="price">$150</span> <span class="price old-price">$250</span> <span class="more"><a href="#"><i class="icon-link"></i></a></span></p>
+											<p>
+												<span class="price">$150</span> <span
+													class="price old-price">$250</span> <span class="more"><a
+													href="#"><i class="icon-link"></i></a></span>
+											</p>
 										</div>
 									</div>
 								</div>
@@ -391,147 +424,148 @@
 						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
 		</div>
-<!-- 		<div id="colorlib-counter" class="colorlib-counters"> -->
-<!-- 			<div class="container"> -->
-<!-- 				<div class="col-md-7"> -->
-<!-- 					<div class="about-desc"> -->
-<!-- 						<div class="about-img-1 animate-box" style="background-image: url(images/about-img-2.jpg);"></div> -->
-<!-- 						<div class="about-img-2 animate-box" style="background-image: url(images/about-img-1.jpg);"></div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 				<div class="col-md-5"> -->
-<!-- 					<div class="row"> -->
-<!-- 						<div class="col-md-12 colorlib-heading animate-box"> -->
-<!-- 							<h1 class="heading-big">Who are we</h1> -->
-<!-- 							<h2>Who are we</h2> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 					<div class="row"> -->
-<!-- 						<div class="col-md-12 animate-box"> -->
-<!-- 							<p><strong>Even the all-powerful Pointing has no control about the blind texts</strong></p> -->
-<!-- 							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p> -->
-<!-- 						</div> -->
-<!-- 						<div class="col-md-6 col-sm-6 animate-box"> -->
-<!-- 							<div class="counter-entry"> -->
-<!-- 								<div class="desc"> -->
-<!-- 									<span class="colorlib-counter js-counter" data-from="0" data-to="1539" data-speed="5000" data-refresh-interval="50"></span> -->
-<!-- 									<span class="colorlib-counter-label">Courses</span> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 						<div class="col-md-6 col-sm-6 animate-box"> -->
-<!-- 							<div class="counter-entry"> -->
-<!-- 								<div class="desc"> -->
-<!-- 									<span class="colorlib-counter js-counter" data-from="0" data-to="3653" data-speed="5000" data-refresh-interval="50"></span> -->
-<!-- 									<span class="colorlib-counter-label">Students</span> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 						<div class="col-md-6 col-sm-6 animate-box"> -->
-<!-- 							<div class="counter-entry"> -->
-<!-- 								<div class="desc"> -->
-<!-- 									<span class="colorlib-counter js-counter" data-from="0" data-to="2300" data-speed="5000" data-refresh-interval="50"></span> -->
-<!-- 									<span class="colorlib-counter-label">Teachers online</span> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 						<div class="col-md-6 col-sm-6 animate-box"> -->
-<!-- 							<div class="counter-entry"> -->
-<!-- 								<div class="desc"> -->
-<!-- 									<span class="colorlib-counter js-counter" data-from="0" data-to="200" data-speed="5000" data-refresh-interval="50"></span> -->
-<!-- 									<span class="colorlib-counter-label">Countries</span> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
+		<!-- 		<div id="colorlib-counter" class="colorlib-counters"> -->
+		<!-- 			<div class="container"> -->
+		<!-- 				<div class="col-md-7"> -->
+		<!-- 					<div class="about-desc"> -->
+		<!-- 						<div class="about-img-1 animate-box" style="background-image: url(images/about-img-2.jpg);"></div> -->
+		<!-- 						<div class="about-img-2 animate-box" style="background-image: url(images/about-img-1.jpg);"></div> -->
+		<!-- 					</div> -->
+		<!-- 				</div> -->
+		<!-- 				<div class="col-md-5"> -->
+		<!-- 					<div class="row"> -->
+		<!-- 						<div class="col-md-12 colorlib-heading animate-box"> -->
+		<!-- 							<h1 class="heading-big">Who are we</h1> -->
+		<!-- 							<h2>Who are we</h2> -->
+		<!-- 						</div> -->
+		<!-- 					</div> -->
+		<!-- 					<div class="row"> -->
+		<!-- 						<div class="col-md-12 animate-box"> -->
+		<!-- 							<p><strong>Even the all-powerful Pointing has no control about the blind texts</strong></p> -->
+		<!-- 							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p> -->
+		<!-- 						</div> -->
+		<!-- 						<div class="col-md-6 col-sm-6 animate-box"> -->
+		<!-- 							<div class="counter-entry"> -->
+		<!-- 								<div class="desc"> -->
+		<!-- 									<span class="colorlib-counter js-counter" data-from="0" data-to="1539" data-speed="5000" data-refresh-interval="50"></span> -->
+		<!-- 									<span class="colorlib-counter-label">Courses</span> -->
+		<!-- 								</div> -->
+		<!-- 							</div> -->
+		<!-- 						</div> -->
+		<!-- 						<div class="col-md-6 col-sm-6 animate-box"> -->
+		<!-- 							<div class="counter-entry"> -->
+		<!-- 								<div class="desc"> -->
+		<!-- 									<span class="colorlib-counter js-counter" data-from="0" data-to="3653" data-speed="5000" data-refresh-interval="50"></span> -->
+		<!-- 									<span class="colorlib-counter-label">Students</span> -->
+		<!-- 								</div> -->
+		<!-- 							</div> -->
+		<!-- 						</div> -->
+		<!-- 						<div class="col-md-6 col-sm-6 animate-box"> -->
+		<!-- 							<div class="counter-entry"> -->
+		<!-- 								<div class="desc"> -->
+		<!-- 									<span class="colorlib-counter js-counter" data-from="0" data-to="2300" data-speed="5000" data-refresh-interval="50"></span> -->
+		<!-- 									<span class="colorlib-counter-label">Teachers online</span> -->
+		<!-- 								</div> -->
+		<!-- 							</div> -->
+		<!-- 						</div> -->
+		<!-- 						<div class="col-md-6 col-sm-6 animate-box"> -->
+		<!-- 							<div class="counter-entry"> -->
+		<!-- 								<div class="desc"> -->
+		<!-- 									<span class="colorlib-counter js-counter" data-from="0" data-to="200" data-speed="5000" data-refresh-interval="50"></span> -->
+		<!-- 									<span class="colorlib-counter-label">Countries</span> -->
+		<!-- 								</div> -->
+		<!-- 							</div> -->
+		<!-- 						</div> -->
+		<!-- 					</div> -->
+		<!-- 				</div> -->
+		<!-- 			</div> -->
+		<!-- 		</div> -->
 
-<!-- 		<div id="colorlib-testimony" class="testimony-img" style="background-image: url(images/img_bg_2.jpg); margin-bottom: 4em;" data-stellar-background-ratio="0.5"> -->
-<!-- 			<div class="overlay"></div> -->
-<!-- 			<div class="container-fluid"> -->
-<!-- 				<div class="row"> -->
-<!-- 					<div class="col-md-12 center-heading text-center colorlib-heading animate-box"> -->
-<!-- 						<h1 class="heading-big">What are the students says</h1> -->
-<!-- 						<h2>What are the students says</h2> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 				<div class="row"> -->
-<!-- 					<div class="col-md-12"> -->
-<!-- 						<div class="testimony-flex"> -->
-<!-- 							<div class="one-fifth animate-box"> -->
-<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
-<!-- 								<div class="testimony-wrap"> -->
-<!-- 									<blockquote> -->
-<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p> -->
-<!-- 									</blockquote> -->
-<!-- 									<div class="desc"> -->
-<!-- 										<div class="figure-img" style="background-image: url(images/person1.jpg);"></div> -->
-<!-- 										<h3>Dave Henderson</h3> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div class="one-fifth animate-box"> -->
-<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
-<!-- 								<div class="testimony-wrap"> -->
-<!-- 									<blockquote> -->
-<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
-<!-- 									</blockquote> -->
-<!-- 									<div class="desc"> -->
-<!-- 										<div class="figure-img" style="background-image: url(images/person2.jpg);"></div> -->
-<!-- 										<h3>Dave Henderson</h3> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div class="one-fifth animate-box"> -->
-<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
-<!-- 								<div class="testimony-wrap"> -->
-<!-- 									<blockquote> -->
-<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p> -->
-<!-- 									</blockquote> -->
-<!-- 									<div class="desc"> -->
-<!-- 										<div class="figure-img" style="background-image: url(images/person3.jpg);"></div> -->
-<!-- 										<h3>Dave Henderson</h3> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div class="one-fifth animate-box"> -->
-<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
-<!-- 								<div class="testimony-wrap"> -->
-<!-- 									<blockquote> -->
-<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p> -->
-<!-- 									</blockquote> -->
-<!-- 									<div class="desc"> -->
-<!-- 										<div class="figure-img" style="background-image: url(images/person1.jpg);"></div> -->
-<!-- 										<h3>Dave Henderson</h3> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div class="one-fifth animate-box"> -->
-<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
-<!-- 								<div class="testimony-wrap"> -->
-<!-- 									<blockquote> -->
-<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
-<!-- 									</blockquote> -->
-<!-- 									<div class="desc"> -->
-<!-- 										<div class="figure-img" style="background-image: url(images/person1.jpg);"></div> -->
-<!-- 										<h3>Dave Henderson</h3> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
+		<!-- 		<div id="colorlib-testimony" class="testimony-img" style="background-image: url(images/img_bg_2.jpg); margin-bottom: 4em;" data-stellar-background-ratio="0.5"> -->
+		<!-- 			<div class="overlay"></div> -->
+		<!-- 			<div class="container-fluid"> -->
+		<!-- 				<div class="row"> -->
+		<!-- 					<div class="col-md-12 center-heading text-center colorlib-heading animate-box"> -->
+		<!-- 						<h1 class="heading-big">What are the students says</h1> -->
+		<!-- 						<h2>What are the students says</h2> -->
+		<!-- 					</div> -->
+		<!-- 				</div> -->
+		<!-- 				<div class="row"> -->
+		<!-- 					<div class="col-md-12"> -->
+		<!-- 						<div class="testimony-flex"> -->
+		<!-- 							<div class="one-fifth animate-box"> -->
+		<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
+		<!-- 								<div class="testimony-wrap"> -->
+		<!-- 									<blockquote> -->
+		<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p> -->
+		<!-- 									</blockquote> -->
+		<!-- 									<div class="desc"> -->
+		<!-- 										<div class="figure-img" style="background-image: url(images/person1.jpg);"></div> -->
+		<!-- 										<h3>Dave Henderson</h3> -->
+		<!-- 									</div> -->
+		<!-- 								</div> -->
+		<!-- 							</div> -->
+		<!-- 							<div class="one-fifth animate-box"> -->
+		<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
+		<!-- 								<div class="testimony-wrap"> -->
+		<!-- 									<blockquote> -->
+		<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+		<!-- 									</blockquote> -->
+		<!-- 									<div class="desc"> -->
+		<!-- 										<div class="figure-img" style="background-image: url(images/person2.jpg);"></div> -->
+		<!-- 										<h3>Dave Henderson</h3> -->
+		<!-- 									</div> -->
+		<!-- 								</div> -->
+		<!-- 							</div> -->
+		<!-- 							<div class="one-fifth animate-box"> -->
+		<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
+		<!-- 								<div class="testimony-wrap"> -->
+		<!-- 									<blockquote> -->
+		<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p> -->
+		<!-- 									</blockquote> -->
+		<!-- 									<div class="desc"> -->
+		<!-- 										<div class="figure-img" style="background-image: url(images/person3.jpg);"></div> -->
+		<!-- 										<h3>Dave Henderson</h3> -->
+		<!-- 									</div> -->
+		<!-- 								</div> -->
+		<!-- 							</div> -->
+		<!-- 							<div class="one-fifth animate-box"> -->
+		<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
+		<!-- 								<div class="testimony-wrap"> -->
+		<!-- 									<blockquote> -->
+		<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p> -->
+		<!-- 									</blockquote> -->
+		<!-- 									<div class="desc"> -->
+		<!-- 										<div class="figure-img" style="background-image: url(images/person1.jpg);"></div> -->
+		<!-- 										<h3>Dave Henderson</h3> -->
+		<!-- 									</div> -->
+		<!-- 								</div> -->
+		<!-- 							</div> -->
+		<!-- 							<div class="one-fifth animate-box"> -->
+		<!-- 								<span class="icon"><i class="icon-quotes-left"></i></span> -->
+		<!-- 								<div class="testimony-wrap"> -->
+		<!-- 									<blockquote> -->
+		<!-- 										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+		<!-- 									</blockquote> -->
+		<!-- 									<div class="desc"> -->
+		<!-- 										<div class="figure-img" style="background-image: url(images/person1.jpg);"></div> -->
+		<!-- 										<h3>Dave Henderson</h3> -->
+		<!-- 									</div> -->
+		<!-- 								</div> -->
+		<!-- 							</div> -->
+		<!-- 						</div> -->
+		<!-- 					</div> -->
+		<!-- 				</div> -->
+		<!-- 			</div> -->
+		<!-- 		</div> -->
 
 		<div class="colorlib-trainers">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 colorlib-heading center-heading text-center animate-box">
+					<div
+						class="col-md-12 colorlib-heading center-heading text-center animate-box">
 						<h1 class="heading-big">Our Instructor</h1>
 						<h2>Our Instructor</h2>
 					</div>
@@ -543,7 +577,8 @@
 								<h3>Olivia Young</h3>
 								<span>instructor</span>
 							</div>
-							<div class="trainer-img" style="background-image: url(images/person1.jpg)"></div>
+							<div class="trainer-img"
+								style="background-image: url(images/person1.jpg)"></div>
 						</div>
 					</div>
 
@@ -553,7 +588,8 @@
 								<h3>Daniel Anderson</h3>
 								<span>Instructor</span>
 							</div>
-							<div class="trainer-img" style="background-image: url(images/person2.jpg)"></div>
+							<div class="trainer-img"
+								style="background-image: url(images/person2.jpg)"></div>
 						</div>
 					</div>
 
@@ -563,7 +599,8 @@
 								<h3>David Brook</h3>
 								<span>Instructor</span>
 							</div>
-							<div class="trainer-img" style="background-image: url(images/person3.jpg)"></div>
+							<div class="trainer-img"
+								style="background-image: url(images/person3.jpg)"></div>
 						</div>
 					</div>
 
@@ -573,7 +610,8 @@
 								<h3>Brigeth Smith</h3>
 								<span>instructor</span>
 							</div>
-							<div class="trainer-img" style="background-image: url(images/person4.jpg)"></div>
+							<div class="trainer-img"
+								style="background-image: url(images/person4.jpg)"></div>
 						</div>
 					</div>
 				</div>
@@ -583,7 +621,8 @@
 		<div class="colorlib-classes">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 colorlib-heading center-heading text-center animate-box">
+					<div
+						class="col-md-12 colorlib-heading center-heading text-center animate-box">
 						<h1 class="heading-big">Our Courses</h1>
 						<h2>Our Courses</h2>
 					</div>
@@ -591,223 +630,253 @@
 				<div class="row">
 					<div class="col-md-4 animate-box">
 						<div class="classes">
-							<div class="classes-img" style="background-image: url(images/classes-1.jpg);">
-							</div>
+							<div class="classes-img"
+								style="background-image: url(images/classes-1.jpg);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>
-									<h3><a href="#">Developing Mobile Apps Using Ruby on Rails</a></h3>
+									<h3>
+										<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
+									</h3>
 								</div>
 								<div class="pricing">
-									<p><span class="price">$150</span> <span class="price old-price">$250</span> <span class="more"><a href="#"><i class="icon-link"></i></a></span></p>
+									<p>
+										<span class="price">$150</span> <span class="price old-price">$250</span>
+										<span class="more"><a href="#"><i class="icon-link"></i></a></span>
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 animate-box">
 						<div class="classes">
-							<div class="classes-img" style="background-image: url(images/classes-2.jpg);">
-							</div>
+							<div class="classes-img"
+								style="background-image: url(images/classes-2.jpg);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>
-									<h3><a href="#">Developing Mobile Apps Using Ruby on Rails</a></h3>
+									<h3>
+										<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
+									</h3>
 								</div>
 								<div class="pricing">
-									<p><span class="price">$150</span> <span class="price old-price">$250</span> <span class="more"><a href="#"><i class="icon-link"></i></a></span></p>
+									<p>
+										<span class="price">$150</span> <span class="price old-price">$250</span>
+										<span class="more"><a href="#"><i class="icon-link"></i></a></span>
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 animate-box">
 						<div class="classes">
-							<div class="classes-img" style="background-image: url(images/classes-3.jpg);">
-							</div>
+							<div class="classes-img"
+								style="background-image: url(images/classes-3.jpg);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>
-									<h3><a href="#">Developing Mobile Apps Using Ruby on Rails</a></h3>
+									<h3>
+										<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
+									</h3>
 								</div>
 								<div class="pricing">
-									<p><span class="price">$150</span> <span class="price old-price">$250</span> <span class="more"><a href="#"><i class="icon-link"></i></a></span></p>
+									<p>
+										<span class="price">$150</span> <span class="price old-price">$250</span>
+										<span class="more"><a href="#"><i class="icon-link"></i></a></span>
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 animate-box">
 						<div class="classes">
-							<div class="classes-img" style="background-image: url(images/classes-4.jpg);">
-							</div>
+							<div class="classes-img"
+								style="background-image: url(images/classes-4.jpg);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>
-									<h3><a href="#">Developing Mobile Apps Using Ruby on Rails</a></h3>
+									<h3>
+										<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
+									</h3>
 								</div>
 								<div class="pricing">
-									<p><span class="price">$150</span> <span class="price old-price">$250</span> <span class="more"><a href="#"><i class="icon-link"></i></a></span></p>
+									<p>
+										<span class="price">$150</span> <span class="price old-price">$250</span>
+										<span class="more"><a href="#"><i class="icon-link"></i></a></span>
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 animate-box">
 						<div class="classes">
-							<div class="classes-img" style="background-image: url(images/classes-5.jpg);">
-							</div>
+							<div class="classes-img"
+								style="background-image: url(images/classes-5.jpg);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>
-									<h3><a href="#">Developing Mobile Apps Using Ruby on Rails</a></h3>
+									<h3>
+										<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
+									</h3>
 								</div>
 								<div class="pricing">
-									<p><span class="price">$150</span> <span class="price old-price">$250</span> <span class="more"><a href="#"><i class="icon-link"></i></a></span></p>
+									<p>
+										<span class="price">$150</span> <span class="price old-price">$250</span>
+										<span class="more"><a href="#"><i class="icon-link"></i></a></span>
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 animate-box">
 						<div class="classes">
-							<div class="classes-img" style="background-image: url(images/classes-6.jpg);">
-							</div>
+							<div class="classes-img"
+								style="background-image: url(images/classes-6.jpg);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>
-									<h3><a href="#">Developing Mobile Apps Using Ruby on Rails</a></h3>
+									<h3>
+										<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
+									</h3>
 								</div>
 								<div class="pricing">
-									<p><span class="price">$150</span> <span class="price old-price">$250</span> <span class="more"><a href="#"><i class="icon-link"></i></a></span></p>
+									<p>
+										<span class="price">$150</span> <span class="price old-price">$250</span>
+										<span class="more"><a href="#"><i class="icon-link"></i></a></span>
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
 		</div>
 
-<!-- 		<div class="colorlib-event"> -->
-<!-- 			<div class="container"> -->
-<!-- 				<div class="row"> -->
-<!-- 					<div class="col-md-5 row-pb-md"> -->
-<!-- 						<div class="row"> -->
-<!-- 							<div class="col-md-12 colorlib-heading animate-box"> -->
-<!-- 								<h1 class="heading-big">Events</h1> -->
-<!-- 								<h2>Upcoming Events</h2> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 						<div class="row"> -->
-<!-- 							<div class="col-md-12"> -->
-<!-- 								<div class="event-entry animate-box"> -->
-<!-- 									<div class="desc"> -->
-<!-- 										<p class="meta"><span class="day">01-02</span><span class="month">Jun</span></p> -->
-<!-- 										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p> -->
-<!-- 										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2> -->
-<!-- 									</div> -->
-<!-- 									<div class="location"> -->
-<!-- 										<span class="icon"><i class="icon-map"></i></span> -->
-<!-- 										<p>291 South 21th Street, Suite 721 New York NY 10016</p> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 								<div class="event-entry animate-box"> -->
-<!-- 									<div class="desc"> -->
-<!-- 										<p class="meta"><span class="day">05-07</span><span class="month">Jun</span></p> -->
-<!-- 										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p> -->
-<!-- 										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2> -->
-<!-- 									</div> -->
-<!-- 									<div class="location"> -->
-<!-- 										<span class="icon"><i class="icon-map"></i></span> -->
-<!-- 										<p>291 South 21th Street, Suite 721 New York NY 10016</p> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 								<div class="event-entry animate-box"> -->
-<!-- 									<div class="desc"> -->
-<!-- 										<p class="meta"><span class="day">10-12</span><span class="month">Jun</span></p> -->
-<!-- 										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p> -->
-<!-- 										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2> -->
-<!-- 									</div> -->
-<!-- 									<div class="location"> -->
-<!-- 										<span class="icon"><i class="icon-map"></i></span> -->
-<!-- 										<p>291 South 21th Street, Suite 721 New York NY 10016</p> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 								<div class="event-entry animate-box"> -->
-<!-- 									<div class="desc"> -->
-<!-- 										<p class="meta"><span class="day">19-25</span><span class="month">Jun</span></p> -->
-<!-- 										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p> -->
-<!-- 										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2> -->
-<!-- 									</div> -->
-<!-- 									<div class="location"> -->
-<!-- 										<span class="icon"><i class="icon-map"></i></span> -->
-<!-- 										<p>291 South 21th Street, Suite 721 New York NY 10016</p> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 					<div class="col-md-7 row-pb-md"> -->
-<!-- 						<div class="row"> -->
-<!-- 							<div class="col-md-12 colorlib-heading animate-box"> -->
-<!-- 								<h1 class="heading-big">Recent Blog</h1> -->
-<!-- 								<h2>Recent Blog</h2> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 						<div class="row"> -->
-<!-- 							<div class="col-md-12"> -->
-<!-- 								<div class="block-21 d-flex animate-box"> -->
-<!-- 					            <a href="#" class="blog-img" style="background-image: url(images/blog-1.jpg);"></a> -->
-<!-- 					            <div class="text"> -->
-<!-- 					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3> -->
-<!-- 					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p> -->
-<!-- 					               <div class="meta"> -->
-<!-- 					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div> -->
-<!-- 					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div> -->
-<!-- 					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
-<!-- 					               </div> -->
-<!-- 					            </div> -->
-<!-- 					         </div> -->
+		<!-- 		<div class="colorlib-event"> -->
+		<!-- 			<div class="container"> -->
+		<!-- 				<div class="row"> -->
+		<!-- 					<div class="col-md-5 row-pb-md"> -->
+		<!-- 						<div class="row"> -->
+		<!-- 							<div class="col-md-12 colorlib-heading animate-box"> -->
+		<!-- 								<h1 class="heading-big">Events</h1> -->
+		<!-- 								<h2>Upcoming Events</h2> -->
+		<!-- 							</div> -->
+		<!-- 						</div> -->
+		<!-- 						<div class="row"> -->
+		<!-- 							<div class="col-md-12"> -->
+		<!-- 								<div class="event-entry animate-box"> -->
+		<!-- 									<div class="desc"> -->
+		<!-- 										<p class="meta"><span class="day">01-02</span><span class="month">Jun</span></p> -->
+		<!-- 										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p> -->
+		<!-- 										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2> -->
+		<!-- 									</div> -->
+		<!-- 									<div class="location"> -->
+		<!-- 										<span class="icon"><i class="icon-map"></i></span> -->
+		<!-- 										<p>291 South 21th Street, Suite 721 New York NY 10016</p> -->
+		<!-- 									</div> -->
+		<!-- 								</div> -->
+		<!-- 								<div class="event-entry animate-box"> -->
+		<!-- 									<div class="desc"> -->
+		<!-- 										<p class="meta"><span class="day">05-07</span><span class="month">Jun</span></p> -->
+		<!-- 										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p> -->
+		<!-- 										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2> -->
+		<!-- 									</div> -->
+		<!-- 									<div class="location"> -->
+		<!-- 										<span class="icon"><i class="icon-map"></i></span> -->
+		<!-- 										<p>291 South 21th Street, Suite 721 New York NY 10016</p> -->
+		<!-- 									</div> -->
+		<!-- 								</div> -->
+		<!-- 								<div class="event-entry animate-box"> -->
+		<!-- 									<div class="desc"> -->
+		<!-- 										<p class="meta"><span class="day">10-12</span><span class="month">Jun</span></p> -->
+		<!-- 										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p> -->
+		<!-- 										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2> -->
+		<!-- 									</div> -->
+		<!-- 									<div class="location"> -->
+		<!-- 										<span class="icon"><i class="icon-map"></i></span> -->
+		<!-- 										<p>291 South 21th Street, Suite 721 New York NY 10016</p> -->
+		<!-- 									</div> -->
+		<!-- 								</div> -->
+		<!-- 								<div class="event-entry animate-box"> -->
+		<!-- 									<div class="desc"> -->
+		<!-- 										<p class="meta"><span class="day">19-25</span><span class="month">Jun</span></p> -->
+		<!-- 										<p class="organizer"><span>Organized by:</span> <span>Noah Henderson</span></p> -->
+		<!-- 										<h2><a href="event.html">We Held Free Training for Basic Programming</a></h2> -->
+		<!-- 									</div> -->
+		<!-- 									<div class="location"> -->
+		<!-- 										<span class="icon"><i class="icon-map"></i></span> -->
+		<!-- 										<p>291 South 21th Street, Suite 721 New York NY 10016</p> -->
+		<!-- 									</div> -->
+		<!-- 								</div> -->
+		<!-- 							</div> -->
+		<!-- 						</div> -->
+		<!-- 					</div> -->
+		<!-- 					<div class="col-md-7 row-pb-md"> -->
+		<!-- 						<div class="row"> -->
+		<!-- 							<div class="col-md-12 colorlib-heading animate-box"> -->
+		<!-- 								<h1 class="heading-big">Recent Blog</h1> -->
+		<!-- 								<h2>Recent Blog</h2> -->
+		<!-- 							</div> -->
+		<!-- 						</div> -->
+		<!-- 						<div class="row"> -->
+		<!-- 							<div class="col-md-12"> -->
+		<!-- 								<div class="block-21 d-flex animate-box"> -->
+		<!-- 					            <a href="#" class="blog-img" style="background-image: url(images/blog-1.jpg);"></a> -->
+		<!-- 					            <div class="text"> -->
+		<!-- 					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3> -->
+		<!-- 					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p> -->
+		<!-- 					               <div class="meta"> -->
+		<!-- 					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div> -->
+		<!-- 					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div> -->
+		<!-- 					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
+		<!-- 					               </div> -->
+		<!-- 					            </div> -->
+		<!-- 					         </div> -->
 
-<!-- 					         <div class="block-21 d-flex animate-box"> -->
-<!-- 					            <a href="#" class="blog-img" style="background-image: url(images/blog-2.jpg);"></a> -->
-<!-- 					            <div class="text"> -->
-<!-- 					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3> -->
-<!-- 					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p> -->
-<!-- 					               <div class="meta"> -->
-<!-- 					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div> -->
-<!-- 					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div> -->
-<!-- 					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
-<!-- 					               </div> -->
-<!-- 					            </div> -->
-<!-- 					         </div> -->
+		<!-- 					         <div class="block-21 d-flex animate-box"> -->
+		<!-- 					            <a href="#" class="blog-img" style="background-image: url(images/blog-2.jpg);"></a> -->
+		<!-- 					            <div class="text"> -->
+		<!-- 					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3> -->
+		<!-- 					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p> -->
+		<!-- 					               <div class="meta"> -->
+		<!-- 					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div> -->
+		<!-- 					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div> -->
+		<!-- 					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
+		<!-- 					               </div> -->
+		<!-- 					            </div> -->
+		<!-- 					         </div> -->
 
-<!-- 					         <div class="block-21 d-flex animate-box"> -->
-<!-- 					            <a href="#" class="blog-img" style="background-image: url(images/blog-3.jpg);"></a> -->
-<!-- 					            <div class="text"> -->
-<!-- 					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3> -->
-<!-- 					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p> -->
-<!-- 					               <div class="meta"> -->
-<!-- 					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div> -->
-<!-- 					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div> -->
-<!-- 					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
-<!-- 					               </div> -->
-<!-- 					            </div> -->
-<!-- 					         </div> -->
+		<!-- 					         <div class="block-21 d-flex animate-box"> -->
+		<!-- 					            <a href="#" class="blog-img" style="background-image: url(images/blog-3.jpg);"></a> -->
+		<!-- 					            <div class="text"> -->
+		<!-- 					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3> -->
+		<!-- 					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p> -->
+		<!-- 					               <div class="meta"> -->
+		<!-- 					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div> -->
+		<!-- 					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div> -->
+		<!-- 					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
+		<!-- 					               </div> -->
+		<!-- 					            </div> -->
+		<!-- 					         </div> -->
 
-<!-- 					         <div class="block-21 d-flex animate-box"> -->
-<!-- 					            <a href="#" class="blog-img" style="background-image: url(images/blog-4.jpg);"></a> -->
-<!-- 					            <div class="text"> -->
-<!-- 					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3> -->
-<!-- 					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p> -->
-<!-- 					               <div class="meta"> -->
-<!-- 					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div> -->
-<!-- 					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div> -->
-<!-- 					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
-<!-- 					               </div> -->
-<!-- 					            </div> -->
-<!-- 					         </div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
+		<!-- 					         <div class="block-21 d-flex animate-box"> -->
+		<!-- 					            <a href="#" class="blog-img" style="background-image: url(images/blog-4.jpg);"></a> -->
+		<!-- 					            <div class="text"> -->
+		<!-- 					               <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3> -->
+		<!-- 					               <p>ven the all-powerful Pointing has no control about the blind texts it is an almost</p> -->
+		<!-- 					               <div class="meta"> -->
+		<!-- 					                  <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div> -->
+		<!-- 					                  <div><a href="#"><span class="icon-user2"></span> Admin</a></div> -->
+		<!-- 					                  <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
+		<!-- 					               </div> -->
+		<!-- 					            </div> -->
+		<!-- 					         </div> -->
+		<!-- 							</div> -->
+		<!-- 						</div> -->
+		<!-- 					</div> -->
+		<!-- 				</div> -->
+		<!-- 			</div> -->
+		<!-- 		</div> -->
 
 
 		<!-- <div class="colorlib-blog colorlib-light-grey">
@@ -864,128 +933,45 @@
 			</div>
 		</div> -->
 
-	
-<!-- 		<div id="colorlib-subscribe" class="subs-img" style="background-image: url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5"> -->
-<!-- 			<div class="overlay"></div> -->
-<!-- 			<div class="container"> -->
-<!-- 				<div class="row"> -->
-<!-- 					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box"> -->
-<!-- 						<h2>Subscribe Newsletter</h2> -->
-<!-- 						<p>Subscribe our newsletter and get latest update</p> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 				<div class="row animate-box"> -->
-<!-- 					<div class="col-md-6 col-md-offset-3"> -->
-<!-- 						<div class="row"> -->
-<!-- 							<div class="col-md-12"> -->
-<!-- 							<form class="form-inline qbstp-header-subscribe"> -->
-<!-- 								<div class="col-three-forth"> -->
-<!-- 									<div class="form-group"> -->
-<!-- 										<input type="text" class="form-control" id="email" placeholder="Enter your email"> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 								<div class="col-one-third"> -->
-<!-- 									<div class="form-group"> -->
-<!-- 										<button type="submit" class="btn btn-primary">Subscribe Now</button> -->
-<!-- 									</div> -->
-<!-- 								</div> -->
-<!-- 							</form> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-		<footer id="colorlib-footer">
-			<div class="container">
-				<div class="row row-pb-md">
-					<div class="col-md-3 colorlib-widget">
-						<h4>Contact Info</h4>
-						<ul class="colorlib-footer-links">
-							<li>First floor,street no 12, <br> Nallakunta,Hyderabad-500044.</li>
-							<li><a href="tel://9700053393"><i class="icon-phone"></i> 9700053393</a></li>
-							<li><a href="mailto:support@neoteach.com"><i class="icon-envelope"></i> support@neoteach.com</a></li>
-							<li><a href="http://www.neoteach.com"><i class="icon-location4"></i> www.neoteach.com</a></li>
-						</ul>  
-					</div>
-					<div class="col-md-2 colorlib-widget">
-						<h4>Online Training</h4>
-						<p>
-							<ul class="colorlib-footer-links">
-								<li><a href="#"><i class="icon-check"></i> C-Language</a></li>
-								<li><a href="#"><i class="icon-check"></i> Core Java</a></li>
-								<li><a href="#"><i class="icon-check"></i> Adv.Java</a></li>
-								<li><a href="#"><i class="icon-check"></i> Python</a></li>
-								<li><a href="#"><i class="icon-check"></i> Data Structures</a></li>
-							</ul>
-						</p>
-					</div>
-					<div class="col-md-2 colorlib-widget">
-						<h4>Useful Links</h4>
-						<p>
-							<ul class="colorlib-footer-links">
-								<li><a href="#"><i class="icon-check"></i> Home</a></li>
-								<li><a href="#"><i class="icon-check"></i>About Us</a></li>
-								<li><a href="#"><i class="icon-check"></i> Courses</a></li>
-								<li><a href="#"><i class="icon-check"></i> Contact Us</a></li>
-								<li><a href="#"><i class="icon-check"></i> Sign Up</a></li>
-							</ul>
-						</p>
-					</div>
 
-					<div class="col-md-2 colorlib-widget">
-						<h4>Offline Classes</h4>
-						<p>
-							<ul class="colorlib-footer-links">
-								<li><a href="#"><i class="icon-check"></i> BTech all Strems</a></li>
-								<li><a href="#"><i class="icon-check"></i> Inter &amp; 10+2</a></li>
-								<li><a href="#"><i class="icon-check"></i> School Tuitions </a></li>
-								<li><a href="#"><i class="icon-check"></i> One to One classes</a></li>
-								<li><a href="#"><i class="icon-check"></i> Home Tuitions</a></li>
-							</ul>
-						</p>
-					</div>
-
-					<div class="col-md-3 colorlib-widget">
-						<h4>Special</h4>
-						<div class="f-blog">
-							<a href="#" class="blog-img" style="background-image: url(images/blog-1.jpg);">
-							</a>
-							<div class="desc">
-								<h2><a href="#">Online one to One </a></h2>
-								<p class="admin"><span>interactive classes</span></p>
-							</div>
-						</div>
-						<div class="f-blog">
-							<a href="#" class="blog-img" style="background-image: url(images/blog-2.jpg);">
-							</a>
-							<div class="desc">
-								<h2><a href="#">Class Room Tuitions</a></h2>
-								<p class="admin"><span>ICSE,SSC&amp; CBSE</span></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="copy">
-				<div class="container">
-					<div class="row">
-					<div class="col-md-12 text-center">
-							<p>
-								<small class="block">Copyright &copy;<script>document.write(new Date().getFullYear());</script> NeoTeach.All rights reserved</small>
-							</p>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</footer>
+		<!-- 		<div id="colorlib-subscribe" class="subs-img" style="background-image: url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5"> -->
+		<!-- 			<div class="overlay"></div> -->
+		<!-- 			<div class="container"> -->
+		<!-- 				<div class="row"> -->
+		<!-- 					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box"> -->
+		<!-- 						<h2>Subscribe Newsletter</h2> -->
+		<!-- 						<p>Subscribe our newsletter and get latest update</p> -->
+		<!-- 					</div> -->
+		<!-- 				</div> -->
+		<!-- 				<div class="row animate-box"> -->
+		<!-- 					<div class="col-md-6 col-md-offset-3"> -->
+		<!-- 						<div class="row"> -->
+		<!-- 							<div class="col-md-12"> -->
+		<!-- 							<form class="form-inline qbstp-header-subscribe"> -->
+		<!-- 								<div class="col-three-forth"> -->
+		<!-- 									<div class="form-group"> -->
+		<!-- 										<input type="text" class="form-control" id="email" placeholder="Enter your email"> -->
+		<!-- 									</div> -->
+		<!-- 								</div> -->
+		<!-- 								<div class="col-one-third"> -->
+		<!-- 									<div class="form-group"> -->
+		<!-- 										<button type="submit" class="btn btn-primary">Subscribe Now</button> -->
+		<!-- 									</div> -->
+		<!-- 								</div> -->
+		<!-- 							</form> -->
+		<!-- 							</div> -->
+		<!-- 						</div> -->
+		<!-- 					</div> -->
+		<!-- 				</div> -->
+		<!-- 			</div> -->
+		<!-- 		</div> -->
+		<%@ include file="footer.jsp"%>
 	</div>
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
-	
+
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -1007,7 +993,8 @@
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
-
-	</body>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
 

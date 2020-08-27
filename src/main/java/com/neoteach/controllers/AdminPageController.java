@@ -1,78 +1,53 @@
 package com.neoteach.controllers;
 
+import javax.servlet.http.HttpSession;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.neoteach.model.Admin;
 import com.neoteach.serviceimpl.AdminServiceImpl;
-import com.neoteach.util.NeoTeachUtill;
 
 @Controller
 public class AdminPageController {
+	private static final Logger logger = LogManager.getLogger(AdminPageController.class);
 	@Autowired
 	AdminServiceImpl adminservice;
-	
-	@Autowired
-	NeoTeachUtill neoTeachUtill;
-	
-//	String UPLOADED_FOLDER="C://Users//Sri//git//NeoTeach//src//main//resources//static//videos//";
-	@RequestMapping(value="/admin",method=RequestMethod.GET)
-	public String adminPage()
-	{
+
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	public String adminPage() {
+		logger.info("Entered into Admin login page");
 		return "adminlogin";
 	}
-	@RequestMapping(value="/adminsignup",method=RequestMethod.POST)
-	public String adminLogin(@RequestParam("username") String email,@RequestParam("password") String pwd,Model model)
-	{
-		boolean result=adminservice.creadentialAuthenticate(email,pwd);
-		
-		if(result)
-		{
-			return "adminhome";	
-		} 
-		else
-		{
-			model.addAttribute("adminloginfail", "Invalid credentials..."+email);
-			return "adminlogin";	
+
+	@RequestMapping(value = "/adminlogin", method = RequestMethod.POST)
+	public String adminLogin(@RequestParam("username") String email, @RequestParam("password") String password,
+			Model model,HttpSession session) {
+		logger.info("Entered into Admin home page");
+		Admin admin = adminservice.findByEmail(email);
+		if (admin == null) {
+			model.addAttribute("errorMessage", "We didn't find an account for that e-mail address.");
+			return "adminlogin";
 		}
-		
+		else if(admin.getPassword().equals(password))
+		{
+			logger.info("Admin password matched");
+//			session.setAttribute("adminSession", admin);
+//			session.setAttribute("adminEmailSession", admin.getEmail());
+			return "adminhome";
+		}
+		else 
+		{
+			model.addAttribute("errorMessage", "invalid password recheck and try again...!");
+			return "adminlogin";
+		}
+
 	}
-//	 @PostMapping("/uploadVideos")
-//	    public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file,@RequestParam("coursename") String coursename) {
-//	        VideoFile vFile = adminservice.storeFile(file,coursename);
-//
-//	        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
-//	                .path("/downloadCourseVideos/")
-//	                .path(vFile.getId())
-//	                .toUriString();
-//
-//	        return new UploadFileResponse(vFile.getFileName(), fileDownloadUri,
-//	                file.getContentType(), file.getSize());
-//	    }
-//	
-//	 @PostMapping("/uploadMultipleFiles")
-//	    public List<UploadFileResponse> uploadMultipleFiles(@RequestParam("videos") MultipartFile[] files,@RequestParam("coursename") String coursename) {
-//	        return Arrays.asList(files)
-//	                .stream()
-//	                .map(file -> uploadFile(file,coursename))
-//	                .collect(Collectors.toList());
-//	    }
-//
-//	  @GetMapping("/coursepage")
-//	  public String coursePage(@RequestParam("coursetitle") String coursetitle,Model cousemodel)
-//	  {
-//		  List<VedioListPogo> courselist=adminservice.getCourseList(coursetitle);
-//		  for (VedioListPogo vedioListPogo : courselist) 
-//		  {
-//			 cousemodel.addAttribute("courselist",vedioListPogo.getData());
-//		  }
-//		 
-//		  System.out.println(courselist);
-//		  return "coursevideos";
-//	  }
-	  
-	  
+
 }

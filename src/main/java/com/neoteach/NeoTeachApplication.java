@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class NeoTeachApplication extends SpringBootServletInitializer{
+public class NeoTeachApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(NeoTeachApplication.class, args);
 	}

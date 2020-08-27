@@ -6,6 +6,8 @@ import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
@@ -21,38 +23,42 @@ import com.neoteach.model.User;
 import com.neoteach.serviceimpl.EmailServiceImpl;
 import com.neoteach.serviceimpl.UserServiceImpl;
 
-
 @Controller
 public class PasswordController {
-
-//	@Autowired
-//	private registerServiceImpl registerServiceImpl;
+	private static final Logger logger = LogManager.getLogger(PasswordController.class);
 	@Autowired
 	UserServiceImpl userServiceImpl;
 	@Autowired
 	private EmailServiceImpl emailServiceImpl;
 
-//	@Autowired
-//	private BCryptPasswordEncoder bCryptPasswordEncoder;
-	
-	// Display forgotPassword page
+	/*
+	 * Display forgotPassword page
+	 */
 	@RequestMapping(value = "/forgot", method = RequestMethod.GET)
 	public String displayForgotPasswordPage() {
+		logger.info("Entered into displayForgotPasswordPage");
 		return "forgotPassword";
-    }
-    
-    // Process form submission from forgotPassword page
-	@RequestMapping(value = "/forgot", method = RequestMethod.POST)
-	public String processForgotPasswordForm(Model model, @RequestParam("email") String userEmail, HttpServletRequest request) {
+	}
 
+	/*
+	 * Process form submission from forgotPassword page
+	 * 
+	 * @Param userEmail-- user email Model model-- to display status of action
+	 * 
+	 * @Param request -- to handle the request parameters
+	 */
+	@RequestMapping(value = "/forgot", method = RequestMethod.POST)
+	public String processForgotPasswordForm(Model model, @RequestParam("email") String userEmail,
+			HttpServletRequest request) {
+		logger.info("User Entered into processForgotPasswordForm");
 		// Lookup user in database by e-mail
 		Optional<User> optional = userServiceImpl.findUserByEmail(userEmail);
 
 		if (!optional.isPresent()) {
 			model.addAttribute("errorMessage", "We didn't find an account for that e-mail address.");
 		} else {
-			
-			// Generate random 36-character string token for reset password 
+
+			// Generate random 36-character string token for reset password
 			User user = optional.get();
 			user.setResetToken(UUID.randomUUID().toString());
 
@@ -60,15 +66,15 @@ public class PasswordController {
 			userServiceImpl.saveUser(user);
 
 			String appUrl = request.getScheme() + "://" + request.getServerName();
-			
+
 			// Email message
 			SimpleMailMessage passwordResetEmail = new SimpleMailMessage();
 			passwordResetEmail.setFrom("support@demo.com");
 			passwordResetEmail.setTo(user.getEmail());
 			passwordResetEmail.setSubject("Password Reset Request");
-			passwordResetEmail.setText("To reset your password, click the link below:\n" + appUrl
-					+ ":8080/reset?token=" + user.getResetToken());
-			
+			passwordResetEmail.setText("To reset your password, click the link below:\n" + appUrl + ":8080/reset?token="
+					+ user.getResetToken());
+
 			emailServiceImpl.sendEmail(passwordResetEmail);
 
 			// Add success message to view
@@ -79,10 +85,14 @@ public class PasswordController {
 
 	}
 
-	// Display form to reset password
+	/*
+	 * Display form to reset password
+	 * 
+	 * @Param token-- user token Model model-- to display status of action
+	 */
 	@RequestMapping(value = "/reset", method = RequestMethod.GET)
 	public String displayResetPasswordPage(Model model, @RequestParam("token") String token) {
-		
+		logger.info("User Entered into displayResetPasswordPage");
 		Optional<User> user = userServiceImpl.findUserByResetToken(token);
 
 		if (user.isPresent()) { // Token found in DB
@@ -94,19 +104,26 @@ public class PasswordController {
 		return "resetPassword";
 	}
 
-	// Process reset password form
+	/*
+	 * Process reset password form
+	 * 
+	 * @Param redir-- for redirect jsp Model model-- to display status of action
+	 * 
+	 * @Param requestParams -- to handle the request parameters
+	 */
 	@RequestMapping(value = "/reset", method = RequestMethod.POST)
-	public String setNewPassword(Model model, @RequestParam Map<String, String> requestParams, RedirectAttributes redir) {
-
+	public String setNewPassword(Model model, @RequestParam Map<String, String> requestParams,
+			RedirectAttributes redir) {
+		logger.info("User Entered into setNewPassword");
 		// Find the user associated with the reset token
 		Optional<User> user = userServiceImpl.findUserByResetToken(requestParams.get("token"));
 
 		// This should always be non-null but we check just in case
 		if (user.isPresent()) {
-			
-			User resetUser = user.get(); 
-            
-			// Set new password    
+
+			User resetUser = user.get();
+
+			// Set new password
 //            resetUser.setPassword(bCryptPasswordEncoder.encode(requestParams.get("password")));
 			resetUser.setPassword(requestParams.get("password"));
 			// Set the reset token to null so it cannot be used again
@@ -119,21 +136,26 @@ public class PasswordController {
 			// RedirectAttributes
 			redir.addFlashAttribute("successMessage", "You have successfully reset your password.  You may now login.");
 
-//			model.setViewName("redirect:login");
 			return "redirect:loginpage";
-			
+
 		} else {
 			model.addAttribute("errorMessage", "Oops!  This is an invalid password reset link.");
 //			model.setViewName("resetPassword");	
 			return "resetPassword";
 		}
-		
+
 //		return "redirect:loginpage";
-   }
-   
-    // Going to reset page without a token redirects to login page
+	}
+
+	/*
+	 * Going to reset page without a token redirects to login page
+	 * 
+	 * @Param ex -- to handle the exception
+	 */
+	// Going to reset page without a token redirects to login page
 	@ExceptionHandler(MissingServletRequestParameterException.class)
 	public String handleMissingParams(MissingServletRequestParameterException ex) {
+		logger.info("User Entered into handleMissingParams");
 		return "redirect:loginpage";
 	}
 }

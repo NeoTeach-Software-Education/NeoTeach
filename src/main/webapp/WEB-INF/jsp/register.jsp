@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ include file="taglib_includes.jsp" %>
 <html lang="en" dir="auto" >
 <head>
     <meta charset="utf-8">
@@ -25,50 +26,7 @@
 </head>
 <body class="">
 
-<div class="main-navbar-wrap">
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-        <div class="container">
-            <a class="navbar-brand site-main-logo" href="/">
-                
-                                    <img src="images/logo.png" alt="NeoTeach" />
-                            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="mainNavbarContent">
-               
-              
-                <ul class="navbar-nav main-nav-auth-profile-wrap justify-content-end mt-2 mt-lg-0 flex-grow-1">
-
-                    <li class="nav-item dropdown mini-cart-item">
-                        <a class="nav-link" href="javascript:;" id="miniCartDropDown">
-    <div class="text-center">
-        <i class="la la-shopping-cart"></i>
-            </div>
-</a>
-
-
-                    </li>
-
-                                            <li class="nav-item mr-2 ml-2">
-                            <a class="nav-link btn btn-login-outline" href="/loginpage"> <i class="la la-sign-in"></i> Log In</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-theme-primary" href="/register"> <i class="la la-user-plus"></i> Sign Up</a>
-                        </li>
-                    
-                </ul>
-
-            </div>
-        </div>
-
-    </nav>
-
-</div>
+<%@ include file="headerLogout.jsp" %>
 <div class="container my-5">
     <div class="row">
         <div class="col-md-8 mx-auto">
@@ -146,111 +104,15 @@
         </div>
     </div>
 </div>
-<footer>
+<%@ include file="footer.jsp" %>
 
-    <div class="footer-top py-5">
-
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-3">
-                    <div class="footer-widget-wrap">
-                        <h4>About US</h4>
-                        <p class="footer-about-us-desc">
-                            NeoTeach is a LMS platform that connect Teachers with Students globally. Teachers crate high quality course and present them in super easy way. NeoTeach created by <a href="#" target="_blank">NeoTeach Group</a>
-                        </p>
-                        <p class="footer-social-icon-wrap">
-                            <a href="#"><i class="la la-facebook"></i> </a>
-                            <a href="#"><i class="la la-twitter"></i> </a>
-                            <a href="#"><i class="la la-youtube"></i> </a>
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="col-md-3">
-                    <div class="footer-widget-wrap contact-us-widget-wrap">
-                        <h4>Contact</h4>
-                        <p class="footer-address">
-                            First floor,street no 12,Nallakunta,Hyderabad-500044.
-                        </p>
-                        <p class="mb-0"> Support.: +91 9700053393 </p>                      
-                        <p class="mb-0"> support@neoteach.com </p>
-                    </div>
-                </div>
-
-
-
-                <div class="col-md-6">
-                    <div class="footer-widget-wrap link-widget-wrap">
-
-                        <ul class="footer-links">
-                            <li><a href="#">Home</a> </li>
-                            <li><a href="#">Dashboard</a> </li>
-                            <li><a href="#">Courses</a> </li>
-                            <li><a href="#">Popular courses</a> </li>
-                            <li><a href="#">Featured courses</a> </li>
-                            <li><a href="#">Blog</a> </li>
-                            <li><a href="#">About Us</a> </li>
-                            <li><a href="#">Sign Up</a> </li>
-                            <li><a href="#">Contact Us</a> </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-    <div class="footer-bottom py-5">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="footer-bottom-contents-wrap d-flex">
-
-                        <div class="footer-bottom-left d-flex">
-                            <h5 class="text-warning">NeoTeach</h5>
-                            <span class="ml-4">Copyright © 2020 NeoTeach. All rights reserved.</span>
-                        </div>
-
-                        <div class="footer-bottom-right flex-grow-1 text-right">
-                            <ul class="footer-bottom-right-links">
-                                <li>
-                                    <a href="#">
-                                        Terms of use
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Privacy Policy &amp; Cookie Policy
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-</footer>
-
-
-<form id="logout-form" action="#" method="POST" class="d-none">
+<!-- <form id="logout-form" action="#" method="POST" class="d-none"> -->
 <!--     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
-</form>
+<!-- </form> -->
 
 
 <!-- jquery latest version -->
-<script src="https://zenoxpro.com/public/assets/js/vendor/jquery-1.12.0.min.js"></script>
+<script src="https://zenoxpro.com/public/assets/js/vendor/jquery.min.js"></script>
 <!-- bootstrap js -->
 <!-- <script src="https://zenoxpro.com/public/assets/js/bootstrap.bundle.min.js"></script> -->
 

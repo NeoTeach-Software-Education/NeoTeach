@@ -3,70 +3,16 @@ package com.neoteach.serviceimpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.neoteach.daoimpl.AdminDaoImpl;
-import com.neoteach.repositories.DBFileRepository;
+import com.neoteach.model.Admin;
+import com.neoteach.repositories.AdminRepository;
 
-@Service(value="AdminServiceImpl")
-public class AdminServiceImpl{
-	 @Autowired
-	    private DBFileRepository dbFileRepository;
-//	@Autowired
-//	private final String CLASS_NAME=this.getClass().getCanonicalName();
-	
+@Service(value = "AdminServiceImpl")
+public class AdminServiceImpl {
 	@Autowired
-	AdminDaoImpl adminDaoImpl;
-	public boolean creadentialAuthenticate(String email, String pwd) {
-		// TODO Auto-generated method stub
-		
-		final String METHOD_NAME="creadentialAuthenticate";
-//		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
-		boolean result=adminDaoImpl.creadentialAuthenticate(email,pwd);
-//		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.EXIT);
-		
-		return result;
-	}
-//	public int saveImageOrVideo(byte[] bytes, String orginalName,String ContentType) {
-//		int result=adminDaoImpl.saveImageOrVideo(bytes,orginalName,ContentType);
-//		return result;
-//	}
-//	public byte[] getTutorialVideos() {
-//		byte[] result=adminDaoImpl.getTutorialVideos();
-//		return result;
-//	}
-//	public VideoFile storeFile(MultipartFile file,String coursename) {
-//		
-//
-//        // Normalize file name
-//        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-//
-//        try {
-//            // Check if the file's name contains invalid characters
-//            if(fileName.contains("..")) {
-//                throw new FileStorageException("Sorry! Filename contains invalid path sequence " + fileName);
-//            }
-//
-//            VideoFile dbFile = new VideoFile(fileName, file.getContentType(), file.getBytes(),coursename);
-//
-//            return dbFileRepository.save(dbFile);
-//        } catch (IOException ex) {
-//            throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
-//        }
-//    
-//		
-//	}
-//	public List<VedioListPogo> getCourseList(String coursetitle) {
-//		List<VedioListPogo> courselist=adminDaoImpl.getCourseList(coursetitle);
-//		return courselist;
-//	}
-//	
+	AdminRepository adminRepository;
 
-//	@Override
-//	public String chkPhoneNo(String phone) throws Exception {
-//		final String METHOD_NAME = "chkPhoneNo";
-//		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
-//		String response=regDao.chkPhoneNo(phone);
-//		nhtLogMgr.writeToError(NhtConstants.LOG_INFO, CLASS_NAME, METHOD_NAME, NhtConstants.ENTRY);
-//	    return response;	
-//	}
-	
+	public Admin findByEmail(String email) {
+		return adminRepository.findByEmail(email);
+	}
+
 }

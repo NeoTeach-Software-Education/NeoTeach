@@ -1,10 +1,8 @@
 package com.neoteach.controllers;
 
-import java.util.Base64;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,75 +20,55 @@ public class DashboardController {
 	UserServiceImpl userServiceImpl;
 	
 	@RequestMapping(value = "/dashboard", method = RequestMethod.GET)
-	public String dashboardPage(Model model, @RequestParam("id") String encodedEmail) {
-//		decode into String from encoded format 
-	    byte[] emailByte = Base64.getDecoder().decode(encodedEmail); 
-	    String decodedEmail = new String(emailByte);
-		User user = userServiceImpl.findByEmail(decodedEmail);
-		model.addAttribute("user",user);
-		model.addAttribute("encodedEmail",encodedEmail);
+	public String dashboardPage(Model model,HttpSession session) {
+//		String email=session.getAttribute("userEmailSession").toString();
 		return "useraccount";
     }
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public String userLogout() {
-		return "login";
+	public String userLogout(HttpServletRequest request) {
+		HttpSession session=request.getSession();  
+	    session.invalidate();  
+	    return "redirect:/login";
+//		return "login";
     }
 	@RequestMapping(value = "/userUpdate", method = RequestMethod.GET)
-	public String userProfile(Model model, @RequestParam("id") String encodedEmail) {
-		model.addAttribute("encodedEmail",encodedEmail);
-//		decode into String from encoded format 
-	      byte[] emailByte = Base64.getDecoder().decode(encodedEmail); 
-	      String decodedEmail = new String(emailByte);
-		  User user = userServiceImpl.findByEmail(decodedEmail);
-		  model.addAttribute("user",user);
+	public String userProfile(Model model,HttpSession session) {
 		return "profileUpdate";
     }
 	@RequestMapping(value = "/userUpdate", method = RequestMethod.POST)
-	public String updateUserProfile(Model model,@RequestParam("userEmail") String encodedEmail,HttpServletRequest request) {
+	public String updateUserProfile(Model model,HttpSession session,HttpServletRequest request) {
 		
-//		decode into String from encoded format 
-	      byte[] emailByte = Base64.getDecoder().decode(encodedEmail); 
-	      String decodedEmail = new String(emailByte);
-			User user = userServiceImpl.findByEmail(decodedEmail);
+		User user = userServiceImpl.findByEmail(session.getAttribute("userEmailSession").toString());
 			user.setQualification(request.getParameter("qualification"));
 			user.setAddress(request.getParameter("address"));
 			user.setCity(request.getParameter("city"));
 			user.setPin(request.getParameter("pin"));
 			user.setCountryId(request.getParameter("countryId"));
 			user.setAboutMe(request.getParameter("aboutMe"));
+			user.setPhone(request.getParameter("phone"));
 		userServiceImpl.saveUser(user);
-		model.addAttribute("user",user);
+		user = userServiceImpl.findByEmail(session.getAttribute("userEmailSession").toString());
+		session.setAttribute("userSession", user);
 		model.addAttribute("successMessage", "You have successfully updated your profile.");
 		return "profileUpdate";
     }
 	
 	@RequestMapping(value = "/changepwd", method = RequestMethod.GET)
-	public String pwdChange(Model model, @RequestParam("id") String encodedEmail) {
-		model.addAttribute("encodedEmail",encodedEmail);
-//		decode into String from encoded format 
-	    byte[] emailByte = Base64.getDecoder().decode(encodedEmail); 
-	    String decodedEmail = new String(emailByte);
-		User user = userServiceImpl.findByEmail(decodedEmail);
-		model.addAttribute("user",user);
+	public String pwdChange(Model model,HttpSession session) {
 		return "changePwd";
     }
 	@RequestMapping(value = "/changepwd", method = RequestMethod.POST)
-	public String pwdChangeComplete(Model model, @RequestParam("userEmail") String encodedEmail,@RequestParam("old_password") String oldpwd,@RequestParam("new_password") String newpwd) {
-//	decode into String from encoded format 
-      byte[] emailByte = Base64.getDecoder().decode(encodedEmail); 
-      String decodedEmail = new String(emailByte);
-		User user = userServiceImpl.findByEmail(decodedEmail);
+	public String pwdChangeComplete(Model model,@RequestParam("old_password") String oldpwd,@RequestParam("new_password") String newpwd,HttpSession session) {
+		User user = userServiceImpl.findByEmail(session.getAttribute("userEmailSession").toString());
 		if (oldpwd.equals(user.getPassword())) {
 			user.setPassword(newpwd);
 			// Save user
 			userServiceImpl.saveUser(user);
-			model.addAttribute("user",user);
 			model.addAttribute("successMessage", "You have successfully reset your password.  You may now login.");
 			return "login";
 		}
 		else 
 		{
-			model.addAttribute("encodedEmail",encodedEmail);
 			model.addAttribute("errorMessage", "Oops!  The old password is invalid.");
 			return "changePwd";
 		}

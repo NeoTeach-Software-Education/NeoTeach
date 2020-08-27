@@ -306,5 +306,263 @@
 		owlCrouselFeatureSlide();
 	});
 
+	 /** Dashboard JS **/
+    $(document).on('click', '.withdraw-preference-method-name', function(e) {
+        $('.withdraw-method-form').hide();
+        $('#'+$(this).attr('data-target')).show();
+    });
+
+    /** END: Dashboard Js **/
+    
+    /**
+     * Custom Toogle Menu For Top Nav
+     */
+    $(document).on('click', '.browse-categories-nav-link', function(e) {
+        e.preventDefault();
+        var $ul = $('.categories-ul-first');
+        if ($ul.hasClass('d-block')){
+            $ul.removeClass('d-block').addClass('d-none');
+        }else{
+            $ul.removeClass('d-none').addClass('d-block');
+        }
+    });
+    $(document).on('click', '#miniCartDropDown', function(e) {
+        e.preventDefault();
+        var $ul = $('.mini-cart-body-wrap');
+        if ($ul.hasClass('d-block')){
+            $ul.removeClass('d-block').addClass('d-none');
+        }else{
+            $ul.removeClass('d-none').addClass('d-block');
+        }
+    });
+    $(document).on('click', '.profile-dropdown-toogle', function(e) {
+        e.preventDefault();
+        var $ul = $('.profile-dropdown-menu');
+        if ($ul.hasClass('d-block')){
+            $ul.removeClass('d-block').addClass('d-none');
+        }else{
+            $ul.removeClass('d-none').addClass('d-block');
+        }
+    });
+    /** END Custom Toggle Menu **/
+    
+    $(document).on('click', '.remove-cart-btn', function(e) {
+        e.preventDefault();
+
+        var $btn = $(this);
+        var cart_id = $btn.attr('data-cart-id');
+        $btn.closest('.mini-cart-course-item').remove();
+        $.post(pageData.routes.remove_cart, {cart_id : cart_id, _token : pageData.csrf_token}, function(response){
+            if (response.success){
+                $('.dropdown.mini-cart-item').html(response.cart_html);
+            }
+        });
+    });
+
+    $(document).on('click', 'a.nav-icon-list', function(e) {
+        e.preventDefault();
+        $('.lecture-sidebar').toggle();
+    });
+    
+    /**
+     * Progress bar Circle
+     */
+    $(".progress.circle").each(function() {
+        var value = $(this).attr('data-value');
+        var left = $(this).find('.progress-left .progress-bar');
+        var right = $(this).find('.progress-right .progress-bar');
+
+        if (value > 0) {
+            if (value <= 50) {
+                right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+            } else {
+                right.css('transform', 'rotate(180deg)')
+                left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+            }
+        }
+    });
+    function percentageToDegrees(percentage) {
+        return percentage / 100 * 360
+    }
+    /**
+     * END Progress bar
+     */
+    /**
+     * Characters limits
+     */
+    $(document).on('keyup change', '[data-maxlength]', function(e) {
+        e.preventDefault();
+        var $that = $(this);
+        var length = parseInt($that.attr('data-maxlength'));
+        var value = $that.val();
+        var remaining_length = length - value.length;
+        if (remaining_length < 1){
+            remaining_length = 0;
+        }
+        $that.closest('.form-group').find('.input-group-text').html(remaining_length);
+
+        if (value.length  > length){
+            $that.val(value.substr(0, length));
+        }
+    });
+
+    function collapse_if_much_height() {
+        var $contentExpandInner = $('.content-expand-inner');
+        if ($contentExpandInner.length) {
+            $contentExpandInner.each(function (index, item) {
+                var $that = $(this);
+                var height = $that.height();
+                if (height > 270) {
+                    $(this).closest('.content-expand-wrap').append('<span class="expand-more-btn-wrap"><button type="button" class="expand-more-btn btn-sm btn btn-link"> + See More</button></span>');
+                }
+            });
+        }
+        $(document).on('click', '.expand-more-btn', function (e) {
+            e.preventDefault();
+            var $that = $(this);
+
+            $that.closest('.content-expand-wrap').css("max-height", "none");
+            $that.closest('.expand-more-btn-wrap').remove();
+        });
+    }
+    collapse_if_much_height();
+
+
+    /**
+     * Expand Collapse Section
+     */
+    $(document).on('click', '.course-section-header', function (e) {
+        var $that = $(this);
+
+        var display = $that.next('.course-section-body').css("display").trim();
+        if (display === 'none'){
+            $that.find('i.la').removeClass('la-plus').addClass('la-minus');
+        }else{
+            $that.find('i.la').removeClass('la-minus').addClass('la-plus');
+        }
+        $that.next('.course-section-body').slideToggle();
+    });
+
+    $(document).on('click', '#expand-collapse-all-sections a', function (e) {
+        var $that = $(this);
+        $that.hide();
+
+        var action = $that.attr('data-action');
+        if (action === 'expand'){
+            $('a[data-action="collapse"]').show();
+            $('.course-section-name i.la').removeClass('la-plus').addClass('la-minus');
+            $('.course-section .course-section-body').slideDown();
+        }else{
+            $('a[data-action="expand"]').show();
+            $('.course-section-name i.la').removeClass('la-minus').addClass('la-plus');
+            $('.course-section .course-section-body').slideUp();
+        }
+    });
+    //END Collapse Section
+
+
+    /**
+     * Add To Cart
+     */
+
+    //add-to-cart-btn
+
+    $(document).on('click', '.add-to-cart-btn', function (e) {
+        var $btn = $(this);
+        var course_id = $btn.attr('data-course-id');
+
+        if ( ! pageData.is_logged_in){
+            //$('#loginFormModal').modal('show');
+            //return;
+        }
+
+        $.ajax({
+            url : pageData.routes.add_to_cart,
+            type : 'POST',
+            data : {course_id : course_id, _token : pageData.csrf_token},
+            beforeSend: function () {
+                $btn.addClass('loader').attr('disabled', 'disabled');
+            },
+            success: function (response) {
+                if (response.success){
+                    $('.dropdown.mini-cart-item').html(response.cart_html);
+                    $btn.html("<i class='la la-check-circle'></i> In Cart");
+                }else{
+                    $btn.removeClass('loader').removeAttr('disabled');
+                }
+            },
+            error : function(jqXHR, textStatus, errorThrown){
+                $btn.removeClass('loader').removeAttr('disabled');
+            },
+            complete: function () {
+                $btn.removeClass('loader');
+            }
+        });
+
+    });
+
+    if ($('#loginFormModalShouldOpen').length){
+        $('#loginFormModalShouldOpen').modal('show');
+    }
+    
+    /**
+     * Checkout page
+     */
+    $('.checkout-payment-methods-wrap .tab-pane:first-child').addClass('show active');
+
+    /**
+     * Rating set
+     */
+    $(document).on('mouseenter', '.review-write-star-wrap i', function(){
+        $(this).closest('.review-write-star-wrap').find('i').removeClass('la-star').addClass('la-star-o');
+        var ratingValue = $(this).attr('data-rating-value');
+
+        for (var i = 1; i<= ratingValue; i++){
+            $(this).closest('.review-write-star-wrap').find('i[data-rating-value="'+i+'"]').removeClass('la-star-o').addClass('la-star');
+        }
+        $(this).closest('.review-write-star-wrap').find('input[name="rating_value"]').val(ratingValue);
+    });
+
+    /**
+     * Add to WishList
+     */
+    $(document).on('click', '.course-card-add-wish', function(){
+        if ( ! pageData.is_logged_in){
+            $('#loginFormModal').modal('show');
+            return false;
+        }
+        var $btn = $(this);
+        var course_id = $btn.attr('data-course-id');
+
+        $.ajax({
+            url : pageData.routes.update_wish_list,
+            type : 'POST',
+            data : {course_id : course_id, _token : pageData.csrf_token},
+            beforeSend: function () {
+                $btn.addClass('loader').attr('disabled', 'disabled');
+            },
+            success: function (response) {
+                if (response.success){
+                    if (response.state === 'added'){
+                        $btn.find('i').removeClass('la-heart-o').addClass('la-heart');
+                    }else{
+                        $btn.find('i').removeClass('la-heart').addClass('la-heart-o');
+                    }
+
+                }
+            },
+            complete: function () {
+                $btn.removeClass('loader').removeAttr('disabled');;
+            }
+        });
+    });
+
+    $(document).on('change', '#course-filter-form', function() {
+        $(this).submit();
+    });
+
+    
+    
+    
 
 }());

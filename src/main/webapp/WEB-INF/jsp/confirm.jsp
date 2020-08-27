@@ -252,7 +252,7 @@
 
 
 <!-- jquery latest version -->
-<script src="https://zenoxpro.com/public/assets/js/vendor/jquery-1.12.0.min.js"></script>
+<script src="https://zenoxpro.com/public/assets/js/vendor/jquery.min.js"></script>
 <!-- bootstrap js -->
 <!-- <script src="https://zenoxpro.com/public/assets/js/bootstrap.bundle.min.js"></script> -->
 <!-- Bootstrap -->

@@ -402,7 +402,7 @@ h1, h2, h3, h4, h5, h6, figure {
         display: table-cell;
         vertical-align: middle;
         height: 700px;
-        padding: 1em; }
+        padding: 9em; }
         @media screen and (max-width: 768px) {
           #colorlib-hero .flexslider .slider-text > .slider-text-inner {
             text-align: center; } }
@@ -3752,4 +3752,6 @@ User Profile Page
         max-width: 400px;
     }
 }
-
+.main_cart{
+	font-size: 15px;
+}
