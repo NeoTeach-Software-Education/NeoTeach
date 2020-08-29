@@ -11,9 +11,20 @@ public class Admin {
 	@Id
 	@Column(name = "email", nullable = false, unique = true)
 	private String email;
-
+	@Column(name = "password")
+	private String password;
+	@Column(name="fullName")
+	private String fullName;
 	public String getEmail() {
 		return email;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 
 	public void setEmail(String email) {
@@ -28,6 +39,5 @@ public class Admin {
 		this.password = password;
 	}
 
-	@Column(name = "password")
-	private String password;
+	
 }

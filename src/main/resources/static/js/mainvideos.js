@@ -50,6 +50,7 @@ function uploadSingleFile(file) {
 }
 
 function uploadMultipleFiles(files) {
+	alert("this is from vds js");
 	var formData = new FormData();
 	formData.append("coursename", $('#mcoursename').val());
 	for (var index = 0; index < files.length; index++) {

@@ -38,9 +38,9 @@ public class AdminPageController {
 		else if(admin.getPassword().equals(password))
 		{
 			logger.info("Admin password matched");
-//			session.setAttribute("adminSession", admin);
+			session.setAttribute("adminSession", admin);
 //			session.setAttribute("adminEmailSession", admin.getEmail());
-			return "adminhome";
+			return "admin_dashboard";
 		}
 		else 
 		{
@@ -48,6 +48,11 @@ public class AdminPageController {
 			return "adminlogin";
 		}
 
+	}
+	@RequestMapping(value = "/uploadVideos", method = RequestMethod.GET)
+	public String uploadVideosPage() {
+		logger.info("Entered uploadVideosPage");
+		return "upload_videos";
 	}
 
 }
