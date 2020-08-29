@@ -21,8 +21,8 @@
 </head>
 <body class="">
 
-	<%@ include file="admin_header.jsp"%>
-	
+	<%@ include file="header_admin.jsp"%>
+
 	<div class="dashboard-wrap">
 
 		<div class="container py-4">
@@ -30,10 +30,11 @@
 				<%@ include file="admin_left.jsp"%>
 
 				<div class="col-md-7">
-				
-				<form id="singleUploadForm" name="singleUploadForm">
+
+					<form id="singleUploadForm" name="singleUploadForm">
 						<div class="form-group row">
-							<label for="videos" class="col-sm-4 col-form-label text-md-right">Single Video</label>
+							<label for="videos" class="col-sm-4 col-form-label text-md-right">Single
+								Video</label>
 
 							<div class="col-md-7">
 								<input id="singleFileUploadInput" type="file"
@@ -69,10 +70,11 @@
 						<div id="singleFileUploadError"></div>
 						<div id="singleFileUploadSuccess"></div>
 					</div>
-				
+
 					<form id="multipleUploadForm" name="multipleUploadForm">
 						<div class="form-group row">
-							<label for="videos" class="col-sm-4 col-form-label text-md-right">Multiple Videos</label>
+							<label for="videos" class="col-sm-4 col-form-label text-md-right">Multiple
+								Videos</label>
 
 							<div class="col-md-7">
 								<input id="multipleFileUploadInput" type="file"

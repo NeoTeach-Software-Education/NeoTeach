@@ -15,4 +15,9 @@ public class AdminServiceImpl {
 		return adminRepository.findByEmail(email);
 	}
 
+	public void saveAdmin(Admin admin) {
+		adminRepository.save(admin);
+		
+	}
+
 }

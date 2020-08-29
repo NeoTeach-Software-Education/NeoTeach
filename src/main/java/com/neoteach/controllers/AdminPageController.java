@@ -1,5 +1,6 @@
 package com.neoteach.controllers;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.logging.log4j.LogManager;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.neoteach.model.Admin;
+import com.neoteach.model.User;
 import com.neoteach.serviceimpl.AdminServiceImpl;
 
 @Controller
@@ -39,7 +41,7 @@ public class AdminPageController {
 		{
 			logger.info("Admin password matched");
 			session.setAttribute("adminSession", admin);
-//			session.setAttribute("adminEmailSession", admin.getEmail());
+			session.setAttribute("adminEmailSession", admin.getEmail());
 			return "admin_dashboard";
 		}
 		else 
@@ -54,5 +56,39 @@ public class AdminPageController {
 		logger.info("Entered uploadVideosPage");
 		return "upload_videos";
 	}
+	@RequestMapping(value = "/adminDashboard", method = RequestMethod.GET)
+	public String adminDashboard() {
+		logger.info("Entered adminDashboard");
+		return "admin_dashboard";
+	}
+	@RequestMapping(value = "/adminLogout", method = RequestMethod.GET)
+	public String adminLogout(HttpServletRequest request) {
+		logger.info("Entered adminLogout");
+		HttpSession session=request.getSession();  
+	    session.invalidate();  
+	    return "redirect:/admin";
+//		return "login";
+    }
+	@RequestMapping(value = "/changeAdminPwd", method = RequestMethod.GET)
+	public String pwdChange(Model model,HttpSession session) {
+		return "change_admin_pwd";
+    }
+	@RequestMapping(value = "/changeAdminPwd", method = RequestMethod.POST)
+	public String adminPwdChangeComplete(Model model,@RequestParam("old_password") String oldpwd,@RequestParam("new_password") String newpwd,HttpSession session) {
+		Admin admin = adminservice.findByEmail(session.getAttribute("adminEmailSession").toString());
+		if (oldpwd.equals(admin.getPassword())) {
+			admin.setPassword(newpwd);
+			// Save user
+			adminservice.saveAdmin(admin);
+			model.addAttribute("successMessage", "You have successfully reset your password.  You may now login.");
+			return "adminlogin";
+		}
+		else 
+		{
+			model.addAttribute("errorMessage", "Oops!  The old password is invalid.");
+			return "change_admin_pwd";
+		}
+		
+    }
 
 }

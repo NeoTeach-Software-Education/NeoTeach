@@ -25,7 +25,7 @@
 </head>
 <body class="">
 
-	<%@ include file="headerLogout.jsp"%>
+	<%@ include file="header_admin_logout.jsp"%>
 	<div class="container my-5">
 		<div class="row justify-content-center">
 			<div class="col-md-8">

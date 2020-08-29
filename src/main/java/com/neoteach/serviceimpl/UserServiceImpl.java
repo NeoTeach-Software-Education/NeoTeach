@@ -22,22 +22,18 @@ public class UserServiceImpl {
 	}
 
 	public void saveUser(@Valid User user) {
-		// TODO Auto-generated method stub
 		userRepository.save(user);
 	}
 
 	public User findByConfirmationToken(String confirmationToken) {
-		// TODO Auto-generated method stub
 		return userRepository.findByConfirmationToken(confirmationToken);
 	}
 
 	public Optional<User> findUserByEmail(String email) {
-		// TODO Auto-generated method stub
 		return Optional.of(userRepository.findByEmail(email));
 	}
 
 	public Optional<User> findUserByResetToken(String resetToken) {
-		// TODO Auto-generated method stub
 		return userRepository.findByResetToken(resetToken);
 	}
 
