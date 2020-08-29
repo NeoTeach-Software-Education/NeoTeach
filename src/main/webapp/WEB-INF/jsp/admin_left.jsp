@@ -17,7 +17,7 @@
 <!-- 						<li class=""><a href="#"> <i class="la la-pencil-square-o"></i> Enrolled Courses	</a></li> -->
 <!-- 						<li class=""><a href="#"> <i class="la la-heart-o"></i>	Wishlist</a></li> -->
 						<li class=""><a href="/uploadVideos"> <i class="la la-star-half-alt"></i>Upload Videos</a></li>
-						<li class=""><a href="/changepwd"> <i class="la la-key"></i>
+						<li class=""><a href="/changeadminpwd"> <i class="la la-key"></i>
 								Reset Password
 						</a></li>
 						<li class=""><a href="#"> <i class="la la-history"></i>
@@ -30,8 +30,7 @@
 						<!--                 <a href="#"> <i class="la la-pie-chart"></i> Students Progress Report </a> -->
 						<!--             </li> -->
 
-						<li><a href="/logout"> <i class="la la-sign-out"></i> Log
-								Out
+						<li><a href="/logout"> <i class="la la-sign-out"></i> Log Out
 						</a></li>
 					</ul>
 				</div>
