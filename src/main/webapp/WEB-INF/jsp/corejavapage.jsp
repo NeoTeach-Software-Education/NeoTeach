@@ -71,9 +71,10 @@
 								<span class="free-text mr-2">Free</span>
 							</div>
 						</div>
-						<form action="#" class="course-free-enroll" method="post">
+						<form action="/order" class="course-free-enroll" method="post">
 							<!--                                     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt">   -->
 							<input type="hidden" name="course_id" value="16">
+							<input type="hidden" name="amount" value="150">
 							<button type="submit" class="btn btn-warning btn-lg btn-block">Enroll
 								Now</button>
 						</form>

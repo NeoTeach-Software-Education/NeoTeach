@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="css/line-awesome.min.css">
 <!-- style css -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/cartpage.css">
     <!-- modernizr css -->
 <!--     <script src="https://zenoxpro.com/public/assets/js/vendor/modernizr-2.8.3.min.js"></script> -->
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -105,14 +106,9 @@
     </div>
 </div>
 <%@ include file="footer.jsp" %>
-
-<!-- <form id="logout-form" action="#" method="POST" class="d-none"> -->
-<!--     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
-<!-- </form> -->
-
-
 <!-- jquery latest version -->
-<script src="https://zenoxpro.com/public/assets/js/vendor/jquery.min.js"></script>
+<!-- <script src="https://zenoxpro.com/public/assets/js/vendor/jquery.min.js"></script> -->
+<script src="js/jquery.min.js"></script>
 <!-- bootstrap js -->
 <!-- <script src="https://zenoxpro.com/public/assets/js/bootstrap.bundle.min.js"></script> -->
 

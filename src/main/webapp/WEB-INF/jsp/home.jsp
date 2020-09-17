@@ -21,11 +21,12 @@
 <meta name="twitter:url" content="" />
 <meta name="twitter:card" content="" />
 
-<link
-	href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900"
-	rel="stylesheet">
+<link ref="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
 
 <!-- Animate.css -->
+<!-- Bootstrap  -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/cartpage.css">
 <link rel="stylesheet" href="css/animate.css">
 <!-- Icomoon Icon Fonts-->
 <link rel="stylesheet" href="css/icomoon.css">
@@ -44,8 +45,7 @@
 
 <!-- Flaticons  -->
 <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-<!-- Bootstrap  -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+
 <link rel="stylesheet" href="css/line-awesome.min.css">
 <!-- Theme style  -->
 <link rel="stylesheet" href="css/style.css">
@@ -56,7 +56,8 @@
 <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+<!-- <link rel="stylesheet" href="cart/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="css/cartpage.css">
 </head>
 <body>
 
@@ -234,6 +235,16 @@
 										</h3>
 									</div>
 								</a>
+
+<!-- 								<div class="course-card-btn-wrap"> -->
+<!-- 									<button type="button" -->
+<!-- 										class="btn btn-sm btn-theme-primary add-to-cart-btn" -->
+<!-- 										data-course-id="14"> -->
+<!-- 										<i class="la la-shopping-cart"></i> Add to cart -->
+<!-- 									</button> -->
+									<button class="btn btn-sm btn-theme-primary my-cart-btn" data-id="1" data-name="Core Java" data-summary="summary 1" data-price="15" data-quantity="1" data-image="cart/images/img_1.png"><i class="la la-shopping-cart"></i>Add to Cart</button>
+<!-- 								</div> -->
+
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
 								<a href="/course?coursetitle=1" class="services"> <span
@@ -245,6 +256,7 @@
 										</h3>
 									</div>
 								</a>
+								<button class="btn btn-sm btn-theme-primary my-cart-btn" data-id="2" data-name="C-Language" data-summary="summary 2" data-price="20" data-quantity="1" data-image="cart/images/img_2.png"><i class="la la-shopping-cart"></i>Add to Cart</button>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
 								<a href="/course?coursetitle=2" class="services"> <span
@@ -256,6 +268,7 @@
 										</h3>
 									</div>
 								</a>
+								<button class="btn btn-sm btn-theme-primary my-cart-btn" data-id="3" data-name="Cpp" data-summary="summary 3" data-price="30" data-quantity="1" data-image="cart/images/img_3.png"><i class="la la-shopping-cart"></i>Add to Cart</button>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
 								<a href="/course?coursetitle=4" class="services"> <span
@@ -267,6 +280,7 @@
 										</h3>
 									</div>
 								</a>
+								<button class="btn btn-sm btn-theme-primary my-cart-btn" data-id="4" data-name="DS" data-summary="summary 4" data-price="40" data-quantity="1" data-image="cart/images/img_4.png"><i class="la la-shopping-cart"></i>Add to Cart</button>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
 								<a href="/course?coursetitle=5" class="services"> <span
@@ -278,6 +292,7 @@
 										</h3>
 									</div>
 								</a>
+								<button class="btn btn-sm btn-theme-primary my-cart-btn" data-id="5" data-name="Python" data-summary="summary 5" data-price="50" data-quantity="1" data-image="cart/images/img_5.png"><i class="la la-shopping-cart"></i>Add to Cart</button>
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
 								<a href="/course?coursetitle=6" class="services"> <span
@@ -289,13 +304,14 @@
 										</h3>
 									</div>
 								</a>
+								<button class="btn btn-sm btn-theme-primary my-cart-btn" data-id="6" data-name="Adv Java" data-summary="summary 6" data-price="150" data-quantity="1" data-image="cart/images/img.png"><i class="la la-shopping-cart"></i>Add to Cart</button>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-12 text-center animate-box">
 						<p>
 							<a
-								href="https://www.youtube.com/channel/UCCQxC1ZDLsPxoKz_2L8OfGQ/?guided_help_flow=5"
+								href="#"
 								class="btn btn-primary btn-outline btn-lg btn-discover popup-vimeo"><span
 								class="icon"><i class="icon-play3"></i></span>Discover Courses</a>
 						</p>
@@ -304,128 +320,130 @@
 			</div>
 		</div>
 
-		<div class="colorlib-classes">
-			<div class="container-fluid">
-				<div class="row">
-					<div
-						class="col-md-12 colorlib-heading center-heading text-center animate-box">
-						<h1 class="heading-big">Popular Online Courses</h1>
-						<h2>Popular Online Courses</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 animate-box">
-						<div class="owl-carousel">
-							<div class="item">
-								<div class="classes">
-									<div class="classes-img"
-										style="background-image: url(images/classes-1.jpg);"></div>
-									<div class="wrap">
-										<div class="desc">
-											<span class="teacher">David Clarson</span>
-											<h3>
-												<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
-											</h3>
-										</div>
-										<div class="pricing">
-											<p>
-												<span class="price">$150</span> <span
-													class="price old-price">$250</span> <span class="more"><a
-													href="#"><i class="icon-link"></i></a></span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="classes">
-									<div class="classes-img"
-										style="background-image: url(images/classes-2.jpg);"></div>
-									<div class="wrap">
-										<div class="desc">
-											<span class="teacher">David Clarson</span>
-											<h3>
-												<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
-											</h3>
-										</div>
-										<div class="pricing">
-											<p>
-												<span class="price">$150</span> <span
-													class="price old-price">$250</span> <span class="more"><a
-													href="#"><i class="icon-link"></i></a></span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="classes">
-									<div class="classes-img"
-										style="background-image: url(images/classes-3.jpg);"></div>
-									<div class="wrap">
-										<div class="desc">
-											<span class="teacher">David Clarson</span>
-											<h3>
-												<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
-											</h3>
-										</div>
-										<div class="pricing">
-											<p>
-												<span class="price">$150</span> <span
-													class="price old-price">$250</span> <span class="more"><a
-													href="#"><i class="icon-link"></i></a></span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="classes">
-									<div class="classes-img"
-										style="background-image: url(images/classes-4.jpg);"></div>
-									<div class="wrap">
-										<div class="desc">
-											<span class="teacher">David Clarson</span>
-											<h3>
-												<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
-											</h3>
-										</div>
-										<div class="pricing">
-											<p>
-												<span class="price">$150</span> <span
-													class="price old-price">$250</span> <span class="more"><a
-													href="#"><i class="icon-link"></i></a></span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="classes">
-									<div class="classes-img"
-										style="background-image: url(images/classes-5.jpg);"></div>
-									<div class="wrap">
-										<div class="desc">
-											<span class="teacher">David Clarson</span>
-											<h3>
-												<a href="#">Developing Mobile Apps Using Ruby on Rails</a>
-											</h3>
-										</div>
-										<div class="pricing">
-											<p>
-												<span class="price">$150</span> <span
-													class="price old-price">$250</span> <span class="more"><a
-													href="#"><i class="icon-link"></i></a></span>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+
+
+<!-- 		<div class="colorlib-classes"> -->
+<!-- 			<div class="container-fluid"> -->
+<!-- 				<div class="row"> -->
+<!-- 					<div -->
+<!-- 						class="col-md-12 colorlib-heading center-heading text-center animate-box"> -->
+<!-- 						<h1 class="heading-big">Popular Online Courses</h1> -->
+<!-- 						<h2>Popular Online Courses</h2> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 				<div class="row"> -->
+<!-- 					<div class="col-md-12 animate-box"> -->
+<!-- 						<div class="owl-carousel"> -->
+<!-- 							<div class="item"> -->
+<!-- 								<div class="classes"> -->
+<!-- 									<div class="classes-img" -->
+<!-- 										style="background-image: url(images/classes-1.jpg);"></div> -->
+<!-- 									<div class="wrap"> -->
+<!-- 										<div class="desc"> -->
+<!-- 											<span class="teacher">David Clarson</span> -->
+<!-- 											<h3> -->
+<!-- 												<a href="#">Developing Mobile Apps Using Ruby on Rails</a> -->
+<!-- 											</h3> -->
+<!-- 										</div> -->
+<!-- 										<div class="pricing"> -->
+<!-- 											<p> -->
+<!-- 												<span class="price">$150</span> <span -->
+<!-- 													class="price old-price">$250</span> <span class="more"><a -->
+<!-- 													href="#"><i class="icon-link"></i></a></span> -->
+<!-- 											</p> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 							<div class="item"> -->
+<!-- 								<div class="classes"> -->
+<!-- 									<div class="classes-img" -->
+<!-- 										style="background-image: url(images/classes-2.jpg);"></div> -->
+<!-- 									<div class="wrap"> -->
+<!-- 										<div class="desc"> -->
+<!-- 											<span class="teacher">David Clarson</span> -->
+<!-- 											<h3> -->
+<!-- 												<a href="#">Developing Mobile Apps Using Ruby on Rails</a> -->
+<!-- 											</h3> -->
+<!-- 										</div> -->
+<!-- 										<div class="pricing"> -->
+<!-- 											<p> -->
+<!-- 												<span class="price">$150</span> <span -->
+<!-- 													class="price old-price">$250</span> <span class="more"><a -->
+<!-- 													href="#"><i class="icon-link"></i></a></span> -->
+<!-- 											</p> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 							<div class="item"> -->
+<!-- 								<div class="classes"> -->
+<!-- 									<div class="classes-img" -->
+<!-- 										style="background-image: url(images/classes-3.jpg);"></div> -->
+<!-- 									<div class="wrap"> -->
+<!-- 										<div class="desc"> -->
+<!-- 											<span class="teacher">David Clarson</span> -->
+<!-- 											<h3> -->
+<!-- 												<a href="#">Developing Mobile Apps Using Ruby on Rails</a> -->
+<!-- 											</h3> -->
+<!-- 										</div> -->
+<!-- 										<div class="pricing"> -->
+<!-- 											<p> -->
+<!-- 												<span class="price">$150</span> <span -->
+<!-- 													class="price old-price">$250</span> <span class="more"><a -->
+<!-- 													href="#"><i class="icon-link"></i></a></span> -->
+<!-- 											</p> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 							<div class="item"> -->
+<!-- 								<div class="classes"> -->
+<!-- 									<div class="classes-img" -->
+<!-- 										style="background-image: url(images/classes-4.jpg);"></div> -->
+<!-- 									<div class="wrap"> -->
+<!-- 										<div class="desc"> -->
+<!-- 											<span class="teacher">David Clarson</span> -->
+<!-- 											<h3> -->
+<!-- 												<a href="#">Developing Mobile Apps Using Ruby on Rails</a> -->
+<!-- 											</h3> -->
+<!-- 										</div> -->
+<!-- 										<div class="pricing"> -->
+<!-- 											<p> -->
+<!-- 												<span class="price">$150</span> <span -->
+<!-- 													class="price old-price">$250</span> <span class="more"><a -->
+<!-- 													href="#"><i class="icon-link"></i></a></span> -->
+<!-- 											</p> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 							<div class="item"> -->
+<!-- 								<div class="classes"> -->
+<!-- 									<div class="classes-img" -->
+<!-- 										style="background-image: url(images/classes-5.jpg);"></div> -->
+<!-- 									<div class="wrap"> -->
+<!-- 										<div class="desc"> -->
+<!-- 											<span class="teacher">David Clarson</span> -->
+<!-- 											<h3> -->
+<!-- 												<a href="#">Developing Mobile Apps Using Ruby on Rails</a> -->
+<!-- 											</h3> -->
+<!-- 										</div> -->
+<!-- 										<div class="pricing"> -->
+<!-- 											<p> -->
+<!-- 												<span class="price">$150</span> <span -->
+<!-- 													class="price old-price">$250</span> <span class="more"><a -->
+<!-- 													href="#"><i class="icon-link"></i></a></span> -->
+<!-- 											</p> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
 		<!-- 		<div id="colorlib-counter" class="colorlib-counters"> -->
 		<!-- 			<div class="container"> -->
 		<!-- 				<div class="col-md-7"> -->
@@ -631,7 +649,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="classes">
 							<div class="classes-img"
-								style="background-image: url(images/classes-1.jpg);"></div>
+								style="background-image: url(images/java1.png);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>
@@ -651,7 +669,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="classes">
 							<div class="classes-img"
-								style="background-image: url(images/classes-2.jpg);"></div>
+								style="background-image: url(images/c.png);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>
@@ -671,7 +689,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="classes">
 							<div class="classes-img"
-								style="background-image: url(images/classes-3.jpg);"></div>
+								style="background-image: url(images/cpp.png);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>
@@ -691,7 +709,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="classes">
 							<div class="classes-img"
-								style="background-image: url(images/classes-4.jpg);"></div>
+								style="background-image: url(images/python.png);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>
@@ -711,7 +729,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="classes">
 							<div class="classes-img"
-								style="background-image: url(images/classes-5.jpg);"></div>
+								style="background-image: url(images/python.png);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>
@@ -731,7 +749,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="classes">
 							<div class="classes-img"
-								style="background-image: url(images/classes-6.jpg);"></div>
+								style="background-image: url(images/java.jpg);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>
@@ -965,6 +983,9 @@
 		<!-- 				</div> -->
 		<!-- 			</div> -->
 		<!-- 		</div> -->
+		
+		
+		
 		<%@ include file="footer.jsp"%>
 	</div>
 
@@ -995,6 +1016,14 @@
 	<script src="js/main.js"></script>
 	<!-- Bootstrap -->
 	<script src="js/bootstrap.bundle.min.js"></script>
+	
+	
+<!-- 	<script src="cart/js/jquery-2.2.3.min.js"></script> -->
+<!--   <script type='text/javascript' src="cart/js/bootstrap.min.js"></script> -->
+  <script type='text/javascript' src="js/jquery.mycart.js"></script>
+<!--    <script type='text/javascript' src="js/jquery.mycart.min.js"></script> -->
+ 
+	
 </body>
 </html>
 

@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ include file="taglib_includes.jsp"%>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -20,15 +19,14 @@
 				<div class="collapse navbar-collapse" id="mainNavbarContent">
 
 
-					<ul
-						class="navbar-nav main-nav-auth-profile-wrap justify-content-end mt-2 mt-lg-0 flex-grow-1">
+					<ul	class="navbar-nav main-nav-auth-profile-wrap justify-content-end mt-2 mt-lg-0 flex-grow-1">
 
-						<li class="nav-item dropdown mini-cart-item"><a
-							class="nav-link" href="javascript:;" id="miniCartDropDown">
-								<div class="text-center">
+						<li class="nav-item dropdown mini-cart-item">
+						<a href="#" id="miniCartDropDown" class="main_cart">
 									<i class="la la-shopping-cart"></i>
-								</div>
-						</a></li>
+									<i class="badge badge-notify my-cart-badge my-cart-icon"></i>
+								</a>
+						</li>
 						<li class="nav-item main-nav-right-menu nav-item-user-profile">
 							<a class="nav-link profile-dropdown-toogle" href="javascript:;">
 								<span class="top-nav-user-name"> <span

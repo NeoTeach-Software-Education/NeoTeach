@@ -75,16 +75,15 @@
     </div>
 </div>
 <%@ include file="footer.jsp" %>
-<!-- <form id="logout-form" action="#" method="POST" class="d-none"> -->
-<!--     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
-<!-- </form> -->
 <!-- jquery latest version -->
 <script src="js/jquery.min.js"></script>
-<!-- bootstrap js -->
-<!-- <script src="https://zenoxpro.com/public/assets/js/bootstrap.bundle.min.js"></script> -->
 <!-- Bootstrap -->
 	<script src="js/bootstrap.bundle.min.js"></script>
-<!-- main js -->
-<!-- <script src="https://zenoxpro.com/public/themes/edugator/assets/js/main.js"></script> -->
+	
+	
+	
+	
+  <script type='text/javascript' src="js/jquery.mycart.js"></script>
+  <script src="js/cart.js"></script>
 </body>
 </html>

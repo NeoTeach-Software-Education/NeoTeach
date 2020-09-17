@@ -25,11 +25,11 @@
 						class="navbar-nav main-nav-auth-profile-wrap justify-content-end mt-2 mt-lg-0 flex-grow-1">
 
 						<li class="nav-item dropdown mini-cart-item">
-						<a class="nav-link" href="javascript:;" id="miniCartDropDown">
-								<div class="text-center">
+						<a href="#" id="miniCartDropDown" class="main_cart">
 									<i class="la la-shopping-cart"></i>
-								</div>
-						</a></li>
+									<i class="badge badge-notify my-cart-badge my-cart-icon"></i>
+								</a>
+						</li>
 
 						<li class="nav-item mr-2 ml-2"><a
 							class="nav-link btn btn-login-outline" href="/login"> <i
@@ -44,5 +44,7 @@
 			</div>
 		</nav>
 	</div>
+
+
 </body>
 </html>

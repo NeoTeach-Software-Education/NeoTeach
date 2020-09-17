@@ -8,9 +8,7 @@
 <body>
 	<div class="col-3 dashboard-menu-col">
 		<ul class="dashboard-menu">
-			<li class="active"><a href="/dashboard"> <i
-					class="la la-dashboard"></i> Dashboard
-			</a></li>
+			<li class="active"><a href="/dashboard"> <i	class="la la-dashboard"></i> Dashboard</a></li>
 			<li class=""><a href="#"> <i class="la la-pencil-square-o"></i>
 					Enrolled Courses
 			</a></li>

@@ -18,14 +18,16 @@
 								<p>NeoTeach is for online learning...9700053393</p>
 							</div>
 							<div class="col-xl-9 col-md-push-2 text-right">
-							<p class="btn-apply">
-							<a href="#" id="miniCartDropDown" class="main_cart">
-									<i class="la la-shopping-cart"></i>
-								</a>
-								</p>
+							
 								<p class="btn-apply">
 								
 									<a href="/login">Login</a> <a href="/register">Sign Up</a>
+								</p>
+								<p class="btn-apply">
+							<a href="#" id="miniCartDropDown" class="main_cart">
+									<i class="la la-shopping-cart"></i>
+									<i class="badge badge-notify my-cart-badge my-cart-icon cart-num"></i>
+								</a>
 								</p>
 							</div>
 						</div>

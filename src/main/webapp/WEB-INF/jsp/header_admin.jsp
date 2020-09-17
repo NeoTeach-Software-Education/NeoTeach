@@ -24,12 +24,12 @@
 					<ul
 						class="navbar-nav main-nav-auth-profile-wrap justify-content-end mt-2 mt-lg-0 flex-grow-1">
 
-						<li class="nav-item dropdown mini-cart-item"><a
-							class="nav-link" href="javascript:;" id="miniCartDropDown">
-								<div class="text-center">
+						<li class="nav-item dropdown mini-cart-item">
+						<a href="#" id="miniCartDropDown" class="main_cart">
 									<i class="la la-shopping-cart"></i>
-								</div>
-						</a></li>
+									<i class="badge badge-notify my-cart-badge my-cart-icon"></i>
+								</a>
+						</li>
 						<li class="nav-item main-nav-right-menu nav-item-user-profile">
 							<a class="nav-link profile-dropdown-toogle" href="javascript:;">
 								<span class="top-nav-user-name"> <span
@@ -63,7 +63,7 @@
 									<li class=""><a href="#"> <i class="la la-history"></i>
 											Delete Course
 									</a></li>
-									<li class=""><a href="/userUpdate"> <i
+									<li class=""><a href="/adminUpdate"> <i
 											class="la la-tools"></i> Update Profile
 									</a></li>
 									<!--                     <li class=""> -->

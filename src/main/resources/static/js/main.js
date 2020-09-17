@@ -461,45 +461,45 @@
     //END Collapse Section
 
 
-    /**
-     * Add To Cart
-     */
-
-    //add-to-cart-btn
-
-    $(document).on('click', '.add-to-cart-btn', function (e) {
-        var $btn = $(this);
-        var course_id = $btn.attr('data-course-id');
-
-        if ( ! pageData.is_logged_in){
-            //$('#loginFormModal').modal('show');
-            //return;
-        }
-
-        $.ajax({
-            url : pageData.routes.add_to_cart,
-            type : 'POST',
-            data : {course_id : course_id, _token : pageData.csrf_token},
-            beforeSend: function () {
-                $btn.addClass('loader').attr('disabled', 'disabled');
-            },
-            success: function (response) {
-                if (response.success){
-                    $('.dropdown.mini-cart-item').html(response.cart_html);
-                    $btn.html("<i class='la la-check-circle'></i> In Cart");
-                }else{
-                    $btn.removeClass('loader').removeAttr('disabled');
-                }
-            },
-            error : function(jqXHR, textStatus, errorThrown){
-                $btn.removeClass('loader').removeAttr('disabled');
-            },
-            complete: function () {
-                $btn.removeClass('loader');
-            }
-        });
-
-    });
+//    /**
+//     * Add To Cart
+//     */
+//
+//    //add-to-cart-btn
+//
+//    $(document).on('click', '.add-to-cart-btn', function (e) {
+//        var $btn = $(this);
+//        var course_id = $btn.attr('data-course-id');
+//
+//        if ( ! pageData.is_logged_in){
+//            //$('#loginFormModal').modal('show');
+//            //return;
+//        }
+//
+//        $.ajax({
+//            url : pageData.routes.add_to_cart,
+//            type : 'POST',
+//            data : {course_id : course_id, _token : pageData.csrf_token},
+//            beforeSend: function () {
+//                $btn.addClass('loader').attr('disabled', 'disabled');
+//            },
+//            success: function (response) {
+//                if (response.success){
+//                    $('.dropdown.mini-cart-item').html(response.cart_html);
+//                    $btn.html("<i class='la la-check-circle'></i> In Cart");
+//                }else{
+//                    $btn.removeClass('loader').removeAttr('disabled');
+//                }
+//            },
+//            error : function(jqXHR, textStatus, errorThrown){
+//                $btn.removeClass('loader').removeAttr('disabled');
+//            },
+//            complete: function () {
+//                $btn.removeClass('loader');
+//            }
+//        });
+//
+//    });
 
     if ($('#loginFormModalShouldOpen').length){
         $('#loginFormModalShouldOpen').modal('show');
@@ -562,7 +562,49 @@
     });
 
     
-    
+    /**
+     * Add to cart start here
+     */
+    $(function () {
+
+  	  var goToCartIcon = function($addTocartBtn){
+  	    var $cartIcon = $(".my-cart-icon");
+  	    var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+  	    $addTocartBtn.prepend($image);
+  	    var position = $cartIcon.position();
+  	    $image.animate({
+  	      top: position.top,
+  	      left: position.left
+  	    }, 500 , "linear", function() {
+  	      $image.remove();
+  	    });
+  	  }
+
+  	  $('.my-cart-btn').myCart({
+  	    classCartIcon: 'my-cart-icon',
+  	    classCartBadge: 'my-cart-badge',
+  	    affixCartIcon: true,
+  	    checkoutCart: function(products) {
+  	      $.each(products, function(){
+  	        console.log(this);
+  	      });
+  	    },
+  	    clickOnAddToCart: function($addTocart){
+  	      goToCartIcon($addTocart);
+  	    },
+  	    getDiscountPrice: function(products) {
+  	      var total = 0;
+  	      $.each(products, function(){
+  	        total += this.quantity * this.price;
+  	      });
+  	      return total * 0.5;
+  	    }
+  	  });
+
+  	});
+    /**
+     * Add to cart ends here
+     */
     
 
 }());
