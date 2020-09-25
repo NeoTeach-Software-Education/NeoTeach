@@ -24,6 +24,14 @@ public class PaymentDtls {
 	private String razorpay_signature;
 	@Column(name = "currency")
 	private String currency;
+	@Column(name = "paymentStatus")
+	private String paymentStatus;
+	public String getPaymentStatus() {
+		return paymentStatus;
+	}
+	public void setPaymentStatus(String paymentStatus) {
+		this.paymentStatus = paymentStatus;
+	}
 	public String getEmail() {
 		return email;
 	}

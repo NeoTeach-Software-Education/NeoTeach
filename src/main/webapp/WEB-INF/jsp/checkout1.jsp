@@ -20,9 +20,29 @@
 			"order_id": "${paymentDtls.order_id}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1    
 // 			"callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",    
 			"handler": function (response){
-		        alert(response.razorpay_payment_id);
-		        alert(response.razorpay_order_id);
-		        alert(response.razorpay_signature)
+				if (typeof response.razorpay_payment_id == 'undefined' ||  response.razorpay_payment_id < 1) {
+					  redirect_url = '/order';
+					} else {
+// 						var tempId = response.razorpay_payment_id;
+// 						$.ajax({
+// 						    type : "POST",
+// 						    url : "/success",
+// 						    data : {id:tempId},
+// 						    timeout : 100000,
+// 						        alert(response);   
+// 						    error : function(e) {
+// 						        console.log("ERROR: ", e);
+// 						        display(e);
+// 						    },
+// 						    done : function(e) {
+// 						        console.log("DONE");
+// 						    }
+// 						});
+						
+						
+					  redirect_url = '/success';
+					}
+					location.href = redirect_url;
 		    },
 			"prefill": {        
 				"name": "Srinivas",        

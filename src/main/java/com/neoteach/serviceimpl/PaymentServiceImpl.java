@@ -19,4 +19,8 @@ public class PaymentServiceImpl {
 		
 	}
 
+	public PaymentDtls findPaymentByEmail(String email) {
+		return paymentRepository.findPaymentByEmail(email);
+	}
+
 }

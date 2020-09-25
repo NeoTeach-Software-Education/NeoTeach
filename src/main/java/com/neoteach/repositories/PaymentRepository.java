@@ -7,11 +7,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.neoteach.model.PaymentDtls;
-import com.neoteach.model.User;
 @Repository
-public interface PaymentRepository extends JpaRepository<User, String>{
+public interface PaymentRepository extends JpaRepository<PaymentDtls, String>{
 
-	Object save(@Valid PaymentDtls paymentDtls);
-
+	@Valid
+	PaymentDtls findPaymentByEmail(String email);
 
 }

@@ -23,7 +23,6 @@
 
 <%@ include file="header.jsp" %>  
 <div class="dashboard-wrap">
-
     <div class="container py-4">
         <div class="row">
            <%@ include file="left.jsp"%>
@@ -34,6 +33,12 @@
 <!--     </div> -->
 
 <%--                     <input type="hidden" name="userEmail" value="${encodedEmail}"> --%>
+ <div>
+					<h5>${successMessage}</h5>
+				</div>
+				<div>
+					<h5>${errorMessage}</h5>
+				</div>
     <div class="row">
         <div class="col-lg-4 col-md-6">
             <div class="dashboard-card mb-3 d-flex border p-3 bg-light">
