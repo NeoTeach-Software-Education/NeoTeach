@@ -1,5 +1,9 @@
 package com.neoteach.serviceimpl;
 
+
+import java.util.ArrayList;
+import java.util.Map;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +23,20 @@ public class PaymentServiceImpl {
 		
 	}
 
-	public PaymentDtls findPaymentByEmail(String email) {
-		return paymentRepository.findPaymentByEmail(email);
+//	public PaymentDtls findPaymentByEmail(String email) {
+//		return paymentRepository.findPaymentByEmail(email);
+//	}
+
+	public PaymentDtls findByOrderId(String order_id) {
+		return paymentRepository.findByOrderId(order_id);
+	}
+
+	public String userPaymentStatus(String email, String javaCourse) {
+		return paymentRepository.userPaymentStatus(email,javaCourse);
+	}
+
+	public Map<String, String> retriveEnrolledCourses(String email) {
+		return paymentRepository.retriveEnrolledCourses(email);
 	}
 
 }

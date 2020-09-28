@@ -39,6 +39,7 @@
 				<div>
 					<h5>${errorMessage}</h5>
 				</div>
+				<c:if test="${enrolledCourse.size()<=0}">
     <div class="row">
         <div class="col-lg-4 col-md-6">
             <div class="dashboard-card mb-3 d-flex border p-3 bg-light">
@@ -75,6 +76,22 @@
             </div>
         </div>
     </div>
+    </c:if>
+    <c:if test="${enrolledCourse.size()>0}">
+    
+    <c:forEach items="${enrolledCourse}" var="coursedtls">
+    
+   
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block btn-lg">
+                               <a href="/course?coursetitle=3">${coursedtls.value}</a> 
+                            </button>
+                        </div>
+    </c:forEach>
+    
+    
+    </c:if>
             </div>
         </div>
     </div>
@@ -84,8 +101,6 @@
 <script src="js/jquery.min.js"></script>
 <!-- Bootstrap -->
 	<script src="js/bootstrap.bundle.min.js"></script>
-	
-	
 	
 	
   <script type='text/javascript' src="js/jquery.mycart.js"></script>

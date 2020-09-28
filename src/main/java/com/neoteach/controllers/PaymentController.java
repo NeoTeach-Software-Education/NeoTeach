@@ -1,5 +1,8 @@
 package com.neoteach.controllers;
 
+
+import java.time.LocalDateTime;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -42,11 +45,14 @@ public class PaymentController {
 				orderRequest.put("currency", paymentDtls.getCurrency());
 				orderRequest.put("receipt", "java_" + CommonUtil.generateRandomNum());
 				Order order = razorpayClient.Orders.create(orderRequest);
+				paymentDtls.setCourse_id(paymentDtls.getCourseName()+"_" + CommonUtil.generateRandomNum());
+				paymentDtls.setCourseName(paymentDtls.getCourseName());
+				paymentDtls.setCourseNumber(paymentDtls.getCourseNumber());
 				paymentDtls.setEmail(session.getAttribute("userEmailSession").toString());
-				paymentDtls.setOrder_id(order.get("id").toString());
+				paymentDtls.setOrderId(order.get("id").toString());
 				paymentDtls.setPaymentStatus(CommonConstant.NO_PAYMNET_STATUS);
 				paymentServiceImpl.savePaymentDetails(paymentDtls);
-				session.setAttribute("paymentDtls", paymentDtls);
+				session.setAttribute("order_id",order.get("id").toString());
 			} catch (RazorpayException e) {
 				e.printStackTrace();
 			}
@@ -69,13 +75,14 @@ public class PaymentController {
 			                     @RequestParam("razorpay_signature") String razorpay_signature,
 			                     Model model, 
 			                     HttpSession session) {
-		PaymentDtls paymentDtls = paymentServiceImpl.findPaymentByEmail(session.getAttribute("userEmailSession").toString());
+		PaymentDtls paymentDtls = paymentServiceImpl.findByOrderId(session.getAttribute("order_id").toString());
 		paymentDtls.setRazorpay_order_id(razorpay_order_id);
 		paymentDtls.setRazorpay_payment_id(razorpay_payment_id);
 		paymentDtls.setRazorpay_signature(razorpay_signature);
 		paymentDtls.setPaymentStatus(CommonConstant.PAYMNET_STATUS);
+		paymentDtls.setPaid_on(LocalDateTime.now());
 		paymentServiceImpl.savePaymentDetails(paymentDtls);
-		String payload = paymentDtls.getOrder_id() + "|" + razorpay_payment_id;
+		String payload = paymentDtls.getOrderId() + "|" + razorpay_payment_id;
 		String generated_signature = null;
 		try {
 			generated_signature = CommonUtil.generateSignature(payload, CommonConstant.key_secret);

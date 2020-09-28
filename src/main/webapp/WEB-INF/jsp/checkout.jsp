@@ -13,7 +13,7 @@
     data-key="rzp_test_l3EiPrTpPDjSWx" 
     data-amount=${paymentDtls.amount}
     data-currency=${paymentDtls.currency}
-    data-order_id=${paymentDtls.order_id}
+    data-order_id=${paymentDtls.orderId}
     data-buttontext="Pay Now"
     data-name="NeoTeach"
     data-description="This Transaction is for enroling a course"

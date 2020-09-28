@@ -1,9 +1,14 @@
 package com.neoteach.repositories;
 
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import javax.validation.Valid;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.neoteach.model.PaymentDtls;
@@ -11,6 +16,15 @@ import com.neoteach.model.PaymentDtls;
 public interface PaymentRepository extends JpaRepository<PaymentDtls, String>{
 
 	@Valid
-	PaymentDtls findPaymentByEmail(String email);
+//	PaymentDtls findPaymentByEmail(String email);
 
+	PaymentDtls findByOrderId(String order_id);
+
+	// custom query return a paymentStatus
+    @Query(value="select payment_status from Payment pay where pay.email = :email and pay.course_name =:javaCourse",nativeQuery = true)
+	String userPaymentStatus(String email, String javaCourse);
+
+ // custom query return a enrolled courses list
+    @Query(value="select course_name,course_number from Payment pay where pay.email = :email and pay.payment_status ='YES'",nativeQuery = true)
+	Map<String, String> retriveEnrolledCourses(String email);
 }

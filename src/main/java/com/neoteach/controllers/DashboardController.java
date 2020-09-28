@@ -1,6 +1,9 @@
 package com.neoteach.controllers;
 
 
+import java.util.ArrayList;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -12,12 +15,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.neoteach.model.User;
+import com.neoteach.serviceimpl.PaymentServiceImpl;
 import com.neoteach.serviceimpl.UserServiceImpl;
+
 
 @Controller
 public class DashboardController {
 	@Autowired
 	UserServiceImpl userServiceImpl;
+	@Autowired
+	PaymentServiceImpl paymentServiceImpl;
 	
 	@RequestMapping(value = "/dashboard", method = RequestMethod.GET)
 	public String dashboardPage(Model model,HttpSession session) {
@@ -72,6 +79,14 @@ public class DashboardController {
 			model.addAttribute("errorMessage", "Oops!  The old password is invalid.");
 			return "changePwd";
 		}
+		
+    }
+	@RequestMapping(value = "/enrolledCourses", method = RequestMethod.GET)
+	public String retriveEnrolledCourses(HttpSession session,Model model) {
+		Map<String,String> enrolledCourse = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());
+		System.out.println("==="+enrolledCourse);
+		model.addAttribute("enrolledCourse", enrolledCourse);
+		return "useraccount";
 		
     }
 }

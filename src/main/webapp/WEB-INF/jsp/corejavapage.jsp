@@ -25,7 +25,6 @@
 <!-- style css -->
 <link rel="stylesheet" href="css/style.css">
 <!-- modernizr css -->
-<!--     <script src="https://zenoxpro.com/public/assets/js/vendor/modernizr-2.8.3.min.js"></script> -->
 <script src="js/modernizr-2.6.2.min.js"></script>
 </head>
 <body class="">
@@ -60,30 +59,31 @@
 
 					</div>
 				</div>
-
+<c:if test="${paymentStatus!='YES'||paymentStatus==null}">
 				<div class="col-md-4">
 
 					<div
 						class="page-header-right-enroll-box p-3 mt-sm-4 mt-md-0 bg-white shadow">
 
 						<div class="course-landing-page-price-wrap">
+						
 							<div class='price-html-wrap  current-price-left '>
 								<span class="free-text mr-2">Rs150</span>
 							</div>
 						</div>
 						<form action="/order" class="course-free-enroll" method="post">
 							<!--                                     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt">   -->
-							<input type="hidden" name="course_id" value="16">
 							<input type="hidden" name="amount" value="15000">
 							<input type="hidden" name="currency" value="INR">
-							<button type="submit" class="btn btn-warning btn-lg btn-block">Enroll
-								Now</button>
+							<input type="hidden" name="courseName" value="Core java">
+							<input type="hidden" name="courseNumber" value="3">
+							<button type="submit" class="btn btn-warning btn-lg btn-block">Enroll Now</button>
 						</form>
 
 					</div>
 
 				</div>
-
+</c:if>
 			</div>
 		</div>
 
@@ -210,12 +210,16 @@
 
 								<div class="course-curriculum-item border-bottom pl-4 d-flex">
 									<p class="curriculum-item-title m-0 flex-grow-1">
-
-										<a href="https://zenoxpro.com/public/index.php/courses/python-course/lecture/56">
+									<c:forEach  items="${videoFile}" var="vid">
+										${vid.fileName} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<c:if test="${paymentStatus=='YES'}">
+										<a href="/retriveVideos?courceid=${vid.id}">
 											<span class="curriculum-item-icon mr-2"> <i
 												class='la la-youtube'></i>
-										</span> <span class="curriculum-item-title"> Programming Basics </span>
+										</span> <span class="curriculum-item-title"> ${vid.fileName}</span>
 										</a>
+										</c:if>
+										</c:forEach>
 									</p>
 
 									<p class="course-section-item-details d-flex m-0">
@@ -224,136 +228,134 @@
 									</p>
 
 								</div>
-								<div class="course-curriculum-item border-bottom pl-4 d-flex">
-									<p class="curriculum-item-title m-0 flex-grow-1">
+<!-- 								<div class="course-curriculum-item border-bottom pl-4 d-flex"> -->
+<!-- 									<p class="curriculum-item-title m-0 flex-grow-1"> -->
 
-										<a
-											href="https://zenoxpro.com/public/index.php/courses/python-course/quiz/150">
-											<span class="curriculum-item-icon mr-2"> <i
-												class='la la-tasks'></i>
-										</span> <span class="curriculum-item-title"> Paython Basics
-												Quizz </span>
-										</a>
-									</p>
+<!-- 										<a -->
+<!-- 											href="https://zenoxpro.com/public/index.php/courses/python-course/quiz/150"> -->
+<!-- 											<span class="curriculum-item-icon mr-2"> <i -->
+<!-- 												class='la la-tasks'></i> -->
+<!-- 										</span> <span class="curriculum-item-title"> Java Basics -->
+<!-- 												Quizz </span> -->
+<!-- 										</a> -->
+<!-- 									</p> -->
 
-									<p class="course-section-item-details d-flex m-0">
-										<span class="section-item-preview flex-grow-1"> </span> <span
-											class="section-item-duration ml-auto"> </span>
-									</p>
+<!-- 									<p class="course-section-item-details d-flex m-0"> -->
+<!-- 										<span class="section-item-preview flex-grow-1"> </span> <span -->
+<!-- 											class="section-item-duration ml-auto"> </span> -->
+<!-- 									</p> -->
 
-								</div>
-
-							</div>
-
-						</div>
-
-						<div id="course-section-24"
-							class="course-section bg-white border mb-2">
-
-							<div
-								class="course-section-header bg-light p-3 border-bottom d-flex">
-								<span class="course-section-name flex-grow-1 ml-2"> <strong>
-										<i class="la la-plus"></i> Data Science Libraries
-								</strong>
-								</span> <span class="course-section-lecture-count"> 2 Lectures </span>
-							</div>
-
-							<div class="course-section-body" style="display: none;">
-
-								<div class="course-curriculum-item border-bottom pl-4 d-flex">
-									<p class="curriculum-item-title m-0 flex-grow-1">
-
-										<a
-											href="https://zenoxpro.com/public/index.php/courses/python-course/lecture/57">
-											<span class="curriculum-item-icon mr-2"> <i
-												class='la la-youtube'></i>
-										</span> <span class="curriculum-item-title"> Data Science
-												Libraries </span>
-										</a>
-									</p>
-
-									<p class="course-section-item-details d-flex m-0">
-										<span class="section-item-preview flex-grow-1"> </span> <span
-											class="section-item-duration ml-auto"> 8:59:00 </span>
-									</p>
-
-								</div>
-								<div class="course-curriculum-item border-bottom pl-4 d-flex">
-									<p class="curriculum-item-title m-0 flex-grow-1">
-
-										<a
-											href="https://zenoxpro.com/public/index.php/courses/python-course/quiz/151">
-											<span class="curriculum-item-icon mr-2"> <i
-												class='la la-tasks'></i>
-										</span> <span class="curriculum-item-title"> Data Science
-												Libraries Quizz </span>
-										</a>
-									</p>
-
-									<p class="course-section-item-details d-flex m-0">
-										<span class="section-item-preview flex-grow-1"> </span> <span
-											class="section-item-duration ml-auto"> </span>
-									</p>
-
-								</div>
+<!-- 								</div> -->
 
 							</div>
 
 						</div>
 
-						<div id="course-section-25"
-							class="course-section bg-white border mb-2">
+<!-- 						<div id="course-section-24" -->
+<!-- 							class="course-section bg-white border mb-2"> -->
 
-							<div
-								class="course-section-header bg-light p-3 border-bottom d-flex">
-								<span class="course-section-name flex-grow-1 ml-2"> <strong>
-										<i class="la la-plus"></i> Dictionaries &amp; Collections
-								</strong>
-								</span> <span class="course-section-lecture-count"> 2 Lectures </span>
-							</div>
+<!-- 							<div -->
+<!-- 								class="course-section-header bg-light p-3 border-bottom d-flex"> -->
+<!-- 								<span class="course-section-name flex-grow-1 ml-2"> <strong> -->
+<!-- 										<i class="la la-plus"></i> Java OOPs -->
+<!-- 								</strong> -->
+<!-- 								</span> <span class="course-section-lecture-count"> 2 Lectures </span> -->
+<!-- 							</div> -->
 
-							<div class="course-section-body" style="display: none;">
+<!-- 							<div class="course-section-body" style="display: none;"> -->
 
-								<div class="course-curriculum-item border-bottom pl-4 d-flex">
-									<p class="curriculum-item-title m-0 flex-grow-1">
+<!-- 								<div class="course-curriculum-item border-bottom pl-4 d-flex"> -->
+<!-- 									<p class="curriculum-item-title m-0 flex-grow-1"> -->
 
-										<a
-											href="https://zenoxpro.com/public/index.php/courses/python-course/lecture/58">
-											<span class="curriculum-item-icon mr-2"> <i
-												class='la la-youtube'></i>
-										</span> <span class="curriculum-item-title"> SQL Database
-												Integration </span>
-										</a>
-									</p>
+<!-- 										<a -->
+<!-- 											href="https://zenoxpro.com/public/index.php/courses/python-course/lecture/57"> -->
+<!-- 											<span class="curriculum-item-icon mr-2"> <i -->
+<!-- 												class='la la-youtube'></i> -->
+<!-- 										</span> <span class="curriculum-item-title"> Exception Handling  </span> -->
+<!-- 										</a> -->
+<!-- 									</p> -->
 
-									<p class="course-section-item-details d-flex m-0">
-										<span class="section-item-preview flex-grow-1"> </span> <span
-											class="section-item-duration ml-auto"> 1:20:00 </span>
-									</p>
+<!-- 									<p class="course-section-item-details d-flex m-0"> -->
+<!-- 										<span class="section-item-preview flex-grow-1"> </span> <span -->
+<!-- 											class="section-item-duration ml-auto"> 8:59:00 </span> -->
+<!-- 									</p> -->
 
-								</div>
-								<div class="course-curriculum-item border-bottom pl-4 d-flex">
-									<p class="curriculum-item-title m-0 flex-grow-1">
+<!-- 								</div> -->
+<!-- 								<div class="course-curriculum-item border-bottom pl-4 d-flex"> -->
+<!-- 									<p class="curriculum-item-title m-0 flex-grow-1"> -->
 
-										<a
-											href="https://zenoxpro.com/public/index.php/courses/python-course/quiz/152">
-											<span class="curriculum-item-icon mr-2"> <i
-												class='la la-tasks'></i>
-										</span> <span class="curriculum-item-title"> Dictionaries
-												&amp; Collections </span>
-										</a>
-									</p>
+<!-- 										<a -->
+<!-- 											href="https://zenoxpro.com/public/index.php/courses/python-course/quiz/151"> -->
+<!-- 											<span class="curriculum-item-icon mr-2"> <i -->
+<!-- 												class='la la-tasks'></i> -->
+<!-- 										</span> <span class="curriculum-item-title"> Exception Handling  Quizz </span> -->
+<!-- 										</a> -->
+<!-- 									</p> -->
 
-									<p class="course-section-item-details d-flex m-0">
-										<span class="section-item-preview flex-grow-1"> </span> <span
-											class="section-item-duration ml-auto"> </span>
-									</p>
+<!-- 									<p class="course-section-item-details d-flex m-0"> -->
+<!-- 										<span class="section-item-preview flex-grow-1"> </span> <span -->
+<!-- 											class="section-item-duration ml-auto"> </span> -->
+<!-- 									</p> -->
 
-								</div>
+<!-- 								</div> -->
 
-							</div>
+<!-- 							</div> -->
 
-						</div>
+<!-- 						</div> -->
+
+<!-- 						<div id="course-section-25" -->
+<!-- 							class="course-section bg-white border mb-2"> -->
+
+<!-- 							<div -->
+<!-- 								class="course-section-header bg-light p-3 border-bottom d-flex"> -->
+<!-- 								<span class="course-section-name flex-grow-1 ml-2"> <strong> -->
+<!-- 										<i class="la la-plus"></i> Packages &amp; Interfaces -->
+<!-- 								</strong> -->
+<!-- 								</span> <span class="course-section-lecture-count"> 2 Lectures </span> -->
+<!-- 							</div> -->
+
+<!-- 							<div class="course-section-body" style="display: none;"> -->
+
+<!-- 								<div class="course-curriculum-item border-bottom pl-4 d-flex"> -->
+<!-- 									<p class="curriculum-item-title m-0 flex-grow-1"> -->
+
+<!-- 										<a -->
+<!-- 											href="https://zenoxpro.com/public/index.php/courses/python-course/lecture/58"> -->
+<!-- 											<span class="curriculum-item-icon mr-2"> <i -->
+<!-- 												class='la la-youtube'></i> -->
+<!-- 										</span> <span class="curriculum-item-title"> Abstract class  -->
+<!-- 												 </span> -->
+<!-- 										</a> -->
+<!-- 									</p> -->
+
+<!-- 									<p class="course-section-item-details d-flex m-0"> -->
+<!-- 										<span class="section-item-preview flex-grow-1"> </span> <span -->
+<!-- 											class="section-item-duration ml-auto"> 1:20:00 </span> -->
+<!-- 									</p> -->
+
+<!-- 								</div> -->
+<!-- 								<div class="course-curriculum-item border-bottom pl-4 d-flex"> -->
+<!-- 									<p class="curriculum-item-title m-0 flex-grow-1"> -->
+
+<!-- 										<a -->
+<!-- 											href="https://zenoxpro.com/public/index.php/courses/python-course/quiz/152"> -->
+<!-- 											<span class="curriculum-item-icon mr-2"> <i -->
+<!-- 												class='la la-tasks'></i> -->
+<!-- 										</span> <span class="curriculum-item-title"> Threads -->
+<!-- 												&amp; Collections </span> -->
+<!-- 										</a> -->
+<!-- 									</p> -->
+
+<!-- 									<p class="course-section-item-details d-flex m-0"> -->
+<!-- 										<span class="section-item-preview flex-grow-1"> </span> <span -->
+<!-- 											class="section-item-duration ml-auto"> </span> -->
+<!-- 									</p> -->
+
+<!-- 								</div> -->
+
+<!-- 							</div> -->
+
+<!-- 						</div> -->
 
 					</div>
 
