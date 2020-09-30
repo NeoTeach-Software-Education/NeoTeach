@@ -16,7 +16,7 @@ public class PaymentDtls {
 	private String orderId;
 	@Column(name = "course_id")
 	private String course_id;
-	@Column(name = "email", nullable = false, unique = true)
+	@Column(name = "email", nullable = false)
 	private String email;
 	@Column(name = "amount")
 	private String amount;
@@ -34,8 +34,60 @@ public class PaymentDtls {
 	private LocalDateTime paid_on;
 	@Column(name = "courseName")
 	private String courseName;
+	@Column(name = "status")
+	private String status;
+	@Column(name = "bank")
+	private String bank;
+	@Column(name = "bank_transaction_id")
+	private String bank_transaction_id;
+	@Column(name = "card_id")
+	private String card_id;
+	
+	
+	public String getBank_transaction_id() {
+		return bank_transaction_id;
+	}
+
+	public void setBank_transaction_id(String bank_transaction_id) {
+		this.bank_transaction_id = bank_transaction_id;
+	}
+
+	public String getCard_id() {
+		return card_id;
+	}
+
+	public void setCard_id(String card_id) {
+		this.card_id = card_id;
+	}
+	
+	public String getBank() {
+		return bank;
+	}
+
+	public void setBank(String bank) {
+		this.bank = bank;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getMethod() {
+		return method;
+	}
+
+	public void setMethod(String method) {
+		this.method = method;
+	}
+
 	@Column(name = "courseNumber")
 	private String courseNumber;
+	@Column(name = "method")
+	private String method;
 	
 	public String getCourseNumber() {
 		return courseNumber;

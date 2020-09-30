@@ -75,7 +75,7 @@
 							<!--                                     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt">   -->
 							<input type="hidden" name="amount" value="15000">
 							<input type="hidden" name="currency" value="INR">
-							<input type="hidden" name="courseName" value="Core java">
+							<input type="hidden" name="courseName" value="Data Structures">
 							<input type="hidden" name="courseNumber" value="4">
 							<button type="submit" class="btn btn-warning btn-lg btn-block">Enroll Now</button>
 						</form>

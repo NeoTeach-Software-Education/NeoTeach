@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.neoteach.model.PaymentDtls;
 import com.neoteach.model.User;
 import com.neoteach.serviceimpl.PaymentServiceImpl;
 import com.neoteach.serviceimpl.UserServiceImpl;
@@ -83,9 +84,9 @@ public class DashboardController {
     }
 	@RequestMapping(value = "/enrolledCourses", method = RequestMethod.GET)
 	public String retriveEnrolledCourses(HttpSession session,Model model) {
-		Map<String,String> enrolledCourse = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());
-		System.out.println("==="+enrolledCourse);
-		model.addAttribute("enrolledCourse", enrolledCourse);
+		ArrayList<PaymentDtls> paymentDtls = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());
+		System.out.println("==="+paymentDtls);
+		model.addAttribute("paymentDtls", paymentDtls);
 		return "useraccount";
 		
     }

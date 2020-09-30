@@ -48,13 +48,15 @@
 											class="la la-dashboard"></i> Dashboard
 									</a></li>
 
-
-									<li class=""><a href="#"> <i
+									<li class=""><a href="/"> 
+									<i class="la la-pencil-square-o"></i> Enroll new Courses
+									</a></li>
+									<li class=""><a href="/enrolledCourses"> <i
 											class="la la-pencil-square-o"></i> Enrolled Courses
 									</a></li>
-									<li class=""><a href="#"> <i class="la la-heart-o"></i>
-											Wishlist
-									</a></li>
+<!-- 									<li class=""><a href="#"> <i class="la la-heart-o"></i> -->
+<!-- 											Wishlist -->
+<!-- 									</a></li> -->
 									<li class=""><a href="#"> <i
 											class="la la-star-half-alt"></i> Reviews
 									</a></li>

@@ -25,6 +25,6 @@ public interface PaymentRepository extends JpaRepository<PaymentDtls, String>{
 	String userPaymentStatus(String email, String javaCourse);
 
  // custom query return a enrolled courses list
-    @Query(value="select course_name,course_number from Payment pay where pay.email = :email and pay.payment_status ='YES'",nativeQuery = true)
-	Map<String, String> retriveEnrolledCourses(String email);
+    @Query(value="select * from Payment pay where pay.email = :email and pay.payment_status ='YES' order by paid_on DESC",nativeQuery = true)
+	ArrayList<PaymentDtls> retriveEnrolledCourses(String email);
 }

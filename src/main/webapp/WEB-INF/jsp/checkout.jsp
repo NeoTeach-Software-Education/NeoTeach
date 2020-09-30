@@ -17,7 +17,7 @@
     data-buttontext="Pay Now"
     data-name="NeoTeach"
     data-description="This Transaction is for enroling a course"
-    data-image="https://example.com/your_logo.jpg"
+    data-image="images/neo_logo.png"
     data-prefill.email=${paymentDtls.email}
     data-theme.color="#528FF0">
  </script>

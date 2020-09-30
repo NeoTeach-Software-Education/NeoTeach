@@ -68,14 +68,14 @@
 						<div class="course-landing-page-price-wrap">
 						
 							<div class='price-html-wrap  current-price-left '>
-								<span class="free-text mr-2">Rs150</span>
+								<span class="free-text mr-2">Rs100</span>
 							</div>
 						</div>
 						<form action="/order" class="course-free-enroll" method="post">
 							<!--                                     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt">   -->
-							<input type="hidden" name="amount" value="15000">
+							<input type="hidden" name="amount" value="10000">
 							<input type="hidden" name="currency" value="INR">
-							<input type="hidden" name="courseName" value="Core java">
+							<input type="hidden" name="courseName" value="C-Language">
 							<input type="hidden" name="courseNumber" value="1">
 							<button type="submit" class="btn btn-warning btn-lg btn-block">Enroll Now</button>
 						</form>

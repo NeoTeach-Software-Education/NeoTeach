@@ -35,7 +35,7 @@ public class PaymentServiceImpl {
 		return paymentRepository.userPaymentStatus(email,javaCourse);
 	}
 
-	public Map<String, String> retriveEnrolledCourses(String email) {
+	public ArrayList<PaymentDtls> retriveEnrolledCourses(String email) {
 		return paymentRepository.retriveEnrolledCourses(email);
 	}
 
