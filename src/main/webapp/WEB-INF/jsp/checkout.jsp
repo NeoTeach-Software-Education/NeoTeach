@@ -11,14 +11,14 @@
 <script
     src="https://checkout.razorpay.com/v1/checkout.js"
     data-key="rzp_test_l3EiPrTpPDjSWx" 
-    data-amount=${paymentDtls.amount}
-    data-currency=${paymentDtls.currency}
-    data-order_id=${paymentDtls.orderId}
+    data-amount=${orderDtls.amount}
+    data-currency=${orderDtls.currency}
+    data-order_id=${orderDtls.orderId}
     data-buttontext="Pay Now"
     data-name="NeoTeach"
     data-description="This Transaction is for enroling a course"
     data-image="images/neo_logo.png"
-    data-prefill.email=${paymentDtls.email}
+    data-prefill.email=${orderDtls.email}
     data-theme.color="#528FF0">
  </script>
 <!-- <input type="hidden" custom="Hidden Element" name="hidden"> -->

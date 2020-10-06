@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.neoteach.daoimpl.AdminDaoImpl;
 import com.neoteach.serviceimpl.EmailServiceImpl;
+import com.neoteach.serviceimpl.PaymentServiceImpl;
 
 @Controller
 public class HomePageController {
@@ -22,11 +23,14 @@ public class HomePageController {
 	AdminDaoImpl adminDaoImpl;
 	@Autowired
 	private EmailServiceImpl emailServiceImpl;
+	@Autowired
+	PaymentServiceImpl paymentServiceImpl;
 
 	@GetMapping(value = "/")
 	public String homePage() {
 		logger.info("Entered into NeoTeach Home page");
 		adminDaoImpl.setMaxPacketSize();
+		paymentServiceImpl.deleteNotPaidOrders();
 		return "home";
 	}
 

@@ -1,6 +1,5 @@
 package com.neoteach.controllers;
 
-
 import java.time.LocalDateTime;
 
 import javax.servlet.http.HttpSession;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.neoteach.model.OrderDtls;
 import com.neoteach.model.PaymentDtls;
 import com.neoteach.serviceimpl.PaymentServiceImpl;
 import com.neoteach.util.CommonConstant;
@@ -33,28 +33,32 @@ public class PaymentController {
 	 * generating order_id
 	 * 
 	 * @Param paymentDtls-- to handle payment details
-	 * @Param session-- to handle email session 
-	 * 
+	 * @Param session-- to handle email session
 	 * @return for success checkout,if error login
 	 */
 	@RequestMapping(value = "/order", method = RequestMethod.POST)
-	public String saveOrderDtls(@Valid PaymentDtls paymentDtls, HttpSession session) throws RazorpayException {
+	public String saveOrderDtls(@Valid OrderDtls orderDtls, HttpSession session){
 		if (session.getAttribute("userEmailSession") != null) {
 			try {
 				razorpayClient = new RazorpayClient(CommonConstant.key_id, CommonConstant.key_secret);
 				JSONObject orderRequest = new JSONObject();
-				orderRequest.put("amount", paymentDtls.getAmount());
-				orderRequest.put("currency", paymentDtls.getCurrency());
-				orderRequest.put("receipt", "java_" + CommonUtil.generateRandomNum());
+				orderRequest.put("amount", orderDtls.getAmount());
+				orderRequest.put("currency", orderDtls.getCurrency());
+				orderRequest.put("receipt", orderDtls.getCourseName() + "_" + CommonUtil.generateRandomNum());
 				Order order = razorpayClient.Orders.create(orderRequest);
-				paymentDtls.setCourse_id(paymentDtls.getCourseName()+"_" + CommonUtil.generateRandomNum());
-				paymentDtls.setCourseName(paymentDtls.getCourseName());
-				paymentDtls.setCourseNumber(paymentDtls.getCourseNumber());
-				paymentDtls.setEmail(session.getAttribute("userEmailSession").toString());
-				paymentDtls.setOrderId(order.get("id").toString());
-				paymentDtls.setPaymentStatus(CommonConstant.NO_PAYMNET_STATUS);
-				paymentServiceImpl.savePaymentDetails(paymentDtls);
-				session.setAttribute("order_id",order.get("id").toString());
+				orderDtls.setCourse_id(orderDtls.getCourseName() + "_" + CommonUtil.generateRandomNum());
+				orderDtls.setCourseName(orderDtls.getCourseName());
+				orderDtls.setCourseNumber(orderDtls.getCourseNumber());
+				orderDtls.setCreated_at(order.get("created_at").toString());
+				orderDtls.setStatus(order.get("status").toString());
+				orderDtls.setAttempts(order.get("attempts").toString());
+				orderDtls.setEmail(session.getAttribute("userEmailSession").toString());
+				orderDtls.setOrderId(order.get("id").toString());
+				paymentServiceImpl.saveOrderDetails(orderDtls);
+				session.setAttribute("order_id", order.get("id").toString());
+				session.setAttribute("course_id", orderDtls.getCourse_id());
+				session.setAttribute("course_name", orderDtls.getCourseName());
+				session.setAttribute("course_number", orderDtls.getCourseNumber());
 			} catch (RazorpayException e) {
 				e.printStackTrace();
 			}
@@ -62,38 +66,49 @@ public class PaymentController {
 		} else
 			return "login";
 	}
+
 	/*
-	 *paymentSuccess  ---to save the payment details in local
+	 * paymentSuccess ---to save the payment details in local
 	 * 
-	 * @Param razorpay_payment_id  -- to handle payment Id
-	 * @Param razorpay_order_id -- to handle razorpay_order_id 
-	 * @param razorpay_signature   -- to handle razorpay_signature 
+	 * @Param razorpay_payment_id -- to handle payment Id
+	 * 
+	 * @Param razorpay_order_id -- to handle razorpay_order_id
+	 * 
+	 * @param razorpay_signature -- to handle razorpay_signature
 	 * 
 	 * @return dashboard with validate message
 	 */
 	@RequestMapping(value = "/success", method = RequestMethod.POST)
 	public String paymentSuccess(@RequestParam("razorpay_payment_id") String razorpay_payment_id,
-			                     @RequestParam("razorpay_order_id") String razorpay_order_id,
-			                     @RequestParam("razorpay_signature") String razorpay_signature,
-			                     Model model, 
-			                     HttpSession session) {
-		PaymentDtls paymentDtls = paymentServiceImpl.findByOrderId(session.getAttribute("order_id").toString());
+			@RequestParam("razorpay_order_id") String razorpay_order_id,
+			@RequestParam("razorpay_signature") String razorpay_signature, Model model, HttpSession session,
+			@Valid PaymentDtls paymentDtls) {
+//		OrderDtls orderDtls = paymentServiceImpl.findByOrderId(session.getAttribute("order_id").toString());
 		try {
 			Payment payment = razorpayClient.Payments.fetch(razorpay_payment_id);
-			  paymentDtls.setMethod(payment.get("method").toString());
-			  paymentDtls.setBank(payment.get("bank").toString());
-			  paymentDtls.setCard_id(payment.get("card_id").toString());
-			  paymentDtls.setBank_transaction_id(payment.get("acquirer_data").toString());
-			  paymentDtls.setStatus(payment.get("status").toString());
-			  paymentDtls.setRazorpay_order_id(razorpay_order_id);
-				paymentDtls.setRazorpay_payment_id(razorpay_payment_id);
-				paymentDtls.setRazorpay_signature(razorpay_signature);
-				paymentDtls.setPaymentStatus(CommonConstant.PAYMNET_STATUS);
-				paymentDtls.setPaid_on(LocalDateTime.now());
-				paymentServiceImpl.savePaymentDetails(paymentDtls);
-			} catch (RazorpayException e) {
-			  System.out.println(e.getMessage());
-			}
+//			System.out.println("orderDtls"+session.getAttribute("orderDtls.courseName").toString());
+			paymentDtls.setEmail(session.getAttribute("userEmailSession").toString());
+			paymentDtls.setAmount(payment.get("amount").toString());
+			paymentDtls.setCurrency(payment.get("currency").toString());
+			paymentDtls.setMethod(payment.get("method").toString());
+			paymentDtls.setBank(payment.get("bank").toString());
+			paymentDtls.setCard_id(payment.get("card_id").toString());
+			paymentDtls.setBank_transaction_id(payment.get("acquirer_data").toString());
+			paymentDtls.setStatus(payment.get("status").toString());
+			paymentDtls.setRazorpay_order_id(razorpay_order_id);
+			paymentDtls.setRazorpay_payment_id(razorpay_payment_id);
+			paymentDtls.setRazorpay_signature(razorpay_signature);
+			paymentDtls.setOrderId(session.getAttribute("order_id").toString());
+			paymentDtls.setPaymentStatus(CommonConstant.PAYMNET_STATUS);
+			paymentDtls.setPaid_on(LocalDateTime.now());
+			paymentDtls.setCourse_id(session.getAttribute("course_id").toString());
+			paymentDtls.setCourseName(session.getAttribute("course_name").toString());
+			paymentDtls.setCourseNumber(session.getAttribute("course_number").toString());
+			paymentServiceImpl.savePaymentDetails(paymentDtls);
+			paymentServiceImpl.updateOrderStatus(payment.get("status").toString(),session.getAttribute("order_id").toString());
+		} catch (RazorpayException e) {
+			System.out.println(e.getMessage());
+		}
 		String payload = paymentDtls.getOrderId() + "|" + razorpay_payment_id;
 		String generated_signature = null;
 		try {

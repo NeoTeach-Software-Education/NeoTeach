@@ -1,7 +1,6 @@
 package com.neoteach.model;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -42,7 +41,10 @@ public class PaymentDtls {
 	private String bank_transaction_id;
 	@Column(name = "card_id")
 	private String card_id;
-	
+	@Column(name = "courseNumber")
+	private String courseNumber;
+	@Column(name = "method")
+	private String method;
 	
 	public String getBank_transaction_id() {
 		return bank_transaction_id;
@@ -84,11 +86,6 @@ public class PaymentDtls {
 		this.method = method;
 	}
 
-	@Column(name = "courseNumber")
-	private String courseNumber;
-	@Column(name = "method")
-	private String method;
-	
 	public String getCourseNumber() {
 		return courseNumber;
 	}
