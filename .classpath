@@ -29,6 +29,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Sriyan/Desktop/GateWay/New folder/razorpay-java-1.3.8.jar"/>
+	<classpathentry kind="lib" path="src/main/resources/static/externaljars/razorpay-java-1.3.8.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

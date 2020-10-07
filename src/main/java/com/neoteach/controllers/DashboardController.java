@@ -85,6 +85,12 @@ public class DashboardController {
 	@RequestMapping(value = "/enrolledCourses", method = RequestMethod.GET)
 	public String retriveEnrolledCourses(HttpSession session,Model model) {
 		ArrayList<PaymentDtls> paymentDtls = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());
+		model.addAttribute("paymentDtls", paymentDtls);
+		return "useraccount";
+    }
+	@RequestMapping(value = "/purchaseHistory", method = RequestMethod.GET)
+	public String retrivepurchaseHistory(HttpSession session,Model model) {
+		ArrayList<PaymentDtls> paymentDtls = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());
 		System.out.println("==="+paymentDtls);
 		model.addAttribute("paymentDtls", paymentDtls);
 		return "useraccount";
