@@ -91,9 +91,13 @@ public class DashboardController {
 	@RequestMapping(value = "/purchaseHistory", method = RequestMethod.GET)
 	public String retrivepurchaseHistory(HttpSession session,Model model) {
 		ArrayList<PaymentDtls> paymentDtls = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());
-		System.out.println("==="+paymentDtls);
-		model.addAttribute("paymentDtls", paymentDtls);
+		session.setAttribute("purchaseHistory", paymentDtls);
+//		model.addAttribute("purchaseHistory", paymentDtls);
 		return "useraccount";
-		
+    }
+	@RequestMapping(value = "/purchaseDtls", method = RequestMethod.GET)
+	public String purchaseHistoryPage(Model model,HttpSession session) {
+//		String email=session.getAttribute("userEmailSession").toString();
+		return "purchaseHistory";
     }
 }

@@ -25,7 +25,7 @@
 			<li class=""><a href="/changepwd"> <i class="la la-key"></i>
 					Reset Password
 			</a></li>
-			<li class=""><a href="#"> <i class="la la-history"></i>
+			<li class=""><a href="/purchaseHistory"> <i class="la la-history"></i>
 					Purchase History
 			</a></li>
 			<li class=""><a href="/userUpdate"> <i class="la la-tools"></i>
