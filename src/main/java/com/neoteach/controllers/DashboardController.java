@@ -1,6 +1,5 @@
 package com.neoteach.controllers;
 
-
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -18,7 +17,6 @@ import com.neoteach.model.PaymentDtls;
 import com.neoteach.model.User;
 import com.neoteach.serviceimpl.PaymentServiceImpl;
 import com.neoteach.serviceimpl.UserServiceImpl;
-
 
 @Controller
 public class DashboardController {
@@ -93,11 +91,12 @@ public class DashboardController {
 		ArrayList<PaymentDtls> paymentDtls = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());
 		session.setAttribute("purchaseHistory", paymentDtls);
 //		model.addAttribute("purchaseHistory", paymentDtls);
-		return "useraccount";
+		return "purchaseHistory";
     }
 	@RequestMapping(value = "/purchaseDtls", method = RequestMethod.GET)
-	public String purchaseHistoryPage(Model model,HttpSession session) {
-//		String email=session.getAttribute("userEmailSession").toString();
-		return "purchaseHistory";
+	public String purchaseHistoryPage(Model model,@RequestParam("orderId") String orderId) {
+		PaymentDtls paymentDtls=paymentServiceImpl.findByOrderId(orderId);
+		model.addAttribute("purchaseDetails", paymentDtls);
+		return "purchaseDetails";
     }
 }

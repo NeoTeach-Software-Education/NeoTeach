@@ -146,66 +146,6 @@
 
 
 					</c:if>
-					<c:if test="${purchaseHistory.size()>0}">
-
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>SNo</th>
-									<th>Course Name</th>
-									<th>Enrolled On</th>
-									<th>Action</th>
-								</tr>
-							</thead>
-							<tbody>
-								<%--     <c:set var="count" value="0" scope="page" /> --%>
-								<c:forEach items="${purchaseHistory}" var="paymentDtls">
-									<tr>
-										<td><c:set var="count" value="${count + 1}" scope="page" />
-											<c:out value="${count}" /></td>
-										<td>${paymentDtls.courseName}</td>
-										<td>${paymentDtls.paid_on}</td>
-										<td><a
-											href="/purchaseDtls"
-											class="btn btn-primary a-btn-slide-text"> <span
-												class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-												<span><strong>History</strong></span>
-										</a></td>
-									</tr>
-								</c:forEach>
-							</tbody>
-						</table>
-
-
-
-						<!--                         <div class="col-md-4"> -->
-
-						<!-- 					<div -->
-						<!-- 						class="page-header-right-enroll-box p-3 mt-sm-4 mt-md-0 bg-white shadow"> -->
-
-						<!-- 						<div class="course-landing-page-price-wrap"> -->
-
-						<!-- 							<div class='price-html-wrap  current-price-left '> -->
-						<!-- 								<span class="free-text mr-2">Rs150</span> -->
-						<!-- 							</div> -->
-						<!-- 						</div> -->
-						<!-- 						<form action="/order" class="course-free-enroll" method="post"> -->
-						<!-- 							<input type="hidden" name="amount" value="15000"> -->
-						<!-- 							<input type="hidden" name="currency" value="INR"> -->
-						<!-- 							<input type="hidden" name="courseName" value="Core java"> -->
-						<!-- 							<input type="hidden" name="courseNumber" value="3"> -->
-						<%-- 							<button type="submit" class="btn btn-warning btn-lg btn-block"><a href="/course?coursetitle=3">${paymentDtls.courseName}</a></button> --%>
-						<!-- 						</form> -->
-
-						<!-- 					</div> -->
-
-						<!-- 				</div> -->
-
-
-
-
-					</c:if>
-
 
 				</div>
 			</div>
