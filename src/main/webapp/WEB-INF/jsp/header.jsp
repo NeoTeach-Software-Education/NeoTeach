@@ -54,25 +54,18 @@
 									<li class=""><a href="/enrolledCourses"> <i
 											class="la la-pencil-square-o"></i> Enrolled Courses
 									</a></li>
-<!-- 									<li class=""><a href="#"> <i class="la la-heart-o"></i> -->
-<!-- 											Wishlist -->
-<!-- 									</a></li> -->
 									<li class=""><a href="#"> <i
 											class="la la-star-half-alt"></i> Reviews
 									</a></li>
 									<li class=""><a href="/changepwd"> <i
 											class="la la-key"></i> Reset Password
 									</a></li>
-									<li class=""><a href="#"> <i class="la la-history"></i>
+									<li class=""><a href="/purchaseHistory"> <i class="la la-history"></i>
 											Purchase History
 									</a></li>
 									<li class=""><a href="/userUpdate"> <i
 											class="la la-tools"></i> Update Profile
 									</a></li>
-									<!--                     <li class=""> -->
-									<!--                 <a href="#"> <i class="la la-pie-chart"></i> Students Progress Report </a> -->
-									<!--             </li> -->
-
 									<li><a href="/logout"> <i class="la la-sign-out"></i>
 											Log Out
 									</a></li>

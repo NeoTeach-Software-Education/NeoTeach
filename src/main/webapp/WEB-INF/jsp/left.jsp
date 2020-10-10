@@ -16,9 +16,6 @@
 			<li class=""><a href="/enrolledCourses"> <i class="la la-pencil-square-o"></i>
 					Enrolled Courses
 			</a></li>
-<!-- 			<li class=""><a href="#"> <i class="la la-heart-o"></i> -->
-<!-- 					Wishlist -->
-<!-- 			</a></li> -->
 			<li class=""><a href="#"> <i class="la la-star-half-alt"></i>
 					Reviews
 			</a></li>
@@ -31,12 +28,7 @@
 			<li class=""><a href="/userUpdate"> <i class="la la-tools"></i>
 					Update Profile
 			</a></li>
-			<!--                     <li class=""> -->
-			<!--                 <a href="#"> <i class="la la-pie-chart"></i> Students Progress Report </a> -->
-			<!--             </li> -->
-
-			<li><a href="/logout"> <i class="la la-sign-out"></i> Log
-					Out
+			<li><a href="/logout"> <i class="la la-sign-out"></i> Log Out
 			</a></li>
 		</ul>
 	</div>

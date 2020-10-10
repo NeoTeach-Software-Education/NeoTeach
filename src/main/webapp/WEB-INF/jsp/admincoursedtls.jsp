@@ -1,13 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<%@ include file="taglib_includes.jsp"%>
-<html lang="en" dir="auto">
+<html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="images/favicon.png" />
 
-<title>Admin Dashboard | NeoTeach</title>
+<title>Dashboard | NeoTeach</title>
 
 <!-- all css here -->
 <!-- Bootstrap  -->
@@ -23,7 +24,6 @@
 
 	<%@ include file="header_admin.jsp"%>
 	<div class="dashboard-wrap">
-
 		<div class="container py-4">
 			<div class="row">
 				<%@ include file="admin_left.jsp"%>
@@ -34,52 +34,60 @@
 					<!--     </div> -->
 
 					<%--                     <input type="hidden" name="userEmail" value="${encodedEmail}"> --%>
-											<table class="table table-striped">
+					<div>
+						<h5>${successMessage}</h5>
+					</div>
+					<div>
+						<h5>${errorMessage}</h5>
+					</div>
+
+
+						<table class="table table-striped">
 							<thead>
 								<tr>
 									<th>SNo</th>
-									<th>Course Name</th>
+									<th>Name</th>
+									<th>Action</th>
 									<th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
 								<%--     <c:set var="count" value="0" scope="page" /> --%>
-								<c:forEach items="${allcourses}" var="allcourses">
+								<c:forEach items="${allCorces}" var="allCorces">
 									<tr>
 										<td><c:set var="count" value="${count + 1}" scope="page" />
 											<c:out value="${count}" /></td>
-										<td>
-										<c:if test="${allcourses==1 }">	C</c:if>
-										<c:if test="${allcourses==2 }">	CPP</c:if>
-										<c:if test="${allcourses==3 }">	Core Java</c:if>
-										<c:if test="${allcourses==4 }">	Data Structure</c:if>
-										<c:if test="${allcourses==5 }">	Python</c:if>
-										<c:if test="${allcourses==6 }">	Adv Java</c:if>
-										</td>
-										<td><a	href="/retriveCourseDtls?coursetitle=${allcourses}"
+										<td>${allCorces.fileName}</td>
+										<td><a
+											href="/editVideo?id=${allCorces.id}"
 											class="btn btn-primary a-btn-slide-text"> <span
 												class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-												<span><strong>View</strong></span>
+												<span><strong>Edit</strong></span>
+										</a></td>
+										<td><a
+											href="/deleteVideo?id=${allCorces.id}&coursetitle=${allCorces.coursename}"
+											class="btn btn-primary a-btn-slide-text"> <span
+												class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+												<span><strong>Delete</strong></span>
 										</a></td>
 									</tr>
 								</c:forEach>
 							</tbody>
 						</table>
+
+
 				</div>
 			</div>
 		</div>
 	</div>
 	<%@ include file="footer.jsp"%>
-	<!-- <form id="logout-form" action="#" method="POST" class="d-none"> -->
-	<!--     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
-	<!-- </form> -->
 	<!-- jquery latest version -->
 	<script src="js/jquery.min.js"></script>
-	<!-- bootstrap js -->
-	<!-- <script src="https://zenoxpro.com/public/assets/js/bootstrap.bundle.min.js"></script> -->
 	<!-- Bootstrap -->
 	<script src="js/bootstrap.bundle.min.js"></script>
-	<!-- main js -->
-	<!-- <script src="https://zenoxpro.com/public/themes/edugator/assets/js/main.js"></script> -->
+
+
+	<script type='text/javascript' src="js/jquery.mycart.js"></script>
+	<script src="js/cart.js"></script>
 </body>
 </html>

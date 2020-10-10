@@ -10,9 +10,9 @@ import com.neoteach.model.VideoFile;
 
 @Repository
 public interface DBFileRepository extends JpaRepository<VideoFile, String> {
-//	@Query("select data from coursevideos where coursename=1")
 	List<VideoFile> findByCoursename(String coursetitle);
 
 	Optional<VideoFile> findByfileName(String fileName);
 
+//	Object delete(String id);
 }
