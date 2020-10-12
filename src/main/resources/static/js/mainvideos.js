@@ -1,5 +1,5 @@
 'use strict';
-
+alert("from js");
 var singleUploadForm = document.querySelector('#singleUploadForm');
 var singleFileUploadInput = document.querySelector('#singleFileUploadInput');
 var singleFileUploadError = document.querySelector('#singleFileUploadError');
@@ -14,6 +14,8 @@ var multipleFileUploadError = document
 var multipleFileUploadSuccess = document
 		.querySelector('#multipleFileUploadSuccess');
 
+var updateVideo=document.querySelector('#updateVideo');
+
 function uploadSingleFile(file) {
 	alert("from uploadsingle file function");
 	var formData = new FormData();
@@ -21,6 +23,42 @@ function uploadSingleFile(file) {
 	formData.append("coursename", $('#coursename').val());
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", "/uploadFile");
+
+	xhr.onload = function() {
+		console.log(xhr.responseText);
+		var response = JSON.parse(xhr.responseText);
+		if (xhr.status == 200) {
+			singleFileUploadError.style.display = "none";
+			singleFileUploadSuccess.innerHTML = "<p>File Uploaded Successfully.</p><p>DownloadUrl : <a href='"
+					+ response.fileDownloadUri
+					+ "' target='_blank'>"
+					+ response.fileDownloadUri + "</a></p>";
+			// singleFileUploadSuccess.innerHTML = " <embed src='" +
+			// response.fileDownloadUri + "' type='application/x-mplayer2'
+			// pluginspage='http://www.microsoft.com/Windows/MediaPlayer/'
+			// name='mediaplayer1' ShowStatusBar='true'
+			// EnableContextMenu='false' width='700' height='500'
+			// autostart='false' loop='false' align='middle' volume='60'
+			// ></embed>";
+			singleFileUploadSuccess.style.display = "block";
+		} else {
+			singleFileUploadSuccess.style.display = "none";
+			singleFileUploadError.innerHTML = (response && response.message)
+					|| "Some Error Occurred";
+		}
+	}
+
+	xhr.send(formData);
+}
+
+function updateVideoFile(file) {
+	alert("from uploadsingle file function");
+	var formData = new FormData();
+	formData.append("file", file);
+	formData.append("coursetitle", $('#coursetitle').val());
+	formData.append("id", $('#id').val());
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", "/updatevideoFile");
 
 	xhr.onload = function() {
 		console.log(xhr.responseText);
@@ -90,6 +128,16 @@ singleUploadForm.addEventListener('submit', function(event) {
 		singleFileUploadError.style.display = "block";
 	}
 	uploadSingleFile(files[0]);
+	event.preventDefault();
+}, true);
+
+updateVideo.addEventListener('submit', function(event) {
+	var files = singleFileUploadInput.files;
+	if (files.length === 0) {
+		singleFileUploadError.innerHTML = "Please select a file";
+		singleFileUploadError.style.display = "block";
+	}
+	updateVideoFile(files[0]);
 	event.preventDefault();
 }, true);
 

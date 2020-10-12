@@ -59,7 +59,7 @@
 											<c:out value="${count}" /></td>
 										<td>${allCorces.fileName}</td>
 										<td><a
-											href="/editVideo?id=${allCorces.id}"
+											href="/editVideo?id=${allCorces.id}&coursetitle=${allCorces.coursename}"
 											class="btn btn-primary a-btn-slide-text"> <span
 												class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
 												<span><strong>Edit</strong></span>

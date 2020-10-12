@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.neoteach.model.Admin;
 import com.neoteach.model.VideoFile;
@@ -112,4 +113,26 @@ public class AdminPageController {
 		adminservice.deleteVideo(id);
 		return "redirect:/retriveCourseDtls?coursetitle=" + coursetitle;
 	}
+	
+	@RequestMapping(value = "/editVideo", method = RequestMethod.GET)
+	public String editVideo(@RequestParam("id") String id, @RequestParam("coursetitle") String coursetitle,
+			Model model) {
+		logger.info("Entered editVideo");
+		model.addAttribute("id", id);
+		model.addAttribute("coursetitle", coursetitle);
+		return "admineditvideo";
+	}
+	
+	@RequestMapping(value = "/updatevideoFile", method = RequestMethod.POST)
+	public String updatevideoFile(@RequestParam("file") MultipartFile file,
+			@RequestParam(value = "coursetitle") String coursetitle,
+			@RequestParam(value = "id") String id) {
+		logger.info("Entered into updatevideoFile");
+		adminservice.updatevideoFile(file, id,coursetitle);
+
+		return "redirect:/retriveCourseDtls?coursetitle=" + coursetitle;
+	}
+
+	
+	
 }

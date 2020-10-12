@@ -649,7 +649,7 @@
 					<div class="col-md-4 animate-box">
 						<div class="classes">
 							<div class="classes-img"
-								style="background-image: url(images/java1.png);"></div>
+								style="background-image: url(images/java.png);"></div>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">David Clarson</span>

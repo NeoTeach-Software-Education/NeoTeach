@@ -49,12 +49,12 @@
 										<td><c:set var="count" value="${count + 1}" scope="page" />
 											<c:out value="${count}" /></td>
 										<td>
-										<c:if test="${allcourses==1 }">	C</c:if>
-										<c:if test="${allcourses==2 }">	CPP</c:if>
-										<c:if test="${allcourses==3 }">	Core Java</c:if>
-										<c:if test="${allcourses==4 }">	Data Structure</c:if>
-										<c:if test="${allcourses==5 }">	Python</c:if>
-										<c:if test="${allcourses==6 }">	Adv Java</c:if>
+										<c:if test="${allcourses=='1' }">	C</c:if>
+										<c:if test="${allcourses=='2' }">	CPP</c:if>
+										<c:if test="${allcourses=='3' }">	Core Java</c:if>
+										<c:if test="${allcourses=='4' }">	Data Structure</c:if>
+										<c:if test="${allcourses=='5' }">	Python</c:if>
+										<c:if test="${allcourses=='6' }">	Adv Java</c:if>
 										</td>
 										<td><a	href="/retriveCourseDtls?coursetitle=${allcourses}"
 											class="btn btn-primary a-btn-slide-text"> <span
