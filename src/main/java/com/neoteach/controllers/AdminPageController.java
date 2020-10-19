@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.neoteach.model.Admin;
+import com.neoteach.model.Course;
 import com.neoteach.model.VideoFile;
 import com.neoteach.serviceimpl.AdminServiceImpl;
 
@@ -24,8 +25,7 @@ import com.neoteach.serviceimpl.AdminServiceImpl;
 public class AdminPageController {
 	private static final Logger logger = LogManager.getLogger(AdminPageController.class);
 	@Autowired
-	AdminServiceImpl adminservice;
-
+	AdminServiceImpl adminServiceImpl;
 	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public String adminPage() {
 		logger.info("Entered into Admin login page");
@@ -36,13 +36,13 @@ public class AdminPageController {
 	public String adminLogin(@RequestParam("username") String email, @RequestParam("password") String password,
 			Model model, HttpSession session) {
 		logger.info("Entered into Admin home page");
-		Admin admin = adminservice.findByEmail(email);
+		Admin admin = adminServiceImpl.findByEmail(email);
 		if (admin == null) {
 			model.addAttribute("errorMessage", "We didn't find an account for that e-mail address.");
 			return "adminlogin";
 		} else if (admin.getPassword().equals(password)) {
 			logger.info("Admin password matched");
-			ArrayList<String> allcourses = adminservice.uploadedCourseList();
+			ArrayList<String> allcourses = adminServiceImpl.uploadedCourseList();
 			session.setAttribute("adminSession", admin);
 			session.setAttribute("adminEmailSession", admin.getEmail());
 			model.addAttribute("allcourses", allcourses);
@@ -63,7 +63,7 @@ public class AdminPageController {
 	@RequestMapping(value = "/adminDashboard", method = RequestMethod.GET)
 	public String adminDashboard(Model model) {
 		logger.info("Entered adminDashboard");
-		ArrayList<String> allcourses = adminservice.uploadedCourseList();
+		ArrayList<String> allcourses = adminServiceImpl.uploadedCourseList();
 		model.addAttribute("allcourses", allcourses);
 		return "admin_dashboard";
 	}
@@ -85,11 +85,11 @@ public class AdminPageController {
 	@RequestMapping(value = "/changeAdminPwd", method = RequestMethod.POST)
 	public String adminPwdChangeComplete(Model model, @RequestParam("old_password") String oldpwd,
 			@RequestParam("new_password") String newpwd, HttpSession session) {
-		Admin admin = adminservice.findByEmail(session.getAttribute("adminEmailSession").toString());
+		Admin admin = adminServiceImpl.findByEmail(session.getAttribute("adminEmailSession").toString());
 		if (oldpwd.equals(admin.getPassword())) {
 			admin.setPassword(newpwd);
 			// Save user
-			adminservice.saveAdmin(admin);
+			adminServiceImpl.saveAdmin(admin);
 			model.addAttribute("successMessage", "You have successfully reset your password.  You may now login.");
 			return "adminlogin";
 		} else {
@@ -101,7 +101,7 @@ public class AdminPageController {
 	@RequestMapping(value = "/retriveCourseDtls", method = RequestMethod.GET)
 	public String retriveCourseDtls(@RequestParam("coursetitle") String coursetitle, Model model) {
 		logger.info("Entered retriveCourseDtls");
-		List<VideoFile> allCorces = adminservice.findByCoursename(coursetitle);
+		List<VideoFile> allCorces = adminServiceImpl.findByCoursename(coursetitle);
 		model.addAttribute("allCorces", allCorces);
 		return "admincoursedtls";
 	}
@@ -110,7 +110,7 @@ public class AdminPageController {
 	public String deleteVideo(@RequestParam("id") String id, @RequestParam("coursetitle") String coursetitle,
 			Model model) {
 		logger.info("Entered deleteVideo");
-		adminservice.deleteVideo(id);
+		adminServiceImpl.deleteVideo(id);
 		return "redirect:/retriveCourseDtls?coursetitle=" + coursetitle;
 	}
 	
@@ -128,11 +128,19 @@ public class AdminPageController {
 			@RequestParam(value = "coursetitle") String coursetitle,
 			@RequestParam(value = "id") String id) {
 		logger.info("Entered into updatevideoFile");
-		adminservice.updatevideoFile(file, id,coursetitle);
+		adminServiceImpl.updatevideoFile(file, id,coursetitle);
 
 		return "redirect:/retriveCourseDtls?coursetitle=" + coursetitle;
 	}
 
+	@RequestMapping(value = "/setCourseDetails", method = RequestMethod.GET)
+	public String setCourseDetails(Model model) {
+		logger.info("Entered into setCourseDetails");
+		List<Course> courceDetails=adminServiceImpl.retriveAllCourseDetails();
+		model.addAttribute("courceDetails", courceDetails);
+		return "setCourseDetails";
+
+	}
 	
 	
 }

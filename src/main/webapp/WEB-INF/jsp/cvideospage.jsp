@@ -72,13 +72,13 @@
 										<c:if test="${courceDetails.coursecode==1}">
 											<span class="free-text mr-2">Rs<c:out value="${courceDetails.discountprice}"></c:out></span>
 											<input type="hidden" name="amount" value="${courceDetails.discountprice}00">
+											<input	type="hidden" name="courseName" value="${courceDetails.coursename}"> 
+								 			<input	type="hidden" name="courseNumber" value="${courceDetails.coursecode}">
 										</c:if>
 									</c:forEach>
 								</div>
 							</div>
-								 <input	type="hidden" name="currency" value="INR"> <input
-									type="hidden" name="courseName" value="C-Language"> <input
-									type="hidden" name="courseNumber" value="1">
+								 <input	type="hidden" name="currency" value="INR"> 
 								<button type="submit" class="btn btn-warning btn-lg btn-block">Enroll
 									Now</button>
 							</form>

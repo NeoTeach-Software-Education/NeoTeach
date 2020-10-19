@@ -20,8 +20,8 @@
 						<li class=""><a href="/changeAdminPwd"> <i class="la la-key"></i>
 								Reset Password
 						</a></li>
-						<li class=""><a href="#"> <i class="la la-history"></i>
-								Delete Course
+						<li class=""><a href="/setCourseDetails"> <i class="la la-history"></i>
+								Set Course Details
 						</a></li>
 						<li class=""><a href="/userUpdate"> <i
 								class="la la-tools"></i> Update Profile
