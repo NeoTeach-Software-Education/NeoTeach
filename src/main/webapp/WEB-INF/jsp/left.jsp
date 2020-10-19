@@ -10,7 +10,7 @@
 		<ul class="dashboard-menu">
 			<li class="active"><a href="/dashboard"> <i	class="la la-dashboard"></i> Dashboard</a></li>
 			
-			<li class=""><a href="/"> 
+			<li class=""><a href="/#colorlib-services"> 
 									<i class="la la-pencil-square-o"></i> Enroll new Courses
 									</a></li>
 			<li class=""><a href="/enrolledCourses"> <i class="la la-pencil-square-o"></i>

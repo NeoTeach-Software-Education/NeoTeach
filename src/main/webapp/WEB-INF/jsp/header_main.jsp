@@ -50,7 +50,7 @@
 							<ul>
 								<!-- 								<li class="active"><a href="/">Home</a></li> -->
 								<li class="active"><a href="/about">About</a></li>
-								<li class="has-dropdown"><a href="courses.html">Courses</a>
+								<li class="has-dropdown"><a href="#colorlib-services">Courses</a>
 									<ul class="dropdown">
 										<li><a href="courses-single.html">C-Language</a></li>
 										<li><a href="#">DS</a></li>

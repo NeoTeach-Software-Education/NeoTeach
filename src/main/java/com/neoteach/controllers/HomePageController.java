@@ -1,6 +1,9 @@
 package com.neoteach.controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.neoteach.daoimpl.AdminDaoImpl;
+import com.neoteach.model.Course;
+import com.neoteach.serviceimpl.AdminServiceImpl;
 import com.neoteach.serviceimpl.EmailServiceImpl;
 import com.neoteach.serviceimpl.PaymentServiceImpl;
 
@@ -25,12 +30,16 @@ public class HomePageController {
 	private EmailServiceImpl emailServiceImpl;
 	@Autowired
 	PaymentServiceImpl paymentServiceImpl;
+	@Autowired
+	AdminServiceImpl adminServiceImpl;
 
 	@GetMapping(value = "/")
-	public String homePage() {
+	public String homePage(HttpSession session) {
 		logger.info("Entered into NeoTeach Home page");
 		adminDaoImpl.setMaxPacketSize();
 		paymentServiceImpl.deleteNotPaidOrders();
+		List<Course> courceDetails=adminServiceImpl.retriveAllCourseDetails();
+		session.setAttribute("courceDetails", courceDetails);
 		return "home";
 	}
 

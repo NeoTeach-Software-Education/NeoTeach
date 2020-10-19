@@ -64,16 +64,21 @@
 
 					<div
 						class="page-header-right-enroll-box p-3 mt-sm-4 mt-md-0 bg-white shadow">
-
+<form action="/order" class="course-free-enroll" method="post">
 						<div class="course-landing-page-price-wrap">
 						
 							<div class='price-html-wrap  current-price-left '>
-								<span class="free-text mr-2">Rs250</span>
+								<c:forEach items="${courceDetails}" var="courceDetails">
+												<c:if test="${courceDetails.coursecode==5}">
+											<span class="free-text mr-2">Rs<c:out value="${courceDetails.discountprice}"></c:out></span>
+											<input type="hidden" name="amount" value="${courceDetails.discountprice}00">
+											</c:if>
+											</c:forEach>
 							</div>
 						</div>
-						<form action="/order" class="course-free-enroll" method="post">
+						
 							<!--                                     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt">   -->
-							<input type="hidden" name="amount" value="25000">
+							
 							<input type="hidden" name="currency" value="INR">
 							<input type="hidden" name="courseName" value="Python">
 							<input type="hidden" name="courseNumber" value="5">
