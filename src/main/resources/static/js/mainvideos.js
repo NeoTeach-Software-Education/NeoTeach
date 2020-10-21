@@ -1,5 +1,4 @@
 'use strict';
-alert("from js");
 var singleUploadForm = document.querySelector('#singleUploadForm');
 var singleFileUploadInput = document.querySelector('#singleFileUploadInput');
 var singleFileUploadError = document.querySelector('#singleFileUploadError');
@@ -17,7 +16,6 @@ var multipleFileUploadSuccess = document
 var updateVideo=document.querySelector('#updateVideo');
 
 function uploadSingleFile(file) {
-	alert("from uploadsingle file function");
 	var formData = new FormData();
 	formData.append("file", file);
 	formData.append("coursename", $('#coursename').val());
@@ -52,7 +50,6 @@ function uploadSingleFile(file) {
 }
 
 function updateVideoFile(file) {
-	alert("from uploadsingle file function");
 	var formData = new FormData();
 	formData.append("file", file);
 	formData.append("coursetitle", $('#coursetitle').val());
@@ -88,7 +85,6 @@ function updateVideoFile(file) {
 }
 
 function uploadMultipleFiles(files) {
-	alert("this is from vds js");
 	var formData = new FormData();
 	formData.append("coursename", $('#mcoursename').val());
 	for (var index = 0; index < files.length; index++) {

@@ -49,30 +49,31 @@
 									<th>Course Name</th>
 									<th>Price</th>
 									<th>Discount Price</th>
+									<th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
 								<%--     <c:set var="count" value="0" scope="page" /> --%>
 								<c:forEach items="${courceDetails}" var="courceDetails">
+								<form action="/updateCourse" method="POST">
 									<tr>
-										<td>${courceDetails.coursecode}</td>
-										<td>${courceDetails.coursename}</td>
-										<td>${courceDetails.price}</td>
-										<td>${courceDetails.discountprice}</td>
-<!-- 										<td><a -->
-<%-- 											href="/editVideo?id=${allCorces.id}&coursetitle=${allCorces.coursename}" --%>
-<!-- 											class="btn btn-primary a-btn-slide-text"> <span -->
-<!-- 												class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> -->
-<!-- 												<span><strong>Edit</strong></span> -->
-<!-- 										</a></td> -->
-<!-- 										<td><a -->
-<%-- 											href="/deleteVideo?id=${allCorces.id}&coursetitle=${allCorces.coursename}" --%>
-<!-- 											class="btn btn-primary a-btn-slide-text"> <span -->
-<!-- 												class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> -->
-<!-- 												<span><strong>Delete</strong></span> -->
-<!-- 										</a></td> -->
+										<td><input type="text" value="${courceDetails.coursecode}" name="coursecode"></td>
+										<td><input type="text" value="${courceDetails.coursename}" disabled="disabled">
+										<input type="hidden" value="${courceDetails.coursename}" name="coursename"></td>
+										<td><input type="text" value="${courceDetails.price}" name="price"></td>
+										<td><input type="text" value="${courceDetails.discountprice}" name="discountprice"></td>
+										<td>
+										<button type="submit" class="btn btn-purple btn-lg">
+								Update</button>
+										</td>
 									</tr>
+									</form>
 								</c:forEach>
+								<td><a	href="/addCourse"
+											class="btn btn-primary a-btn-slide-text"> <span
+												class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+												<span><strong>Add a new Course</strong></span>
+										</a></td>
 							</tbody>
 						</table>
 

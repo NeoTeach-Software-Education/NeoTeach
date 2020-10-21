@@ -61,9 +61,9 @@
 											class="la la-key"></i> Reset Password
 									</a></li>
 									<li class=""><a href="#"> <i class="la la-history"></i>
-											Delete Course
+											set Course Details
 									</a></li>
-									<li class=""><a href="/adminUpdate"> <i
+									<li class=""><a href="#"> <i
 											class="la la-tools"></i> Update Profile
 									</a></li>
 									<!--                     <li class=""> -->

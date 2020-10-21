@@ -2,15 +2,19 @@ package com.neoteach.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,6 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.neoteach.model.Admin;
 import com.neoteach.model.Course;
+import com.neoteach.model.User;
 import com.neoteach.model.VideoFile;
 import com.neoteach.serviceimpl.AdminServiceImpl;
 
@@ -26,6 +31,7 @@ public class AdminPageController {
 	private static final Logger logger = LogManager.getLogger(AdminPageController.class);
 	@Autowired
 	AdminServiceImpl adminServiceImpl;
+
 	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public String adminPage() {
 		logger.info("Entered into Admin login page");
@@ -113,7 +119,7 @@ public class AdminPageController {
 		adminServiceImpl.deleteVideo(id);
 		return "redirect:/retriveCourseDtls?coursetitle=" + coursetitle;
 	}
-	
+
 	@RequestMapping(value = "/editVideo", method = RequestMethod.GET)
 	public String editVideo(@RequestParam("id") String id, @RequestParam("coursetitle") String coursetitle,
 			Model model) {
@@ -122,13 +128,12 @@ public class AdminPageController {
 		model.addAttribute("coursetitle", coursetitle);
 		return "admineditvideo";
 	}
-	
+
 	@RequestMapping(value = "/updatevideoFile", method = RequestMethod.POST)
 	public String updatevideoFile(@RequestParam("file") MultipartFile file,
-			@RequestParam(value = "coursetitle") String coursetitle,
-			@RequestParam(value = "id") String id) {
+			@RequestParam(value = "coursetitle") String coursetitle, @RequestParam(value = "id") String id) {
 		logger.info("Entered into updatevideoFile");
-		adminServiceImpl.updatevideoFile(file, id,coursetitle);
+		adminServiceImpl.updatevideoFile(file, id, coursetitle);
 
 		return "redirect:/retriveCourseDtls?coursetitle=" + coursetitle;
 	}
@@ -136,11 +141,49 @@ public class AdminPageController {
 	@RequestMapping(value = "/setCourseDetails", method = RequestMethod.GET)
 	public String setCourseDetails(Model model) {
 		logger.info("Entered into setCourseDetails");
-		List<Course> courceDetails=adminServiceImpl.retriveAllCourseDetails();
+		List<Course> courceDetails = adminServiceImpl.retriveAllCourseDetails();
 		model.addAttribute("courceDetails", courceDetails);
 		return "setCourseDetails";
 
 	}
-	
-	
+
+	@RequestMapping(value = "/updateCourse", method = RequestMethod.POST)
+	public String updateCourseDetails(@RequestParam("coursecode") String coursecode,
+			@RequestParam("coursename") String coursename, @RequestParam("price") String price,
+			@RequestParam("discountprice") String discountprice) {
+		logger.info("Entered into updateCourseDetails");
+		adminServiceImpl.updateCourseDetails(coursecode, coursename, price, discountprice);
+		return "redirect:setCourseDetails";
+
+	}
+
+	@RequestMapping(value = "/addCourse", method = RequestMethod.GET)
+	public String addCourse() {
+		logger.info("Entered into addCourse");
+		return "addCourse";
+	}
+
+	@RequestMapping(value = "/addCourse", method = RequestMethod.POST)
+	public String addCourseDetails(@Valid Course course, HttpServletRequest request, Model model) {
+		logger.info("Entered into addCourseDetails");
+		Course courseExists = adminServiceImpl.addCourseDetails(course.getCoursename());
+		if (courseExists != null) {
+			model.addAttribute("errorMessage",
+					"Oops!  There is already a course availabel with the course name provided.");
+			return "addCourse";
+		}
+		else if (courseExists == null) {
+			Course courseCodeExist = adminServiceImpl.findByCoursecode(course.getCoursecode());
+			if (courseCodeExist != null) {
+				model.addAttribute("errorMessage",
+						"Oops!  There is already a course availabel with the course code provided.");
+				return "addCourse";
+			} else {
+				adminServiceImpl.saveCourse(course);
+				model.addAttribute("successMessage", "Successfully added a new course.");
+			}
+		}
+		return "redirect:setCourseDetails";
+	}
+
 }

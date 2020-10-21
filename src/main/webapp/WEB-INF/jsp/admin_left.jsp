@@ -23,7 +23,7 @@
 						<li class=""><a href="/setCourseDetails"> <i class="la la-history"></i>
 								Set Course Details
 						</a></li>
-						<li class=""><a href="/userUpdate"> <i
+						<li class=""><a href="#"> <i
 								class="la la-tools"></i> Update Profile
 						</a></li>
 						<!--                     <li class=""> -->

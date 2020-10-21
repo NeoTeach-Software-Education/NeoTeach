@@ -79,9 +79,7 @@
 								</div>
 							</div>
 							
-								<!--                                     <input type="hidden" name="_token" value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt">   -->
-								 <input
-									type="hidden" name="currency" value="INR"> <input
+								 <input	type="hidden" name="currency" value="INR">
 								<button type="submit" class="btn btn-warning btn-lg btn-block">Enroll
 									Now</button>
 							</form>

@@ -4,9 +4,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.neoteach.exception.FileStorageException;
@@ -65,6 +68,23 @@ public class AdminServiceImpl {
 
 	public List<Course> retriveAllCourseDetails() {
 		return allCourseDetailsRepository.findAll();
+	}
+
+	public void updateCourseDetails(String coursecode, String coursename, String price, String discountprice) {
+		// TODO Auto-generated method stub
+		allCourseDetailsRepository.updateCourseDetails(coursecode,coursename,price,discountprice);
+	}
+
+	public Course addCourseDetails(String coursename) {
+		return allCourseDetailsRepository.findByCoursename(coursename);
+	}
+
+	public void saveCourse(@Valid Course course) {
+		allCourseDetailsRepository.save(course);
+	}
+
+	public Course findByCoursecode(String coursecode) {
+		return allCourseDetailsRepository.findByCoursecode(coursecode);
 	}
 
 }
