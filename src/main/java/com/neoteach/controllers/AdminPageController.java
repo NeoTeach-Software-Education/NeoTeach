@@ -2,7 +2,6 @@ package com.neoteach.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -11,10 +10,8 @@ import javax.validation.Valid;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,7 +19,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.neoteach.model.Admin;
 import com.neoteach.model.Course;
-import com.neoteach.model.User;
 import com.neoteach.model.VideoFile;
 import com.neoteach.serviceimpl.AdminServiceImpl;
 
@@ -171,8 +167,7 @@ public class AdminPageController {
 			model.addAttribute("errorMessage",
 					"Oops!  There is already a course availabel with the course name provided.");
 			return "addCourse";
-		}
-		else if (courseExists == null) {
+		} else if (courseExists == null) {
 			Course courseCodeExist = adminServiceImpl.findByCoursecode(course.getCoursecode());
 			if (courseCodeExist != null) {
 				model.addAttribute("errorMessage",

@@ -60,7 +60,7 @@
 									<li class=""><a href="/changeAdminPwd"> <i
 											class="la la-key"></i> Reset Password
 									</a></li>
-									<li class=""><a href="#"> <i class="la la-history"></i>
+									<li class=""><a href="/setCourseDetails"> <i class="la la-history"></i>
 											set Course Details
 									</a></li>
 									<li class=""><a href="#"> <i
