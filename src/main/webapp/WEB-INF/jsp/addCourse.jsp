@@ -44,7 +44,7 @@
 
 
 					<form class="form-horizontal" name="courseform" action="/addCourse"
-						method="post">
+						method="post" enctype="multipart/form-data">
 
 
 						<div class="form-group row ">
@@ -94,7 +94,7 @@
 
 							<div class="col-md-4">
 								<input id="courseimg" type="file"
-									class="form-control" name="courseimg" required>
+									class="form-control" name="courseimg" accept="image/png, image/jpeg" required>
 							</div>
 						</div>
 

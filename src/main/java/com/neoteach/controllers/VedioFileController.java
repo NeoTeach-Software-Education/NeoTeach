@@ -88,9 +88,7 @@ public class VedioFileController {
 		List<String> videos = new ArrayList<String>();
 		StringBuilder sb = null;
 		String videoUrl = null;
-		System.out.println("sss" + videoFile.size());
 		for (VideoFile videolist : videoFile) {
-			System.out.println(videolist);
 			v_byte = videolist.getData();
 			sb = new StringBuilder();
 			sb.append("data:video/mp4;base64,");
@@ -101,7 +99,6 @@ public class VedioFileController {
 		}
 
 		coursemodel.addAttribute("videos", videos);
-		System.out.println("vdd" + videos.size());
 
 		return "corejavapage";
 	}

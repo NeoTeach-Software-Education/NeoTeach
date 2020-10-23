@@ -1,5 +1,13 @@
 package com.neoteach.controllers;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,8 +65,10 @@ public class AdminPageController {
 	}
 
 	@RequestMapping(value = "/uploadVideos", method = RequestMethod.GET)
-	public String uploadVideosPage() {
+	public String uploadVideosPage(Model model) {
 		logger.info("Entered uploadVideosPage");
+		List<Course> courceDetails = adminServiceImpl.retriveAllCourseDetails();
+		model.addAttribute("courceDetails", courceDetails);
 		return "upload_videos";
 	}
 
@@ -160,7 +170,8 @@ public class AdminPageController {
 	}
 
 	@RequestMapping(value = "/addCourse", method = RequestMethod.POST)
-	public String addCourseDetails(@Valid Course course, HttpServletRequest request, Model model) {
+	public String addCourseDetails(@Valid Course course, @RequestParam("courseimg") MultipartFile file,
+			HttpServletRequest request, Model model) throws IOException {
 		logger.info("Entered into addCourseDetails");
 		Course courseExists = adminServiceImpl.addCourseDetails(course.getCoursename());
 		if (courseExists != null) {
@@ -174,6 +185,21 @@ public class AdminPageController {
 						"Oops!  There is already a course availabel with the course code provided.");
 				return "addCourse";
 			} else {
+
+				if (!file.getOriginalFilename().isEmpty()) {
+					String imagelocation = "C:\\Users\\India1\\git\\NeoTeach\\src\\main\\resources\\static\\courseimages";
+					Path uploadPath = Paths.get(imagelocation);
+					if (!Files.exists(uploadPath)) {
+						Files.createDirectories(uploadPath);
+					}
+					BufferedOutputStream outputStream = new BufferedOutputStream(
+							new FileOutputStream(new File(imagelocation, file.getOriginalFilename())));
+					outputStream.write(file.getBytes());
+					outputStream.flush();
+					outputStream.close();
+					String imgLoc = imagelocation + "\\" + file.getOriginalFilename();
+					course.setCourseimag(imgLoc);
+				}
 				adminServiceImpl.saveCourse(course);
 				model.addAttribute("successMessage", "Successfully added a new course.");
 			}

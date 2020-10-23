@@ -3,7 +3,6 @@ package com.neoteach.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.Table;
 
 @Entity
@@ -18,19 +17,31 @@ public class Course {
 	private String discountprice;
 	@Column(name = "coursecode")
 	private String coursecode;
-	@Lob
-	private byte[] courseimag;
-
-	public byte[] getCourseimag() {
-		return courseimag;
-	}
-
-	public void setCourseimag(byte[] courseimag) {
-		this.courseimag = courseimag;
-	}
+	 @Column(nullable = true, length = 9216)
+	    private String courseimag;
+//	@Lob
+//	private byte[] courseimag;
+//
+//	public byte[] getCourseimag() {
+//		return courseimag;
+//	}
+//
+//	public void setCourseimag(byte[] courseimag) {
+//		this.courseimag = courseimag;
+//	}
+	 
+	 
 
 	public String getCoursename() {
 		return coursename;
+	}
+
+	public String getCourseimag() {
+		return courseimag;
+	}
+
+	public void setCourseimag(String courseimag) {
+		this.courseimag = courseimag;
 	}
 
 	public void setCoursename(String coursename) {

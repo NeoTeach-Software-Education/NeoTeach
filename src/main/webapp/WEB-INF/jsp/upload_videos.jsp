@@ -30,7 +30,13 @@
 				<%@ include file="admin_left.jsp"%>
 
 				<div class="col-md-7">
-
+<h4 class="mb-3">Upload Course Videos</h4>
+						<div>
+							<h5>${successMessage}</h5>
+						</div>
+						<div>
+							<h5>${errorMessage}</h5>
+						</div>
 					<form id="singleUploadForm" name="singleUploadForm">
 						<div class="form-group row">
 							<label for="videos" class="col-sm-4 col-form-label text-md-right">Single
@@ -49,11 +55,9 @@
 							<div class="col-md-7">
 								<select class="form-control" name="coursename" id="coursename">
 									<option value="0" selected="selected">Choose a course:</option>
-									<option value="1">C</option>
-									<option value="2">Cpp</option>
-									<option value="3">Core Java</option>
-									<option value="4">DS</option>
-									<option value="5">Python</option>
+									<c:forEach items="${courceDetails}" var="courceDetails">
+									<option value="${courceDetails.coursecode}">${courceDetails.coursename}</option>
+									</c:forEach>
 								</select>
 
 							</div>
@@ -90,11 +94,9 @@
 								<select class="form-control" name="multicoursename"
 									id="mcoursename">
 									<option value="0" selected="selected">Choose a course:</option>
-									<option value="1">C</option>
-									<option value="2">Cpp</option>
-									<option value="3">Core Java</option>
-									<option value="4">DS</option>
-									<option value="5">Python</option>
+									<c:forEach items="${courceDetails}" var="courceDetails">
+									<option value="${courceDetails.coursecode}">${courceDetails.coursename}</option>
+									</c:forEach>
 								</select>
 
 							</div>

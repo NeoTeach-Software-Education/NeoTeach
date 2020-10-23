@@ -79,8 +79,8 @@ public class AdminServiceImpl {
 		return allCourseDetailsRepository.findByCoursename(coursename);
 	}
 
-	public void saveCourse(@Valid Course course) {
-		allCourseDetailsRepository.save(course);
+	public Course saveCourse(@Valid Course course) {
+		return allCourseDetailsRepository.save(course);
 	}
 
 	public Course findByCoursecode(String coursecode) {
