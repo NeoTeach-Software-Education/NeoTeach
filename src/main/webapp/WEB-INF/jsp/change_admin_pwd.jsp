@@ -73,22 +73,12 @@
 
 								<button type="submit" class="btn btn-purple btn-lg">
 									Change Password</button>
-
-
 							</div>
-
-
-
 						</form>
-
-
 					</div>
-
 				</div>
-
 			</div>
 		</div>
-
 	</div>
 	<%@ include file="footer.jsp"%>
 

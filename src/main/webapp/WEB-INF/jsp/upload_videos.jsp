@@ -37,6 +37,7 @@
 						<div>
 							<h5>${errorMessage}</h5>
 						</div>
+						<div class="profile-basic-info bg-white p-3">
 					<form id="singleUploadForm" name="singleUploadForm">
 						<div class="form-group row">
 							<label for="videos" class="col-sm-4 col-form-label text-md-right">Single
@@ -114,7 +115,7 @@
 						<div id="multipleFileUploadSuccess"></div>
 					</div>
 				</div>
-
+</div>
 			</div>
 		</div>
 	</div>

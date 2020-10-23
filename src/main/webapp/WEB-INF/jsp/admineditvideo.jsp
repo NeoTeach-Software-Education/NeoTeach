@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="images/favicon.png" />
 
-<title>Upload Videos | NeoTeach</title>
+<title>Edit Videos | NeoTeach</title>
 
 <!-- all css here -->
 <!-- Bootstrap  -->
@@ -30,7 +30,14 @@
 				<%@ include file="admin_left.jsp"%>
 
 				<div class="col-md-7">
-
+<h4 class="mb-3">Edit Course video...</h4>
+						<div>
+							<h5>${successMessage}</h5>
+						</div>
+						<div>
+							<h5>${errorMessage}</h5>
+						</div>
+<div class="profile-basic-info bg-white p-3">
 					<form id="updateVideo" name="singleUploadForm" action="/updatevideoFile" method="POST" enctype="multipart/form-data">
 						<div class="form-group row">
 							<label for="videos" class="col-sm-4 col-form-label text-md-right">Single
@@ -42,9 +49,9 @@
 							</div>
 						</div>
 
-						<div class="form-group row">
-							<label for="courselist"
-								class="col-md-4 col-form-label text-md-right">Course</label>
+<!-- 						<div class="form-group row"> -->
+<!-- 							<label for="courselist" -->
+<!-- 								class="col-md-4 col-form-label text-md-right">Course</label> -->
 
 <!-- 							<div class="col-md-7"> -->
 <!-- 								<select class="form-control" name="coursename" id="coursename"> -->
@@ -57,7 +64,7 @@
 <!-- 								</select> -->
 
 <!-- 							</div> -->
-						</div>
+<!-- 						</div> -->
 
 						<div class="form-group row mb-0">
 							<div class="col-md-7 offset-md-4">
@@ -76,43 +83,43 @@
 						<div id="singleFileUploadError"></div>
 						<div id="singleFileUploadSuccess"></div>
 					</div>
+</div>
+<!-- 					<form id="multipleUploadForm" name="multipleUploadForm"> -->
+<!-- 						<div class="form-group row"> -->
+<!-- 							<label for="videos" class="col-sm-4 col-form-label text-md-right">Multiple -->
+<!-- 								Videos</label> -->
 
-					<form id="multipleUploadForm" name="multipleUploadForm">
-						<div class="form-group row">
-							<label for="videos" class="col-sm-4 col-form-label text-md-right">Multiple
-								Videos</label>
+<!-- 							<div class="col-md-7"> -->
+<!-- 								<input id="multipleFileUploadInput" type="file" -->
+<!-- 									class="form-control" name="files" multiple required> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
 
-							<div class="col-md-7">
-								<input id="multipleFileUploadInput" type="file"
-									class="form-control" name="files" multiple required>
-							</div>
-						</div>
+<!-- 						<div class="form-group row"> -->
+<!-- 							<label for="courselist" -->
+<!-- 								class="col-md-4 col-form-label text-md-right">Course</label> -->
 
-						<div class="form-group row">
-							<label for="courselist"
-								class="col-md-4 col-form-label text-md-right">Course</label>
+<!-- 							<div class="col-md-7"> -->
+<!-- 								<select class="form-control" name="multicoursename" -->
+<!-- 									id="mcoursename"> -->
+<!-- 									<option value="0" selected="selected">Choose a course:</option> -->
+<!-- 									<option value="1">C</option> -->
+<!-- 									<option value="2">Cpp</option> -->
+<!-- 									<option value="3">Core Java</option> -->
+<!-- 									<option value="4">DS</option> -->
+<!-- 									<option value="5">Python</option> -->
+<!-- 								</select> -->
 
-							<div class="col-md-7">
-								<select class="form-control" name="multicoursename"
-									id="mcoursename">
-									<option value="0" selected="selected">Choose a course:</option>
-									<option value="1">C</option>
-									<option value="2">Cpp</option>
-									<option value="3">Core Java</option>
-									<option value="4">DS</option>
-									<option value="5">Python</option>
-								</select>
+<!-- 							</div> -->
+<!-- 						</div> -->
 
-							</div>
-						</div>
+<!-- 						<div class="form-group row mb-0"> -->
+<!-- 							<div class="col-md-7 offset-md-4"> -->
+<!-- 								<button type="submit" class="btn btn-primary">Upload</button> -->
 
-						<div class="form-group row mb-0">
-							<div class="col-md-7 offset-md-4">
-								<button type="submit" class="btn btn-primary">Upload</button>
-
-							</div>
-						</div>
-					</form>
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</form> -->
 <!-- 					<div class="upload-response"> -->
 <!-- 						<div id="multipleFileUploadError"></div> -->
 <!-- 						<div id="multipleFileUploadSuccess"></div> -->

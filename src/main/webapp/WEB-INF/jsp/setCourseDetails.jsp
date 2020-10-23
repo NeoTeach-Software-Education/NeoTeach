@@ -34,14 +34,13 @@
 					<!--     </div> -->
 
 					<%--                     <input type="hidden" name="userEmail" value="${encodedEmail}"> --%>
-					<div>
-						<h5>${successMessage}</h5>
-					</div>
-					<div>
-						<h5>${errorMessage}</h5>
-					</div>
-
-
+					<h4 class="mb-3">Set Course Details</h4>
+						<div>
+							<h5>${successMessage}</h5>
+						</div>
+						<div>
+							<h5>${errorMessage}</h5>
+						</div>
 						<table class="table table-striped">
 							<thead>
 								<tr>

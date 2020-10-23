@@ -34,15 +34,14 @@
 					<!--     </div> -->
 
 					<%--                     <input type="hidden" name="userEmail" value="${encodedEmail}"> --%>
-					<div>
-						<h5>${successMessage}</h5>
-					</div>
-					<div>
-						<h5>${errorMessage}</h5>
-					</div>
-
-
-
+					<h4 class="mb-3">Add a new Course</h4>
+						<div>
+							<h5>${successMessage}</h5>
+						</div>
+						<div>
+							<h5>${errorMessage}</h5>
+						</div>
+<div class="profile-basic-info bg-white p-3">
 					<form class="form-horizontal" name="courseform" action="/addCourse"
 						method="post" enctype="multipart/form-data">
 
@@ -108,7 +107,7 @@
 					</form>
 
 
-
+</div>
 
 				</div>
 			</div>

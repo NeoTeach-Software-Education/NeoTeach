@@ -29,19 +29,20 @@
 				<%@ include file="admin_left.jsp"%>
 
 				<div class="col-9">
+				<h4 class="mb-3">Course Videos</h4>
+						<div>
+							<h5>${successMessage}</h5>
+						</div>
+						<div>
+							<h5>${errorMessage}</h5>
+						</div>
+				
 					<!--                 <div class="alert alert-danger"> -->
 					<!--         <i class="la la-info-circle"></i> Restriction area, permission denied -->
 					<!--     </div> -->
 
 					<%--                     <input type="hidden" name="userEmail" value="${encodedEmail}"> --%>
-					<div>
-						<h5>${successMessage}</h5>
-					</div>
-					<div>
-						<h5>${errorMessage}</h5>
-					</div>
-
-
+<div class="profile-basic-info bg-white p-3">
 						<table class="table table-striped">
 							<thead>
 								<tr>
@@ -75,7 +76,7 @@
 							</tbody>
 						</table>
 
-
+</div>
 				</div>
 			</div>
 		</div>
