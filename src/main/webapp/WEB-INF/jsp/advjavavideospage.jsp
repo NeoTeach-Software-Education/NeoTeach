@@ -69,7 +69,7 @@
 						
 							<div class='price-html-wrap  current-price-left '>
 								<c:forEach items="${courceDetails}" var="courceDetails">
-												<c:if test="${courceDetails.coursecode==3}">
+												<c:if test="${courceDetails.coursecode==6}">
 											<span class="free-text mr-2">Rs<c:out value="${courceDetails.discountprice}"></c:out></span>
 											<input type="hidden" name="amount" value="${courceDetails.discountprice}00">
 											<input	type="hidden" name="courseName" value="${courceDetails.coursename}"> 
