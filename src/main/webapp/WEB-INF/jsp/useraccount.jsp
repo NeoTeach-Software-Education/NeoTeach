@@ -49,9 +49,9 @@
 
 								<div class="card-info">
 									<div class="text-value">
-										<h4>0</h4>
+										<h4>${paymentDtls.size()}</h4>
 									</div>
-									<div>Courses Enrolled</div>
+									<div><a href="/enrolledCourses">Courses Enrolled</a></div>
 								</div>
 							</div>
 						</div>
@@ -84,11 +84,6 @@
 					</div>
 					<%--     </c:if> --%>
 					<c:if test="${paymentDtls.size()>0}">
-
-
-
-
-
 						<table class="table table-striped">
 							<thead>
 								<tr>
@@ -142,9 +137,9 @@
 
 						<!-- 				</div> -->
 
-
-
-
+					</c:if>
+					<c:if test="${paymentDtls.size()==0}">
+					<div>Not yet enrolled any course...</div>
 					</c:if>
 
 				</div>

@@ -72,7 +72,7 @@
 									<div class="form-group col-md-4">
 										<label>Email</label> <input type="disable"
 											class="form-control" name="email"
-											value="${userSession.email}">
+											value="${userSession.email}" disabled="disabled">
 									</div>
 									<div class="form-group col-md-4">
 										<label>Address</label> <input type="text" class="form-control"

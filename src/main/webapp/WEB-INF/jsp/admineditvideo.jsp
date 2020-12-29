@@ -71,10 +71,10 @@
 								<button type="submit" class="btn btn-primary">Update</button>
 
 							</div>
-							<div class="col-md-7 offset-md-4">
-								<button type="submit" class="btn btn-primary">Cancel</button>
+<!-- 							<div class="col-md-7 offset-md-4"> -->
+<!-- 								<button type="submit" class="btn btn-primary">Cancel</button> -->
 
-							</div>
+<!-- 							</div> -->
 						</div>
 						<input type="hidden" name="id" id="videoid" value="${id}"/>
 						<input type="hidden" name="coursetitle" id="coursetitle" value="${coursetitle}"/>					

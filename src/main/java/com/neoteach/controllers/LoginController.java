@@ -1,5 +1,7 @@
 package com.neoteach.controllers;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.neoteach.model.PaymentDtls;
 import com.neoteach.model.User;
+import com.neoteach.serviceimpl.PaymentServiceImpl;
 import com.neoteach.serviceimpl.UserServiceImpl;
 
 @Controller
@@ -20,6 +24,8 @@ public class LoginController {
 	
 	@Autowired
 	UserServiceImpl userServiceImpl;
+	@Autowired
+	PaymentServiceImpl paymentServiceImpl;
 	
 	/*
 	 * loginPage() for landing user login page
@@ -56,6 +62,8 @@ public class LoginController {
 		{
 			session.setAttribute("userSession", user);
 			session.setAttribute("userEmailSession", user.getEmail());
+			ArrayList<PaymentDtls> paymentDtls = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());
+			model.addAttribute("paymentDtls", paymentDtls);
 			return "useraccount";
 		}
 		else 

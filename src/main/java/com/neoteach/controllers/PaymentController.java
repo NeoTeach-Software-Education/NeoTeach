@@ -1,6 +1,7 @@
 package com.neoteach.controllers;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -117,8 +118,10 @@ public class PaymentController {
 			e.printStackTrace();
 		}
 		if (generated_signature.equals(razorpay_signature)) {
+			ArrayList<PaymentDtls> paymentDtls1 = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());
+			model.addAttribute("paymentDtls", paymentDtls1);
 			model.addAttribute("successMessage", "Your payment has successfully completed thank you!.");
-			return "redirect:/dashboard";
+			return "useraccount";
 		} else {
 			model.addAttribute("errorMessage", "Oops! the payment has failed please try again.");
 			return "redirect:/dashboard";

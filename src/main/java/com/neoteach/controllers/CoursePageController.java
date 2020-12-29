@@ -29,47 +29,48 @@ public class CoursePageController {
 	private PaymentServiceImpl paymentServiceImpl;
 
 	@GetMapping("/course")
-	public String coursePage(@RequestParam("coursetitle") String cousetitle, Model model,HttpSession session) {
+	public String coursePage(@RequestParam("coursetitle") String cousetitle, Model model, HttpSession session) {
 		logger.info("Entered into course page");
-		String paymentStatus="NO";
-		if (cousetitle.equalsIgnoreCase("3")) {
-			logger.info("Entered into core java course page");
-			if(session.getAttribute("userEmailSession")!=null)
-			{
-				paymentStatus=paymentServiceImpl.userPaymentStatus(session.getAttribute("userEmailSession").toString(),CommonConstant.JAVA_COURSE);
-			}
-			model.addAttribute("paymentStatus", paymentStatus);
-			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);
-			model.addAttribute("videoFile", videoFile);
-			return "corejavapage";
-		}
-		if (cousetitle.equalsIgnoreCase("2")) {
-			logger.info("Entered into cpp course page");
-			if(session.getAttribute("userEmailSession")!=null)
-			{
-				paymentStatus=paymentServiceImpl.userPaymentStatus(session.getAttribute("userEmailSession").toString(),CommonConstant.CPP_COURSE);
-			}
-			model.addAttribute("paymentStatus", paymentStatus);
-			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);
-			model.addAttribute("videoFile", videoFile);
-			return "cppvideospage";
-		}
+		String paymentStatus = "NO";
 		if (cousetitle.equalsIgnoreCase("1")) {
 			logger.info("Entered into  c language course page");
-			if(session.getAttribute("userEmailSession")!=null)
-			{
-				paymentStatus=paymentServiceImpl.userPaymentStatus(session.getAttribute("userEmailSession").toString(),CommonConstant.C_COURSE);
+			if (session.getAttribute("userEmailSession") != null) {
+				paymentStatus = paymentServiceImpl.userPaymentStatus(
+						session.getAttribute("userEmailSession").toString(), CommonConstant.C_COURSE);
 			}
 			model.addAttribute("paymentStatus", paymentStatus);
 			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);
 			model.addAttribute("videoFile", videoFile);
 			return "cvideospage";
 		}
+		if (cousetitle.equalsIgnoreCase("2")) {
+			logger.info("Entered into cpp course page");
+			if (session.getAttribute("userEmailSession") != null) {
+				paymentStatus = paymentServiceImpl.userPaymentStatus(
+						session.getAttribute("userEmailSession").toString(), CommonConstant.CPP_COURSE);
+			}
+			model.addAttribute("paymentStatus", paymentStatus);
+			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);
+			model.addAttribute("videoFile", videoFile);
+			return "cppvideospage";
+		}
+		if (cousetitle.equalsIgnoreCase("3")) {
+			logger.info("Entered into core java course page");
+			if (session.getAttribute("userEmailSession") != null) {
+				paymentStatus = paymentServiceImpl.userPaymentStatus(
+						session.getAttribute("userEmailSession").toString(), CommonConstant.JAVA_COURSE);
+			}
+			model.addAttribute("paymentStatus", paymentStatus);
+			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);
+			model.addAttribute("videoFile", videoFile);
+			return "corejavapage";
+		}
+
 		if (cousetitle.equalsIgnoreCase("4")) {
 			logger.info("Entered into DS course page");
-			if(session.getAttribute("userEmailSession")!=null)
-			{
-				paymentStatus=paymentServiceImpl.userPaymentStatus(session.getAttribute("userEmailSession").toString(),CommonConstant.DS_COURSE);
+			if (session.getAttribute("userEmailSession") != null) {
+				paymentStatus = paymentServiceImpl.userPaymentStatus(
+						session.getAttribute("userEmailSession").toString(), CommonConstant.DS_COURSE);
 			}
 			model.addAttribute("paymentStatus", paymentStatus);
 			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);
@@ -78,9 +79,9 @@ public class CoursePageController {
 		}
 		if (cousetitle.equalsIgnoreCase("5")) {
 			logger.info("Entered into python course page");
-			if(session.getAttribute("userEmailSession")!=null)
-			{
-				paymentStatus=paymentServiceImpl.userPaymentStatus(session.getAttribute("userEmailSession").toString(),CommonConstant.PYTHON_COURSE);
+			if (session.getAttribute("userEmailSession") != null) {
+				paymentStatus = paymentServiceImpl.userPaymentStatus(
+						session.getAttribute("userEmailSession").toString(), CommonConstant.PYTHON_COURSE);
 			}
 			model.addAttribute("paymentStatus", paymentStatus);
 			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);
@@ -89,9 +90,9 @@ public class CoursePageController {
 		}
 		if (cousetitle.equalsIgnoreCase("6")) {
 			logger.info("Entered into adv java course page");
-			if(session.getAttribute("userEmailSession")!=null)
-			{
-				paymentStatus=paymentServiceImpl.userPaymentStatus(session.getAttribute("userEmailSession").toString(),CommonConstant.ADV_JAVA_COURSE);
+			if (session.getAttribute("userEmailSession") != null) {
+				paymentStatus = paymentServiceImpl.userPaymentStatus(
+						session.getAttribute("userEmailSession").toString(), CommonConstant.ADV_JAVA_COURSE);
 			}
 			model.addAttribute("paymentStatus", paymentStatus);
 			List<VideoFile> videoFile = dbFileStorageService.getCourseList(cousetitle);

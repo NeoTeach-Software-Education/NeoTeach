@@ -197,7 +197,7 @@ public class AdminPageController {
 					outputStream.write(file.getBytes());
 					outputStream.flush();
 					outputStream.close();
-					String imgLoc = imagelocation + "\\" + file.getOriginalFilename();
+					String imgLoc = "courseimages" + "/" + file.getOriginalFilename();
 					course.setCourseimag(imgLoc);
 				}
 				adminServiceImpl.saveCourse(course);

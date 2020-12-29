@@ -27,6 +27,8 @@ public class DashboardController {
 	@RequestMapping(value = "/dashboard", method = RequestMethod.GET)
 	public String dashboardPage(Model model,HttpSession session) {
 //		String email=session.getAttribute("userEmailSession").toString();
+		ArrayList<PaymentDtls> paymentDtls = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());
+		model.addAttribute("paymentDtls", paymentDtls);
 		return "useraccount";
     }
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)

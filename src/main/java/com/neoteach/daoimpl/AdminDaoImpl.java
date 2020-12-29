@@ -10,7 +10,7 @@ public class AdminDaoImpl {
 	JdbcTemplate jdbcTemplate;
 
 	public void setMaxPacketSize() {
-		jdbcTemplate.execute("SET GLOBAL max_allowed_packet=16*1024*1024");
+		jdbcTemplate.execute("SET GLOBAL max_allowed_packet=30*1024*1024");
 
 	}
 }

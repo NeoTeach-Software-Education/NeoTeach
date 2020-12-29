@@ -50,7 +50,7 @@
 								<div class="form-row">
 									<div class="form-group col-md-6 ">
 										<label>Old Password</label> <input type="tel"
-											class="form-control" name="old_password">
+											class="form-control" name="old_password" required="required">
 
 									</div>
 
@@ -59,13 +59,13 @@
 								<div class="form-row">
 									<div class="form-group col-md-6 ">
 										<label>New Password</label> <input type="tel"
-											class="form-control" name="new_password">
+											class="form-control" name="new_password" required="required">
 									</div>
 								</div>
 								<div class="form-row">
 									<div class="form-group col-md-6 ">
 										<label>Confirm New Password</label> <input type="tel"
-											class="form-control" name="new_password_confirmation">
+											class="form-control" name="new_password_confirmation" required="required">
 
 									</div>
 

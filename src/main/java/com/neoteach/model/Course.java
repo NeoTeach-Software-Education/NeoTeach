@@ -17,20 +17,18 @@ public class Course {
 	private String discountprice;
 	@Column(name = "coursecode")
 	private String coursecode;
-	 @Column(nullable = true, length = 9216)
-	    private String courseimag;
-//	@Lob
-//	private byte[] courseimag;
-//
-//	public byte[] getCourseimag() {
-//		return courseimag;
-//	}
-//
-//	public void setCourseimag(byte[] courseimag) {
-//		this.courseimag = courseimag;
-//	}
-	 
-	 
+	@Column(nullable = true, length = 9216)
+	private String courseimag;
+	@Column(name = "tutorname")
+	private String tutorname;
+
+	public String getTutorname() {
+		return tutorname;
+	}
+
+	public void setTutorname(String tutorname) {
+		this.tutorname = tutorname;
+	}
 
 	public String getCoursename() {
 		return coursename;
@@ -56,7 +54,6 @@ public class Course {
 		this.price = price;
 	}
 
-	
 	public String getCoursecode() {
 		return coursecode;
 	}
@@ -72,5 +69,5 @@ public class Course {
 	public void setDiscountprice(String discountprice) {
 		this.discountprice = discountprice;
 	}
-	
+
 }

@@ -354,6 +354,197 @@
 			</div>
 		</div>
 
+<!-- 		<div class="colorlib-classes"> -->
+<!-- 			<div class="container"> -->
+<!-- 				<div class="row"> -->
+<!-- 					<div -->
+<!-- 						class="col-md-12 colorlib-heading center-heading text-center animate-box"> -->
+<!-- 						<h1 class="heading-big">Our Courses</h1> -->
+<!-- 						<h2>Our Courses</h2> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 				<div class="row"> -->
+<!-- 					<div class="col-md-4 animate-box"> -->
+<!-- 						<div class="classes"> -->
+<!-- 							<div class="classes-img" -->
+<!-- 								style="background-image: url(images/java.jpg);"></div> -->
+<!-- 							<div class="wrap"> -->
+<!-- 								<div class="desc"> -->
+<!-- 									<span class="teacher">David Clarson</span> -->
+<!-- 									<h3> -->
+<!-- 										<a href="#">Core Java</a> -->
+<!-- 									</h3> -->
+<!-- 								</div> -->
+<!-- 								<div class="pricing"> -->
+<%-- 									<c:forEach items="${courceDetails}" var="courceDetails"> --%>
+<%-- 										<c:if test="${courceDetails.coursecode==3}"> --%>
+<!-- 											<p> -->
+<%-- 												<span class="price"> <c:out --%>
+<%-- 														value="${courceDetails.discountprice}"></c:out> --%>
+<%-- 												</span> <span class="price old-price"> <c:out --%>
+<%-- 														value="${courceDetails.price}"></c:out> --%>
+<!-- 												</span> <span class="more"><a href="#"><i -->
+<!-- 														class="icon-link"></i></a></span> -->
+<!-- 											</p> -->
+<%-- 										</c:if> --%>
+<%-- 									</c:forEach> --%>
+
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-md-4 animate-box"> -->
+<!-- 						<div class="classes"> -->
+<!-- 							<div class="classes-img" -->
+<!-- 								style="background-image: url(images/c.png);"></div> -->
+<!-- 							<div class="wrap"> -->
+<!-- 								<div class="desc"> -->
+<!-- 									<span class="teacher">David Clarson</span> -->
+<!-- 									<h3> -->
+<!-- 										<a href="#">C Language</a> -->
+<!-- 									</h3> -->
+<!-- 								</div> -->
+<!-- 								<div class="pricing"> -->
+<%-- 									<c:forEach items="${courceDetails}" var="courceDetails"> --%>
+<%-- 										<c:if test="${courceDetails.coursecode==1}"> --%>
+<!-- 											<p> -->
+<%-- 												<span class="price"> <c:out --%>
+<%-- 														value="${courceDetails.discountprice}"></c:out> --%>
+<%-- 												</span> <span class="price old-price"> <c:out --%>
+<%-- 														value="${courceDetails.price}"></c:out> --%>
+<!-- 												</span> <span class="more"><a href="#"><i -->
+<!-- 														class="icon-link"></i></a></span> -->
+<!-- 											</p> -->
+<%-- 										</c:if> --%>
+<%-- 									</c:forEach> --%>
+
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-md-4 animate-box"> -->
+<!-- 						<div class="classes"> -->
+<!-- 							<div class="classes-img" -->
+<!-- 								style="background-image: url(images/cpp.png);"></div> -->
+<!-- 							<div class="wrap"> -->
+<!-- 								<div class="desc"> -->
+<!-- 									<span class="teacher">David Clarson</span> -->
+<!-- 									<h3> -->
+<!-- 										<a href="#">Cpp Programming Language</a> -->
+<!-- 									</h3> -->
+<!-- 								</div> -->
+<!-- 								<div class="pricing"> -->
+<%-- 									<c:forEach items="${courceDetails}" var="courceDetails"> --%>
+<%-- 										<c:if test="${courceDetails.coursecode==2}"> --%>
+<!-- 											<p> -->
+<%-- 												<span class="price"> <c:out --%>
+<%-- 														value="${courceDetails.discountprice}"></c:out> --%>
+<%-- 												</span> <span class="price old-price"> <c:out --%>
+<%-- 														value="${courceDetails.price}"></c:out> --%>
+<!-- 												</span> <span class="more"><a href="#"><i -->
+<!-- 														class="icon-link"></i></a></span> -->
+<!-- 											</p> -->
+<%-- 										</c:if> --%>
+<%-- 									</c:forEach> --%>
+
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-md-4 animate-box"> -->
+<!-- 						<div class="classes"> -->
+<!-- 							<div class="classes-img" -->
+<!-- 								style="background-image: url(images/python.png);"></div> -->
+<!-- 							<div class="wrap"> -->
+<!-- 								<div class="desc"> -->
+<!-- 									<span class="teacher">David Clarson</span> -->
+<!-- 									<h3> -->
+<!-- 										<a href="#">Python Programming Language</a> -->
+<!-- 									</h3> -->
+<!-- 								</div> -->
+<!-- 								<div class="pricing"> -->
+<%-- 									<c:forEach items="${courceDetails}" var="courceDetails"> --%>
+<%-- 										<c:if test="${courceDetails.coursecode==5}"> --%>
+<!-- 											<p> -->
+<%-- 												<span class="price"> <c:out --%>
+<%-- 														value="${courceDetails.discountprice}"></c:out> --%>
+<%-- 												</span> <span class="price old-price"> <c:out --%>
+<%-- 														value="${courceDetails.price}"></c:out> --%>
+<!-- 												</span> <span class="more"><a href="#"><i -->
+<!-- 														class="icon-link"></i></a></span> -->
+<!-- 											</p> -->
+<%-- 										</c:if> --%>
+<%-- 									</c:forEach> --%>
+
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-md-4 animate-box"> -->
+<!-- 						<div class="classes"> -->
+<!-- 							<div class="classes-img" -->
+<!-- 								style="background-image: url(images/python.png);"></div> -->
+<!-- 							<div class="wrap"> -->
+<!-- 								<div class="desc"> -->
+<!-- 									<span class="teacher">David Clarson</span> -->
+<!-- 									<h3> -->
+<!-- 										<a href="#">Data Structure</a> -->
+<!-- 									</h3> -->
+<!-- 								</div> -->
+<!-- 								<div class="pricing"> -->
+<%-- 									<c:forEach items="${courceDetails}" var="courceDetails"> --%>
+<%-- 										<c:if test="${courceDetails.coursecode==4}"> --%>
+<!-- 											<p> -->
+<%-- 												<span class="price"> <c:out --%>
+<%-- 														value="${courceDetails.discountprice}"></c:out> --%>
+<%-- 												</span> <span class="price old-price"> <c:out --%>
+<%-- 														value="${courceDetails.price}"></c:out> --%>
+<!-- 												</span> <span class="more"><a href="#"><i -->
+<!-- 														class="icon-link"></i></a></span> -->
+<!-- 											</p> -->
+<%-- 										</c:if> --%>
+<%-- 									</c:forEach> --%>
+
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 					<div class="col-md-4 animate-box"> -->
+<!-- 						<div class="classes"> -->
+<!-- 							<div class="classes-img" -->
+<!-- 								style="background-image: url(images/java.jpg);"></div> -->
+<!-- 							<div class="wrap"> -->
+<!-- 								<div class="desc"> -->
+<!-- 									<span class="teacher">David Clarson</span> -->
+<!-- 									<h3> -->
+<!-- 										<a href="#">Adv Java</a> -->
+<!-- 									</h3> -->
+<!-- 								</div> -->
+<!-- 								<div class="pricing"> -->
+<%-- 									<c:forEach items="${courceDetails}" var="courceDetails"> --%>
+<%-- 										<c:if test="${courceDetails.coursecode==6}"> --%>
+<!-- 											<p> -->
+<%-- 												<span class="price"> <c:out --%>
+<%-- 														value="${courceDetails.discountprice}"></c:out> --%>
+<%-- 												</span> <span class="price old-price"> <c:out --%>
+<%-- 														value="${courceDetails.price}"></c:out> --%>
+<!-- 												</span> <span class="more"><a href="#"><i -->
+<!-- 														class="icon-link"></i></a></span> -->
+<!-- 											</p> -->
+<%-- 										</c:if> --%>
+<%-- 									</c:forEach> --%>
+
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+
+
+		<!-- testing started here -->
+
 		<div class="colorlib-classes">
 			<div class="container">
 				<div class="row">
@@ -363,196 +554,46 @@
 						<h2>Our Courses</h2>
 					</div>
 				</div>
-					<div class="row">
-						<div class="col-md-4 animate-box">
-							<div class="classes">
-								<div class="classes-img"
-									style="background-image: url(images/java.jpg);"></div>
-								<div class="wrap">
-									<div class="desc">
-										<span class="teacher">David Clarson</span>
-										<h3>
-											<a href="#">Core Java</a>
-										</h3>
-									</div>
-									<div class="pricing">
-									<c:forEach items="${courceDetails}" var="courceDetails">
-												<c:if test="${courceDetails.coursecode==3}">
-										<p>
-											<span class="price">
-											<c:out value="${courceDetails.discountprice}"></c:out>
-											</span>
-											<span class="price old-price">
-												
-												<c:out value="${courceDetails.price}"></c:out>
-											</span> <span class="more"><a
-												href="#"><i class="icon-link"></i></a></span>
-										</p>
-											</c:if>
-											</c:forEach>
-										
-									</div>
+				<div class="row">
+				<c:forEach items="${courceDetails}" var="courceDetails">
+					<div class="col-md-4 animate-box">
+						<div class="classes">
+							<div class="classes-img"
+								style="background-image: url(${courceDetails.courseimag});"></div>
+							<div class="wrap">
+								<div class="desc">
+									<span class="teacher">${courceDetails.tutorname}</span>
+									<h3>
+										<a href="#">${courceDetails.coursename}</a>
+									</h3>
 								</div>
-							</div>
-						</div>
-						<div class="col-md-4 animate-box">
-							<div class="classes">
-								<div class="classes-img"
-									style="background-image: url(images/c.png);"></div>
-								<div class="wrap">
-									<div class="desc">
-										<span class="teacher">David Clarson</span>
-										<h3>
-											<a href="#">C Language</a>
-										</h3>
-									</div>
-									<div class="pricing">
-									<c:forEach items="${courceDetails}" var="courceDetails">
-												<c:if test="${courceDetails.coursecode==1}">
-										<p>
-											<span class="price">
-											<c:out value="${courceDetails.discountprice}"></c:out>
-											</span>
-											<span class="price old-price">
-												
-												<c:out value="${courceDetails.price}"></c:out>
-											</span> <span class="more"><a
-												href="#"><i class="icon-link"></i></a></span>
-										</p>
-											</c:if>
-											</c:forEach>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 animate-box">
-							<div class="classes">
-								<div class="classes-img"
-									style="background-image: url(images/cpp.png);"></div>
-								<div class="wrap">
-									<div class="desc">
-										<span class="teacher">David Clarson</span>
-										<h3>
-											<a href="#">Cpp Programming Language</a>
-										</h3>
-									</div>
-									<div class="pricing">
-									<c:forEach items="${courceDetails}" var="courceDetails">
-												<c:if test="${courceDetails.coursecode==2}">
-										<p>
-											<span class="price">
-											<c:out value="${courceDetails.discountprice}"></c:out>
-											</span>
-											<span class="price old-price">
-												
-												<c:out value="${courceDetails.price}"></c:out>
-											</span> <span class="more"><a
-												href="#"><i class="icon-link"></i></a></span>
-										</p>
-											</c:if>
-											</c:forEach>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 animate-box">
-							<div class="classes">
-								<div class="classes-img"
-									style="background-image: url(images/python.png);"></div>
-								<div class="wrap">
-									<div class="desc">
-										<span class="teacher">David Clarson</span>
-										<h3>
-											<a href="#">Python Programming Language</a>
-										</h3>
-									</div>
-									<div class="pricing">
-									<c:forEach items="${courceDetails}" var="courceDetails">
-												<c:if test="${courceDetails.coursecode==5}">
-										<p>
-											<span class="price">
-											<c:out value="${courceDetails.discountprice}"></c:out>
-											</span>
-											<span class="price old-price">
-												
-												<c:out value="${courceDetails.price}"></c:out>
-											</span> <span class="more"><a
-												href="#"><i class="icon-link"></i></a></span>
-										</p>
-											</c:if>
-											</c:forEach>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 animate-box">
-							<div class="classes">
-								<div class="classes-img"
-									style="background-image: url(images/python.png);"></div>
-								<div class="wrap">
-									<div class="desc">
-										<span class="teacher">David Clarson</span>
-										<h3>
-											<a href="#">Data Structure</a>
-										</h3>
-									</div>
-									<div class="pricing">
-									<c:forEach items="${courceDetails}" var="courceDetails">
-												<c:if test="${courceDetails.coursecode==4}">
-										<p>
-											<span class="price">
-											<c:out value="${courceDetails.discountprice}"></c:out>
-											</span>
-											<span class="price old-price">
-												
-												<c:out value="${courceDetails.price}"></c:out>
-											</span> <span class="more"><a
-												href="#"><i class="icon-link"></i></a></span>
-										</p>
-											</c:if>
-											</c:forEach>
-										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 animate-box">
-							<div class="classes">
-								<div class="classes-img"
-									style="background-image: url(images/java.jpg);"></div>
-								<div class="wrap">
-									<div class="desc">
-										<span class="teacher">David Clarson</span>
-										<h3>
-											<a href="#">Adv Java</a>
-										</h3>
-									</div>
-									<div class="pricing">
-									<c:forEach items="${courceDetails}" var="courceDetails">
-												<c:if test="${courceDetails.coursecode==6}">
-										<p>
-											<span class="price">
-											<c:out value="${courceDetails.discountprice}"></c:out>
-											</span>
-											<span class="price old-price">
-												
-												<c:out value="${courceDetails.price}"></c:out>
-											</span> <span class="more"><a
-												href="#"><i class="icon-link"></i></a></span>
-										</p>
-											</c:if>
-											</c:forEach>
-										
-									</div>
+								<div class="pricing">
+<%-- 										<c:if test="${courceDetails.coursecode==3}"> --%>
+											<p>
+												<span class="price"> <c:out
+														value="${courceDetails.discountprice}"></c:out>
+												</span> <span class="price old-price"> <c:out
+														value="${courceDetails.price}"></c:out>
+												</span> <span class="more"><a href="#"><i
+														class="icon-link"></i></a></span>
+											</p>
+<%-- 										</c:if> --%>
 								</div>
 							</div>
 						</div>
 					</div>
+					</c:forEach>
+				</div>
 			</div>
 		</div>
+
+		<!-- testing end here -->
+
+
+
+
+
+
 
 
 
