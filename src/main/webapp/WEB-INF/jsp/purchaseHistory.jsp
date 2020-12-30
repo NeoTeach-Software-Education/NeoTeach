@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,11 +29,7 @@
 				<%@ include file="left.jsp"%>
 
 				<div class="col-9">
-					<!--                 <div class="alert alert-danger"> -->
-					<!--         <i class="la la-info-circle"></i> Restriction area, permission denied -->
-					<!--     </div> -->
-
-					<%--                     <input type="hidden" name="userEmail" value="${encodedEmail}"> --%>
+					<h4 class="mb-3">Purchase History</h4>
 					<div>
 						<h5>${successMessage}</h5>
 					</div>
@@ -42,33 +38,33 @@
 					</div>
 
 
-						<table class="table table-striped">
-							<thead>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>SNo</th>
+								<th>Course Name</th>
+								<th>Enrolled On</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<%--     <c:set var="count" value="0" scope="page" /> --%>
+							<c:forEach items="${purchaseHistory}" var="paymentDtls" begin="0"
+								end="1">
 								<tr>
-									<th>SNo</th>
-									<th>Course Name</th>
-									<th>Enrolled On</th>
-									<th>Action</th>
+									<td><c:set var="count" value="${count + 1}" scope="page" />
+										<c:out value="${count}" /></td>
+									<td>${paymentDtls.courseName}</td>
+									<td>${paymentDtls.paid_on}</td>
+									<td><a href="/purchaseDtls?orderId=${paymentDtls.orderId}"
+										class="btn btn-primary a-btn-slide-text"> <span
+											class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+											<span><strong>History</strong></span>
+									</a></td>
 								</tr>
-							</thead>
-							<tbody>
-								<%--     <c:set var="count" value="0" scope="page" /> --%>
-								<c:forEach items="${purchaseHistory}" var="paymentDtls" begin="0" end="1">
-									<tr>
-										<td><c:set var="count" value="${count + 1}" scope="page" />
-											<c:out value="${count}" /></td>
-										<td>${paymentDtls.courseName}</td>
-										<td>${paymentDtls.paid_on}</td>
-										<td><a
-											href="/purchaseDtls?orderId=${paymentDtls.orderId}"
-											class="btn btn-primary a-btn-slide-text"> <span
-												class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-												<span><strong>History</strong></span>
-										</a></td>
-									</tr>
-								</c:forEach>
-							</tbody>
-						</table>
+							</c:forEach>
+						</tbody>
+					</table>
 
 
 				</div>

@@ -29,6 +29,7 @@
 				<%@ include file="left.jsp"%>
 
 				<div class="col-9">
+				<h4 class="mb-3">Course Purchase History</h4>
 					<!--                 <div class="alert alert-danger"> -->
 					<!--         <i class="la la-info-circle"></i> Restriction area, permission denied -->
 					<!--     </div> -->
@@ -50,7 +51,7 @@
 							</tr>
 							<tr>
 								<td>Course fee:</td>
-								<td>${purchaseDetails.amount}</td>
+								<td>Rs ${purchaseDetails.amount/100}0</td>
 							</tr>
 							<tr>
 								<td>Paid on:</td>
@@ -59,6 +60,10 @@
 							<tr>
 								<td>Payment method:</td>
 								<td>${purchaseDetails.method}</td>
+							</tr>
+							<tr>
+								<td>Bank Name:</td>
+								<td>${purchaseDetails.bank}</td>
 							</tr>
 							<%-- 								</c:forEach> --%>
 						</tbody>

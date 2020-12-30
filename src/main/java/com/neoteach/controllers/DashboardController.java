@@ -85,7 +85,7 @@ public class DashboardController {
 	public String retriveEnrolledCourses(HttpSession session,Model model) {
 		ArrayList<PaymentDtls> paymentDtls = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());
 		model.addAttribute("paymentDtls", paymentDtls);
-		return "useraccount";
+		return "enrolledcourses";
     }
 	@RequestMapping(value = "/purchaseHistory", method = RequestMethod.GET)
 	public String retrivepurchaseHistory(HttpSession session,Model model) {
