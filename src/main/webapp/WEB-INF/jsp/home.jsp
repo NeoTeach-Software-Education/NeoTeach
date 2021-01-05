@@ -590,15 +590,6 @@
 		<!-- testing end here -->
 
 
-
-
-
-
-
-
-
-
-
 		<%@ include file="footer.jsp"%>
 	</div>
 

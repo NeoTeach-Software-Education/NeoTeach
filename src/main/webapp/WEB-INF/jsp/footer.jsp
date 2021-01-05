@@ -25,11 +25,11 @@
 						<h4>Online Training</h4>
 						<p>
 							<ul class="colorlib-footer-links">
-								<li><a href="#"><i class="icon-check"></i> C-Language</a></li>
-								<li><a href="#"><i class="icon-check"></i> Core Java</a></li>
-								<li><a href="#"><i class="icon-check"></i> Adv.Java</a></li>
-								<li><a href="#"><i class="icon-check"></i> Python</a></li>
-								<li><a href="#"><i class="icon-check"></i> Data Structures</a></li>
+								<li><a href="/course?coursetitle=1"><i class="icon-check"></i> C-Language</a></li>
+								<li><a href="/course?coursetitle=3"><i class="icon-check"></i> Core Java</a></li>
+								<li><a href="/course?coursetitle=6"><i class="icon-check"></i> Adv.Java</a></li>
+								<li><a href="/course?coursetitle=5"><i class="icon-check"></i> Python</a></li>
+								<li><a href="/course?coursetitle=4"><i class="icon-check"></i> Data Structures</a></li>
 							</ul>
 						</p>
 					</div>
@@ -37,11 +37,11 @@
 						<h4>Useful Links</h4>
 						<p>
 							<ul class="colorlib-footer-links">
-								<li><a href="#"><i class="icon-check"></i> Home</a></li>
-								<li><a href="#"><i class="icon-check"></i>About Us</a></li>
-								<li><a href="#"><i class="icon-check"></i> Courses</a></li>
-								<li><a href="#"><i class="icon-check"></i> Contact Us</a></li>
-								<li><a href="#"><i class="icon-check"></i> Sign Up</a></li>
+								<li><a href="/"><i class="icon-check"></i> Home</a></li>
+								<li><a href="/about"><i class="icon-check"></i>About Us</a></li>
+								<li><a href="#colorlib-services"><i class="icon-check"></i> Courses</a></li>
+								<li><a href="/contact"><i class="icon-check"></i> Contact Us</a></li>
+								<li><a href="/register"><i class="icon-check"></i> Sign Up</a></li>
 							</ul>
 						</p>
 					</div>
@@ -50,11 +50,11 @@
 						<h4>Offline Classes</h4>
 						<p>
 							<ul class="colorlib-footer-links">
-								<li><a href="#"><i class="icon-check"></i> BTech all Strems</a></li>
-								<li><a href="#"><i class="icon-check"></i> Inter &amp; 10+2</a></li>
-								<li><a href="#"><i class="icon-check"></i> School Tuitions </a></li>
-								<li><a href="#"><i class="icon-check"></i> One to One classes</a></li>
-								<li><a href="#"><i class="icon-check"></i> Home Tuitions</a></li>
+								<li><a href="/classenqire"><i class="icon-check"></i> BTech all Strems</a></li>
+								<li><a href="/classenqire"><i class="icon-check"></i> Inter &amp; 10+2</a></li>
+								<li><a href="/classenqire"><i class="icon-check"></i> School Tuitions </a></li>
+								<li><a href="/classenqire"><i class="icon-check"></i> One to One classes</a></li>
+								<li><a href="/classenqire"><i class="icon-check"></i> Home Tuitions</a></li>
 							</ul>
 						</p>
 					</div>
@@ -62,18 +62,18 @@
 					<div class="col-md-3 colorlib-widget">
 						<h4>Special</h4>
 						<div class="f-blog">
-							<a href="#" class="blog-img" style="background-image: url(images/blog-1.jpg);">
+							<a href="/classenqire" class="blog-img" style="background-image: url(images/blog-1.jpg);">
 							</a>
 							<div class="desc">
-								<h2><a href="#">Online live class </a></h2>
+								<h2><a href="/classenqire">Online live class </a></h2>
 								<p class="admin"><span>interactive classes</span></p>
 							</div>
 						</div>
 						<div class="f-blog">
-							<a href="#" class="blog-img" style="background-image: url(images/blog-2.jpg);">
+							<a href="/classenqire" class="blog-img" style="background-image: url(images/blog-2.jpg);">
 							</a>
 							<div class="desc">
-								<h2><a href="#">Class Room Tuitions</a></h2>
+								<h2><a href="/classenqire">Class Room Tuitions</a></h2>
 								<p class="admin"><span>ICSE,SSC&amp; CBSE</span></p>
 							</div>
 						</div>

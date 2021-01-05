@@ -52,11 +52,12 @@
 								<li class="active"><a href="/about">About</a></li>
 								<li class="has-dropdown"><a href="#colorlib-services">Courses</a>
 									<ul class="dropdown">
-										<li><a href="courses-single.html">C-Language</a></li>
-										<li><a href="#">DS</a></li>
-										<li><a href="#">Cpp</a></li>
-										<li><a href="#">Core Java</a></li>
-										<li><a href="#">Adv Java</a></li>
+										<li><a href="/course?coursetitle=1">C-Language</a></li>
+										<li><a href="/course?coursetitle=2">Cpp</a></li>
+										<li><a href="/course?coursetitle=3">Core Java</a></li>
+										<li><a href="/course?coursetitle=4">DS</a></li>
+										<li><a href="/course?coursetitle=5">Python</a></li>
+										<li><a href="/course?coursetitle=6">Adv Java</a></li>
 									</ul></li>
 								<li><a href="/teachers">Teachers</a></li>
 								<!-- 								<li><a href="event.html">Events</a></li> -->
