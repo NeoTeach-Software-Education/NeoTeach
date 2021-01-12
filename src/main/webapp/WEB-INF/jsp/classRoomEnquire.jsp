@@ -26,50 +26,6 @@
 </head>
 <body class="">
 
-	<!-- <div class="main-navbar-wrap"> -->
-
-
-	<!--     <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
-
-	<!--         <div class="container"> -->
-	<!--             <a class="navbar-brand site-main-logo" href="/"> -->
-
-	<!--                                     <img src="images/logo.png" alt="NeoTeach" /> -->
-	<!--                             </a> -->
-	<!--             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbarContent" aria-controls="mainNavbarContent" aria-expanded="false" aria-label="Toggle navigation"> -->
-	<!--                 <span class="navbar-toggler-icon"></span> -->
-	<!--             </button> -->
-
-	<!--             <div class="collapse navbar-collapse" id="mainNavbarContent"> -->
-
-
-	<!--                 <ul class="navbar-nav main-nav-auth-profile-wrap justify-content-end mt-2 mt-lg-0 flex-grow-1"> -->
-
-	<!--                     <li class="nav-item dropdown mini-cart-item"> -->
-	<!--                         <a class="nav-link" href="javascript:;" id="miniCartDropDown"> -->
-	<!--     <div class="text-center"> -->
-	<!--         <i class="la la-shopping-cart"></i> -->
-	<!--             </div> -->
-	<!-- </a> -->
-
-
-	<!--                     </li> -->
-
-	<!--                                             <li class="nav-item mr-2 ml-2"> -->
-	<!--                             <a class="nav-link btn btn-login-outline" href="/login"> <i class="la la-sign-in"></i> Log In</a> -->
-	<!--                         </li> -->
-	<!--                         <li class="nav-item"> -->
-	<!--                             <a class="nav-link btn btn-theme-primary" href="/register"> <i class="la la-user-plus"></i> Sign Up</a> -->
-	<!--                         </li> -->
-
-	<!--                 </ul> -->
-
-	<!--             </div> -->
-	<!--         </div> -->
-
-	<!--     </nav> -->
-
-	<!-- </div> -->
 	<c:if test="${sessionScope.userEmailSession == null}">
 		<%@ include file="headerLogout.jsp"%>
 	</c:if>
@@ -96,7 +52,8 @@
 
 							<div class="col-md-6">
 								<input id="name" type="text" class="form-control"
-									name="fullName" value="" required autofocus>
+									name="fullName" value="" required autofocus pattern="[a-zA-Z]{3,15}"
+        title="Name should only contain at least 3 letters. e.g. Sri">
 
 							</div>
 						</div>
@@ -106,7 +63,8 @@
 
 							<div class="col-md-6">
 								<input id="phone" type="text" class="form-control" name="phone"
-									value="" required>
+									value="" pattern="[789][0-9]{9}"
+           required="required" title="Phone number should only start with 6/7/8/9 and 10 digits only . e.g. 9595959595">
 
 							</div>
 						</div>
@@ -126,7 +84,8 @@
 
 							<div class="col-md-6">
 								<input id="course" type="text" class="form-control"
-									name="course" value="" required>
+									name="course" value="" required autofocus pattern="[a-zA-Z]{3,15}"
+        title="Course name should only contain letters min 3. e.g. Java">
 
 							</div>
 						</div>
@@ -139,34 +98,6 @@
 
 							</div>
 						</div>
-
-
-
-						<!--                     <div class="form-group row "> -->
-						<!--                         <label for="password" class="col-md-4 control-label">Password</label> -->
-
-						<!--                         <div class="col-md-6"> -->
-						<!--                             <input id="password" type="password" class="form-control" name="password" required> -->
-
-						<!--                                                     </div> -->
-						<!--                     </div> -->
-
-						<!--                     <div class="form-group row "> -->
-						<!--                         <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label> -->
-
-						<!--                         <div class="col-md-6"> -->
-						<!--                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required> -->
-						<!--                         </div> -->
-						<!--                     </div> -->
-
-						<!--                     <div class="form-group row "> -->
-						<!--                         <label for="password-confirm" class="col-md-4 control-label">I am</label> -->
-
-						<!--                         <div class="col-md-6"> -->
-						<!--                             <label class="mr-3"><input type="radio" name="user_as" value="student" checked> Student </label> -->
-						<!--                             <label><input type="radio" name="user_as" value="instructor"  > Instructor </label> -->
-						<!--                         </div> -->
-						<!--                     </div> -->
 
 						<div class="form-group row ">
 							<div class="col-md-6 offset-4">

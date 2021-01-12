@@ -50,14 +50,6 @@
 							<div class="col-md-8">
 								<form name="passwordForm" action="/reset" method="post">
 									<input type="hidden" name="token" value=${resetToken}>
-									<!--                                 <div class="form-group row"> -->
-									<!--                                     <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label> -->
-
-									<!--                                     <div class="col-md-8"> -->
-									<!--                                         <input id="email" type="email" class="form-control" name="username"  required autofocus> -->
-
-									<!--                                                                             </div> -->
-									<!--                                 </div> -->
 
 									<div class="form-group row">
 										<label for="password"

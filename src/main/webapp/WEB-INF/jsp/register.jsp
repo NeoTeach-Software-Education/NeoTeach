@@ -45,7 +45,8 @@
                         <label for="name" class="col-md-4 control-label">Name</label>
 
                         <div class="col-md-6">
-                            <input id="name" type="text" class="form-control" name="fullName" value="" required autofocus>
+                            <input id="name" type="text" class="form-control" name="fullName" value="" required autofocus pattern="[a-zA-Z]{3,15}"
+        title="Name should only contain at least 3 letters. e.g. Sri">
 
                         </div>
                     </div>
@@ -54,7 +55,8 @@
                         <label for="phone" class="col-md-4 control-label">Phone</label>
 
                         <div class="col-md-6">
-                            <input id="phone" type="text" class="form-control" name="phone" value="" required>
+                            <input id="phone" type="text" class="form-control" name="phone" value=""  pattern="[789][0-9]{9}"
+           required="required" title="Phone number should only start with 6/7/8/9 and 10 digits only . e.g. 9595959595">
 
                         </div>
                     </div>
@@ -68,31 +70,6 @@
                        </div>
                     </div>
 
-<!--                     <div class="form-group row "> -->
-<!--                         <label for="password" class="col-md-4 control-label">Password</label> -->
-
-<!--                         <div class="col-md-6"> -->
-<!--                             <input id="password" type="password" class="form-control" name="password" required> -->
-
-<!--                                                     </div> -->
-<!--                     </div> -->
-
-<!--                     <div class="form-group row "> -->
-<!--                         <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label> -->
-
-<!--                         <div class="col-md-6"> -->
-<!--                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required> -->
-<!--                         </div> -->
-<!--                     </div> -->
-
-<!--                     <div class="form-group row "> -->
-<!--                         <label for="password-confirm" class="col-md-4 control-label">I am</label> -->
-
-<!--                         <div class="col-md-6"> -->
-<!--                             <label class="mr-3"><input type="radio" name="user_as" value="student" checked> Student </label> -->
-<!--                             <label><input type="radio" name="user_as" value="instructor"  > Instructor </label> -->
-<!--                         </div> -->
-<!--                     </div> -->
 
                     <div class="form-group row ">
                         <div class="col-md-6 offset-4">

@@ -1950,7 +1950,7 @@ User Profile Page
 .main_cart{
 	font-size: 15px;
 }
-///////////////////////////////// home page style.css starts here/////////////////
+/*// home page style.css starts here/////////////////*/
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -3746,4 +3746,4 @@ input[type="text"] {
 
 .js .animate-box {
   opacity: 0; }
-///////////////home page style.css ends here/////////////////////////////////////
+/*//////////////home page style.css ends here////////////////////////////////////*/

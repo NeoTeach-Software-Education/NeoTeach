@@ -45,8 +45,8 @@
 
 
 								<form name="userloginform" action="/login" method="post">
-									<input type="hidden" name="_token"
-										value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt">
+<!-- 									<input type="hidden" name="_token" -->
+<!-- 										value="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
 									<div class="form-group row">
 										<label for="email"
 											class="col-sm-4 col-form-label text-md-right">E-Mail

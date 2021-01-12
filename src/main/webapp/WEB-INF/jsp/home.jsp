@@ -190,12 +190,12 @@
 								<!-- 										data-course-id="14"> -->
 								<!-- 										<i class="la la-shopping-cart"></i> Add to cart -->
 								<!-- 									</button> -->
-								<button class="btn btn-sm btn-theme-primary my-cart-btn"
-									data-id="1" data-name="Core Java" data-summary="summary 1"
-									data-price="15" data-quantity="1"
-									data-image="cart/images/img_1.png">
-									<i class="la la-shopping-cart"></i>Add to Cart
-								</button>
+<!-- 								<button class="btn btn-sm btn-theme-primary my-cart-btn" -->
+<!-- 									data-id="1" data-name="Core Java" data-summary="summary 1" -->
+<!-- 									data-price="15" data-quantity="1" -->
+<!-- 									data-image="cart/images/img_1.png"> -->
+<!-- 									<i class="la la-shopping-cart"></i>Add to Cart -->
+<!-- 								</button> -->
 								<!-- 								</div> -->
 
 							</div>
@@ -209,12 +209,12 @@
 										</h3>
 									</div>
 								</a>
-								<button class="btn btn-sm btn-theme-primary my-cart-btn"
-									data-id="2" data-name="C-Language" data-summary="summary 2"
-									data-price="20" data-quantity="1"
-									data-image="cart/images/img_2.png">
-									<i class="la la-shopping-cart"></i>Add to Cart
-								</button>
+<!-- 								<button class="btn btn-sm btn-theme-primary my-cart-btn" -->
+<!-- 									data-id="2" data-name="C-Language" data-summary="summary 2" -->
+<!-- 									data-price="20" data-quantity="1" -->
+<!-- 									data-image="cart/images/img_2.png"> -->
+<!-- 									<i class="la la-shopping-cart"></i>Add to Cart -->
+<!-- 								</button> -->
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
 								<a href="/course?coursetitle=2" class="services"> <span
@@ -226,12 +226,12 @@
 										</h3>
 									</div>
 								</a>
-								<button class="btn btn-sm btn-theme-primary my-cart-btn"
-									data-id="3" data-name="Cpp" data-summary="summary 3"
-									data-price="30" data-quantity="1"
-									data-image="cart/images/img_3.png">
-									<i class="la la-shopping-cart"></i>Add to Cart
-								</button>
+<!-- 								<button class="btn btn-sm btn-theme-primary my-cart-btn" -->
+<!-- 									data-id="3" data-name="Cpp" data-summary="summary 3" -->
+<!-- 									data-price="30" data-quantity="1" -->
+<!-- 									data-image="cart/images/img_3.png"> -->
+<!-- 									<i class="la la-shopping-cart"></i>Add to Cart -->
+<!-- 								</button> -->
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
 								<a href="/course?coursetitle=4" class="services"> <span
@@ -243,12 +243,12 @@
 										</h3>
 									</div>
 								</a>
-								<button class="btn btn-sm btn-theme-primary my-cart-btn"
-									data-id="4" data-name="DS" data-summary="summary 4"
-									data-price="40" data-quantity="1"
-									data-image="cart/images/img_4.png">
-									<i class="la la-shopping-cart"></i>Add to Cart
-								</button>
+<!-- 								<button class="btn btn-sm btn-theme-primary my-cart-btn" -->
+<!-- 									data-id="4" data-name="DS" data-summary="summary 4" -->
+<!-- 									data-price="40" data-quantity="1" -->
+<!-- 									data-image="cart/images/img_4.png"> -->
+<!-- 									<i class="la la-shopping-cart"></i>Add to Cart -->
+<!-- 								</button> -->
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
 								<a href="/course?coursetitle=5" class="services"> <span
@@ -260,12 +260,12 @@
 										</h3>
 									</div>
 								</a>
-								<button class="btn btn-sm btn-theme-primary my-cart-btn"
-									data-id="5" data-name="Python" data-summary="summary 5"
-									data-price="50" data-quantity="1"
-									data-image="cart/images/img_5.png">
-									<i class="la la-shopping-cart"></i>Add to Cart
-								</button>
+<!-- 								<button class="btn btn-sm btn-theme-primary my-cart-btn" -->
+<!-- 									data-id="5" data-name="Python" data-summary="summary 5" -->
+<!-- 									data-price="50" data-quantity="1" -->
+<!-- 									data-image="cart/images/img_5.png"> -->
+<!-- 									<i class="la la-shopping-cart"></i>Add to Cart -->
+<!-- 								</button> -->
 							</div>
 							<div class="col-md-2 col-sm-6 text-center animate-box">
 								<a href="/course?coursetitle=6" class="services"> <span
@@ -277,12 +277,12 @@
 										</h3>
 									</div>
 								</a>
-								<button class="btn btn-sm btn-theme-primary my-cart-btn"
-									data-id="6" data-name="Adv Java" data-summary="summary 6"
-									data-price="150" data-quantity="1"
-									data-image="cart/images/img.png">
-									<i class="la la-shopping-cart"></i>Add to Cart
-								</button>
+<!-- 								<button class="btn btn-sm btn-theme-primary my-cart-btn" -->
+<!-- 									data-id="6" data-name="Adv Java" data-summary="summary 6" -->
+<!-- 									data-price="150" data-quantity="1" -->
+<!-- 									data-image="cart/images/img.png"> -->
+<!-- 									<i class="la la-shopping-cart"></i>Add to Cart -->
+<!-- 								</button> -->
 							</div>
 						</div>
 					</div>
@@ -558,13 +558,13 @@
 				<c:forEach items="${courceDetails}" var="courceDetails">
 					<div class="col-md-4 animate-box">
 						<div class="classes">
-							<div class="classes-img"
-								style="background-image: url(${courceDetails.courseimag});"></div>
+							<a href="/course?coursetitle=${courceDetails.coursecode}"><div class="classes-img"
+								style="background-image: url(${courceDetails.courseimag});"></div></a>
 							<div class="wrap">
 								<div class="desc">
 									<span class="teacher">${courceDetails.tutorname}</span>
 									<h3>
-										<a href="#">${courceDetails.coursename}</a>
+										<a href="/course?coursetitle=${courceDetails.coursecode}">${courceDetails.coursename}</a>
 									</h3>
 								</div>
 								<div class="pricing">
@@ -574,8 +574,8 @@
 														value="${courceDetails.discountprice}"></c:out>
 												</span> <span class="price old-price"> <c:out
 														value="${courceDetails.price}"></c:out>
-												</span> <span class="more"><a href="#"><i
-														class="icon-link"></i></a></span>
+												</span> <span class="more"><a href="/course?coursetitle=${courceDetails.coursecode}">
+												<i class="icon-link"></i>Enroll Now</a></span>
 											</p>
 <%-- 										</c:if> --%>
 								</div>

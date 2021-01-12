@@ -19,9 +19,6 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/line-awesome.min.css">
 
-<link rel="stylesheet"
-	href="https://zenoxpro.com/public/assets/plugins/video-js/video-js.min.css">
-
 <!-- style css -->
 <link rel="stylesheet" href="css/style.css">
 <!-- modernizr css -->
@@ -53,7 +50,7 @@
 							<span class="created-by mr-3"> <i class="la la-user"></i>
 								Created by NeoTeach
 							</span> <span class="last-updated-at"> <i class="la la-clock"></i>
-								Last Updated 26/06/2020 15:31
+								Last Updated 11/01/2021 15:31
 							</span>
 						</p>
 
@@ -113,7 +110,7 @@
 
 									<ul>
 										<li><i class="la la-video"></i> 8:59:00 on-demand video</li>
-										<li><i class="la la-book"></i> 3 Lectures</li>
+										<li><i class="la la-book"></i>${videoFile.size()} Lectures</li>
 										<li><i class="la la-mobile"></i> Access on tablet and
 											phone</li>
 										<li><i class="la la-certificate"></i> Certificate of
@@ -204,7 +201,7 @@
 							<div
 								class="course-section-header bg-light p-3 border-bottom d-flex">
 								<span class="course-section-name flex-grow-1 ml-2"> <strong>
-										<i class="la la-minus"></i> Core Java Basics
+										<i class="la la-minus"></i> C Language Basics
 								</strong>
 								</span> <span class="course-section-lecture-count"> 2 Lectures </span>
 							</div>
@@ -230,136 +227,6 @@
 											class="section-item-duration ml-auto"> 6:30:00 </span>
 									</p>
 
-								</div>
-								<!-- 								<div class="course-curriculum-item border-bottom pl-4 d-flex"> -->
-								<!-- 									<p class="curriculum-item-title m-0 flex-grow-1"> -->
-
-								<!-- 										<a -->
-								<!-- 											href="https://zenoxpro.com/public/index.php/courses/python-course/quiz/150"> -->
-								<!-- 											<span class="curriculum-item-icon mr-2"> <i -->
-								<!-- 												class='la la-tasks'></i> -->
-								<!-- 										</span> <span class="curriculum-item-title"> Java Basics -->
-								<!-- 												Quizz </span> -->
-								<!-- 										</a> -->
-								<!-- 									</p> -->
-
-								<!-- 									<p class="course-section-item-details d-flex m-0"> -->
-								<!-- 										<span class="section-item-preview flex-grow-1"> </span> <span -->
-								<!-- 											class="section-item-duration ml-auto"> </span> -->
-								<!-- 									</p> -->
-
-								<!-- 								</div> -->
-
-							</div>
-
-						</div>
-
-						<!-- 						<div id="course-section-24" -->
-						<!-- 							class="course-section bg-white border mb-2"> -->
-
-						<!-- 							<div -->
-						<!-- 								class="course-section-header bg-light p-3 border-bottom d-flex"> -->
-						<!-- 								<span class="course-section-name flex-grow-1 ml-2"> <strong> -->
-						<!-- 										<i class="la la-plus"></i> Java OOPs -->
-						<!-- 								</strong> -->
-						<!-- 								</span> <span class="course-section-lecture-count"> 2 Lectures </span> -->
-						<!-- 							</div> -->
-
-						<!-- 							<div class="course-section-body" style="display: none;"> -->
-
-						<!-- 								<div class="course-curriculum-item border-bottom pl-4 d-flex"> -->
-						<!-- 									<p class="curriculum-item-title m-0 flex-grow-1"> -->
-
-						<!-- 										<a -->
-						<!-- 											href="https://zenoxpro.com/public/index.php/courses/python-course/lecture/57"> -->
-						<!-- 											<span class="curriculum-item-icon mr-2"> <i -->
-						<!-- 												class='la la-youtube'></i> -->
-						<!-- 										</span> <span class="curriculum-item-title"> Exception Handling  </span> -->
-						<!-- 										</a> -->
-						<!-- 									</p> -->
-
-						<!-- 									<p class="course-section-item-details d-flex m-0"> -->
-						<!-- 										<span class="section-item-preview flex-grow-1"> </span> <span -->
-						<!-- 											class="section-item-duration ml-auto"> 8:59:00 </span> -->
-						<!-- 									</p> -->
-
-						<!-- 								</div> -->
-						<!-- 								<div class="course-curriculum-item border-bottom pl-4 d-flex"> -->
-						<!-- 									<p class="curriculum-item-title m-0 flex-grow-1"> -->
-
-						<!-- 										<a -->
-						<!-- 											href="https://zenoxpro.com/public/index.php/courses/python-course/quiz/151"> -->
-						<!-- 											<span class="curriculum-item-icon mr-2"> <i -->
-						<!-- 												class='la la-tasks'></i> -->
-						<!-- 										</span> <span class="curriculum-item-title"> Exception Handling  Quizz </span> -->
-						<!-- 										</a> -->
-						<!-- 									</p> -->
-
-						<!-- 									<p class="course-section-item-details d-flex m-0"> -->
-						<!-- 										<span class="section-item-preview flex-grow-1"> </span> <span -->
-						<!-- 											class="section-item-duration ml-auto"> </span> -->
-						<!-- 									</p> -->
-
-						<!-- 								</div> -->
-
-						<!-- 							</div> -->
-
-						<!-- 						</div> -->
-
-						<!-- 						<div id="course-section-25" -->
-						<!-- 							class="course-section bg-white border mb-2"> -->
-
-						<!-- 							<div -->
-						<!-- 								class="course-section-header bg-light p-3 border-bottom d-flex"> -->
-						<!-- 								<span class="course-section-name flex-grow-1 ml-2"> <strong> -->
-						<!-- 										<i class="la la-plus"></i> Packages &amp; Interfaces -->
-						<!-- 								</strong> -->
-						<!-- 								</span> <span class="course-section-lecture-count"> 2 Lectures </span> -->
-						<!-- 							</div> -->
-
-						<!-- 							<div class="course-section-body" style="display: none;"> -->
-
-						<!-- 								<div class="course-curriculum-item border-bottom pl-4 d-flex"> -->
-						<!-- 									<p class="curriculum-item-title m-0 flex-grow-1"> -->
-
-						<!-- 										<a -->
-						<!-- 											href="https://zenoxpro.com/public/index.php/courses/python-course/lecture/58"> -->
-						<!-- 											<span class="curriculum-item-icon mr-2"> <i -->
-						<!-- 												class='la la-youtube'></i> -->
-						<!-- 										</span> <span class="curriculum-item-title"> Abstract class  -->
-						<!-- 												 </span> -->
-						<!-- 										</a> -->
-						<!-- 									</p> -->
-
-						<!-- 									<p class="course-section-item-details d-flex m-0"> -->
-						<!-- 										<span class="section-item-preview flex-grow-1"> </span> <span -->
-						<!-- 											class="section-item-duration ml-auto"> 1:20:00 </span> -->
-						<!-- 									</p> -->
-
-						<!-- 								</div> -->
-						<!-- 								<div class="course-curriculum-item border-bottom pl-4 d-flex"> -->
-						<!-- 									<p class="curriculum-item-title m-0 flex-grow-1"> -->
-
-						<!-- 										<a -->
-						<!-- 											href="https://zenoxpro.com/public/index.php/courses/python-course/quiz/152"> -->
-						<!-- 											<span class="curriculum-item-icon mr-2"> <i -->
-						<!-- 												class='la la-tasks'></i> -->
-						<!-- 										</span> <span class="curriculum-item-title"> Threads -->
-						<!-- 												&amp; Collections </span> -->
-						<!-- 										</a> -->
-						<!-- 									</p> -->
-
-						<!-- 									<p class="course-section-item-details d-flex m-0"> -->
-						<!-- 										<span class="section-item-preview flex-grow-1"> </span> <span -->
-						<!-- 											class="section-item-duration ml-auto"> </span> -->
-						<!-- 									</p> -->
-
-						<!-- 								</div> -->
-
-						<!-- 							</div> -->
-
-						<!-- 						</div> -->
-
 					</div>
 
 					<h4 class="mb-4">Requirements</h4>
@@ -377,12 +244,9 @@
 
 						<div class="content-expand-wrap">
 							<div class="content-expand-inner">
-								<p>Python Which is an Open Source, non-compiled &amp;
-									Scripting Language Plays a Vital Role in Data Science since it
-									is Fast, Easy to Use and Good Compatibility with Machine Code
-									&amp; Supported by its vast resource of Libraries and Functions
-									hence have become 1 of Top Programming Language for Machine
-									Learning or Machine Level Programming.</p>
+								<p>C Language is a basic and general purpose programming Language &amp;
+								used to develop the Software Applications 
+									&amp;it is a simple programming language easy to learn and develop the programs.</p>
 
 								<p>Python is being Used by top companies like Google, Intel,
 									Twitter etc to Power their Applications, hence rapidly being
