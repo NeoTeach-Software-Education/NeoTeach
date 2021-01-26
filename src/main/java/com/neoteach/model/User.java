@@ -1,5 +1,6 @@
 package com.neoteach.model;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -28,7 +29,7 @@ public class User {
 	@Column(name = "enabled")
 	private boolean enabled;
 	@Column(name = "created_on")
-	private Date createdOn;
+	private LocalDateTime created_on;
 	@Column(name = "last_login")
 	private Date lastLogin;
 	@Column(name = "reset_token")
@@ -39,19 +40,12 @@ public class User {
 	private String city;
 	@Column(name = "pin")
 	private String pin;
-	@Column(name = "aboutMe")
-	private String aboutMe;
+	@Column(name = "about_me")
+	private String about_me;
 	@Column(name = "qualification")
 	private String qualification;
 
-	public String getAboutMe() {
-		return aboutMe;
-	}
-
-	public void setAboutMe(String aboutMe) {
-		this.aboutMe = aboutMe;
-	}
-
+	
 	@Column(name = "countryId")
 	private String countryId;
 	@Lob
@@ -73,8 +67,20 @@ public class User {
 		this.countryId = countryId;
 	}
 
-	public Date getCreatedOn() {
-		return createdOn;
+	public LocalDateTime getCreated_on() {
+		return created_on;
+	}
+
+	public void setCreated_on(LocalDateTime created_on) {
+		this.created_on = created_on;
+	}
+
+	public String getAbout_me() {
+		return about_me;
+	}
+
+	public void setAbout_me(String about_me) {
+		this.about_me = about_me;
 	}
 
 	public String getAddress() {
@@ -107,10 +113,6 @@ public class User {
 
 	public void setPhoto(byte[] photo) {
 		this.photo = photo;
-	}
-
-	public void setCreatedOn(Date createdOn) {
-		this.createdOn = createdOn;
 	}
 
 	public Date getLastLogin() {

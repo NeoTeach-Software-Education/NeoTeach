@@ -19,7 +19,6 @@
 <!-- style css -->
 <link rel="stylesheet" href="css/style.css">
 <!-- modernizr css -->
-<!--     <script src="https://zenoxpro.com/public/assets/js/vendor/modernizr-2.8.3.min.js"></script> -->
 <script src="js/modernizr-2.6.2.min.js"></script>
 </head>
 <body class="">
@@ -33,11 +32,6 @@
 				<%@ include file="left.jsp"%>
 
 				<div class="col-9">
-
-					<!--     <div class="dashboard-inline-submenu-wrap mb-4 border-bottom"> -->
-					<!--         <a href="https://zenoxpro.com/public/index.php/dashboard/settings" class="active">Profile Settings</a> -->
-					<!--         <a href="https://zenoxpro.com/public/index.php/dashboard/settings/reset-password" class="">Password Reset</a> -->
-					<!--     </div> -->
 
 
 					<div class="profile-settings-wrap">
@@ -54,20 +48,23 @@
 								<div class="form-row">
 									<div class="form-group col-md-6 ">
 										<label>Name</label> <input type="text" class="form-control"
-											name="fullName" value="${userSession.fullName}">
+											name="fullName" value="${userSession.fullName}" value="" required autofocus pattern="[a-zA-Z]{3,15}"
+        title="Name should only contain at least 3 letters. e.g. Sri">
 									</div>
 
 									<div class="form-group col-md-6 ">
 										<label>Qualification/Job Title</label> <input type="text"
 											class="form-control" name="qualification"
-											value="${userSession.qualification}">
+											value="${userSession.qualification}" value="" required autofocus pattern="[a-zA-Z]{3,15}"
+        title="Qualification contain at least 3 letters. e.g. MCA">
 									</div>
 								</div>
 
 								<div class="form-row">
 									<div class="form-group col-md-4">
 										<label>Phone</label> <input type="text" class="form-control"
-											name="phone" value="${userSession.phone}">
+											name="phone" value="${userSession.phone}" pattern="[6789][0-9]{9}"
+           required="required" title="Phone number should only start with 6/7/8/9 and 10 digits only . e.g. 9595959595">
 									</div>
 									<div class="form-group col-md-4">
 										<label>Email</label> <input type="disable"
@@ -76,19 +73,20 @@
 									</div>
 									<div class="form-group col-md-4">
 										<label>Address</label> <input type="text" class="form-control"
-											name="address" value="${userSession.address}">
+											name="address" value="${userSession.address}" required="required">
 									</div>
 								</div>
 
 								<div class="form-row">
 									<div class="form-group col-md-6">
 										<label>City</label> <input type="text" class="form-control"
-											name="city" value="${userSession.city}">
+											name="city" value="${userSession.city}" required pattern="[a-zA-Z]{3,15}"
+        title="City should only contain at least 3 letters. e.g. Hyd">
 									</div>
 
 									<div class="form-group col-md-2">
 										<label>Zip/Pin</label> <input type="text" class="form-control"
-											name="pin" value="${userSession.pin}">
+											name="pin" value="${userSession.pin}" required="required" pattern="[0-9]{6}" title="Pin/Zip is only 5 digits. e.g. 500000">
 									</div>
 
 									<div class="form-group col-md-4">
@@ -361,13 +359,13 @@
 
 									<div class="form-group col-md-8">
 										<label>About Me</label>
-										<textarea class="form-control" name="aboutMe" rows="3"></textarea>
+										<textarea class="form-control" name="aboutMe" rows="3">${userSession.about_me}</textarea>
 									</div>
 									<div class="form-group col-md-3">
 										<label>Profile Photo</label>
 										<div class="image-wrap">
-											<a href="javascript:;" data-toggle="filemanager"> <img
-												src="https://zenoxpro.com/public/uploads/placeholder-image.png"
+											<a href="#" data-toggle="filemanager"> <img
+												src="#"
 												alt="" class="img-thumbnail" />
 											</a> <input type="hidden" name="photo" class="image-input"
 												value="">

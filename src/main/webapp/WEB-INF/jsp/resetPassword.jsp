@@ -21,6 +21,21 @@
 <!-- modernizr css --0>
 <!--     <script src="https://zenoxpro.com/public/assets/js/vendor/modernizr-2.8.3.min.js"></script> -->
 <script src="js/modernizr-2.6.2.min.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        var txtPassword = document.getElementById("newPassword");
+        var txtConfirmPassword = document.getElementById("newConfirmPassword");
+        txtPassword.onchange = ConfirmPassword;
+        txtConfirmPassword.onkeyup = ConfirmPassword;
+        function ConfirmPassword() {
+            txtConfirmPassword.setCustomValidity("");
+            if (txtPassword.value != txtConfirmPassword.value) {
+                txtConfirmPassword.setCustomValidity("Passwords do not match.");
+            }
+        }
+    }
+</script>
+
 </head>
 <body class="">
 
@@ -57,8 +72,9 @@
 											Password</label>
 
 										<div class="col-md-8">
-											<input id="password" type="password" class="form-control"
-												name="password" required autofocus>
+											<input id="newPassword" type="password" class="form-control"
+												name="password" title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number"
+												required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
 
 										</div>
 									</div>
@@ -70,11 +86,7 @@
 
 										<div class="col-md-8">
 											<input type="password" class="form-control"
-												id="signup-password-confirm" name="ConfirmPassword"
-												data-fv-notempty="true"
-												data-fv-notempty-message="Please confirm password"
-												data-fv-identical="true" data-fv-identical-field="password"
-												data-fv-identical-message="Both passwords must be identical" />
+												id="newConfirmPassword" name="ConfirmPassword" required="required"/>
 										</div>
 
 									</div>

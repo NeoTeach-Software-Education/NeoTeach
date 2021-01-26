@@ -601,7 +601,7 @@ Home popular courses
     border-right: 1px solid #dedfe0;
 }
 .dashboard-menu:not(.dropdown-menu .dashboard-menu){
-    margin-right: -15px;
+    margin-right: 0px;
 }
 .dashboard-menu li a{
     padding: 10px;

@@ -97,11 +97,13 @@ public class PasswordController {
 
 		if (user.isPresent()) { // Token found in DB
 			model.addAttribute("resetToken", token);
+			return "resetPassword";
 		} else { // Token not found in DB
 			model.addAttribute("errorMessage", "Oops!  This is an invalid password reset link.");
+			return "forgotPassword";
 		}
 
-		return "resetPassword";
+		
 	}
 
 	/*
@@ -136,12 +138,11 @@ public class PasswordController {
 			// RedirectAttributes
 			redir.addFlashAttribute("successMessage", "You have successfully reset your password.  You may now login.");
 
-			return "redirect:loginpage";
+			return "redirect:login";
 
 		} else {
 			model.addAttribute("errorMessage", "Oops!  This is an invalid password reset link.");
-//			model.setViewName("resetPassword");	
-			return "resetPassword";
+			return "redirect:login";
 		}
 
 //		return "redirect:loginpage";
@@ -156,6 +157,6 @@ public class PasswordController {
 	@ExceptionHandler(MissingServletRequestParameterException.class)
 	public String handleMissingParams(MissingServletRequestParameterException ex) {
 		logger.info("User Entered into handleMissingParams");
-		return "redirect:loginpage";
+		return "redirect:login";
 	}
 }

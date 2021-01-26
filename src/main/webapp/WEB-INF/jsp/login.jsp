@@ -65,7 +65,7 @@
 
 										<div class="col-md-8">
 											<input id="password" type="password" class="form-control"
-												name="password" required>
+												name="password" title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
 
 										</div>
 									</div>

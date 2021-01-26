@@ -55,7 +55,7 @@
                         <label for="phone" class="col-md-4 control-label">Phone</label>
 
                         <div class="col-md-6">
-                            <input id="phone" type="text" class="form-control" name="phone" value=""  pattern="[789][0-9]{9}"
+                            <input id="phone" type="text" class="form-control" name="phone" value=""  pattern="[6789][0-9]{9}"
            required="required" title="Phone number should only start with 6/7/8/9 and 10 digits only . e.g. 9595959595">
 
                         </div>

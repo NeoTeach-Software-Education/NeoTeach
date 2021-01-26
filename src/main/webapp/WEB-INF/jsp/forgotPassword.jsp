@@ -45,7 +45,7 @@
                         <div class="form-group">
                             <label for="email" class=" control-label">E-Mail Address</label>
 
-                            <input id="youremail" type="email" class="form-control" name="email" required>
+                            <input id="youremail" type="email" class="form-control" name="email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
 
                                                     </div>
 

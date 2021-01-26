@@ -1,5 +1,6 @@
 package com.neoteach.controllers;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
@@ -51,8 +52,9 @@ public class DashboardController {
 			user.setCity(request.getParameter("city"));
 			user.setPin(request.getParameter("pin"));
 			user.setCountryId(request.getParameter("countryId"));
-			user.setAboutMe(request.getParameter("aboutMe"));
+			user.setAbout_me(request.getParameter("aboutMe"));
 			user.setPhone(request.getParameter("phone"));
+			user.setCreated_on(LocalDateTime.now());
 		userServiceImpl.saveUser(user);
 		user = userServiceImpl.findByEmail(session.getAttribute("userEmailSession").toString());
 		session.setAttribute("userSession", user);

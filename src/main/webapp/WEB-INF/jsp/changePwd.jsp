@@ -50,13 +50,12 @@
 							<h5>${errorMessage}</h5>
 						</div>
 						<form action="/changepwd" method="post">
-							<%-- 				<input type="hidden" name="userEmail" value="${encodedEmail}"> --%>
 							<div class="profile-basic-info bg-white p-3">
 
 								<div class="form-row">
 									<div class="form-group col-md-6 ">
-										<label>Old Password</label> <input type="tel"
-											class="form-control" name="old_password">
+										<label>Old Password</label> <input type="tel" id="oldPassword"
+											class="form-control" name="old_password" title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
 
 									</div>
 
@@ -64,13 +63,13 @@
 
 								<div class="form-row">
 									<div class="form-group col-md-6 ">
-										<label>New Password</label> <input type="tel"
+										<label>New Password</label> <input type="password" id="newPassword" title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
 											class="form-control" name="new_password">
 									</div>
 								</div>
 								<div class="form-row">
 									<div class="form-group col-md-6 ">
-										<label>Confirm New Password</label> <input type="tel"
+										<label>Confirm New Password</label> <input type="password" id="newConfirmPassword"
 											class="form-control" name="new_password_confirmation">
 
 									</div>
@@ -103,7 +102,20 @@
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<!-- Main -->
 <!-- 	<script src="js/main.js"></script> -->
-
+<script type="text/javascript">
+    window.onload = function () {
+        var txtPassword = document.getElementById("newPassword");
+        var txtConfirmPassword = document.getElementById("newConfirmPassword");
+        txtPassword.onchange = ConfirmPassword;
+        txtConfirmPassword.onkeyup = ConfirmPassword;
+        function ConfirmPassword() {
+            txtConfirmPassword.setCustomValidity("");
+            if (txtPassword.value != txtConfirmPassword.value) {
+                txtConfirmPassword.setCustomValidity("Passwords do not match.");
+            }
+        }
+    }
+</script>
 <script type='text/javascript' src="js/jquery.mycart.js"></script>
   <script src="js/cart.js"></script>
 </body>
