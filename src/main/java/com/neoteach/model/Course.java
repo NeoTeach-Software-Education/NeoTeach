@@ -21,9 +21,18 @@ public class Course {
 	private String courseimag;
 	@Column(name = "tutorname")
 	private String tutorname;
-
+	@Column(name = "discount")
+	private String discount;
 	public String getTutorname() {
 		return tutorname;
+	}
+
+	public String getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(String discount) {
+		this.discount = discount;
 	}
 
 	public void setTutorname(String tutorname) {

@@ -12,8 +12,8 @@ import com.neoteach.model.Course;
 public interface AllCourseDetailsRepository extends JpaRepository<Course, String>{
 	@Transactional
 	@Modifying
-	@Query(value = "update coursedetails set coursecode = :coursecode,price = :price,discountprice= :discountprice where coursename = :coursename", nativeQuery = true)
-	void updateCourseDetails(String coursecode, String coursename, String price, String discountprice);
+	@Query(value = "update coursedetails set coursecode = :coursecode,price = :price,discountprice= :discountprice,discount= :discount where coursename = :coursename", nativeQuery = true)
+	void updateCourseDetails(String coursecode, String coursename, String price,String discount, String discountprice);
 
 	Course findByCoursename(String coursename);
 

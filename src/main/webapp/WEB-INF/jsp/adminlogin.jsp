@@ -6,8 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="images/favicon.png" />
 
-<!-- CSRF Token -->
-<!--     <meta name="csrf-token" content="OohSvh4J8CMe4oZAOPuTyWDFyyPqboLnCnYO5rDt"> -->
 
 <title>Admin Login | NeoTeach</title>
 
@@ -19,7 +17,6 @@
 <!-- style css -->
 <link rel="stylesheet" href="css/style.css">
 <!-- modernizr css -->
-<!--     <script src="https://zenoxpro.com/public/assets/js/vendor/modernizr-2.8.3.min.js"></script> -->
 <script src="js/modernizr-2.6.2.min.js"></script>
 
 </head>
@@ -66,7 +63,7 @@
 
 										<div class="col-md-8">
 											<input id="password" type="password" class="form-control"
-												name="password" required>
+												name="password" title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
 
 										</div>
 									</div>

@@ -21,6 +21,21 @@
 <link rel="stylesheet" href="css/style.css">
 <!-- modernizr css -->
 <script src="js/modernizr-2.6.2.min.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        var txtPassword = document.getElementById("newPassword");
+        var txtConfirmPassword = document.getElementById("newConfirmPassword");
+        txtPassword.onchange = ConfirmPassword;
+        txtConfirmPassword.onkeyup = ConfirmPassword;
+        function ConfirmPassword() {
+            txtConfirmPassword.setCustomValidity("");
+            if (txtPassword.value != txtConfirmPassword.value) {
+                txtConfirmPassword.setCustomValidity("Passwords do not match.");
+            }
+        }
+    }
+</script>
+
 </head>
 <body class="">
 
@@ -50,7 +65,7 @@
 								<div class="form-row">
 									<div class="form-group col-md-6 ">
 										<label>Old Password</label> <input type="tel"
-											class="form-control" name="old_password" required="required">
+											class="form-control" name="old_password" title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
 
 									</div>
 
@@ -58,14 +73,14 @@
 
 								<div class="form-row">
 									<div class="form-group col-md-6 ">
-										<label>New Password</label> <input type="tel"
-											class="form-control" name="new_password" required="required">
+										<label>New Password</label> <input type="tel" id="newPassword"
+											class="form-control" name="new_password" title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
 									</div>
 								</div>
 								<div class="form-row">
 									<div class="form-group col-md-6 ">
-										<label>Confirm New Password</label> <input type="tel"
-											class="form-control" name="new_password_confirmation" required="required">
+										<label>Confirm New Password</label> <input type="tel" id="newConfirmPassword"
+											class="form-control" name="new_password_confirmation"/>
 
 									</div>
 

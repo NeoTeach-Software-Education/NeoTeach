@@ -155,10 +155,10 @@ public class AdminPageController {
 
 	@RequestMapping(value = "/updateCourse", method = RequestMethod.POST)
 	public String updateCourseDetails(@RequestParam("coursecode") String coursecode,
-			@RequestParam("coursename") String coursename, @RequestParam("price") String price,
+			@RequestParam("coursename") String coursename, @RequestParam("price") String price,@RequestParam("discount") String discount,
 			@RequestParam("discountprice") String discountprice) {
 		logger.info("Entered into updateCourseDetails");
-		adminServiceImpl.updateCourseDetails(coursecode, coursename, price, discountprice);
+		adminServiceImpl.updateCourseDetails(coursecode, coursename, price,discount,discountprice);
 		return "redirect:setCourseDetails";
 
 	}

@@ -76,7 +76,16 @@
 
 							</div>
 						</div>
+						<div class="form-group row ">
+							<label for="price" class="col-md-3 control-label">Discount</label>
 
+							<div class="col-md-4">
+								<input type="text" class="form-control" name="discount" id="discount"
+									value="" required>
+
+							</div>
+						</div>
+						
 						<div class="form-group row ">
 							<label for="email" class="col-md-3 control-label">Discount
 								Price</label>
@@ -120,7 +129,18 @@
 	<script src="js/bootstrap.bundle.min.js"></script>
 
 
-	<script type='text/javascript' src="js/jquery.mycart.js"></script>
-	<script src="js/cart.js"></script>
+<!-- 	<script type='text/javascript' src="js/jquery.mycart.js"></script> -->
+<!-- 	<script src="js/cart.js"></script> -->
+<script>
+        $(document).on("change keyup blur", "#discount", function() {
+            var main = $('#price').val();
+            var disc = $('#discount').val();
+            var dec = (disc / 100).toFixed(2); //its convert 10 into 0.10
+            var mult = main * dec; // gives the value for subtract from main value
+            var discont = main - mult;
+            $('#discountprice').val(discont);
+        });
+    </script>
+
 </body>
 </html>

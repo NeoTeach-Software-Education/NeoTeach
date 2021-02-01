@@ -54,8 +54,8 @@
 								class="col-md-4 col-form-label text-md-right">Course</label>
 
 							<div class="col-md-7">
-								<select class="form-control" name="coursename" id="coursename">
-									<option value="0" selected="selected">Choose a course:</option>
+								<select class="form-control" name="coursename" id="coursename" required="required">
+									<option value="" selected="selected">Choose a course:</option>
 									<c:forEach items="${courceDetails}" var="courceDetails">
 									<option value="${courceDetails.coursecode}">${courceDetails.coursename}</option>
 									</c:forEach>
@@ -93,7 +93,7 @@
 
 							<div class="col-md-7">
 								<select class="form-control" name="multicoursename"
-									id="mcoursename">
+									id="mcoursename" required="required">
 									<option value="0" selected="selected">Choose a course:</option>
 									<c:forEach items="${courceDetails}" var="courceDetails">
 									<option value="${courceDetails.coursecode}">${courceDetails.coursename}</option>

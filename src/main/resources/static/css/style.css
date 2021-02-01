@@ -3164,7 +3164,9 @@ h1, h2, h3, h4, h5, h6, figure {
     border: 1px solid #4586ff; }
 
 input[type="text"] {
-  height: 50px; }
+  height: 35px;
+  width: 125px;
+   }
 
 .form-group {
   margin-bottom: 30px; }
@@ -3607,7 +3609,7 @@ input[type="text"] {
   .btn.btn-md {
     padding: 8px 20px !important; }
   .btn.btn-lg {
-    padding: 18px 36px !important; }
+    padding: 5px 25px !important; }
   .btn:hover, .btn:active, .btn:focus {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;

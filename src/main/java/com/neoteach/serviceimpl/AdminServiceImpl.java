@@ -70,9 +70,8 @@ public class AdminServiceImpl {
 		return allCourseDetailsRepository.findAll();
 	}
 
-	public void updateCourseDetails(String coursecode, String coursename, String price, String discountprice) {
-		// TODO Auto-generated method stub
-		allCourseDetailsRepository.updateCourseDetails(coursecode,coursename,price,discountprice);
+	public void updateCourseDetails(String coursecode, String coursename, String price,String discount, String discountprice) {
+		allCourseDetailsRepository.updateCourseDetails(coursecode,coursename,price,discount,discountprice);
 	}
 
 	public Course addCourseDetails(String coursename) {
