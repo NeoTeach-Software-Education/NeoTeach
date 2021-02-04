@@ -60,17 +60,17 @@
 								<form action="/updateCourse" method="POST">
 									<tr>
 										<td><input type="text"
-											value="${courceDetails.coursecode}" name="coursecode" required pattern="[0-9]" title="Enter only numbers"></td>
+											value="${courceDetails.coursecode}" name="coursecode" required pattern="[0-9]{3}" title="Enter only 3 digit numbers"></td>
 										<td><input type="text"
 											value="${courceDetails.coursename}" disabled="disabled">
 											<input type="hidden" value="${courceDetails.coursename}"
 											name="coursename"></td>
 										<td><input type="number" id="cBalance${count+1}"
-											value="${courceDetails.price}" name="price" min="0" required pattern='[0-9]+(\\.[0-9][0-9]?)?'></td>
+											value="${courceDetails.price}" name="price" min="0" required pattern='[0-9]+(\\.[0-9][0-9]?)?' onkeyup="finddiscount(${count+1})"></td>
 										<td><input type="number" min="0" max="30" id="chDiscount${count+1}" onkeyup="finddiscount(${count+1})"
 											value="${courceDetails.discount}" name="discount" required pattern="[0-9]{2}" title="Only 2 digits"></td>
 										<td><input type='number' id="result${count+1}"
-											value="${courceDetails.discountprice}" name="discountprice" min="0" required pattern='[0-9]+(\\.[0-9][0-9]?)?'></td>
+											value="${courceDetails.discountprice}" name="discountprice" min="0" required pattern='[0-9]+(\\.[0-9][0-9]?)?' readonly="readonly"></td>
 										<td>
 											<button type="submit" class="btn btn-purple btn-lg">
 												Update</button>

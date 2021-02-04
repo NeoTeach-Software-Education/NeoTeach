@@ -52,7 +52,7 @@
 
 							<div class="col-md-4">
 								<input id="coursecode" type="text" class="form-control"
-									name="coursecode" value="" required autofocus>
+									name="coursecode" value="" required pattern="[0-9]{3}" title="Enter only 3 digit numbers" autofocus>
 
 							</div>
 						</div>
@@ -63,7 +63,8 @@
 
 							<div class="col-md-4">
 								<input id="coursename" type="text" class="form-control"
-									name="coursename" value="" required>
+									name="coursename" value="" required pattern="[a-zA-Z]{3,15}"
+        title="course name should only contain at least 3 letters. e.g. Java">
 
 							</div>
 						</div>
@@ -71,8 +72,8 @@
 							<label for="price" class="col-md-3 control-label">Price</label>
 
 							<div class="col-md-4">
-								<input id="price" type="text" class="form-control" name="price"
-									value="" required>
+								<input id="price" type="text" class="form-control" name="price" onkeyup="finddiscount()"
+									value="" required pattern='[0-9]+(\\.[0-9][0-9]?)?' title="Price value numeric only">
 
 							</div>
 						</div>
@@ -80,8 +81,8 @@
 							<label for="price" class="col-md-3 control-label">Discount</label>
 
 							<div class="col-md-4">
-								<input type="text" class="form-control" name="discount" id="discount"
-									value="" required>
+								<input type="text" class="form-control" name="discount" id="discount" onkeyup="finddiscount()"
+									value=""  min="0" required pattern='[0-9]+(\\.[0-9][0-9]?)?'>
 
 							</div>
 						</div>
@@ -132,14 +133,16 @@
 <!-- 	<script type='text/javascript' src="js/jquery.mycart.js"></script> -->
 <!-- 	<script src="js/cart.js"></script> -->
 <script>
-        $(document).on("change keyup blur", "#discount", function() {
-            var main = $('#price').val();
-            var disc = $('#discount').val();
-            var dec = (disc / 100).toFixed(2); //its convert 10 into 0.10
-            var mult = main * dec; // gives the value for subtract from main value
-            var discont = main - mult;
-            $('#discountprice').val(discont);
-        });
+        
+        function finddiscount()
+    	{
+    		 var main = $('#price').val();
+                var disc = $('#discount').val();
+                var dec = (disc / 100).toFixed(2); //its convert 10 into 0.10
+                var mult = main * dec; // gives the value for subtract from main value
+                var discont = main - mult;
+                $('#discountprice').val(discont);
+    	}
     </script>
 
 </body>
