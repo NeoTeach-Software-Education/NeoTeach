@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.tomcat.util.codec.binary.Base64;
+import org.apache.tomcat.util.codec.binary.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,7 @@ import com.neoteach.model.PaymentDtls;
 import com.neoteach.model.User;
 import com.neoteach.serviceimpl.PaymentServiceImpl;
 import com.neoteach.serviceimpl.UserServiceImpl;
+import com.neoteach.util.CommonUtil;
 
 @Controller
 public class LoginController {
@@ -26,7 +29,8 @@ public class LoginController {
 	UserServiceImpl userServiceImpl;
 	@Autowired
 	PaymentServiceImpl paymentServiceImpl;
-	
+	@Autowired
+	CommonUtil commonUtil;
 	/*
 	 * loginPage() for landing user login page
 	 * 
@@ -60,6 +64,11 @@ public class LoginController {
 		}
 		else if(user.getPassword().equals(pwd))
 		{
+			byte v_byte[] = commonUtil.decompressBytes(user.getPhoto());
+			StringBuilder sb = new StringBuilder();
+			sb.append("data:image/jpg;base64,");
+			sb.append(StringUtils.newStringUtf8(Base64.encodeBase64(v_byte, false)));
+			user.setPhoto(v_byte);
 			session.setAttribute("userSession", user);
 			session.setAttribute("userEmailSession", user.getEmail());
 			ArrayList<PaymentDtls> paymentDtls = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());

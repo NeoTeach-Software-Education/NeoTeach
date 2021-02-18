@@ -40,7 +40,7 @@
 						<div>
 							<h5>${successMessage}</h5>
 						</div>
-						<form action="/userUpdate" method="post">
+						<form action="/userUpdate" method="post" enctype="multipart/form-data">
 							<%--             <input type="hidden" name="userEmail" value="${encodedEmail}"> --%>
 
 							<div class="profile-basic-info bg-white p-3">
@@ -364,10 +364,11 @@
 									<div class="form-group col-md-3">
 										<label>Profile Photo</label>
 										<div class="image-wrap">
-											<a href="#" data-toggle="filemanager"> <img
-												src="#"
-												alt="" class="img-thumbnail" />
-											</a> <input type="hidden" name="photo" class="image-input"
+											<a href="#" data-toggle="filemanager"> 
+											<img src="data:image/jpg;base64,${userSession.photo}"
+												alt="User photo" class="img-thumbnail" />
+											</a>
+											 <input type="file" name="photo" class="image-input"
 												value="">
 
 

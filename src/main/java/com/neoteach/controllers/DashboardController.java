@@ -12,11 +12,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.neoteach.model.PaymentDtls;
 import com.neoteach.model.User;
 import com.neoteach.serviceimpl.PaymentServiceImpl;
 import com.neoteach.serviceimpl.UserServiceImpl;
+import com.neoteach.util.CommonUtil;
 
 @Controller
 public class DashboardController {
@@ -24,6 +26,8 @@ public class DashboardController {
 	UserServiceImpl userServiceImpl;
 	@Autowired
 	PaymentServiceImpl paymentServiceImpl;
+	@Autowired
+	CommonUtil commonUtil;
 	
 	@RequestMapping(value = "/dashboard", method = RequestMethod.GET)
 	public String dashboardPage(Model model,HttpSession session) {
@@ -44,7 +48,7 @@ public class DashboardController {
 		return "profileUpdate";
     }
 	@RequestMapping(value = "/userUpdate", method = RequestMethod.POST)
-	public String updateUserProfile(Model model,HttpSession session,HttpServletRequest request) {
+	public String updateUserProfile(Model model,HttpSession session,HttpServletRequest request,@RequestParam("photo") MultipartFile file) throws Exception {
 		
 		User user = userServiceImpl.findByEmail(session.getAttribute("userEmailSession").toString());
 			user.setQualification(request.getParameter("qualification"));
@@ -55,6 +59,8 @@ public class DashboardController {
 			user.setAbout_me(request.getParameter("aboutMe"));
 			user.setPhone(request.getParameter("phone"));
 			user.setCreated_on(LocalDateTime.now());
+			
+			user.setPhoto(commonUtil.compressBytes(file.getBytes()));
 		userServiceImpl.saveUser(user);
 		user = userServiceImpl.findByEmail(session.getAttribute("userEmailSession").toString());
 		session.setAttribute("userSession", user);
