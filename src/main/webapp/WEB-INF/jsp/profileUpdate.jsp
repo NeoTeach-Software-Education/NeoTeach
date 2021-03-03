@@ -365,9 +365,10 @@
 										<label>Profile Photo</label>
 										<div class="image-wrap">
 											<a href="#" data-toggle="filemanager"> 
-											<img src="data:image/jpg;base64,${userSession.photo}"
+											<img src="data:image/jpg;base64,${userSession.base64Image}"
 												alt="User photo" class="img-thumbnail" />
 											</a>
+<%-- 											<img id="profileImage" src="data:image/jpg;base64,${userSession.base64Image}"> --%>
 											 <input type="file" name="photo" class="image-input"
 												value="">
 

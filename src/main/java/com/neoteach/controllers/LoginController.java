@@ -1,8 +1,15 @@
 package com.neoteach.controllers;
 
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.sql.Blob;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpSession;
+import javax.sql.rowset.serial.SerialBlob;
+import javax.sql.rowset.serial.SerialException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.tomcat.util.codec.binary.Base64;
@@ -54,7 +61,7 @@ public class LoginController {
 	public String userLogin(@RequestParam("username") String email,
 			                @RequestParam("password") String pwd,
 			                Model model,
-			                HttpSession session)
+			                HttpSession session) throws Exception, SQLException
 	{
 		logger.info("User Entered into user login validation page");
 		User user = userServiceImpl.findByEmail(email);
@@ -64,11 +71,37 @@ public class LoginController {
 		}
 		else if(user.getPassword().equals(pwd))
 		{
-			byte v_byte[] = commonUtil.decompressBytes(user.getPhoto());
-			StringBuilder sb = new StringBuilder();
-			sb.append("data:image/jpg;base64,");
-			sb.append(StringUtils.newStringUtf8(Base64.encodeBase64(v_byte, false)));
-			user.setPhoto(v_byte);
+			/*
+			 * byte v_byte[] = commonUtil.decompressBytes(user.getPhoto()); StringBuilder sb
+			 * = new StringBuilder(); sb.append("data:image/jpg;base64,");
+			 * sb.append(StringUtils.newStringUtf8(Base64.encodeBase64(v_byte, false)));
+			 * user.setPhoto(v_byte);
+			 */
+			if(user.getPhoto()!=null)
+			{
+				byte v_byte[] = commonUtil.decompressBytes(user.getPhoto());
+				Blob blob = new SerialBlob(v_byte);
+				
+                
+                InputStream inputStream = blob.getBinaryStream();
+                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                byte[] buffer = new byte[4096];
+                int bytesRead = -1;
+                 
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);                  
+                }
+                 
+                byte[] imageBytes = outputStream.toByteArray();
+                String base64Image = Base64.encodeBase64String(imageBytes);
+                 
+                 
+                inputStream.close();
+                outputStream.close();
+				
+
+				user.setBase64Image(base64Image);
+			}
 			session.setAttribute("userSession", user);
 			session.setAttribute("userEmailSession", user.getEmail());
 			ArrayList<PaymentDtls> paymentDtls = paymentServiceImpl.retriveEnrolledCourses(session.getAttribute("userEmailSession").toString());

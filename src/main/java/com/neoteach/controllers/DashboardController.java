@@ -1,11 +1,16 @@
 package com.neoteach.controllers;
 
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.sql.Blob;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.sql.rowset.serial.SerialBlob;
 
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -63,6 +68,32 @@ public class DashboardController {
 			user.setPhoto(commonUtil.compressBytes(file.getBytes()));
 		userServiceImpl.saveUser(user);
 		user = userServiceImpl.findByEmail(session.getAttribute("userEmailSession").toString());
+		if(user.getPhoto()!=null)
+		{
+			byte v_byte[] = commonUtil.decompressBytes(user.getPhoto());
+			Blob blob = new SerialBlob(v_byte);
+			
+            
+            InputStream inputStream = blob.getBinaryStream();
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            byte[] buffer = new byte[4096];
+            int bytesRead = -1;
+             
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, bytesRead);                  
+            }
+             
+            byte[] imageBytes = outputStream.toByteArray();
+            String base64Image = Base64.encodeBase64String(imageBytes);
+             
+             
+            inputStream.close();
+            outputStream.close();
+			
+
+			user.setBase64Image(base64Image);
+		}
+		
 		session.setAttribute("userSession", user);
 		model.addAttribute("successMessage", "You have successfully updated your profile.");
 		return "profileUpdate";
